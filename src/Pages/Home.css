@@ -24,7 +24,7 @@ html, body, #root, #app {
 position: absolute;
   inset: 0;
   width: 100vw;
-  height: 100vh;
+  height: 20vh;
   display: block;
   z-index: 0;
   opacity: 0.5;
@@ -79,13 +79,7 @@ position: absolute;
   .title-2 { font-size: 28px; }
   .highlight { font-size: 56px; }
 }
-#webgl-canvas {
-  
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;    /* canvas is at layer 0 */
-}
+
 .awards-text{
   font-size: 40px;
   color: white;
@@ -103,5 +97,66 @@ position: absolute;
   }
   .highlight{
     font-size: 46px;
+  }
+}
+
+@media (max-width : 600px){
+  #webgl-canvas {
+  background-color: rgb(11, 11, 11);
+
+  inset: 0;
+  width: 100vw;
+  height: 50px;
+  display: block;
+  z-index: 0;
+  opacity: 0.5;
+}
+}
+/* Floating down-arrow button */
+.scroll-down {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: yellow;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000; /* above the canvas */
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.scroll-down:hover {
+  transform: translateY(1px) scale(1.04);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.scroll-down:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.scroll-down.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.scroll-down svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Optional: tweak for light themes so it's visible on white content below */
+@media (prefers-color-scheme: light) {
+  .scroll-down {
+    background: yellow;
+    border-color: rgba(0, 0, 0, 0.2);
   }
 }

@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import "./Home.css"
+import { useEffect, useRef, useState } from "react";
+import "./Home.css";
 import BoxCard from "../components/BoxCard";
 import Carousel from "../components/Carousel";
 import Work from "../components/Work";
@@ -8,8 +8,17 @@ export default function Home() {
   const canvasRef = useRef(null);
   const bgRef = useRef(null);
 
+  // NEW: target to scroll to, and visibility for arrow
+  const belowHeroRef = useRef(null);
+  const [showArrow, setShowArrow] = useState(true);
+
   useEffect(() => {
     const cleanupFns = [];
+
+    // Hide arrow after user starts scrolling down a bit
+    const onScroll = () => setShowArrow(window.scrollY < 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    cleanupFns.push(() => window.removeEventListener("scroll", onScroll));
 
     (async () => {
       try {
@@ -23,14 +32,14 @@ export default function Home() {
         const bg = Grid2Background(canvas);
         bgRef.current = bg;
 
-        // --- Ensure target element can receive pointer events ---
+        // Ensure target element can receive pointer events
         const target = bg?.renderer?.domElement || canvas;
         if (target && target.style) {
           target.style.pointerEvents = "auto";
-          target.style.touchAction = "none"; // avoid browser gesture interference
+          target.style.touchAction = "none";
         }
 
-        // --- Full-bleed + crisp DPR ---
+        // Full-bleed + crisp DPR
         const resize = () => {
           const w = window.innerWidth;
           const h = window.innerHeight;
@@ -52,12 +61,10 @@ export default function Home() {
         window.addEventListener("resize", resize, { passive: true });
         cleanupFns.push(() => window.removeEventListener("resize", resize));
 
-        // --- Forward real (trusted) events only to avoid feedback loops ---
+        // Forward real (trusted) events only
         const forward = (e) => {
-          // Ignore synthetic events (including the ones we dispatch below)
           if (!e.isTrusted) return;
           if (!target) return;
-
           const evt = new e.constructor(e.type, e);
           target.dispatchEvent(evt);
         };
@@ -76,22 +83,18 @@ export default function Home() {
           window.addEventListener(t, forward, { passive: true })
         );
         cleanupFns.push(() =>
-          eventTypes.forEach((t) =>
-            window.removeEventListener(t, forward)
-          )
+          eventTypes.forEach((t) => window.removeEventListener(t, forward))
         );
 
-        // --- Click to randomize palette/lights ---
+        // Click to randomize palette/lights
         const rand = () => Math.floor(Math.random() * 0xffffff);
         const handleClick = () => {
           if (!bg?.grid) return;
           bg.grid.setColors([rand(), rand(), rand()]);
           bg.grid.light1?.color?.set(rand());
-          if (bg.grid.light1)
-            bg.grid.light1.intensity = 500 + Math.random() * 1000;
+          if (bg.grid.light1) bg.grid.light1.intensity = 500 + Math.random() * 1000;
           bg.grid.light2?.color?.set(rand());
-          if (bg.grid.light2)
-            bg.grid.light2.intensity = 250 + Math.random() * 250;
+          if (bg.grid.light2) bg.grid.light2.intensity = 250 + Math.random() * 250;
         };
         document.body.addEventListener("click", handleClick);
         cleanupFns.push(() =>
@@ -102,46 +105,77 @@ export default function Home() {
       }
     })();
 
-    // Cleanup on unmount
     return () => {
       cleanupFns.forEach((fn) => {
         try {
           fn();
-        } catch {
-          // intentionally ignore cleanup errors
-        }
+        } catch {}
       });
       const bg = bgRef.current;
       try {
         bg?.renderer?.dispose?.();
-      } catch {
-        // ignore renderer dispose errors
-      }
+      } catch {}
       bgRef.current = null;
     };
   }, []);
 
+  // NEW: smooth scroll helper
+  const scrollDown = () => {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (belowHeroRef.current) {
+      belowHeroRef.current.scrollIntoView({
+        behavior: prefersReduced ? "auto" : "smooth",
+        block: "start",
+      });
+    } else {
+      window.scrollTo({ top: window.innerHeight, behavior: prefersReduced ? "auto" : "smooth" });
+    }
+  };
+
   return (
-    <>   
-     <div id="app" style={{backgroundColor : "black"}}>
-      <canvas id="webgl-canvas" ref={canvasRef} />
-      <div className="hero">
-        <h1 className="title-1">THE BEST 360° BRANDING AND ADVERTISING</h1>
-        <h2 className="title-2">
-          AGENCY IN <span className="highlight">MAHARASHTRA</span>
-        </h2>
+    <>
+      <div id="app" style={{ backgroundColor: "black" }} className="home-main">
+        <canvas id="webgl-canvas" ref={canvasRef} />
+
+        <div className="hero">
+          <h1 className="title-1">THE BEST 360° BRANDING AND ADVERTISING</h1>
+          <h2 className="title-2">
+            AGENCY IN <span className="highlight">MAHARASHTRA</span>
+          </h2>
+        </div>
+
+        {/* NEW: floating scroll-down arrow */}
+        <button
+          className={`scroll-down ${showArrow ? "" : "hidden"}`}
+          onClick={scrollDown}
+          aria-label="Scroll down"
+          title="Scroll down"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
       </div>
-    </div>
-    <BoxCard /><br />
-       <h1 className="awards-text" style={{textAlign : "center",color : "Black" }}> Recognised and Awarded by </h1>
 
-    <div className="award-container">
-   <br />
-    <br /><br /><Carousel />  </div>
-    <br /><br />
-    <Work/>
-  
+      {/* NEW: anchor target just below the hero */}
+      <div ref={belowHeroRef} />
+
+      <BoxCard />
+      <br />
+      <h1 className="awards-text" style={{ textAlign: "center", color: "Black" }}>
+        Recognised and Awarded by
+      </h1>
+
+      <div className="award-container">
+        <br />
+        <br />
+        <br />
+        <Carousel />
+      </div>
+
+      <br />
+      <br />
+      <Work />
     </>
-
   );
 }
