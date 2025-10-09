@@ -1,0 +1,17 @@
+.work-container{
+    background-color: white;
+}
+.image1-container img{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border-right: 2px solid rgb(239, 227, 227);
+    border-bottom: 2px solid rgb(239, 227, 227);
+}
+
+.image1-container{
+    gap: 20px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}

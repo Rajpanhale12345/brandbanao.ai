@@ -1,0 +1,147 @@
+import { useEffect, useRef } from "react";
+import "./Home.css"
+import BoxCard from "../components/BoxCard";
+import Carousel from "../components/Carousel";
+import Work from "../components/Work";
+
+export default function Home() {
+  const canvasRef = useRef(null);
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const cleanupFns = [];
+
+    (async () => {
+      try {
+        const { default: Grid2Background } = await import(
+          "https://cdn.jsdelivr.net/npm/threejs-components@0.0.17/build/backgrounds/grid2.cdn.min.js"
+        );
+
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const bg = Grid2Background(canvas);
+        bgRef.current = bg;
+
+        // --- Ensure target element can receive pointer events ---
+        const target = bg?.renderer?.domElement || canvas;
+        if (target && target.style) {
+          target.style.pointerEvents = "auto";
+          target.style.touchAction = "none"; // avoid browser gesture interference
+        }
+
+        // --- Full-bleed + crisp DPR ---
+        const resize = () => {
+          const w = window.innerWidth;
+          const h = window.innerHeight;
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+          canvas.style.width = "100vw";
+          canvas.style.height = "100vh";
+          canvas.width = Math.floor(w * dpr);
+          canvas.height = Math.floor(h * dpr);
+
+          bg?.renderer?.setPixelRatio?.(dpr);
+          bg?.renderer?.setSize?.(w, h, false);
+          if (bg?.camera) {
+            bg.camera.aspect = w / h;
+            bg.camera.updateProjectionMatrix?.();
+          }
+        };
+        resize();
+        window.addEventListener("resize", resize, { passive: true });
+        cleanupFns.push(() => window.removeEventListener("resize", resize));
+
+        // --- Forward real (trusted) events only to avoid feedback loops ---
+        const forward = (e) => {
+          // Ignore synthetic events (including the ones we dispatch below)
+          if (!e.isTrusted) return;
+          if (!target) return;
+
+          const evt = new e.constructor(e.type, e);
+          target.dispatchEvent(evt);
+        };
+
+        const eventTypes = [
+          "pointermove",
+          "pointerdown",
+          "pointerup",
+          "mousemove",
+          "touchstart",
+          "touchmove",
+          "touchend",
+        ];
+
+        eventTypes.forEach((t) =>
+          window.addEventListener(t, forward, { passive: true })
+        );
+        cleanupFns.push(() =>
+          eventTypes.forEach((t) =>
+            window.removeEventListener(t, forward)
+          )
+        );
+
+        // --- Click to randomize palette/lights ---
+        const rand = () => Math.floor(Math.random() * 0xffffff);
+        const handleClick = () => {
+          if (!bg?.grid) return;
+          bg.grid.setColors([rand(), rand(), rand()]);
+          bg.grid.light1?.color?.set(rand());
+          if (bg.grid.light1)
+            bg.grid.light1.intensity = 500 + Math.random() * 1000;
+          bg.grid.light2?.color?.set(rand());
+          if (bg.grid.light2)
+            bg.grid.light2.intensity = 250 + Math.random() * 250;
+        };
+        document.body.addEventListener("click", handleClick);
+        cleanupFns.push(() =>
+          document.body.removeEventListener("click", handleClick)
+        );
+      } catch (e) {
+        console.error("Failed to initialize Grid2Background", e);
+      }
+    })();
+
+    // Cleanup on unmount
+    return () => {
+      cleanupFns.forEach((fn) => {
+        try {
+          fn();
+        } catch {
+          // intentionally ignore cleanup errors
+        }
+      });
+      const bg = bgRef.current;
+      try {
+        bg?.renderer?.dispose?.();
+      } catch {
+        // ignore renderer dispose errors
+      }
+      bgRef.current = null;
+    };
+  }, []);
+
+  return (
+    <>   
+     <div id="app" style={{backgroundColor : "black"}}>
+      <canvas id="webgl-canvas" ref={canvasRef} />
+      <div className="hero">
+        <h1 className="title-1">THE BEST 360° BRANDING AND ADVERTISING</h1>
+        <h2 className="title-2">
+          AGENCY IN <span className="highlight">MAHARASHTRA</span>
+        </h2>
+      </div>
+    </div>
+    <BoxCard /><br />
+       <h1 className="awards-text" style={{textAlign : "center",color : "Black" }}> Recognised and Awarded by </h1>
+
+    <div className="award-container">
+   <br />
+    <br /><br /><Carousel />  </div>
+    <br /><br />
+    <Work/>
+  
+    </>
+
+  );
+}

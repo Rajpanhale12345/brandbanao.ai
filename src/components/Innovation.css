@@ -1,0 +1,46 @@
+.innovation-wrapper {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.innovation-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.innovation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.innovation-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.innovation-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.innovation-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+@media (max-width : 600px){
+  .innovation-container {
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+}

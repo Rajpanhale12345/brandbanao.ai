@@ -1,0 +1,43 @@
+.carousel {
+  position: relative;
+  --gap: 12px;
+  --slide-h: 160px;
+  --slide-w: 300px;
+  outline: none;
+}
+
+.track {
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;               /* we drive scrollLeft via JS */
+  scroll-behavior: auto;          /* JS controls timing; avoid smoothing here */
+  -ms-overflow-style: none;       /* hide scrollbar (Edge/IE) */
+  scrollbar-width: none;          /* Firefox */
+}
+.track::-webkit-scrollbar { display: none; }
+
+.slide {
+  flex: 0 0 var(--slide-w);
+  height: var(--slide-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(185, 15, 15, 0.7);
+  padding: 8px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.nav.prev { left: 6px; }
+.nav.next { right: 6px; }

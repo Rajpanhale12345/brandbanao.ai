@@ -1,0 +1,105 @@
+/* layout shell */
+*{
+  font-family: poppins;
+}
+.navbar {
+  position: relative;
+  z-index: 1000;
+  background: #20242c;
+  border-bottom: 1px solid #eaeaea;
+  height: 100px;
+  color: yellow;
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: inline-flex; align-items: center; gap: 8px; }
+.logo { height: 200px; width: 200px; display: block; margin-top: -60px;}
+
+/* desktop menu */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top:-3%;
+  font-size: 20px;
+  color: yellow;
+}
+.menu--desktop {
+  display: none; /* hidden by default, shown on >= md */
+  gap: 24px;
+}
+.menu--desktop li { display: inline-block; }
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 4px;
+  color: yellow;
+}
+.menu a.active {
+  text-decoration: underline;
+  color:  #d94f5c;
+}
+
+/* hamburger button */
+.hamburger {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border: none; background: transparent; cursor: pointer;
+  margin-top:-30px ;
+
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px; margin: 3px 0;
+  background: currentColor;
+  transition: transform 200ms ease, opacity 200ms ease;
+  color: white;
+}
+.hamburger.is-open span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+/* overlay for mobile menu */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.38);
+  opacity: 0; pointer-events: none;
+  transition: opacity 200ms ease;
+}
+.overlay.show {
+  opacity: 1; pointer-events: auto;
+}
+
+/* mobile panel (slide from right) */
+.panel {
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(82vw, 340px);
+  background: #725b5b;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+  transform: translateX(100%);
+  transition: transform  ease;
+  padding: 16px;
+  display: flex; flex-direction: column;
+}
+.panel.open { transform: translateX(0); }
+
+.menu--mobile li { margin: 6px 0; }
+.menu--mobile a { display: block; padding: 10px 6px; }
+
+/* responsive */
+@media (min-width: 960px) {
+  .menu--desktop { display: flex; }
+  .hamburger { display: none; }
+  .overlay, .panel { display: none; }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hamburger span, .overlay, .panel { transition: none; }
+}
