@@ -1,54 +1,20 @@
-import React, { useMemo, useState } from "react";
-import busshelter from "../Images/busshelter.jpg"
-import hoarding from "../Images/hoarding.jpg"
-import cinema from "../Images/cinemabranding.webp"
-import radio from "../Images/radio.jpg"
+import React from "react";
+import { Link } from "react-router-dom";
+
+import busshelter from "../Images/busshelter.jpg";
+import hoarding from "../Images/hoarding.jpg";
+import cinema from "../Images/cinemabranding.webp";
+import radio from "../Images/radio.jpg";
 import railway from "../Images/railwaybranding.jpg";
 import cycle from "../Images/cycle.jpg";
 import auto from "../Images/autobranding.jpg";
-import airport from "../Images/airport.jpg"
-import digital from "../Images/digital.jpg"
+import airport from "../Images/airport.jpg";
+import digital from "../Images/digital.jpg";
 import bus from "../Images/busbranding.jpg";
-import app from "../Images/app.png"
+import app from "../Images/app.png";
 import news from "../Images/news.png";
 
-
-const demoItems = [
-  { id: 1,  title: "Hoardings/billboards",  image: hoarding, },
-  { id: 2,  title: "Bus Shelter",  image: busshelter,  },
-  { id: 3,  title: "Cinema Branding",  image: cinema, },
-  { id: 4,  title: "Radio FM Branding",  image: radio, },
-  { id: 5,  title: "Airport Branding", image: airport,  },
-  { id: 6,  title: "Digital Marketing",  image:digital ,  },
-  { id: 7,  title: "Railway Branding",  image: railway,  },
-  { id: 8,  title: "Bus Branding", image:bus  },
-  { id: 10,  title: "TV News Channel Branding", image: news,  style : {objectFit:"contain"}  },
-  { id: 11, title: "Auto Branding ", image: auto,  },
-  { id: 12, title: "Software/App Development ", image: app,  },
-  { id: 13, title: "Cycle Branding ", image: cycle,  },
-]
-
-export default function Services({ items, onServiceClick }) {
-  const data = Array.isArray(items) && items.length === 14 ? items : demoItems;
-
-  const [query, setQuery] = useState("");
-  const [activeCat, setActiveCat] = useState("All");
-
-  const categories = useMemo(() => {
-    const set = new Set(data.map((d) => d.category).filter(Boolean));
-    return ["All", ...Array.from(set)];
-  }, [data]);
-
-  const filtered = useMemo(() => {
-    return data.filter((d) => {
-      const matchesQuery = `${d.title} ${d.description || ""}`
-        .toLowerCase()
-        .includes(query.toLowerCase());
-      const matchesCat = activeCat === "All" || d.category === activeCat;
-      return matchesQuery && matchesCat;
-    });
-  }, [data, query, activeCat]);
-
+export default function Services() {
   return (
     <div style={{ minHeight: "100vh", background: "#fafafa" }}>
       <StyleBlock />
@@ -57,10 +23,6 @@ export default function Services({ items, onServiceClick }) {
       <section style={{ position: "relative" }}>
         <div className="container">
           <h1 className="title" style={{ color: "#d94f5c" }}>Our Services</h1>
-          
-
-          {/* Controls */}
-      
         </div>
       </section>
 
@@ -68,61 +30,162 @@ export default function Services({ items, onServiceClick }) {
       <section>
         <div className="container">
           <div className="grid">
-            {filtered.map((item) => (
-              <article
-                key={item.id}
-                className="card"
-                onClick={() => onServiceClick && onServiceClick(item)}
-                role={onServiceClick ? "button" : "article"}
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && onServiceClick) onServiceClick(item);
-                }}
-              >
-                <div className="imageWrap">
-                  {item.image ? (
-                    <img src={item.image} alt={item.title} className="image" loading="lazy" />
-                  ) : (
-                    <div className="imagePlaceholder">No image</div>
-                  )}
-                  {item.featured && <span className="badge">★ Featured</span>}
-                </div>
+            {/* Each card declared separately so you can give unique links */}
+            <ServiceCard
+              title="Hoardings/Billboards"
+              image={hoarding}
+              path="/hoardings"
+            />
 
-                <div className="cardBody">
-                  <div className="cardHeader">
-                    <h3 className="cardTitle">{item.title}</h3>
-                    {item.category && <span className="pill">{item.category}</span>}
-                  </div>
-                  {item.description && <p className="cardText">{item.description}</p>}
+            <ServiceCard
+              title="Bus Shelter"
+              image={busshelter}
+              path="/bus-shelter"
+            />
 
-                  <div className="cardFooter">
-                    <div className="bar" />
-                    <button className="linkBtn" type="button">
-                      Learn more →
-                    </button>
-                  </div>
-                </div>
-              </article>
-            ))}
+            <ServiceCard
+              title="Cinema Branding"
+              image={cinema}
+              path="/cinema"
+             
+            />
+
+            <ServiceCard
+              title="Radio FM Branding"
+              image={radio}
+              path="/radio"
+            />
+
+            <ServiceCard
+              title="Airport Branding"
+              image={airport}
+              path="/airport"
+            />
+
+            <ServiceCard
+              title="Digital Marketing"
+              image={digital}
+              path="/digital"
+            />
+
+            <ServiceCard
+              title="Railway Branding"
+              image={railway}
+              path="/railway"
+            />
+
+            <ServiceCard
+              title="Bus Branding"
+              image={bus}
+              path="/bus-branding"
+            />
+
+            <ServiceCard
+              title="TV News Channel Branding"
+              image={news}
+              path="/tv-branding"
+              // example of custom img style on a single card:
+              imgStyle={{ objectFit: "contain", background: "#fff" }}
+            />
+
+            <ServiceCard
+              title="Auto Branding"
+              image={auto}
+              path="/auto-branding"
+            />
+
+            <ServiceCard
+              title="Software/App Development"
+              image={app}
+              path="/app-development"
+            />
+
+            <ServiceCard
+              title="Cycle Branding"
+              image={cycle}
+              path="/cycle-branding"
+            />
           </div>
-
-          {filtered.length === 0 && (
-            <div className="empty">
-              <p>No services match your search.</p>
-            </div>
-          )}
         </div>
-      </section>
-
-      {/* CTA band */}
-      <section className="cta">
-      
       </section>
     </div>
   );
 }
 
-/** Inline CSS (scoped via class names) */
+/** Single reusable card that keeps your existing markup & classes */
+function ServiceCard({
+  title,
+  image,
+  path,       // internal Link (e.g., /cinema)
+  url,        // external link (e.g., https://your-site)
+  featured,
+  category,
+  description,
+  imgStyle,
+  onClick,    // optional: if you still want to handle a card-level click
+}) {
+  return (
+    <article
+      className="card"
+      onClick={onClick}
+      role={onClick ? "button" : "article"}
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" && onClick) onClick();
+      }}
+    >
+      <div className="imageWrap">
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="image"
+            loading="lazy"
+            style={imgStyle}
+          />
+        ) : (
+          <div className="imagePlaceholder">No image</div>
+        )}
+        {featured && <span className="badge">★ Featured</span>}
+      </div>
+
+      <div className="cardBody">
+        <div className="cardHeader">
+          <h3 className="cardTitle">{title}</h3>
+          {category && <span className="pill">{category}</span>}
+        </div>
+
+        {description && <p className="cardText">{description}</p>}
+
+        <div className="cardFooter">
+          <div className="bar" />
+          {/* Prefer internal path if provided, else external url, else disabled */}
+          {path ? (
+            <Link to={path} className="linkBtn" onClick={(e) => e.stopPropagation()}>
+              Learn more →
+            </Link>
+          ) : url ? (
+            <a
+              href={url}
+              className="linkBtn"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Learn more →
+            </a>
+          ) : (
+            <button className="linkBtn" type="button" disabled style={{ opacity: 0.5, cursor: "not-allowed" }}>
+              Learn more →
+            </button>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+/** Inline CSS (same styling you had) */
 function StyleBlock() {
   return (
     <style>{`
@@ -152,62 +215,6 @@ function StyleBlock() {
         background-clip: text;
         color: transparent;
       }
-      .subtitle{
-        color: var(--muted);
-        max-width: 720px;
-        margin: 0 0 16px;
-      }
-      .controls{
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 16px 0 8px;
-      }
-      @media (min-width: 640px){
-        .controls{ flex-direction: row; align-items: center; }
-      }
-      .searchWrap{
-        position: relative;
-        width: 100%;
-        max-width: 380px;
-      }
-      .searchIcon{
-        position: absolute;
-        left: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 14px;
-        opacity: 0.55;
-      }
-      .searchInput{
-        width: 100%;
-        padding: 10px 12px 10px 34px;
-        border: 1px solid #e5e7eb;
-        border-radius: 10px;
-        background: #fff;
-        outline: none;
-      }
-      .searchInput:focus{
-        box-shadow: 0 0 0 4px var(--ring);
-        border-color: var(--primary);
-      }
-      .chips{ display: flex; flex-wrap: wrap; gap: 8px; }
-      .chip{
-        padding: 8px 14px;
-        border-radius: 999px;
-        border: 1px solid #e5e7eb;
-        background: #fff;
-        cursor: pointer;
-        transition: box-shadow .2s, transform .06s;
-      }
-      .chip:hover{ box-shadow: 0 0 0 4px var(--ring); }
-      .chip:active{ transform: translateY(1px); }
-      .chipActive{
-        background: var(--accent);
-        color: #000;
-        border-color: var(--accent);
-      }
-
       .grid{
         display: grid;
         grid-template-columns: 1fr;
@@ -279,33 +286,10 @@ function StyleBlock() {
       .linkBtn{
         border: none; background: transparent; color: var(--primary);
         font-weight: 600; cursor: pointer; padding: 6px 8px; border-radius: 8px;
+        text-decoration: none; /* so <Link> looks same */
+        display: inline-block;
       }
       .linkBtn:hover{ background: rgba(217,79,92,0.08); }
-
-      .empty{ text-align: center; color: var(--muted); margin: 40px 0; }
-
-      .cta{
-        position: relative; color: #fff;
-        background: linear-gradient(135deg, var(--primary), var(--primary) 50%, var(--accent));
-        margin-top: 8px;
-      }
-      .ctaInner{ display: flex; gap: 16px; flex-direction: column; padding: 24px; }
-      @media (min-width: 640px){
-        .ctaInner{ flex-direction: row; align-items: center; justify-content: space-between; }
-      }
-      .ctaTitle{ margin: 0 0 4px; }
-      .ctaText{ margin: 0; opacity: 0.95; }
-      .ctaActions{ display: flex; gap: 10px; }
-      .btnPrimary{
-        background: #fff; color: #000;
-        padding: 10px 16px; border-radius: 12px; border: 1px solid #fff; cursor: pointer; font-weight: 600;
-      }
-      .btnPrimary:hover{ opacity: 0.9; }
-      .btnOutline{
-        background: transparent; color: #fff;
-        padding: 10px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.7); cursor: pointer; font-weight: 600;
-      }
-      .btnOutline:hover{ background: rgba(255,255,255,0.1); }
     `}</style>
   );
 }

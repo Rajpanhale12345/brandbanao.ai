@@ -7,18 +7,26 @@ import Contact from "./components/Contact";
 import Careers from "./Pages/Careers";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
+import CinemaBranding from "./Pages/CinemaBranding";
+import RadioBranding from "./Pages/RadioBranding";
+import Hoardings from "./Pages/HoardingBranding";
+import BusShelterBranding from "./Pages/BusShelterBranding";
 
 export default function App() {
   return (
-   
+
     <Router>
- <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>}/>
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-  <Route path="/careers" element={<Careers />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/cinema" element={<CinemaBranding />} />
+        <Route path="/radio" element={<RadioBranding />} />
+        <Route path="/hoardings" element={<Hoardings />} />
+        <Route path="/bus-shelter" element={<BusShelterBranding />} />
       </Routes>
       <Footer />
     </Router>
