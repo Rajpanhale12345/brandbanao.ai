@@ -3,20 +3,19 @@ name: Deploy to cPanel
 on:
   push:
     branches:
-      - master   # deploy when pushing to master branch
+      - master   # change if your default branch is different
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: npm ci
@@ -30,6 +29,6 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: './dist/*'
-          remote_path: '/home/brandbanao/public_html'
+          local_path: dist
+          remote_path: /public_html
           delete_remote_files: true
