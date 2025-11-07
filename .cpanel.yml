@@ -1,16 +1,7 @@
-# .cpanel.yml  — Vite → public_html (user: brandbanao)
 deployment:
   tasks:
-    # keep the working tree clean for cPanel
     - /usr/bin/git reset --hard HEAD
     - /usr/bin/git clean -fdx
-
-    # build (uses the Node/npm available on your account)
-    - npm ci
-    - npm run build
-
-    # deploy built files
-    - /bin/rsync -a --delete ./dist/ /home/brandbanao/public_html/
-
-    # optional: remove build artifacts so next deploy starts clean
-    - /bin/rm -rf ./dist
+    - /home/brandbanao/nodevenv/nodeapp/18.20.8/bin/npm ci
+    - /home/brandbanao/nodevenv/nodeapp/18.20.8/bin/npm run build
+    - /bin/rsync -a --delete ./dist/ /home/brandbanao/public_html/site-v2/
