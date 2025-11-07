@@ -25,7 +25,7 @@ const Work = () => {
 
             <div className='work-container'>
                 <br /><br />
-                <h1 style={{  textAlign: "center", color : "black",   }}>Our Work </h1>
+                <h1 style={{  textAlign: "center", color : "#d94f5c",   }}>Our Work </h1>
 <br />
                 <div className='image1-container' style={{ justifyContent: "center", alignItems: "center", justifyItems: "center" }}>
                     <img src={client1} alt="Client 1" />

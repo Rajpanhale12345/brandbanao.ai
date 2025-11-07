@@ -14,7 +14,7 @@ const RadioBranding = () => {
        text2="2. Catchy Jingles and Tales"
        text3="3. Wherever Your Audience Goes"
        text4="4. On-Air & Interactive Experiences"
-       text5="5. Live RJ Mentions: Natural, friendly suggestions that create listener trust."
+       text5="5. Live RJ fMentions: Natural, friendly suggestions that create listener trust."
        text6="6. Custom Radio Jingles: Notices there are pieces that people whistle, listen to again, or ask about a lot."
        cta="Your brand and BrandBanao.ai are valued by the audience. Good experiences are created at every touchpoint, and over time, deep relationships are built. Care is infused in every interaction, and meaningful moments are created in every interaction."
      />

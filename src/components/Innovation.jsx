@@ -8,7 +8,7 @@ import image from  '../Images/innovation.jpg'
 const Innovation = () => {
   return (
     <div className="innovation-wrapper">
-      <h2 className="innovation-title" style={{color : " black"}}>Innovation</h2>
+      <h2 className="innovation-title" style={{color : " #d94f5c"}}>Innovation</h2>
       <div className="innovation-container">
          <motion.div
           className="innovation-image"
@@ -27,7 +27,7 @@ const Innovation = () => {
           viewport={{ once: true }}
         >
           <p>
-            <span style={{textAlign : "center"}}><span className='brand-name' style={{fontSize : "50px", color : ""}}>B</span>randBanao.Ai</span> is a Mumbai based branding and outdoor advertising agency operating under the umbrella of AHP Resolute Pvt. Ltd. It is powered by PANA Enterprises, an Out-of-Home (OOH) media agency with its owned media (Hoardings/Billboards) with over 16+ years of robust experience.
+            <span style={{textAlign : "center"}}><span className='brand-name' style={{fontSize : "50px", color : ""}}>B</span>randBanao.Ai</span> is a Mumbai based branding and outdoor advertising company operating under the umbrella of AHP Resolute Pvt. Ltd. It is powered by PANA Enterprises, an Out-of-Home (OOH) media agency with its owned media (Hoardings/Billboards) with over 16+ years of robust experience.
           </p>
         </motion.div>
 

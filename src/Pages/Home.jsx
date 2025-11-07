@@ -140,7 +140,8 @@ export default function Home() {
         <div className="hero">
           <h1 className="title-1">THE BEST 360° BRANDING AND ADVERTISING</h1>
           <h2 className="title-2">
-            AGENCY IN <span className="highlight">MAHARASHTRA</span>
+            AGENCY IN 
+          <br /><div className="highlight">MAHARASHTRA</div>
           </h2>
         </div>
 
@@ -162,7 +163,7 @@ export default function Home() {
 
       <BoxCard />
       <br />
-      <h1 className="awards-text" style={{ textAlign: "center", color: "Black" }}>
+      <h1 className="awards-text" style={{ textAlign: "center", color: "#d94f5c" }}>
         Recognised and Awarded by
       </h1>
 

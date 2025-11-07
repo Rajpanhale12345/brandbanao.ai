@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
+
+
 const initialState = {
   officeLocation: "MUMBAI",
   topic: "Business",
@@ -59,15 +61,15 @@ export default function Contact() {
          
           <div className="perks" id="life" aria-label="Perks">
             <div className="perk">
-              <h2>Command - Registered office</h2>
+              <h2> 📍 Command - Registered office</h2>
               <p>502, Buildarch Olive, Dadasaheb Rege Marg, Dadar West, Mumbai</p>
             </div>
             <div className="perk">
-              <h2>Basecamp - Headquarters</h2>
+              <h2>📍 Basecamp - Headquarters</h2>
               <p>B-603, The Hub, Mahatma Nagar, Nashik</p>
             </div>
             <div className="perk">
-              <h2>Launchpad </h2>
+              <h2>📍 Launchpad </h2>
               <p>B-605, The Hub, Mahatma Nagar, Nashik</p>
             </div>
           </div>

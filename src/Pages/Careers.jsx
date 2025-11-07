@@ -30,24 +30,8 @@ const JOBS = [
     tags: ["sales"],
   
   },
-  {
-    id: "pm",
-    title: "Client Co-ordinator",
-    type: "Full-time",
-    location: "Nashik (India)",
-     comp: "01 - 05 years",
-    tags: ["product"],
   
-},
- {
-    id: "pm",
-    title: "Accountant - Senior Level",
-    type: "Full-time",
-    location: "Nashik (India)",
-     comp: " 05+ years",
-    tags: ["product"],
-  
-},
+
   
   
 ];
