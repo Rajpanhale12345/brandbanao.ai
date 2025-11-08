@@ -3,6 +3,7 @@ import "./Home.css";
 import BoxCard from "../components/BoxCard";
 import Carousel from "../components/Carousel";
 import Work from "../components/Work";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const canvasRef = useRef(null);
@@ -134,6 +135,12 @@ export default function Home() {
 
   return (
     <>
+
+    <Helmet>
+      <title>Brand Banao.ai</title>
+    </Helmet>
+
+
       <div id="app" style={{ backgroundColor: "black" }} className="home-main">
         <canvas id="webgl-canvas" ref={canvasRef} />
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import busshelter from "../Images/busshelter.jpg";
 import hoarding from "../Images/hoarding.jpg";
@@ -16,6 +17,15 @@ import news from "../Images/news.png";
 
 export default function Services() {
   return (
+
+    <>
+
+    <Helmet>
+
+      <title>Services | Brand Banao.ai</title>
+      
+    </Helmet>
+
     <div style={{ minHeight: "100vh", background: "#fafafa" }}>
       <StyleBlock />
 
@@ -109,6 +119,8 @@ export default function Services() {
         </div>
       </section>
     </div>
+
+    </>
   );
 }
 
@@ -182,6 +194,7 @@ function ServiceCard({
         </div>
       </div>
     </article>
+    
   );
 }
 

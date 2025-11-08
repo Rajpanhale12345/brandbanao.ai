@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import "../components/Careers.css"
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const JOBS = [
   {
@@ -52,6 +53,17 @@ export default function Careers() {
   }, [active]);
 
   return (
+
+    <>
+
+    <Helmet>
+
+      <title>Careers | Brand Banao.ai</title>
+
+    </Helmet>
+
+
+
     <div className="careers-page">
       <header className="site-header" role="banner">
         {/* <div className="container nav">
@@ -149,5 +161,7 @@ export default function Careers() {
         </div> */}
       </footer>
     </div>
+
+    </>
   );
 }

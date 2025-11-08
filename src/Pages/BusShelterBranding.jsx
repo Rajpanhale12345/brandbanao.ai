@@ -1,9 +1,20 @@
 import React from 'react'
 import Products from '../components/Products'
 import  busshelter from "../Images/busshelter.jpg"
+import { Helmet } from 'react-helmet';
 
 const BusShelterBranding = () => {
   return (
+
+    <>
+
+    <Helmet>
+
+      <title>Bus Shelter | Brand Banao.ai</title>
+
+    </Helmet>
+
+
     <div>
      <Products
        title="Bus Shelter Advertising & Branding"
@@ -25,6 +36,8 @@ Reach out now and place your brand where it matters most!"
         
     
     </div>
+
+    </>
   )
 }
 
