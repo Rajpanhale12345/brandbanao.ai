@@ -121,7 +121,7 @@ export default function Careers() {
                 </div>
                 <p className="desc">{job.desc}</p>
                 <div className="actions">
-                  <Link to="/contact"><button className="apply" onClick={() => alert(`Applied to ${job.title}!`)}>
+                  <Link to="/contact"><button className="apply" onClick={() => alert(`Redirecting to Contact page!`)}>
                     Apply
                   </button></Link>
                 </div>

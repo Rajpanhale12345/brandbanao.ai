@@ -95,7 +95,7 @@ export default function Services() {
             />
 
             <ServiceCard
-              title="Software/App Development"
+              title="Website/App Development"
               image={app}
               path="/app-development"
             />

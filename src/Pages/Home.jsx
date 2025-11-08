@@ -109,12 +109,16 @@ export default function Home() {
       cleanupFns.forEach((fn) => {
         try {
           fn();
-        } catch {}
+        } catch {
+          //ignore
+        }
       });
       const bg = bgRef.current;
       try {
         bg?.renderer?.dispose?.();
-      } catch {}
+      } catch {
+        //ignore
+      }
       bgRef.current = null;
     };
   }, []);
