@@ -87,14 +87,14 @@ export default function Navbar() {
           <img src={logo} alt="Company logo" className="logo" />
         </NavLink>
 
-        {/* desktop menu */}
+   
         <ul className="menu menu--desktop" style={{color : "yellow"}}>
           {links.map((l) => (
             <li key={l.to}>{renderLink(l)}</li>
           ))}
         </ul>
 
-        {/* hamburger */}
+        
         <button
           className={`hamburger ${open ? "is-open" : ""}`}
           aria-label={open ? "Close menu" : "Open menu"}

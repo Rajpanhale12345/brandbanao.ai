@@ -40,8 +40,6 @@ position: absolute;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* Let pointer events reach the canvas (for the 3D background) */
   pointer-events: none;
 }
 
@@ -56,6 +54,7 @@ position: absolute;
   line-height: 100%;
   user-select: none;
   text-align: center;
+  
 }
 
 .title-1 { font-size: 80px; font-weight: 700; }
@@ -81,6 +80,12 @@ position: absolute;
   .highlight { font-size: 56px; }
 }
 
+@media (min-width: 1440px) {
+  .title-1 { font-size: 126px; }
+  .title-2 { font-size: 120px; }
+  .highlight { font-size: 160px; }
+}
+
 .awards-text{
   font-size: 40px;
   color: white;
@@ -91,13 +96,14 @@ position: absolute;
 }
 @media (max-width : 600px) {
   .title-1{
-   font-size: 36px;
+   font-size: 46px;
+   margin-top: -40%;
   }
   .title-2{
-    font-size: 38px;
+    font-size: 46px;
   }
   .highlight{
-    font-size: 46px;
+    font-size:98%;
   }
 }
 
@@ -122,7 +128,7 @@ position: absolute;
   height: 56px;
   border-radius: 9999px;
   background: yellow;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid  #d94f5c;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   color: #fff;

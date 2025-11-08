@@ -139,8 +139,8 @@ export default function Contact() {
                 onChange={set("officeLocation")}
                 className="select"
               >
+                <option value="NASHIK">NASHIK</option>
                 <option value="MUMBAI">MUMBAI</option>
-                <option value="DELHI">DELHI</option>
                 <option value="BENGALURU">BENGALURU</option>
                 <option value="PUNE">PUNE</option>
                 <option value="REMOTE">Other</option>

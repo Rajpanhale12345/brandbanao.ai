@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
+import "../components/Services.css"
 import busshelter from "../Images/busshelter.jpg";
 import hoarding from "../Images/hoarding.jpg";
 import cinema from "../Images/cinemabranding.webp";
@@ -45,6 +45,7 @@ export default function Services() {
               title="Hoardings/Billboards"
               image={hoarding}
               path="/hoardings"
+              style={{ height : "200px"}}
             />
 
             <ServiceCard
@@ -69,31 +70,31 @@ export default function Services() {
             <ServiceCard
               title="Airport Branding"
               image={airport}
-              path="/airport"
+              
             />
 
             <ServiceCard
               title="Digital Marketing"
               image={digital}
-              path="/digital"
+              // path="/digital"
             />
 
             <ServiceCard
               title="Railway Branding"
               image={railway}
-              path="/railway"
+              // path="/railway"
             />
 
             <ServiceCard
               title="Bus Branding"
               image={bus}
-              path="/bus-branding"
+              // path="/bus-branding"
             />
 
             <ServiceCard
               title="TV News Channel Branding"
               image={news}
-              path="/tv-branding"
+              // path="/tv-branding"
               // example of custom img style on a single card:
               imgStyle={{ objectFit: "contain", background: "#fff" }}
             />
@@ -101,19 +102,19 @@ export default function Services() {
             <ServiceCard
               title="Auto Branding"
               image={auto}
-              path="/auto-branding"
+              // path="/auto-branding"
             />
 
             <ServiceCard
               title="Website/App Development"
               image={app}
-              path="/app-development"
+              // path="/app-development"
             />
 
             <ServiceCard
               title="Cycle Branding"
               image={cycle}
-              path="/cycle-branding"
+              // path="/cycle-branding"
             />
           </div>
         </div>

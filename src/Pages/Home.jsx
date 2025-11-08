@@ -149,7 +149,7 @@ export default function Home() {
         <canvas id="webgl-canvas" ref={canvasRef} />
 
         <div className="hero">
-          <h1 className="title-1">THE BEST 360° BRANDING AND ADVERTISING</h1>
+          <p className="title-1">THE BEST 360° BRANDING AND ADVERTISING</p>
           <h2 className="title-2">
             AGENCY IN 
           <br /><div className="highlight">MAHARASHTRA</div>

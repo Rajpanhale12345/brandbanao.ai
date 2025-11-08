@@ -19,41 +19,49 @@ import "./Footer.css";
           <Column
             title="Company"
             links={[
-              ["About", "#"],
-              ["Careers", "#"],
+              ["About", "/about"],
+              ["Careers", "/careers"],
            
-              ["Contact", "#"],
+              ["Contact", "/contact"],
             ]}
           />
           <Column
-            title="Resources"
+            title="Contact"
             links={[
-              ["Blogs", "/blogs"],
+            ["Contact", "/contact"],
              
              
             ]}
           />
            <Column
-            title="Contact"
+            title="Social Links"
             links={[
-             ["Contact", "/contact"]
+             ["Instagram", "https://www.instagram.com/brandbanao.ai/?hl=en"],
+             ["Youtube", "https://www.youtube.com/@BrandBanao-Ai"],
+             ["Facebook", "https://www.facebook.com/brandbanaoai/"],
+             ["Linkedin", "https://in.linkedin.com/company/brand-banao-ai"]
             ]}
           />  
           <div className="sf-cta">
-               <h4 style={{color : "white"}}>Reach us out : </h4>
+               <h4 style={{color : "white"}}>Reach us out  </h4>
             <a className="sf-pill" href="mailto:sales@brandbanao.ai">
               sales@brandbanao.ai
             </a>
+             <br />
+           <a className="sf-pill" href="tel:91 5678 5678">
+             91 5678 5678
+            </a>
          
           </div>
+         
         </div>
 
         {/* Bottom row */}
         <div className="sf-bottom">
           <p  style={{color : "white"}}>© {year} brandbanao.ai. All rights reserved.</p>
           <ul className="sf-legal" role="list">
-            <li><a href="#"  style={{color : "white"}}>Privacy</a></li>
-            <li><a href="#"  style={{color : "white"}}  >Terms</a></li>
+            {/* <li><a href="#"  style={{color : "white"}}>Privacy</a></li>
+            <li><a href="#"  style={{color : "white"}}  >Terms</a></li> */}
            
           </ul>
         </div>

@@ -1,7 +1,5 @@
 /* layout shell */
-*{
-  font-family: poppins;
-}
+
 .navbar {
   position: relative;
   z-index: 1000;
@@ -103,3 +101,21 @@
 @media (prefers-reduced-motion: reduce) {
   .hamburger span, .overlay, .panel { transition: none; }
 }
+@media (min-width : 1440px){
+  .nav-inner img{
+    margin-left: -80%;
+   height: 300px;
+   width: 300px;
+  }
+}
+@media (min-width : 1440px){
+  .navbar{
+   height: 20%;
+  }
+  .menu{
+  font-size: 28px;
+  margin-right: -190px;
+  }
+}
+  
+
