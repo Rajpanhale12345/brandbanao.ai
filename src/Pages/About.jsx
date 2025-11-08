@@ -72,7 +72,7 @@ const About = () => {
 
           </div>
         </div><br /><br /><br />
-        <h1 className='title' style={{ color: "#d94f5c" }}>Co-Founder and CFO</h1><br />
+        <h1 className='title' style={{ color: "#d94f5c" }}>Co-Founder and CFO</h1>
         <div className='images'>
           <div className='image-container'>
             <img src={cofounder} alt="Co-Founder" className='founder' />
