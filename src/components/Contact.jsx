@@ -2,11 +2,21 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { Helmet } from "react-helmet";
 
-
+/**
+ * SheetDB setup
+ * Google Sheet headers (row 1) MUST be exactly:
+ * officeLocation | topic | fullName | phone | email | company | designation | message | created_at
+ *
+ * Endpoint you provided:
+ * https://sheetdb.io/api/v1/svdrh2yfsfqkm
+ *
+ * If your SheetDB API uses auth, put the bearer token below.
+ */
+const SHEETDB_URL = "https://sheetdb.io/api/v1/svdrh2yfsfqkm";
+const SHEETDB_TOKEN = ""; // e.g. "your_long_bearer_token" if enabled; otherwise leave empty
 
 const initialState = {
   officeLocation: "MUMBAI",
-  topic: "Business",
   fullName: "",
   phone: "",
   email: "",
@@ -18,26 +28,24 @@ const initialState = {
 export default function Contact() {
   const [form, setForm] = useState(initialState);
   const [touched, setTouched] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
   const touch = (key) => () => setTouched((t) => ({ ...t, [key]: true }));
 
   const errors = {
     fullName: form.fullName.trim() ? "" : "Full name is required.",
-    phone: /^\+?[0-9 ()-]{7,20}$/.test(form.phone)
-      ? ""
-      : "Enter a valid phone number.",
-    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
-      ? ""
-      : "Enter a valid email.",
+    phone: /^\+?[0-9 ()-]{7,20}$/.test(form.phone) ? "" : "Enter a valid phone number.",
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) ? "" : "Enter a valid email.",
     message: form.message.trim() ? "" : "Please tell us how we can help.",
   };
 
   const hasErrors = Object.values(errors).some(Boolean);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // mark all as touched so errors show if user tries to submit early
+
+    // mark fields as touched to surface errors
     setTouched({
       fullName: true,
       phone: true,
@@ -46,15 +54,56 @@ export default function Contact() {
     });
     if (hasErrors) return;
 
-    // simulate submit
-    console.log("Form submitted:", form);
-    alert("Thanks! We'll be in touch soon.");
-    setForm(initialState);
-    setTouched({});
+    setIsSubmitting(true);
+    try {
+      // SheetDB expects { data: [ { ...row } ] }
+      const payload = {
+        data: [
+          {
+            officeLocation: form.officeLocation,
+            topic: form.topic,
+            fullName: form.fullName,
+            phone: form.phone,
+            email: form.email,
+            company: form.company,
+            designation: form.designation,
+            message: form.message,
+            created_at: new Date().toISOString(),
+          },
+        ],
+      };
+
+      const res = await fetch(SHEETDB_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(SHEETDB_TOKEN ? { Authorization: `Bearer ${SHEETDB_TOKEN}` } : {}),
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`SheetDB error: ${res.status} ${text}`);
+      }
+
+      alert("Thanks! We’ve received your message.");
+      setForm(initialState);
+      setTouched({});
+    } catch (err) {
+      console.error(err);
+      alert("Oops—couldn’t submit right now. Please try again in a bit.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
+    <>
+      <section className="hero" aria-labelledby="hero-title" style={{ marginTop: "-120px" }}>
+        <h1 id="hero-title" style={{ color: "#d94f5c" }}>Contact us</h1>
 
+<<<<<<< HEAD
     <>
 
     <Helmet>
@@ -65,6 +114,8 @@ export default function Contact() {
 
         <h1 id="hero-title" style={{ color: "#d94f5c" }}>Contact us</h1>
 
+=======
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
         <div className="perks" id="life" aria-label="Perks">
           <div className="perk">
             <h2> 📍 Command - Registered office</h2>
@@ -83,13 +134,20 @@ export default function Contact() {
 
       <div className="contact-page">
         <form className="contact" onSubmit={handleSubmit} noValidate>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
           <div className="grid">
             {/* Office Location */}
             <div className="field">
               <label htmlFor="officeLocation">
+<<<<<<< HEAD
                 Office Location<span aria-hidden="true">*</span>
+=======
+                Location<span aria-hidden="true">*</span>
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               </label>
               <select
                 id="officeLocation"
@@ -101,7 +159,11 @@ export default function Contact() {
                 <option value="DELHI">DELHI</option>
                 <option value="BENGALURU">BENGALURU</option>
                 <option value="PUNE">PUNE</option>
+<<<<<<< HEAD
                 <option value="REMOTE">REMOTE</option>
+=======
+                <option value="REMOTE">Other</option>
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               </select>
             </div>
 
@@ -157,6 +219,10 @@ export default function Contact() {
                 onBlur={touch("email")}
                 className={`input ${touched.email && errors.email ? "invalid" : ""}`}
                 placeholder="you@company.com"
+<<<<<<< HEAD
+=======
+                required
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               />
               {touched.email && errors.email && (
                 <p className="error">{errors.email}</p>
@@ -165,7 +231,11 @@ export default function Contact() {
 
             {/* Company */}
             <div className="field">
+<<<<<<< HEAD
               <label htmlFor="company">Company</label>
+=======
+              <label htmlFor="company">Company *</label>
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               <input
                 id="company"
                 type="text"
@@ -189,7 +259,11 @@ export default function Contact() {
 
             {/* Message */}
             <div className="field span-2">
+<<<<<<< HEAD
               <label htmlFor="message">How can we help? </label>
+=======
+              <label htmlFor="message">How can we help?</label>
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               <textarea
                 id="message"
                 rows={5}
@@ -205,8 +279,13 @@ export default function Contact() {
           </div>
 
           <div className="actions">
+<<<<<<< HEAD
             <button type="submit" disabled={hasErrors}>
               Submit
+=======
+            <button type="submit" disabled={hasErrors || isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit"}
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
             </button>
             <button
               type="button"
@@ -215,6 +294,10 @@ export default function Contact() {
                 setForm(initialState);
                 setTouched({});
               }}
+<<<<<<< HEAD
+=======
+              disabled={isSubmitting}
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
             >
               Reset
             </button>
@@ -224,7 +307,10 @@ export default function Contact() {
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.1335766335305!2d73.7520522737645!3d20.002907722223778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x26ef329dafe0db95%3A0x5c70a29058bce542!2sBrand%20Banao.Ai!5e0!3m2!1sen!2sin!4v1758287654363!5m2!1sen!2sin"
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
             height="450"
             style={{ border: 0 }}
             allowFullScreen
