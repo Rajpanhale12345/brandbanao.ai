@@ -100,22 +100,15 @@ export default function Contact() {
 
   return (
     <>
-      <section className="hero" aria-labelledby="hero-title" style={{ marginTop: "-120px" }}>
-        <h1 id="hero-title" style={{ color: "#d94f5c" }}>Contact us</h1>
-
-<<<<<<< HEAD
-    <>
 
     <Helmet>
       <title>Contact | Brand Banao.ai</title>
     </Helmet>
 
+    
       <section className="hero" aria-labelledby="hero-title" style={{ marginTop: "-120px" }}>
-
         <h1 id="hero-title" style={{ color: "#d94f5c" }}>Contact us</h1>
 
-=======
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
         <div className="perks" id="life" aria-label="Perks">
           <div className="perk">
             <h2> 📍 Command - Registered office</h2>
@@ -134,20 +127,11 @@ export default function Contact() {
 
       <div className="contact-page">
         <form className="contact" onSubmit={handleSubmit} noValidate>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
           <div className="grid">
             {/* Office Location */}
             <div className="field">
               <label htmlFor="officeLocation">
-<<<<<<< HEAD
-                Office Location<span aria-hidden="true">*</span>
-=======
                 Location<span aria-hidden="true">*</span>
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               </label>
               <select
                 id="officeLocation"
@@ -159,11 +143,7 @@ export default function Contact() {
                 <option value="DELHI">DELHI</option>
                 <option value="BENGALURU">BENGALURU</option>
                 <option value="PUNE">PUNE</option>
-<<<<<<< HEAD
-                <option value="REMOTE">REMOTE</option>
-=======
                 <option value="REMOTE">Other</option>
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               </select>
             </div>
 
@@ -219,10 +199,7 @@ export default function Contact() {
                 onBlur={touch("email")}
                 className={`input ${touched.email && errors.email ? "invalid" : ""}`}
                 placeholder="you@company.com"
-<<<<<<< HEAD
-=======
                 required
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               />
               {touched.email && errors.email && (
                 <p className="error">{errors.email}</p>
@@ -231,11 +208,7 @@ export default function Contact() {
 
             {/* Company */}
             <div className="field">
-<<<<<<< HEAD
-              <label htmlFor="company">Company</label>
-=======
               <label htmlFor="company">Company *</label>
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               <input
                 id="company"
                 type="text"
@@ -259,11 +232,7 @@ export default function Contact() {
 
             {/* Message */}
             <div className="field span-2">
-<<<<<<< HEAD
-              <label htmlFor="message">How can we help? </label>
-=======
               <label htmlFor="message">How can we help?</label>
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
               <textarea
                 id="message"
                 rows={5}
@@ -279,13 +248,8 @@ export default function Contact() {
           </div>
 
           <div className="actions">
-<<<<<<< HEAD
-            <button type="submit" disabled={hasErrors}>
-              Submit
-=======
             <button type="submit" disabled={hasErrors || isSubmitting}>
               {isSubmitting ? "Submitting..." : "Submit"}
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
             </button>
             <button
               type="button"
@@ -294,10 +258,7 @@ export default function Contact() {
                 setForm(initialState);
                 setTouched({});
               }}
-<<<<<<< HEAD
-=======
               disabled={isSubmitting}
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
             >
               Reset
             </button>
@@ -307,10 +268,6 @@ export default function Contact() {
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.1335766335305!2d73.7520522737645!3d20.002907722223778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x26ef329dafe0db95%3A0x5c70a29058bce542!2sBrand%20Banao.Ai!5e0!3m2!1sen!2sin!4v1758287654363!5m2!1sen!2sin"
-<<<<<<< HEAD
-
-=======
->>>>>>> d1573c04e17b8dfc46a6b4dad92f15cd2566d8ae
             height="450"
             style={{ border: 0 }}
             allowFullScreen
