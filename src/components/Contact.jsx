@@ -16,7 +16,7 @@ const SHEETDB_URL = "https://sheetdb.io/api/v1/svdrh2yfsfqkm";
 const SHEETDB_TOKEN = ""; // e.g. "your_long_bearer_token" if enabled; otherwise leave empty
 
 const initialState = {
-  officeLocation: "MUMBAI",
+  officeLocation: "Nashik",
   fullName: "",
   phone: "",
   email: "",
@@ -141,7 +141,7 @@ export default function Contact() {
               >
                 <option value="NASHIK">NASHIK</option>
                 <option value="MUMBAI">MUMBAI</option>
-                <option value="BENGALURU">BENGALURU</option>
+                <option value="BENGALURU">CHHATRAPATI SAMBHAJI NAGAR</option>
                 <option value="PUNE">PUNE</option>
                 <option value="REMOTE">Other</option>
               </select>
@@ -198,7 +198,7 @@ export default function Contact() {
                 onChange={set("email")}
                 onBlur={touch("email")}
                 className={`input ${touched.email && errors.email ? "invalid" : ""}`}
-                placeholder="you@company.com"
+              
                 required
               />
               {touched.email && errors.email && (
@@ -207,28 +207,10 @@ export default function Contact() {
             </div>
 
             {/* Company */}
-            <div className="field">
-              <label htmlFor="company">Company *</label>
-              <input
-                id="company"
-                type="text"
-                value={form.company}
-                onChange={set("company")}
-                className="input"
-              />
-            </div>
+      
 
             {/* Designation */}
-            <div className="field">
-              <label htmlFor="designation">Designation</label>
-              <input
-                id="designation"
-                type="text"
-                value={form.designation}
-                onChange={set("designation")}
-                className="input"
-              />
-            </div>
+           
 
             {/* Message */}
             <div className="field span-2">
@@ -246,6 +228,7 @@ export default function Contact() {
               )}
             </div>
           </div>
+
 
           <div className="actions">
             <button type="submit" disabled={hasErrors || isSubmitting}>

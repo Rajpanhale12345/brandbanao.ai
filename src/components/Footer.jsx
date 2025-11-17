@@ -44,12 +44,12 @@ import "./Footer.css";
           />  
           <div className="sf-cta">
                <h4 style={{color : "white"}}>Reach us out  </h4>
-            <a className="sf-pill" href="mailto:sales@brandbanao.ai">
-              sales@brandbanao.ai
+            <a className="sf-pill" href="mailto:clientservicing@brandbanao.ai">
+              clientservicing@brandbanao.ai
             </a>
              <br />
-           <a className="sf-pill" href="tel:91 5678 5678">
-             91 5678 5678
+           <a className="sf-pill" href="tel:91 5678 1718 ">
+             91 5678 1718
             </a>
          
           </div>
@@ -69,8 +69,6 @@ import "./Footer.css";
     </footer>
   );
 }
-
-/* ---------- Small building blocks ---------- */
 
 function Column({ title, links }) {
   return (

@@ -140,7 +140,13 @@ font-size: 45px;
   margin-left: 45%;
   }
 .define{
-  font-family: 'Dancing Script', cursive;
+text-align: center;
+}
+.terms{
+text-align: center;
+}
+.text{
+  text-align: center;
 }}
 .define{
   font-family: 'Dancing Script', cursive;

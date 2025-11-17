@@ -12,12 +12,20 @@ import RadioBranding from "./Pages/RadioBranding";
 import Hoardings from "./Pages/HoardingBranding";
 import BusShelterBranding from "./Pages/BusShelterBranding";
 import Helmet from 'react-helmet';
+import DigitalMarketingExecutiveRole from "./JD/DigitalExecutive";
+import DigitalMarketingManager from "./JD/DigitalManager";
+import MediaPlanner from "./JD/MediaPlanner";
+import OperationsHead from "./JD/OperationsHead";
+import SalesMarketingExecutiveFemale from "./JD/SalesFemale";
+import SalesMarketingManager from "./JD/SalesManager";
+import ScrollToTop from "./Pages/ScrollToTop";
 
 export default function App() {
   return (
 
     <Router>
       <Navbar />
+        <ScrollToTop smooth offset={80} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -28,6 +36,12 @@ export default function App() {
         <Route path="/radio" element={<RadioBranding />} />
         <Route path="/hoardings" element={<Hoardings />} />
         <Route path="/bus-shelter" element={<BusShelterBranding />} />
+        <Route path="/Careers/DigitalMarketingExecutive" element={<DigitalMarketingExecutiveRole />} />
+        <Route path="/Careers/DigitalMarketingManager" element={<DigitalMarketingManager />} />
+        <Route path="/Careers/MediaPlanner" element={<MediaPlanner />} />
+        <Route path="/Careers/SalesMarketingExecutiveFemale" element={<SalesMarketingExecutiveFemale/>} />
+        <Route path="/Careers/SalesMarketingManager" element={<SalesMarketingManager />} />
+        <Route path="/Careers/OperationsHead" element={<OperationsHead />} />
       </Routes>
       <Footer />
     </Router>
