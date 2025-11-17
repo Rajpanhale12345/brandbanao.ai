@@ -13,6 +13,34 @@ export default function Home() {
   const belowHeroRef = useRef(null);
   const [showArrow, setShowArrow] = useState(true);
 
+
+
+  // ✅ JSON-LD data (plain JS object, NOT inside <script>)
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "Best 360° Marketing & Branding Agency",
+    "description":
+      "BrandBanao.Ai is full 360° service of marketing agency delivering impactful branding across digital, outdoor, print, TV, & radio. With over 16+ years of experience.",
+    "image": "https://brandbanao.ai/images/finallogo1.png",
+    "url": "https://brandbanao.ai/",
+    "datePublished": "2024-03-05",
+    "dateCreated": "2024-03-05",
+    "dateModified": "2025-05-05",
+    "publisher": {
+      "@type": "Organization",
+      "name": "BrandBanao.ai",
+      "url": "https://brandbanao.ai/",
+      "logo": "https://brandbanao.ai/images/finallogo1.png"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Amit Hemant Patil"
+    }
+  };
+
+
+
   useEffect(() => {
     const cleanupFns = [];
 
@@ -140,9 +168,43 @@ export default function Home() {
   return (
     <>
 
-    <Helmet>
-      <title>Brand Banao.ai</title>
-    </Helmet>
+      <Helmet>
+        <title>Brand Banao.ai</title>
+        <meta name="description" content="BrandBanao.Ai is full 360° service of marketing agency delivering impactful branding across digital, outdoor, print, TV, & radio. With over 16+ years of experience." />
+
+        <meta name="keywords" content="best 360° advertising agency in nashik, best digital marketing agency in nashik, best IT company in nashik, top 360° advertising agency in nashik, top digital marketing agency in nashik" />
+
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <link rel="canonical" href="https://brandbanao.ai/" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="HandheldFriendly" content="true" />
+
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content="Brand Banao.Ai" />
+        <meta property="og:title" content="Brand Banao.Ai 360° Marketing & Branding Agency" />
+        <meta property="og:description" content="A leading 360° digital & outdoor marketing agency in Maharashtra. We deliver strategic advertising & branding with over 16+ years of experience." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://brandbanao.ai/" />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:latitude" content="20.00293012347024" />
+        <meta property="og:longitude" content="73.75462348408139" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="BrandBanao.Ai 360° Marketing & Branding Agency" />
+        <meta name="twitter:description" content="BrandBanao.Ai offers 360° expert digital, outdoor, and print marketing services across Maharashtra." />
+        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+
+        {/* ✅ Correct JSON-LD injection */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+
+
+      </Helmet>
 
 
       <div id="app" style={{ backgroundColor: "black" }} className="home-main">
@@ -151,8 +213,8 @@ export default function Home() {
         <div className="hero">
           <p className="title-1">THE BEST 360° BRANDING AND ADVERTISING</p>
           <h2 className="title-2">
-            AGENCY IN 
-          <br /><div className="highlight">MAHARASHTRA</div>
+            AGENCY IN
+            <br /><div className="highlight">MAHARASHTRA</div>
           </h2>
         </div>
 
