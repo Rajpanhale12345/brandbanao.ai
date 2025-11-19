@@ -42,14 +42,14 @@ export default function MediaPlannerExecutive() {
       <section id="key-resp" className="mpe-panel">
         <h2 className="mpe-h2">Key Responsibilities</h2>
         <ol className="mpe-ol">
-          <li>1. Preparing media plans</li>
-          <li>2. Negotiating with other media owners/ agencies</li>
-          <li>3. Prepare master data for cities/ hoardings/ other medias/ new media owners added in the Master media list every month with details</li>
-          <li>4. Maintaining Current media</li>
-          <li>5. Printing, mounting and monitoring execution work</li>
-          <li>6. Checking of media owners/ agencies bills</li>
-          <li>7. Handling enquries calls and attending new leads through hoardings cover flex</li>
-          <li>8. Clients vendor coordination</li>
+          <li> Preparing media plans</li>
+          <li> Negotiating with other media owners/ agencies</li>
+          <li> Prepare master data for cities/ hoardings/ other medias/ new media owners added in the Master media list every month with details</li>
+          <li> Maintaining Current media</li>
+          <li> Printing, mounting and monitoring execution work</li>
+          <li> Checking of media owners/ agencies bills</li>
+          <li> Handling enquries calls and attending new leads through hoardings cover flex</li>
+          <li> Clients vendor coordination</li>
         </ol>
       </section>
 

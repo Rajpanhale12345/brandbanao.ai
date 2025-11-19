@@ -38,13 +38,13 @@ export default function DigitalMarketingExecutive() {
       <section id="responsibilities" className="dme-panel" aria-labelledby="dme-h2-resp">
         <h2 id="dme-h2-resp" className="dme-h2">Key Responsibilities</h2>
         <ol className="dme-list">
-          <li>1. Draft marketing plans and proposals.</li>
-          <li>2. Oversee calendar, posting, and campaign execution.</li>
-          <li>3. Lead internal marketing operations and reporting.</li>
-          <li>4. Collaborate with creative, performance, and media planning teams.</li>
-          <li>5. Monitor digital performance, footprint, and innovation.</li>
-          <li>6. Handling leads</li>
-          <li>7. Client Meeting Handling, Co-ordination &amp; Communication</li>
+          <li> Draft marketing plans and proposals.</li>
+          <li> Oversee calendar, posting, and campaign execution.</li>
+          <li> Lead internal marketing operations and reporting.</li>
+          <li> Collaborate with creative, performance, and media planning teams.</li>
+          <li> Monitor digital performance, footprint, and innovation.</li>
+          <li> Handling leads</li>
+          <li> Client Meeting Handling, Co-ordination &amp; Communication</li>
         </ol>
       </section>
 
