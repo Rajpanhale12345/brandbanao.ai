@@ -1,7 +1,289 @@
-.products-image{
-    height: 200px;
-    width: 200px;
+/* ================================
+   PRODUCTS (GENERIC SERVICES)
+   ================================ */
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 16px;
 }
-.products-container{
-    padding: 40px;
+
+/* HERO SECTION */
+
+.products-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 48px;
 }
+
+.products-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #d94f5c;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.products-text p {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+    color: #444;
+}
+
+.products-image {
+    display: flex;
+    justify-content: center;
+}
+
+.products-image img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 32px;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* TEXT / BULLETS */
+
+.products-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.products-heading {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.products-item p {
+    margin: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.products-item h3 {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* BUTTON */
+
+.button {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.button button {
+    border: none;
+    padding: 12px 32px;
+    border-radius: 999px;
+    background-color: #d94f5c;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.button button:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* RESPONSIVE: desktop layout side-by-side like a typical services page */
+
+@media (min-width: 768px) {
+    .products-hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .products-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .products-text h1,
+    .products-text p,
+    .products-item p,
+    .products-item h3 {
+        text-align: left;
+    }
+
+    .products-image {
+        flex: 0 0 360px;
+    }
+}
+
+/* ================================
+   HOARDING PAGE (FULL-WIDTH IMAGE + CONTENT)
+   ================================ */
+
+.hoarding-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title above image */
+.hoarding-page .hoarding-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #d94f5c;
+    margin-bottom: 20px;
+}
+
+/* Full width image wrapper */
+.hoarding-page .hoarding-image-wrap {
+    width: 100%;
+}
+
+/* Full width image with reduced height */
+.hoarding-page .hoarding-image {
+    width: 100%;
+    height: 480px;          /* adjust this for more/less height */
+    object-fit: fill;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hoarding-page .hoarding-image:hover {
+    opacity: 0.9;
+}
+
+/* Content Section under the image */
+.hoarding-page .hoarding-content {
+    margin-top: 30px;
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.hoarding-page .hoarding-content ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.hoarding-page .hoarding-content li {
+    margin-bottom: 8px;
+}
+
+/* CTA text */
+.hoarding-page .cta-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Button under CTA */
+.hoarding-page .hoarding-btn-wrap {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.hoarding-page .hoarding-btn {
+    background-color: #d94f5c;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.hoarding-page .hoarding-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   GALLERY / LIGHTBOX (ON IMAGE CLICK)
+   ================================ */
+
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.gallery-box {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.gallery-img {
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Navigation buttons */
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: yellow;
+    border: none;
+    font-size: 40px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.gallery-prev {
+    left: -60px;
+}
+
+.gallery-next {
+    right: -60px;
+}
+
+/* Close button */
+
+.gallery-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: REd;
+    border: none;
+    font-size: 28px;
+    padding: 5px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .hoarding-page .hoarding-image {
+    height: 240px;
+    object-fit: cover;
+  }
+}
+
