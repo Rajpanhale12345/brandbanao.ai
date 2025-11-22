@@ -8,7 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "generate:feeds": "node scripts/generate-feeds.js",
+    "generate:rss": "node scripts/generate-rss-txt.js",
+    "build:with-rss": "npm run generate:rss && npm run build",
+    "build:full": "npm run generate-sitemap && npm run generate:feeds && npm run generate:rss && npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",

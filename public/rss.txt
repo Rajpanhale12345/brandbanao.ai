@@ -1,0 +1,12 @@
+# rss.txt
+# Auto-generated list of RSS/Atom/JSON feeds for this site.
+
+https://brandbanao.ai/feed.xml
+type: rss
+title: Main Site Feed
+description: All new updates from the site.
+
+https://brandbanao.ai/careers/feed.xml
+type: rss
+title: Careers Feed
+description: Job openings and career updates.
