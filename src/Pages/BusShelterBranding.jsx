@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import busshelter from "../Images/busshelter.jpg";
+import "./busShelter.css"
 
 const BusShelterBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+
 
   // You can add more bus shelter images here later if you have them
   const images = [busshelter];
@@ -97,6 +100,40 @@ const BusShelterBranding = () => {
       },
     ],
   };
+
+  const faqItems = [
+    {
+      question: "What is bus shelter advertising and how does it work?",
+      answer:
+        "Bus shelter advertising refers to a form of advertising where messages of your brand are displayed on side panels, back panels, or as full wraps at busy junctions, markets, residential zones, school and college routes, and high-traffic roads. Thousands of people view these shelters daily while waiting for buses, walking, or stopping at signals; this creates strong visibility and recall for your brand.",
+    },
+    {
+      question: "Which locations and cities do you cover for bus shelter advertising?",
+      answer:
+        "Brand Banao.AI operates bus shelter media services in Maharashtra and is significantly present in Konkan, North Maharashtra, West Maharashtra, Marathwada, and Vidarbha. We take care of main and tier-2/tier-3 cities, along with the most frequented corridors that encircle residential areas, business areas, dense school/college areas, hospital areas, and market roads that link to your brand's geography and audience.",
+    },
+    {
+      question: "What types of bus shelter formats do you offer?",
+      answer:
+        "We provide backlit bus shelters, which are very eye-catching at night compared to regular non-lit bus shelters, which provide more economical and economy-long-term campaigns. Digital bus shelters provide new opportunities to changing messaging, and full panel/side panel branding would cover the most reach per dollar spend to your audience daily. We will work with you to find the right mix of available options based on your brand objectives and the budget available. ",
+    },
+    {
+      question: "Do you provide creative design and printing support for bus shelter ads?",
+      answer:
+        "Yes, of course, our in-house creative team can develop the concept, adapt the layouts for the various shelter sizes, and provide print-ready artwork. We also handle high-quality printing on durable outdoor materials so that your creatives stay sharp, visible, and weather-resistant throughout the campaign.",
+    },
+    {
+      question: "How do you monitor and report bus shelter campaigns?",
+      answer:
+        "We offer total execution and tracking: install checks, lighting and visibility for the backlit and digital shelters, photo documentation (daily/weekly), maintenance visits, and proof-of-performance report. Our reporting will ensure your brand is clean, visible, and running as intended.",
+    },
+    {
+      question: "Why should I choose Brand Banao.AI for bus shelter advertising?",
+      answer:
+        "Brand Banao.AI brings together 15+ years of OOH experience, a large owned-media bus shelter network across Maharashtra, AI-backed planning tools, formidable creative capabilities, and transparent reporting. Because we own the media, we assure better pricing, faster turnaround, and tighter control on quality and performance.",
+    },
+  ];
+
 
   return (
     <>
@@ -198,129 +235,310 @@ const BusShelterBranding = () => {
         )}
 
         <div className="hoarding-content">
-          <h2>Why Bus Shelter Advertising Matters</h2>
+          <h2>Bus Shelter Advertising Services - Brand Banao.AI</h2>
           <p>
-            In a world full of scrolling screens and skipped ads, bus shelters
-            stand where it truly matters — on the street, at eye level, where
-            people wait, pause, and actually look around.
+            Bus Shelter Advertising is still one of the most powerful and great
+            value forms of outdoor advertising available today, especially for
+            brands that require visibility, recall factor, and continuous exposure.
+            Brand Banao.AI offers premium bus shelter advertising options in
+            Maharashtra and beyond, helping brands engage directly with commuters,
+            visiting pedestrians, and local audiences likely to be in busy locations.
           </p>
           <p>
-            Bus shelter advertising lets your brand live inside people’s daily
-            routine – on their way to work, college, hospitals, malls, and home.
-          </p>
-          <p>
-            At BrandBanao.ai, we turn bus shelters into powerful brand touchpoints
-            that stay visible, memorable, and hyperlocal.
+            As an expert in OOH media with 15+ years of experience coupled with our
+            own strong owned-media network, we assure you that your brand will
+            be noticed where it is most important.
           </p>
 
-          <h2>Why Bus Shelter Advertising Works</h2>
+          <h2>What is Bus Shelter Advertising?</h2>
+          <p>
+            Bus Shelter Advertising refers to marketing displays placed on the
+            sides, back panels, or complete wraps of bus shelters. These
+            displays are placed in high-visibility areas such as:
+          </p>
           <ul>
+            <li>Busy traffic junctions</li>
+            <li>Commercial streets</li>
+            <li>Residential zones</li>
+            <li>Business districts</li>
+            <li>College and school routes</li>
+            <li>Markets and shopping hubs</li>
+          </ul>
+          <p>
+            With thousands of people passing by these shelters each day, they are
+            ideal for brand awareness, regional reach, and location-based marketing.
+            <br />
+            Bus shelters give continuous, all day and all-night visibility even
+            when people are not travelling. Whether a person waits for the bus,
+            walks across the road, or stops at a signal, they naturally look at
+            shelter ads.
+          </p>
+
+          <h2>Why Bus Shelter Advertising Works So Well</h2>
+          <ol>
             <li>
-              <strong>Wide Reach at Lower Cost:</strong> Reach thousands every
-              day without premium billboard pricing.
+              <strong>Long Dwell Time</strong>
+              <p>
+                Bus shelters are where people wait so they have more time to examine
+                your ad, which increases recall, learning from the message, and
+                engagement based on action.
+              </p>
             </li>
             <li>
-              <strong>Visible at Street Level:</strong> Your brand is right where
-              people stand, wait, and observe.
+              <strong>Hyperlocal Targeting</strong>
+              <p>
+                Bus shelters provide the opportunity to target audiences in a
+                specific locality, zone, or high movement corridor, making
+                it an ideal advertising channel for:
+              </p>
+              <ul>
+                <li>Retail outlets</li>
+                <li>Hospitals</li>
+                <li>Schools &amp; colleges</li>
+                <li>Real estate projects</li>
+                <li>Hotels &amp; resorts</li>
+                <li>Gyms &amp; fitness</li>
+                <li>Political campaigns</li>
+              </ul>
             </li>
             <li>
-              <strong>Repeated Daily Exposure:</strong> Daily commuters see your
-              message again and again, building recall.
+              <strong>Day and Night Visibility</strong>
+              <p>
+                We have digital, backlit, and non-lit shelters for all
+                visibility issues (day and night).
+              </p>
             </li>
             <li>
-              <strong>Always On, Day and Night:</strong> 24x7 visibility with
-              options for lighting and backlit designs.
+              <strong>Economical OOH Media</strong>
+              <p>
+                Bus shelters provide a greater return rate on investment compared
+                to more expensive OOH assets such as billboards or a large format
+                OOH display, given their lower cost factor and repeated impressions
+                relative to the same location every day.
+              </p>
             </li>
             <li>
-              <strong>Easy to Remember:</strong> Clean, bold creatives placed at
-              eye level are hard to ignore.
+              <strong>Great for Short-term and Long-term Campaigns</strong>
+              <p>
+                Brands may also choose to use flexible durations based upon
+                objectives, including a 15-day campaign, or year-long visibility.
+              </p>
             </li>
-            <li>
-              <strong>Works for Every Sector:</strong> Real Estate, Healthcare,
-              Education, Fashion, Hotels, Jewellery, Restaurants, and more.
+          </ol>
+
+          <h2>Bus Shelter Advertising by Brand Banao.AI</h2>
+          <p>
+            As one of the most significant OOH media owners in Maharashtra,
+            Brand Banao.AI has a full bus shelter advertising solution with its own:
+          </p>
+          <ul>
+            <li>Premium Media Locations</li>
+            <li>Dedicated Monitoring</li>
+            <li>Creative Excellence</li>
+            <li>Pan-Maharashtra Placeability</li>
+            <li>AI-Optimized Campaign Planning</li>
+          </ul>
+          <p>
+            We control Digital, Backlit, and Non-Lit shelters in cities and towns
+            that will provide your advertisement with consistent visibility in
+            order to maximize brand recall.
+          </p>
+
+          <h2>The Bus Shelter Advertising Services will include:</h2>
+
+          <h3>1. Planning and Geographic Strategy</h3>
+          <p>
+            We will examine the locations and shelters with the best value for
+            impressions by analyzing the following factors:
+          </p>
+          <ul>
+            <li>Traffic patterns</li>
+            <li>Audience demographics</li>
+            <li>Commercial hubs</li>
+            <li>Commuting routes</li>
+            <li>Alignment with brand category</li>
+          </ul>
+          <p>
+            We will ensure your brand is in the right place, at the right
+            time, in front of the right audience!
+          </p>
+
+          <h3>2. Creative Development and Execution</h3>
+          <p>
+            The best designs create the best outcomes! Our highly trained and
+            leveraged in-house creative team will create high-contrast,
+            high-quality designs that offer visual snap for outdoor viewing.
+            This involves:
+          </p>
+          <ul>
+            <li>Concept development</li>
+            <li>Creative adapted for multiple sizes of shelter</li>
+            <li>Print ready files</li>
+            <li>Prints on durable materials with high-quality printing</li>
+          </ul>
+
+          <h3>3. End-to-End Media Execution.</h3>
+          <p>Once approved, we handle:</p>
+          <ul>
+            <li>Material printing</li>
+            <li>Installation display media</li>
+            <li>Quality checks</li>
+            <li>Lighting and visibility checks</li>
+            <li>Final photo documentation</li>
+          </ul>
+          <p>Every step is treated with due care and professionalism.</p>
+
+          <h3>4. Campaign Monitoring and Documentation</h3>
+          <p>We provide:</p>
+          <ul>
+            <li>On-location adult review</li>
+            <li>Daily/weekly photo documentation</li>
+            <li>Maintenance checks</li>
+            <li>Proofs of performance reports</li>
+          </ul>
+          <p>
+            All of this assists in ensuring your brand is clean, vibrant
+            and 100% visible throughout the campaign.
+          </p>
+
+          <h2>Types of Bus Shelter Advertising We Offer</h2>
+          <ul>
+
+            <li><strong>Backlit Bus Shelters:</strong>
+              <ol>Great night visibility.</ol>
+              <ol>Bright, pop, high impact look.</ol>
+            </li>
+
+            <li><strong>Non-lit Bus Shelters:</strong>
+              <ol>Great for a budget-friendly campaign.</ol>
+              <ol>Provides long-term visibility at a lesser cost.</ol>
+            </li>
+
+
+            <li><strong>Digital Bus Shelters:</strong>
+              <ol>High-impact modern displays.</ol>
+              <ol>Excellent for changing dynamic content or multiple creatives.</ol>
+            </li>
+
+
+            <li><strong>Full Panel / Side Panel Branding:</strong>
+              <ol>Tried and true.</ol>
+              <ol>Delivers repeated impressions daily.</ol>
             </li>
           </ul>
 
-          <h2>Our Bus Shelter Branding Services</h2>
-          <ul>
-            <li>Creative bus shelter ad design</li>
-            <li>High-quality printing &amp; fabrication</li>
-            <li>Street-level location planning</li>
-            <li>Installation and maintenance</li>
-            <li>Lit and backlit shelters for night visibility</li>
-            <li>Hyperlocal, ward-wise, and route-based planning</li>
-          </ul>
+          <h2>Industries that Benefit the Most From Bus Shelter Advertising</h2>
           <p>
-            Every shelter we brand is designed to feel like your brand’s
-            mini-billboard inside the city.
-          </p>
-
-          <h2>Strategic Locations Across Maharashtra</h2>
-          <p>
-            We help you select the right bus shelters based on traffic density,
-            audience profile, and brand objective.
+            Bus shelters work for virtually every type of business, particularly
+            businesses that are dependent on engaging a local audience. The
+            following are some of the leading industries:
           </p>
           <ul>
-            <li>Prime bus stops in Nashik and Mumbai</li>
-            <li>High-traffic routes in tier 2 and tier 3 cities</li>
-            <li>Near schools, colleges, hospitals, malls, and markets</li>
+            <li>Hospitals &amp; Clinics</li>
+            <li>Educational Institutions</li>
+            <li>Developments in Real Estate</li>
+            <li>FMCG &amp; Retail Brands</li>
+            <li>Food &amp; Beverage locations</li>
+            <li>E-commerce</li>
+            <li>Automotive Brands</li>
+            <li>Politicians and Corporators</li>
+            <li>Government Campaigns</li>
+            <li>Financial &amp; Banking Services</li>
           </ul>
           <p>
-            You don’t need to be everywhere — you need to be exactly where your
-            audience stands every day.
+            We are here to ensure that your message reaches the right audience
+            through our powerful hyperlocal network.
           </p>
 
-          <h2>Perfect for Local and PAN India Campaigns</h2>
-          <p>
-            Whether you are a local brand targeting one city or a national brand
-            planning regional bursts, bus shelter campaigns can scale easily
-            across Maharashtra and beyond.
-          </p>
-          <p>
-            With BrandBanao.ai, you get a single team that plans, designs, executes,
-            and manages bus shelter advertising end-to-end.
-          </p>
+          <h2>Why Choose Brand Banao.AI for Bus Shelter Advertising?</h2>
+          <ol>
 
-          <h2>Industries That Love Bus Shelter Advertising</h2>
-          <ul>
-            <li>Real Estate project launches &amp; site branding</li>
-            <li>Hospitals, clinics, and diagnostic centres</li>
-            <li>Schools, colleges, and coaching institutes</li>
-            <li>Fashion, jewellery &amp; lifestyle brands</li>
-            <li>Hotels, restaurants, cafés &amp; QSR chains</li>
-          </ul>
-          <p>
-            If your audience moves through the city, bus shelter advertising can
-            move your brand into their memory.
-          </p>
+            <li>
+              <strong>Maharashtra&apos;s Largest OOH Network</strong>
+              <p>
+                With planetary coverage across Konkan, North Maharashtra,
+                West Maharashtra, Marathwada, and Vidarbha, we provide
+                exceptional geographical coverage for your brand.
+              </p>
+            </li>
 
-          <h2>Why BrandBanao.ai for Bus Shelter Ads</h2>
-          <p>
-            We don’t just paste flex on a frame — we build a campaign that aligns
-            with your route plans, audience pockets, and brand tone.
-          </p>
-          <ul>
-            <li>Data-led location planning</li>
-            <li>Local language creatives (Marathi, Hindi, Hinglish)</li>
-            <li>Transparent costing and execution</li>
-            <li>On-ground photo proof and reporting</li>
-          </ul>
-          <p>
-            From the first layout to the final installed shelter, we keep your
-            brand presence consistent and impactful.
-          </p>
+            <li>
+              <strong>Concerning 15+ Years of experience in OOH advertising</strong>
+              <p>
+                PANA Enterprises provides 15 years of experience in outdoor
+                advertising to each and every campaign
+              </p>
+            </li>
 
-          <h2>Start Your Bus Shelter Campaign</h2>
-          <p>
-            Bus shelters are where real people pause, think, and decide. It’s the
-            perfect place for your brand to quietly but consistently show up.
-          </p>
-          <p>
-            Start your Bus Shelter Ad campaign today with Brand Banao.Ai. Place
-            your brand where it matters the most — right on the street, in front
-            of your customer.
-          </p>
+            <li>
+              <strong>The value of OOH homeless and target </strong>
+              <p>
+                Real media, Media we own. <br />
+                Our own bus shelters - meaning:
+              </p>
+              <ul>
+                <li>IMMEDIATE AVAILABILITY.</li>
+                <li>BETTER PRICING.</li>
+                <li>QUICKER TURNAROUND TIMES.</li>
+                <li>Ongoing reporting.</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>360° Campaign Support</strong>
+              <p>We handle everything in-house from planning to execution.</p>
+            </li>
+
+            <li>
+              <strong>High ROI and Transparency of Reporting</strong>
+              <p>
+                We just focus on performance-based outdoor campaigns backed by:
+              </p>
+              <ul>
+                <li>Photo reports</li>
+                <li>Monitoring updates</li>
+                <li>Planning tools powered by AI</li>
+              </ul>
+            </li>
+
+          </ol>
         </div>
+
+        {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
+        <div className="hoarding-content faq-section">
+          <h2>Bus Shelter Advertising FAQs</h2>
+          <div className="faq-list">
+            {faqItems.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
+
+              return (
+                <div
+                  className={`faq-item ${isActive ? "active" : ""}`}
+                  key={index}
+                >
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() =>
+                      setActiveFaqIndex(isActive ? null : index)
+                    }
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
+
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+
 
         <div className="hoarding-content">
           {/* Reserved for any additional blocks, forms, CTAs, etc. */}
