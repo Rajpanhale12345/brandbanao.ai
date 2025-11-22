@@ -105,7 +105,7 @@ const BusShelterBranding = () => {
     {
       question: "What is bus shelter advertising and how does it work?",
       answer:
-        "Bus shelter advertising refers to a form of advertising where messages of your brand are displayed on side panels, back panels, or as full wraps at busy junctions, markets, residential zones, school and college routes, and high-traffic roads. Thousands of people view these shelters daily while waiting for buses, walking, or stopping at signals; this creates strong visibility and recall for your brand.",
+        "Bus shelter advertising refers to a form of advertising where messages of your brand are displayed on Front panels, side panels, back drop panels, or as full wraps at busy junctions, markets, residential zones, school and college routes, and high-traffic roads. Thousands of people view these shelters daily while waiting for buses, walking, or stopping at signals; this creates strong visibility and recall for your brand.",
     },
     {
       question: "Which locations and cities do you cover for bus shelter advertising?",
@@ -115,7 +115,7 @@ const BusShelterBranding = () => {
     {
       question: "What types of bus shelter formats do you offer?",
       answer:
-        "We provide backlit bus shelters, which are very eye-catching at night compared to regular non-lit bus shelters, which provide more economical and economy-long-term campaigns. Digital bus shelters provide new opportunities to changing messaging, and full panel/side panel branding would cover the most reach per dollar spend to your audience daily. We will work with you to find the right mix of available options based on your brand objectives and the budget available. ",
+        "We provide non-lit and backlit bus shelters, which are very eye-catching at night compared to regular non-lit bus shelters, which provide more economical and economy-long-term campaigns. Digital bus shelters provide new opportunities to changing messaging, and full panel/side panel branding would cover the most reach per dollar spend to your audience daily. We will work with you to find the right mix of available options based on your brand objectives and the budget available. ",
     },
     {
       question: "Do you provide creative design and printing support for bus shelter ads?",
@@ -125,12 +125,12 @@ const BusShelterBranding = () => {
     {
       question: "How do you monitor and report bus shelter campaigns?",
       answer:
-        "We offer total execution and tracking: install checks, lighting and visibility for the backlit and digital shelters, photo documentation (daily/weekly), maintenance visits, and proof-of-performance report. Our reporting will ensure your brand is clean, visible, and running as intended.",
+        "We offer total execution and tracking: install checks, lighting and visibility for the backlit and digital shelters, photo documentation, maintenance visits, and proof-of-performance report. Our reporting will ensure your brand is clean, visible, and running as intended.",
     },
     {
       question: "Why should I choose Brand Banao.AI for bus shelter advertising?",
       answer:
-        "Brand Banao.AI brings together 15+ years of OOH experience, a large owned-media bus shelter network across Maharashtra, AI-backed planning tools, formidable creative capabilities, and transparent reporting. Because we own the media, we assure better pricing, faster turnaround, and tighter control on quality and performance.",
+        "Brand Banao.AI brings together 15+ years of OOH experience, a large owned-media bus shelter network across Maharashtra, formidable creative capabilities, and transparent reporting. Because we own the media, we assure better pricing, faster turnaround, and tighter control on quality and performance.",
     },
   ];
 
@@ -392,7 +392,7 @@ const BusShelterBranding = () => {
           <p>We provide:</p>
           <ul>
             <li>On-location adult review</li>
-            <li>Daily/weekly photo documentation</li>
+            <li>Photo documentation</li>
             <li>Maintenance checks</li>
             <li>Proofs of performance reports</li>
           </ul>
@@ -421,7 +421,7 @@ const BusShelterBranding = () => {
             </li>
 
 
-            <li><strong>Full Panel / Side Panel Branding:</strong>
+            <li><strong>Front Panel / Full Panel Branding:</strong>
               <ol>Tried and true.</ol>
               <ol>Delivers repeated impressions daily.</ol>
             </li>
