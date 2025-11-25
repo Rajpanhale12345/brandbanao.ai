@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import "./busShelter.css"
 
 import hoarding from "../Images/hoarding.jpg";
 import hoarding2 from "../Images/award2.png";
@@ -8,7 +9,8 @@ import hoarding4 from "../Images/busbranding.jpg";
 
 const HoardingBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);;
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const images = [hoarding, hoarding2, hoarding3, hoarding4];
 
@@ -97,6 +99,34 @@ const HoardingBranding = () => {
       },
     ],
   };
+
+  const faqItems = [
+    {
+      question: "What makes BrandBanao.ai the best hoarding advertising company in Nashik?",
+      answer:
+        "Brand Banao.ai blends a blend of creative storytelling, exceptional production quality, strategic placement of media, and 24/7 continuous visibility in outdoor locations by designing each static billboard or medium as a city landmark for memory and measurable brand impact.",
+    },
+    {
+      question: "What hoarding advertising services does BrandBanao.ai offer?",
+      answer:
+        "Creative billboard design, top-notch printing, digital billboard advertising, outdoor installation, and maintenance services, as well as environmentally friendly options. Temporary construction hoarding and custom design templates are also available.",
+    },
+    {
+      question: "How does BrandBanao.ai choose the best hoarding locations?",
+      answer:
+        "Locations are selected according to what route/location has traffic, sight angles for visibility, demographic connection of the area, and overall goal for the brand. Therefore, the best locations are offered throughout Nashik, as well as in heavily trafficked areas of Maharashtra, such as around malls and markets, and near the major corridors of real estate.",
+    },
+    {
+      question: "Which industries do you serve with hoarding advertising?",
+      answer:
+        "Industries serviced include commercial property, retail, health care, education, hospitality, as well as corporate entities. Each sector gets an individualized and customized creative solution.",
+    },
+    {
+      question: "How can I book a hoarding with BrandBanao.ai?",
+      answer:
+        "The team can be reached via phone, WhatsApp, or via their web page to find out how to begin developing an outdoor advertising campaign with Brand Banao.ai. Please provide the team with the goals of your brand placement, where you would like the locations to be, what your budget is, and when you would like to begin your campaign.",
+    },
+  ];
 
   return (
     <>
@@ -302,6 +332,41 @@ const HoardingBranding = () => {
             the screen.
           </p>
           <p>Let's create your brand, the city's heritage.</p>
+        </div>
+
+
+        {/* FAQ SECTION – ACCORDION STYLE */}
+        <div className="hoarding-content faq-section">
+          <h2>Hoarding Advertising FAQs</h2>
+          <div className="faq-list">
+            {faqItems.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
+
+              return (
+                <div
+                  className={`faq-item ${isActive ? "active" : ""}`}
+                  key={index}
+                >
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() =>
+                      setActiveFaqIndex(isActive ? null : index)
+                    }
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
+
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="hoarding-content">
