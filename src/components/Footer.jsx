@@ -19,8 +19,7 @@ import "./Footer.css";
           <Column
             title="Company"
             links={[
-              ["About", "/about"],
-              ["Careers", "/careers"],           
+              ["About", "/about"],          
               ["Contact", "/contact"],
             ]}
           />
