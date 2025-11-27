@@ -20,8 +20,7 @@ import "./Footer.css";
             title="Company"
             links={[
               ["About", "/about"],
-              ["Careers", "/careers"],
-           
+              ["Careers", "/careers"],           
               ["Contact", "/contact"],
             ]}
           />
