@@ -23,7 +23,7 @@ const RadioFMBranding = () => {
     headline: "Best Bus Shelter in Maharashtra",
     name: "Bus Shelter Advertising & Branding - Brand Banao.AI",
     description:
-      "Make your brand unforgettable with Bus Shelter Ads by  . Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more.",
+      "Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more.",
     image: "https://brandbanao.ai/images/finallogo1.png",
     url: "https://brandbanao.ai/bus%20shelter.html",
     publisher: {
@@ -145,7 +145,7 @@ const RadioFMBranding = () => {
         />
         <meta
           name="keywords"
-          content="best bus shelter advertising mumbai, top bus shelter branding in mumbai, best bus shelter branding in nashik, top bus shelter advertising in nashik, best bus stop advertising in Nashik, bus shelter advertising in mumbai, bus shelter branding nashik, bus shelter advertising cost, bus shelter advertising price, bus stop cover, shelter bus, bus shelter advertising company near me, bus shelter branding agency near me, bus shelter branding company in nashik, best bus shelter advertising agency in nashik, best digital bus shelter advertising agency in nashik, top digital bus shelter branding agency in nashik, best outdoor bus shelter branding in nashik, best outdoor bus shelter advertising agency in nashik, outdoor advertising India, OOH advertising, affordable advertising, street level ads, local targeting ads, brand visibility, real estate advertising, healthcare ads, education advertising, fashion advertising, jewellery advertising, hotel advertising, restaurant advertising, BrandBanao.Ai"
+          content="best bus shelter advertising mumbai, top bus shelter branding in mumbai, best bus shelter branding in nashik, top bus shelter advertising in nashik, best bus stop advertising in Nashik, bus shelter advertising in mumbai, bus shelter branding nashik, bus shelter advertising cost, bus shelter advertising price, bus stop cover, shelter bus, bus shelter advertising company near me, bus shelter branding agency near me, bus shelter branding company in nashik, best bus shelter advertising agency in nashik, best digital bus shelter advertising agency in nashik, top digital bus shelter branding agency in nashik, best outdoor bus shelter branding in nashik, best outdoor bus shelter advertising agency in nashik, outdoor advertising India, OOH advertising, affordable advertising, street level ads, local targeting ads, brand visibility, real estate advertising, healthcare ads, education advertising, fashion advertising, jewellery advertising, hotel advertising, restaurant advertising, Brand Banao.AI"
         />
         <meta
           name="robots"
@@ -160,11 +160,11 @@ const RadioFMBranding = () => {
 
         {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content="BrandBanao.Ai" />
+        <meta property="og:site_name" content="Brand Banao.AI" />
         <meta property="og:title" content="Bus Shelter" />
         <meta
           property="og:description"
-          content="Make your brand unforgettable with Bus Shelter Ads by BrandBanao.Ai. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."
+          content="Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/bus-shelter" />
@@ -183,7 +183,7 @@ const RadioFMBranding = () => {
         <meta name="twitter:title" content="Bus Shelter" />
         <meta
           name="twitter:description"
-          content="Make your brand unforgettable with Bus Shelter Ads by BrandBanao.Ai. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."
+          content="Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."
         />
         <meta
           name="twitter:image"
