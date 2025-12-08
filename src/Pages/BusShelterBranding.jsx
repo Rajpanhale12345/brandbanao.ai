@@ -392,12 +392,6 @@ const BusShelterBranding = () => {
               <ol>High-impact modern displays.</ol>
               <ol>Excellent for changing dynamic content or multiple creatives.</ol>
             </li>
-
-
-            <li><strong>Front Panel / Full Panel Branding:</strong>
-              <ol>Tried and true.</ol>
-              <ol>Delivers repeated impressions daily.</ol>
-            </li>
           </ul>
 
           <h2>Industries that Benefit the Most From Bus Shelter Advertising</h2>
