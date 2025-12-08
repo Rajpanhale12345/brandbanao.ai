@@ -27,7 +27,7 @@ const HoardingBranding = () => {
     name: "Hoarding / Billboard Advertising - Brand Banao.AI",
     description:
       "Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra.",
-    image: "https://brandbanao.ai/images/finallogo1.png",
+    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
     url: "https://brandbanao.ai/hoardings.html",
     publisher: {
       "@type": "Organization",
@@ -149,7 +149,7 @@ const HoardingBranding = () => {
         <meta property="og:description" content="Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/hoardings.html" />
-        <meta property="og:image" content="https://brandbanao.ai/images/finallogo1.png" />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />

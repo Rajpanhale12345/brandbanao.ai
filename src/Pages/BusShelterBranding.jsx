@@ -24,7 +24,7 @@ const BusShelterBranding = () => {
     name: "Bus Shelter Advertising & Branding - Brand Banao.AI",
     description:
       "Make your brand unforgettable with Bus Shelter Ads by BrandBanao.Ai. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more.",
-    image: "https://brandbanao.ai/images/finallogo1.png",
+    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
     url: "https://brandbanao.ai/bus%20shelter.html",
     publisher: {
       "@type": "Organization",
@@ -157,7 +157,7 @@ const BusShelterBranding = () => {
         <meta property="og:description" content="Make your brand unforgettable with Bus Shelter Ads by BrandBanao.Ai. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/bus-shelter" />
-        <meta property="og:image" content="https://brandbanao.ai/images/finallogo1.png" />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />

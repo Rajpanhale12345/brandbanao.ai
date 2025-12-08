@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const RadioFMBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   // You can add more bus shelter images here later if you have them
   const images = [radioimg];
@@ -20,12 +20,12 @@ const RadioFMBranding = () => {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    headline: "Best Bus Shelter in Maharashtra",
-    name: "Bus Shelter Advertising & Branding - Brand Banao.AI",
+    headline: "Radio & FM Advertising and Branding",
+    name: "Radio & FM Branding - Brand Banao.AI",
     description:
-      "Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more.",
-    image: "https://brandbanao.ai/images/finallogo1.png",
-    url: "https://brandbanao.ai/bus%20shelter.html",
+      "Brand Banao.AI creates natural, conversational Radio & FM ads that connect brands and listeners. We craft clear, memorable radio ad scripts, FM ad content, and creative radio campaigns that work across radio and digital.",
+    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+    url: "https://brandbanao.ai/radio",
     publisher: {
       "@type": "Organization",
       name: "Brand Banao.AI",
@@ -44,134 +44,114 @@ const RadioFMBranding = () => {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Which is the best 360 degree advertising agency in Maharashtra?",
+        name: "What is Radio & FM branding and how does it work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "If you want to find the largest 360-degree advertising agency in Maharashtra, Brand Banao.AI should stand out as a trustworthy name. Based in Mumbai and dedicated to tier 2 and tier 3 cities like Nashik, Dhule, Jalgaon, and Marathwada, we provide end-to-end advertising solutions and partnerships including digital, print, outdoor and on-ground activations. With our expertise in OOH and transit advertising, Brand Banao.AI is branded as the best bus shelter advertising agency in Nashik and the best bus shelter branding agency in Nashik that maximized outdoor campaigns for businesses through branded bus shelters. It helps businesses make a great impression to get their audiences' attention. We are data-driven, and our unique designs will ensure brands stand out but also connect impactfully with their target market across Maharashtra through a complete 360-degree approach to advertising.",
+          text: "Radio & FM branding uses carefully written audio scripts and voice performances to build recall for your brand while people are listening during their everyday routines. At Brand Banao.AI, we create radio commercials with a natural, clear and simple-to-follow flow so they sound like real conversations instead of scripted messages, making it easier for listeners to remember your brand in a short amount of time.",
         },
       },
       {
         "@type": "Question",
-        name: "Which is the best Bus Shelter company in Maharashtra?",
+        name: "Why is radio advertising still effective in the digital age?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For effective outdoor marketing, Brand Banao.AI is the finest bus shelter advertisement agency in Nashik and among the most reliable in Maharashtra. With an emphasis on innovative designs, optimal positioning, and maximum exposure, the agency ensures that businesses reach their target audience efficiently through bus shelter campaigns. Its planning and execution skill sets Brand Banao.AI, the best bus shelter branding company in Nashik, delivering campaigns that create brand recall and drive measurable results. For companies seeking to own the local and regional market with innovative OOH advertising, Brand Banao.AI is a perfect partner in Maharashtra.",
+          text: "Radio remains powerful because it reaches people when they are highly attentive—while driving, during daily routines, or when screens are busy but ears are free. Well-written radio scripts increase recall compared with long digital ads. When we combine radio advertising with digital campaigns, your brand message is reinforced across channels and becomes deeply ingrained in the listener's memory.",
         },
       },
       {
         "@type": "Question",
-        name: "Which is the best Bus Shelter Branding provider company in Maharashtra?",
+        name: "What makes Brand Banao.AI's radio ads different?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "When it comes to effective outdoor advertising, Brand Banao.AI is the top bus shelter advertising agency in Nashik and all of Maharashtra. Brand Banao.AI has a strong presence in tier 1, tier 2, and tier 3 cities. The company offers innovative, high-visibility branding solutions that help businesses reach their target audience effectively. As the leading bus shelter branding agency in Nashik, Brand Banao.AI combines strategic planning, creative design, and prime advertising locations to provide great opportunities for brand exposure. The agency deeply understands out-of-home (OOH) advertising in Maharashtra and uses tools and technologies that give audiences and clients easy access to information through data point delivery. Brand Banao.AI is a trusted agency for businesses that want to boost visibility and connect with the people of Maharashtra.",
+          text: "We treat radio like a precision job where every second matters. Each pause, line and tone is designed to hold attention naturally without forcing it. First, we build the message and then add creativity, ensuring the core idea is always heard. We avoid overacting, forced humour, or dramatic effects and instead focus on one strong idea that matches real listener behaviour and everyday situations. This makes our radio ads sound relatable, believable and highly memorable.",
         },
       },
       {
         "@type": "Question",
-        name: "Which is the best bus shelter branding provider company in India?",
+        name: "What is your process for creating radio and FM advertisements?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "When it is about the best bus shelter brand provider in India, Brand Banao.AI is a brand to reckon with when it comes to outdoor advertising solutions. It has a high presence in tier 2 and tier 3 cities and has made a name for itself as an effective and results-driven campaign builder. Known as the leading bus shelter advertising agency in Nashik, Brand Banao.AI mixes creativity, planning, and modern design to ensure brands get maximum visibility. Their skills in local marketing and execution have also made them the top bus shelter branding agency in Nashik. They deliver consistent results that help businesses connect with their target audience across India.",
+          text: "Our process is structured into four main steps: 1) Identify the brand's message and purpose. 2) Identify the optimal time to listen (excluding morning and evening drive times and weekend radio, unless context demands it). 3) Write an engaging script that clearly defines the message and is easy to remember. 4) Once the script is finalised, we add voice and sound design. This approach helps us consistently produce top-performing radio ad campaigns that achieve results.",
         },
       },
       {
         "@type": "Question",
-        name: "Who is the top bus shelter branding provider agency in India?",
+        name: "What ad lengths and formats do you offer for radio campaigns?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "When it concerns the best bus shelter branding provider agency in India, Brand Banao.AI is a name that is highly recommended, particularly for companies who are seeking to make their outdoor visibility effective. Awarded as the top bus shelter ad agency in Nashik and universally accepted as the top bus shelter branding agency in Nashik, Brand Banao.AI provides creative and successful solutions to assist brands in reaching out to their customers in busy urban and semi-urban spaces. With a specialty in strategic placement, innovative design, and complete execution, the agency maximizes every campaign to achieve maximum brand exposure and customer interaction, and therefore is the top bus shelter advertising agency in India.",
+          text: "We work with a range of ad lengths and formats depending on your objective. This includes short-form retail pushes such as 10-second spots as well as longer storytelling formats like 30-second commercials. We design every script to be concise, fast-paced when needed, and simple to digest so your brand message lands clearly within the time available.",
         },
       },
       {
         "@type": "Question",
-        name: "Who is the top bus shelter branding provider agency in Maharashtra?",
+        name: "Can you integrate radio ads with digital marketing campaigns?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "When it comes to the top bus shelter branding provider in Maharashtra, Brand Banao.AI stands out as a leading name in the industry. Recognized as the best bus shelter advertising agency in Nashik, the company is trusted by businesses throughout Maharashtra. It specializes in creating effective outdoor campaigns that reach a wide range of audiences. With its innovative approach, strategic locations, and creative execution, Brand Banao.AI has built a strong reputation as the best bus shelter branding agency in Nashik. It delivers measurable results and helps brands improve their visibility in both tier-1 and tier-2 markets across the state.",
+          text: "Yes. For stronger brand visibility, we frequently combine radio advertising with digital advertising. By aligning the core message across both platforms, we ensure that your brand is heard on radio and seen online. This multi-touch approach helps your advertising stay top of mind and strengthens your presence on both radio and digital platforms.",
         },
       },
       {
         "@type": "Question",
-        name: "Who is the top bus shelter branding provider agency in Nashik?",
+        name: "Do you support two-way communication or communication-focused brands?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "When it is about successful outdoor advertisement, Brand Banao.AI is the best bus shelter advertising agency in Nashik. The company is centered around creativity, innovation, and strategic placing. This way, there is good visibility and recall of the brand for the companies within the city. Identified as the best bus shelter branding agency in Nashik, Brand Banao.AI offers customized advertising solutions that resonate with the local audience and establish a strong market presence. Their out-of-home and transit media expertise positions them as the go-to agency for businesses that seek to increase reach and build a strong brand presence through bus shelter campaigns.",
+          text: "If your brand is involved in two-way communications, we can add two-way radio branding, two-way radio brands and two-way radio messages as part of your campaign. This creates an expanded set of communication-oriented promotions that keep your messaging consistent and memorable across all touchpoints.",
         },
       },
     ],
   };
 
-  // const faqItems = [
-  //   {
-  //     question: "What is bus shelter advertising and how does it work?",
-  //     answer:
-  //       "Bus shelter advertising refers to a form of advertising where messages of your brand are displayed on front panels, side panels, back drop panels, or as full wraps at busy junctions, markets, residential zones, school and college routes, and high-traffic roads. Thousands of people view these shelters daily while waiting for buses, walking, or stopping at signals; this creates strong visibility and recall for your brand.",
-  //   },
-  //   {
-  //     question: "Which locations and cities do you cover for bus shelter advertising?",
-  //     answer:
-  //       "Brand Banao.AI operates bus shelter media services in Maharashtra and is significantly present in Konkan, North Maharashtra, West Maharashtra, Marathwada, and Vidarbha. We take care of main and tier-2/tier-3 cities, along with the most frequented corridors that encircle residential areas, business areas, dense school/college areas, hospital areas, and market roads that link to your brand's geography and audience.",
-  //   },
-  //   {
-  //     question: "What types of bus shelter formats do you offer?",
-  //     answer:
-  //       "We provide non-lit and backlit bus shelters, which are very eye-catching at night compared to regular non-lit bus shelters, which provide more economical and economy-long-term campaigns. Digital bus shelters provide new opportunities to changing messaging, and full panel/side panel branding would cover the most reach per dollar spend to your audience daily. We will work with you to find the right mix of available options based on your brand objectives and the budget available.",
-  //   },
-  //   {
-  //     question: "Do you provide creative design and printing support for bus shelter ads?",
-  //     answer:
-  //       "Yes, of course, our in-house creative team can develop the concept, adapt the layouts for the various shelter sizes, and provide print-ready artwork. We also handle high-quality printing on durable outdoor materials so that your creatives stay sharp, visible, and weather-resistant throughout the campaign.",
-  //   },
-  //   {
-  //     question: "How do you monitor and report bus shelter campaigns?",
-  //     answer:
-  //       "We offer total execution and tracking: install checks, lighting and visibility for the backlit and digital shelters, photo documentation, maintenance visits, and proof-of-performance report. Our reporting will ensure your brand is clean, visible, and running as intended.",
-  //   },
-  //   {
-  //     question: "Why should I choose Brand Banao.AI for bus shelter advertising?",
-  //     answer:
-  //       "Brand Banao.AI brings together 15+ years of OOH experience, a large owned-media bus shelter network across Maharashtra, formidable creative capabilities, and transparent reporting. Because we own the media, we assure better pricing, faster turnaround, and tighter control on quality and performance.",
-  //   },
-  // ];
+  const faqItems = [
+    {
+      question: "What is Radio & FM branding and how does it work?",
+      answer:
+        "Radio & FM branding uses natural, conversation-like scripts and strong audio delivery to build recall for your brand while people are listening during their everyday routines. At Brand Banao.AI, we write radio ads that feel like real conversations instead of scripted announcements, so your message is easy to follow and remember.",
+    },
+    {
+      question: "Why is radio advertising still effective in the digital age?",
+      answer:
+        "Radio reaches people when they are highly attentive—while driving, during daily routines, or when screens are busy but ears are free. Well-crafted scripts tend to increase recall compared with long digital ads. When radio is combined with digital campaigns, your brand message is reinforced, making it more memorable.",
+    },
+    {
+      question: "What makes Brand Banao.AI's radio scripts different?",
+      answer:
+        "We treat radio like a precision job: every second matters. We first build the core message and then add creativity. Each pause, line and tone is designed to hold attention naturally. We avoid overacting, forced humour or unnecessary drama and focus on one strong idea that matches real listener behaviour and everyday situations.",
+    },
+    {
+      question: "What ad lengths do you offer for radio campaigns?",
+      answer:
+        "We offer flexible ad lengths based on your objectives, from short 10-second retail pushes to longer 30-second stories. Every script is written to be concise, impactful and easy to digest, even at a fast pace.",
+    },
+    {
+      question: "Can you combine radio ads with our digital marketing?",
+      answer:
+        "Yes. We frequently combine radio advertising with digital advertising. By aligning the message across channels, we reinforce your brand so that listeners remember it on both radio and digital platforms.",
+    },
+  ];
+
 
   return (
     <>
       <Helmet>
-        {/* Basic SEO */}
         <title>Brand Banao.ai | Radio &amp; FM Branding</title>
-        <meta
-          name="description"
-          content="Boost your brand visibility with Bus Shelter Advertising by Brand Banao.Ai. 24x7 street-level ads with wide reach, local targeting, PAN India presence, and complete campaign execution."
-        />
-        <meta
-          name="keywords"
-          content="best bus shelter advertising mumbai, top bus shelter branding in mumbai, best bus shelter branding in nashik, top bus shelter advertising in nashik, best bus stop advertising in Nashik, bus shelter advertising in mumbai, bus shelter branding nashik, bus shelter advertising cost, bus shelter advertising price, bus stop cover, shelter bus, bus shelter advertising company near me, bus shelter branding agency near me, bus shelter branding company in nashik, best bus shelter advertising agency in nashik, best digital bus shelter advertising agency in nashik, top digital bus shelter branding agency in nashik, best outdoor bus shelter branding in nashik, best outdoor bus shelter advertising agency in nashik, outdoor advertising India, OOH advertising, affordable advertising, street level ads, local targeting ads, brand visibility, real estate advertising, healthcare ads, education advertising, fashion advertising, jewellery advertising, hotel advertising, restaurant advertising, Brand Banao.AI"
-        />
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-video-preview:-1"
-        />
+        <meta name="description" content="Brand Banao.AI is a top radio advertising agency in India, crafting natural Radio & FM ads that boost recall, drive response and align with your digital campaigns." />
+        <meta name="keywords" content="radio advertising agency India, FM radio advertising, radio branding, radio commercials, radio ad production, creative radio scripts, conversational radio ads, audio branding, radio marketing, radio ads Mumbai, radio ads Nashik, radio branding Maharashtra, best radio ad agency, top radio advertising company, FM radio campaigns, radio media buying, RJ mentions, radio brand integration, radio and digital campaigns, Brand Banao.AI" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="MobileOptimized" content="width" />
         <meta name="HandheldFriendly" content="true" />
 
         {/* Canonical */}
-        <link rel="canonical" href="https://brandbanao.ai/bus-shelter" />
+        <link rel="canonical" href="https://brandbanao.ai/radio" />
 
         {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="Brand Banao.AI" />
-        <meta property="og:title" content="Bus Shelter" />
-        <meta
-          property="og:description"
-          content="Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."
-        />
+        <meta property="og:title" content="Radio Branding" />
+        <meta property="og:description" content="Create unforgettable Radio & FM campaigns with Brand Banao.AI — top India-based audio branding experts crafting natural, high-recall radio ads that sound like real conversations."/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/bus-shelter" />
-        <meta
-          property="og:image"
-          content="https://brandbanao.ai/images/finallogo1.png"
-        />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"/>
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />
@@ -181,14 +161,8 @@ const RadioFMBranding = () => {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bus Shelter" />
-        <meta
-          name="twitter:description"
-          content="Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more."
-        />
-        <meta
-          name="twitter:image"
-          content="https://brandbanao.ai/images/homemainimage.png"
-        />
+        <meta name="twitter:description" content="Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more." />
+        <meta name="twitter:image" content="https://brandbanao.ai/images/homemainimage.png" />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -326,7 +300,7 @@ const RadioFMBranding = () => {
         </div>
 
         
-        {/* <div className="hoarding-content faq-section">
+        <div className="hoarding-content faq-section">
           <h2>Radio &amp; FM Branding FAQs</h2>
           <div className="faq-list">
             {faqItems.map((faq, index) => {
@@ -358,7 +332,7 @@ const RadioFMBranding = () => {
               );
             })}
           </div>
-        </div> */}
+        </div>
 
         <div className="hoarding-content">
           {/* Reserved for any additional blocks, forms, CTAs, etc. */}
