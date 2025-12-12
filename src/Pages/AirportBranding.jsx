@@ -218,9 +218,9 @@ const AirportBranding = () => {
                         Airport Branding that puts your brand exactly where people are looking.
                     </p>
                     <p>
-                        Airports naturally mean minimum 90 minutes to 120 minutes spans: travelers
+                        <b>Airports naturally mean minimum 90 minutes to 120 minutes spans: travelers
                         hang out in check-in lines, lounge areas near boarding gates, at baggage
-                        belts, and scrolling digital screens around the terminal. That extra exposure
+                        belts, and scrolling digital screens around the terminal.</b> That extra exposure
                         will stick better, build real brand connection, and beat traditional outdoor
                         ads. Our aim is to have your brand part of every traveler's journey-from the
                         time they land to when they take off.
@@ -228,8 +228,8 @@ const AirportBranding = () => {
 
                     <h2>Why Airports' Unique Branding Opportunities</h2>
                     <p>
-                        The extended unit of time that people have in airports, usually 90 minutes to
-                        2 hours before their flight, provides an opportunity for branding that cannot
+                        The extended unit of time that people have in airports, <b>usually 90 minutes to
+                        2 hours before their flight, provides an opportunity for branding</b> that cannot
                         be missed, avoided, or passed up. This is a perfect setting for building brand
                         recognition and advocacy through repeated exposure to your brand in an
                         uninterrupted manner and creating trust.
@@ -238,9 +238,9 @@ const AirportBranding = () => {
                         Additionally, when people consider the image of an airport, they see a combination
                         of being a secure, aspirational, international, and premium location that
                         automatically enhances both the perceived quality and how credible each piece
-                        of advertising is. Therefore, if you are looking to impress your probable investors,
+                        of advertising is. Therefore, <b>if you are looking to impress your probable investors,
                         joint ventures (JV), partnerships, or high-end collaborations, having a presence in
-                        an airport indicates size, seriousness, and market maturity.
+                        an airport indicates size, seriousness, and market maturity</b>.
                     </p>
 
                     <h2>Talent Acquisition: An Effective Method</h2>
