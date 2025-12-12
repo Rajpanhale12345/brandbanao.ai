@@ -11,6 +11,7 @@ import CinemaBranding from "./Pages/CinemaBranding";
 import RadioBranding from "./Pages/RadioBranding";
 import Hoardings from "./Pages/HoardingBranding";
 import BusShelterBranding from "./Pages/BusShelterBranding";
+import AirportBranding from "./Pages/AirportBranding";
 import Helmet from 'react-helmet';
 import DigitalMarketingExecutiveRole from "./JD/DigitalExecutive";
 import DigitalMarketingManager from "./JD/DigitalManager";
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="/radio" element={<RadioBranding />} />
         <Route path="/hoardings" element={<Hoardings />} />
         <Route path="/bus-shelter" element={<BusShelterBranding />} />
+        <Route path="/AirportBranding" element={<AirportBranding />} />
         <Route path="/Careers/DigitalMarketingExecutive" element={<DigitalMarketingExecutiveRole />} />
         <Route path="/Careers/DigitalMarketingManager" element={<DigitalMarketingManager />} />
         <Route path="/Careers/MediaPlanner" element={<MediaPlanner />} />
