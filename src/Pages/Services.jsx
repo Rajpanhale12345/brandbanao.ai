@@ -23,6 +23,7 @@ export default function Services() {
     <Helmet>
 
       <title>Services | Brand Banao.ai</title>
+      <meta name="author" content="Brand Banao.AI" />
       
     </Helmet>
 

@@ -24,13 +24,13 @@ const RadioFMBranding = () => {
     name: "Radio & FM Branding - Brand Banao.AI",
     description:
       "Brand Banao.AI creates natural, conversational Radio & FM ads that connect brands and listeners. We craft clear, memorable radio ad scripts, FM ad content, and creative radio campaigns that work across radio and digital.",
-    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+    image: "https://brandbanao.ai/assets/radio-flTFxuUH.jpg",
     url: "https://brandbanao.ai/radio",
     publisher: {
       "@type": "Organization",
       name: "Brand Banao.AI",
       url: "https://brandbanao.ai/",
-      logo: "https://brandbanao.ai/images/finallogo.png",
+      logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
     },
     author: {
       "@type": "Organization",
@@ -134,6 +134,7 @@ const RadioFMBranding = () => {
     <>
       <Helmet>
         <title>Brand Banao.ai | Radio &amp; FM Branding</title>
+        <meta name="author" content="Brand Banao.AI" />
         <meta name="description" content="Brand Banao.AI is a top radio advertising agency in India, crafting natural Radio & FM ads that boost recall, drive response and align with your digital campaigns." />
         <meta name="keywords" content="radio advertising agency India, FM radio advertising, radio branding, radio commercials, radio ad production, creative radio scripts, conversational radio ads, audio branding, radio marketing, radio ads Mumbai, radio ads Nashik, radio branding Maharashtra, best radio ad agency, top radio advertising company, FM radio campaigns, radio media buying, RJ mentions, radio brand integration, radio and digital campaigns, Brand Banao.AI" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
@@ -148,10 +149,10 @@ const RadioFMBranding = () => {
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="Brand Banao.AI" />
         <meta property="og:title" content="Radio Branding" />
-        <meta property="og:description" content="Create unforgettable Radio & FM campaigns with Brand Banao.AI — top India-based audio branding experts crafting natural, high-recall radio ads that sound like real conversations."/>
+        <meta property="og:description" content="Create unforgettable Radio & FM campaigns with Brand Banao.AI — top India-based audio branding experts crafting natural, high-recall radio ads that sound like real conversations." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brandbanao.ai/bus-shelter" />
-        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"/>
+        <meta property="og:url" content="https://brandbanao.ai/radio" />
+        <meta property="og:image" content="https://brandbanao.ai/assets/radio-flTFxuUH.jpg" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />
@@ -160,8 +161,8 @@ const RadioFMBranding = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bus Shelter" />
-        <meta name="twitter:description" content="Make your brand unforgettable with Bus Shelter Ads by Brand Banao.AI. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more." />
+        <meta name="twitter:title" content="Radio &amp; FM Advertising Scripts &amp; Branding" />
+        <meta name="twitter:description" content="Crisp, conversational radio & FM ad scripts built for recall 10-30 sec formats, voice-ready flow, and integrated radio + digital messaging." />
         <meta name="twitter:image" content="https://brandbanao.ai/images/homemainimage.png" />
 
         {/* Structured Data */}
@@ -204,25 +205,25 @@ const RadioFMBranding = () => {
         <div className="hoarding-content">
 
           <h2>Introduction</h2>
-          <p>At Brand Banao.AI creates radio advertising with a natural, clear and 
-            simple-to-follow flow that creates successful radio advertisements, 
-            FM ad content, and top-performing radio ads. At Brand Banao.AI, the focus 
-            of our work is to make a connection between the listener and the brand 
-            while making sure to produce radio commercials that do not sound like 
-            scripted messages but rather as if they are real conversations happening 
-            between two people. All of the words in a band advertising commercial are 
-            carefully selected to give the strongest impression within the brief time 
+          <p>At Brand Banao.AI creates radio advertising with a natural, clear and
+            simple-to-follow flow that creates successful radio advertisements,
+            FM ad content, and top-performing radio ads. At Brand Banao.AI, the focus
+            of our work is to make a connection between the listener and the brand
+            while making sure to produce radio commercials that do not sound like
+            scripted messages but rather as if they are real conversations happening
+            between two people. All of the words in a band advertising commercial are
+            carefully selected to give the strongest impression within the brief time
             available for a brand to be heard.</p>
 
 
           <h2>What we create:</h2>
-          <p>We create radio commercials that have a smooth flow and that are engaging to 
-            the listener. No matter the format for the type of brand radio, talk radio 
-            advertising, branding radio or FM radio advertising, we are focused on one 
-            thing: getting your message to your audience in an effective, concise and 
+          <p>We create radio commercials that have a smooth flow and that are engaging to
+            the listener. No matter the format for the type of brand radio, talk radio
+            advertising, branding radio or FM radio advertising, we are focused on one
+            thing: getting your message to your audience in an effective, concise and
             memorable way.</p>
 
-          <p>Our approach ensures every script becomes the best radio commercial or a 
+          <p>Our approach ensures every script becomes the best radio commercial or a
             creative radio ad that stands out.</p>
 
           <h2>How We Approach Radio</h2>
@@ -230,8 +231,8 @@ const RadioFMBranding = () => {
 
           <p>Each pause, line, and tone is designed to hold attention naturally without forcing it.</p>
 
-          <p>We build the message first and add creativity later, ensuring the core idea is heard. 
-            The result is a crisp, clean, and effective ad that listeners cannot ignore, similar 
+          <p>We build the message first and add creativity later, ensuring the core idea is heard.
+            The result is a crisp, clean, and effective ad that listeners cannot ignore, similar
             to the best radio ads ever and the best radio adverts in the industry.</p>
 
           <h2>Why Radio Still Works</h2>
@@ -248,58 +249,58 @@ const RadioFMBranding = () => {
 
           <p>Scripts that are well written tend to increase recall compared with long digital ads.</p>
 
-          <p>When establishing stronger brand visibility, we frequently combine radio advertising with 
-            digital advertising, and the result is that your advertisements are ingrained in the 
+          <p>When establishing stronger brand visibility, we frequently combine radio advertising with
+            digital advertising, and the result is that your advertisements are ingrained in the
             memories of the listeners.</p>
 
           <h2>Why Our Radio Ads Stand Out</h2>
           <p>
-            We avoid overacting, forced humour, or dramatic effects. Instead, we focus on one strong 
-            idea crafted to match real listener behaviour and everyday situations. This helps us create 
+            We avoid overacting, forced humour, or dramatic effects. Instead, we focus on one strong
+            idea crafted to match real listener behaviour and everyday situations. This helps us create
             top radio advertiser-level content that feels natural and easy for voice artists to deliver.
-          </p>         
+          </p>
 
-          <p>Because of the way our advertisements sound so relatable, our ads tend to be more memorable 
-            than other advertisements on the radio and other digital formats, as they utilise real-life 
+          <p>Because of the way our advertisements sound so relatable, our ads tend to be more memorable
+            than other advertisements on the radio and other digital formats, as they utilise real-life
             moments of listening.</p>
 
           <h2>The Steps of Our Process</h2>
-          
+
           <ol>
             <li>Identify the Brand's Message and Purpose</li>
-            <li>Identify the Optimal Time to listen (excluding morning drive time, evening driving, 
+            <li>Identify the Optimal Time to listen (excluding morning drive time, evening driving,
               weekend radio).</li>
             <li>Write an Engaging Script That Clearly Defines The Message and Is Memorable.</li>
             <li>Once The Script Has Been Finalised, The Next Step Is To Ad Voice/Sound Design.</li>
           </ol>
 
-          <p>Our structured approach allows us to continually produce the best radio ad campaigns 
+          <p>Our structured approach allows us to continually produce the best radio ad campaigns
             and radio advertisements that consistently achieve results.</p>
 
-          
+
           <h2>What Will You Get?</h2>
 
           <ul>
             <li>No fluff in your scripts, only relevant, compelling, concise words.</li>
             <li>Natural, believable voice quality.</li>
-            <li>Messaging is easy to remember AND digest quickly, even if it is delivering 
+            <li>Messaging is easy to remember AND digest quickly, even if it is delivering
               on a clock of "fast-paced."</li>
-            <li>Lengthy advertising options (for example, short form retail pushes -- 
+            <li>Lengthy advertising options (for example, short form retail pushes --
               10-sec or longer story across 30-sec spots).</li>
           </ul>
 
-          <p>The goal is to develop the best radio ad campaigns that resonate with listeners, 
+          <p>The goal is to develop the best radio ad campaigns that resonate with listeners,
             build brands and strengthen their presence on both radio and digital platforms.</p>
 
-          <p>If you are involved in two-way communications, we'll be able to add two-way radio 
-            branding, two-way radio brands and two-way radio messages to create an expanded set 
+          <p>If you are involved in two-way communications, we'll be able to add two-way radio
+            branding, two-way radio brands and two-way radio messages to create an expanded set
             of communications-oriented promotions.</p>
 
-          <h2 style={{textAlign : "center"}}><b>Every ad we create is built to be remembered and to work.</b></h2>
-                      
+          <h2 style={{ textAlign: "center" }}><b>Every ad we create is built to be remembered and to work.</b></h2>
+
         </div>
 
-        
+
         <div className="hoarding-content faq-section">
           <h2>Radio &amp; FM Branding FAQs</h2>
           <div className="faq-list">

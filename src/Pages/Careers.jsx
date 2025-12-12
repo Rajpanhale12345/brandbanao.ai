@@ -91,6 +91,7 @@ export default function Careers() {
     <>
       <Helmet>
         <title>Careers | Brand Banao.ai</title>
+        <meta name="author" content="Brand Banao.AI" />
       </Helmet>
 
       <div className="careers-page">

@@ -28,12 +28,12 @@ const HoardingBranding = () => {
     description:
       "Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra.",
     image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    url: "https://brandbanao.ai/hoardings.html",
+    url: "https://brandbanao.ai/hoardings",
     publisher: {
       "@type": "Organization",
       name: "Brand Banao.AI",
       url: "https://brandbanao.ai/",
-      logo: "https://brandbanao.ai/images/finallogo.png",
+      logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
     },
   };
 
@@ -133,6 +133,7 @@ const HoardingBranding = () => {
       <Helmet>
 
         <title>Hoarding | Brand Banao.AI </title>
+        <meta name="author" content="Brand Banao.AI" />
         <meta name="description" content="Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra." />
         <meta name="keywords" content="best hoardings near me, best hoardings in Nashik, best billborads in nashik, top billboards in nashik, best 360 degree advertising agency in Maharashtra, best 360 degree advertisiing company in maharashtra, top 360 degree advertising agency in maharashtra, top 360 degree advertising company in maharashtra, best outdoor advertising agency in Maharashtra, top billboard advertising companies in India, digital billboard advertising services near me, affordable hoarding advertising in Mumbai, billboard advertising agency for political campaigns, programmatic DOOH advertising India, best flex printing for hoardings in Maharashtra, hoarding advertising rates in Nashik, where to rent billboards in Nashik, how effective is billboard advertising in India, billboard advertising Maharashtra, hoarding ads India, outdoor advertising agency, OOH advertising company, digital billboards Maharashtra, LED hoardings Mumbai, affordable billboard ads, programmatic DOOH India, brand visibility hoardings, hyperlocal billboard targeting, high impact OOH marketing, AI outdoor advertising, traditional vs digital billboards, billboard design experts, top hoarding agency Maharashtra" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
@@ -148,7 +149,7 @@ const HoardingBranding = () => {
         <meta property="og:title" content="Hoarding/Billboard | Brand Banao.AI" />
         <meta property="og:description" content="Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brandbanao.ai/hoardings.html" />
+        <meta property="og:url" content="https://brandbanao.ai/hoardings" />
         <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
@@ -159,7 +160,7 @@ const HoardingBranding = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hoarding/Billboard | Brand Banao.AI" />
         <meta name="twitter:description" content="Brand Banao.AI provides strategic, eye-catching billboard advertising solutions virtually all across Maharashtra." />
-        <meta name="twitter:image" content="https://brandbanao.ai/images/homemainimage.png" />
+        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
         {/* Page-specific structured data */}
         <script type="application/ld+json">
@@ -355,7 +356,7 @@ const HoardingBranding = () => {
                     }
                   >
                     <span className="faq-question-text">{faq.question}</span>
-                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                    <span className="faq-icon">{isActive ? "-" : "+"}</span>
                   </button>
 
                   <div className={`faq-answer ${isActive ? "open" : ""}`}>

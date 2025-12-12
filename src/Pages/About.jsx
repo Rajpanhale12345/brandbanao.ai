@@ -13,6 +13,7 @@ const About = () => {
 
       <Helmet>
         <title>About | Brand Banao.Ai</title>
+        <meta name="author" content="Brand Banao.AI" />
       </Helmet>
 
       <div>

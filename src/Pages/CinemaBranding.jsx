@@ -10,6 +10,7 @@ const CinemaBranding = () => {
 
       <Helmet>
         <title>Cinema Branding | Brand Banao.ai</title>
+        <meta name="author" content="Brand Banao.AI" />
       </Helmet>
 
 

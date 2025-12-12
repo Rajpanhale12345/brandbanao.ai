@@ -103,6 +103,7 @@ export default function Contact() {
 
     <Helmet>
       <title>Contact | Brand Banao.ai</title>
+      <meta name="author" content="Brand Banao.AI" />
     </Helmet>
 
     

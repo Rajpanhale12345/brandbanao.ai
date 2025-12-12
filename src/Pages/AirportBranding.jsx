@@ -25,12 +25,12 @@ const AirportBranding = () => {
         description:
             "Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens with end-to-end planning, creatives, permissions, and execution.",
         image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/bus%20shelter.html",
+        url: "https://brandbanao.ai/AirportBranding",
         publisher: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
             url: "https://brandbanao.ai/",
-            logo: "https://brandbanao.ai/images/finallogo.png",
+            logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
         },
         author: {
             "@type": "Organization",
@@ -141,6 +141,7 @@ const AirportBranding = () => {
             <Helmet>
                 {/* Basic SEO */}
                 <title>Brand Banao.Ai | Airport Branding</title>
+                <meta name="author" content="Brand Banao.AI" />
                 <meta name="description" content="Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
                 <meta name="keywords" content="airport branding, airport advertising, airport media, airport hoarding, airport digital screens advertising, airport LED advertising, baggage belt branding, baggage claim advertising, lounge branding, check-in counter branding, boarding gate branding, terminal branding, airport OOH, out of home advertising, premium advertising, brand banao ai, brand banao airport branding, airport branding agency india, airport branding pan india, airport advertising company" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
@@ -149,7 +150,7 @@ const AirportBranding = () => {
                 <meta name="HandheldFriendly" content="true" />
 
                 {/* Canonical */}
-                <link rel="canonical" href="https://brandbanao.ai/bus-shelter" />
+                <link rel="canonical" href="https://brandbanao.ai/AirportBranding" />
 
                 {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
@@ -157,7 +158,7 @@ const AirportBranding = () => {
                 <meta property="og:title" content="Airport Branding Service" />
                 <meta property="og:description" content="Airport Branding Services by Brand Banao.Ai. Premium visibility across terminals, lounges, baggage belts, and digital screens with end-to-end execution." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://brandbanao.ai/bus-shelter" />
+                <meta property="og:url" content="https://brandbanao.ai/AirportBranding" />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1000" />
@@ -169,7 +170,7 @@ const AirportBranding = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Airport Branding Service" />
                 <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by Brand Banao.Ai." />
-                <meta name="twitter:image" content="https://brandbanao.ai/images/homemainimage.png" />
+                <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
                 {/* Structured Data */}
                 <script type="application/ld+json">
