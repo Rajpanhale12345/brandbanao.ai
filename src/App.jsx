@@ -19,6 +19,7 @@ import MediaPlanner from "./JD/MediaPlanner";
 import OperationsHead from "./JD/OperationsHead";
 import SalesMarketingExecutiveFemale from "./JD/SalesFemale";
 import SalesMarketingManager from "./JD/SalesManager";
+import TVNewsChanelBranding from "./Pages/TV&NewsBranding"
 import ScrollToTop from "./Pages/ScrollToTop";
 
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
         <Route path="/Careers/SalesMarketingExecutiveFemale" element={<SalesMarketingExecutiveFemale/>} />
         <Route path="/Careers/SalesMarketingManager" element={<SalesMarketingManager />} />
         <Route path="/Careers/OperationsHead" element={<OperationsHead />} />
+        <Route path="/TVNewsChanelBranding" element={<TVNewsChanelBranding />} />
       </Routes>
       <Footer />
     </Router>

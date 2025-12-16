@@ -95,7 +95,7 @@ export default function Services() {
             <ServiceCard
               title="TV News Channel Branding"
               image={news}
-              // path="/tv-branding"
+              path="/TVNewsChanelBranding"
               // example of custom img style on a single card:
               imgStyle={{ objectFit: "contain", background: "#fff" }}
             />

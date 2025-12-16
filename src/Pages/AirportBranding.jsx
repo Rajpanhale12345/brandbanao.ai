@@ -345,7 +345,7 @@ const AirportBranding = () => {
 
                 {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
                 <div className="hoarding-content faq-section">
-                    <h2>Bus Shelter Advertising FAQs</h2>
+                    <h2>Airport Branding FAQs</h2>
                     <div className="faq-list">
                         {faqItems.map((faq, index) => {
                             const isActive = activeFaqIndex === index;
