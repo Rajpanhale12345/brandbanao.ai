@@ -21,6 +21,7 @@ import SalesMarketingExecutiveFemale from "./JD/SalesFemale";
 import SalesMarketingManager from "./JD/SalesManager";
 import TVNewsChanelBranding from "./Pages/TV&NewsBranding"
 import ScrollToTop from "./Pages/ScrollToTop";
+import BusBranding from "./Pages/BusBranding"
 
 export default function App() {
   return (
@@ -46,6 +47,7 @@ export default function App() {
         <Route path="/Careers/SalesMarketingManager" element={<SalesMarketingManager />} />
         <Route path="/Careers/OperationsHead" element={<OperationsHead />} />
         <Route path="/TVNewsChanelBranding" element={<TVNewsChanelBranding />} />
+        <Route path="/BusBranding" element={<BusBranding />} />
       </Routes>
       <Footer />
     </Router>
