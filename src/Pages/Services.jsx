@@ -103,7 +103,7 @@ export default function Services() {
             <ServiceCard
               title="Auto Branding"
               image={auto}
-              // path="/auto-branding"
+              path="/AutoBranding"
             />
 
             <ServiceCard

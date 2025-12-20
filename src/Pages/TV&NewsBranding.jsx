@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import airport from "../Images/news.png";
 import "./tvNews.css"
 
-const AirportBranding = () => {
+const TVNewsBranding = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
@@ -395,4 +395,4 @@ const AirportBranding = () => {
     );
 };
 
-export default AirportBranding;
+export default TVNewsBranding;

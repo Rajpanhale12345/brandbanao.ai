@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import BusBranding from "../Images/busbranding.jpg";
 import "./tvNews.css"
 
-const AirportBranding = () => {
+const BussBranding = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
@@ -341,4 +341,4 @@ const AirportBranding = () => {
     );
 };
 
-export default AirportBranding;
+export default BussBranding;

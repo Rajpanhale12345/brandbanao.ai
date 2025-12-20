@@ -21,7 +21,8 @@ import SalesMarketingExecutiveFemale from "./JD/SalesFemale";
 import SalesMarketingManager from "./JD/SalesManager";
 import TVNewsChanelBranding from "./Pages/TV&NewsBranding"
 import ScrollToTop from "./Pages/ScrollToTop";
-import BusBranding from "./Pages/BusBranding"
+import BusBranding from "./Pages/BusBranding";
+import AutoBranding from "./Pages/AutoBranding";
 
 export default function App() {
   return (
@@ -30,24 +31,25 @@ export default function App() {
       <Navbar />
         <ScrollToTop smooth offset={80} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/cinema" element={<CinemaBranding />} />
-        <Route path="/radio" element={<RadioBranding />} />
-        <Route path="/hoardings" element={<Hoardings />} />
-        <Route path="/bus-shelter" element={<BusShelterBranding />} />
-        <Route path="/AirportBranding" element={<AirportBranding />} />
-        <Route path="/Careers/DigitalMarketingExecutive" element={<DigitalMarketingExecutiveRole />} />
-        <Route path="/Careers/DigitalMarketingManager" element={<DigitalMarketingManager />} />
-        <Route path="/Careers/MediaPlanner" element={<MediaPlanner />} />
-        <Route path="/Careers/SalesMarketingExecutiveFemale" element={<SalesMarketingExecutiveFemale/>} />
-        <Route path="/Careers/SalesMarketingManager" element={<SalesMarketingManager />} />
-        <Route path="/Careers/OperationsHead" element={<OperationsHead />} />
-        <Route path="/TVNewsChanelBranding" element={<TVNewsChanelBranding />} />
-        <Route path="/BusBranding" element={<BusBranding />} />
+        <Route path="/" element={< Home />} />
+        <Route path="/about" element={< About />} />
+        <Route path="/contact" element={< Contact />} />
+        <Route path="/services" element={< Services />} />
+        <Route path="/careers" element={< Careers />} />
+        <Route path="/cinema" element={< CinemaBranding />} />
+        <Route path="/radio" element={< RadioBranding />} />
+        <Route path="/hoardings" element={< Hoardings />} />
+        <Route path="/bus-shelter" element={< BusShelterBranding />} />
+        <Route path="/AirportBranding" element={< AirportBranding />} />
+        <Route path="/Careers/DigitalMarketingExecutive" element={< DigitalMarketingExecutiveRole />} />
+        <Route path="/Careers/DigitalMarketingManager" element={< DigitalMarketingManager />} />
+        <Route path="/Careers/MediaPlanner" element={< MediaPlanner />} />
+        <Route path="/Careers/SalesMarketingExecutiveFemale" element={< SalesMarketingExecutiveFemale/>} />
+        <Route path="/Careers/SalesMarketingManager" element={< SalesMarketingManager />} />
+        <Route path="/Careers/OperationsHead" element={< OperationsHead />} />
+        <Route path="/TVNewsChanelBranding" element={< TVNewsChanelBranding />} />
+        <Route path="/BusBranding" element={< BusBranding />} />
+        <Route path="/AutoBranding" element={< AutoBranding />} />
       </Routes>
       <Footer />
     </Router>
