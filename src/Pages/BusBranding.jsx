@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import airport from "../Images/busbranding.jpg";
+import BusBranding from "../Images/busbranding.jpg";
 import "./tvNews.css"
 
 const AirportBranding = () => {
@@ -10,7 +10,7 @@ const AirportBranding = () => {
 
 
     // You can add more bus shelter images here later if you have them
-    const images = [airport];
+    const images = [BusBranding];
 
     const openGallery = (index) => {
         setCurrentIndex(index);
@@ -20,11 +20,11 @@ const AirportBranding = () => {
     const webPageSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        headline: "TV News Channel Branding Services - Brand Banao.Ai",
-        name: "TV News Channel Branding Services - Brand Banao.Ai",
-        description: "TV News Channel Branding by Brand Banao.Ai. End-to-end on-air branding, motion graphics, channel identity, lower-thirds, tickers, show packaging, and visual systems for regional and national news networks.",
+        headline: "Bus Branding & Advertising Services - Brand Banao.Ai",
+        name: "Bus Branding & Advertising Services",
+        description: "Bus branding and bus advertising services by Brand Banao.Ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall.",
         image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/AirportBranding",
+        url: "https://brandbanao.ai/BusBranding",
         publisher: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
@@ -44,56 +44,56 @@ const AirportBranding = () => {
         mainEntity: [
             {
                 "@type": "Question",
-                name: "What is TV news channel branding?",
+                name: "What is bus branding?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "TV news channel branding is the complete visual identity and on-air design system of a news network—logo, color system, typography, motion language, lower-thirds, tickers, transitions, show packaging, and guidelines to keep the channel consistent across programs and platforms.",
+                        "Bus branding is outdoor advertising on buses using formats like full wraps, side panels, and back-of-bus creatives. It turns moving buses into high-frequency ads across multiple locations daily.",
                 },
             },
             {
                 "@type": "Question",
-                name: "What all is included in on-air branding for news channels?",
+                name: "Which bus advertising formats do you offer?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "On-air branding typically includes logo development/refinement, channel identity package, lower-thirds, tickers, bugs, stings, wipes, promo templates, breaking-news packages, title sequences, and a brand guideline system for consistent execution.",
+                        "We offer full bus wraps, side ads, back-of-bus ads, panel ads, and route-wise planning for city and metro corridors—based on your campaign goals and budget.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Do you create motion graphics packages for 24x7 news?",
+                name: "How do you select routes and coverage?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Yes. We design scalable motion graphics systems for 24x7 news operations, including modular templates for daily bulletins, special shows, and breaking news so your team can produce fast while maintaining a premium look.",
+                        "We plan coverage by matching routes with your target areas (markets, neighborhoods, high-footfall corridors), then balance reach + frequency for strong recall and efficient spend.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Can you brand regional language news channels (Marathi and others)?",
+                name: "Do you also design the bus creatives?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Yes. We create culturally relevant branding for regional language news channels, including Marathi, with design systems that reflect audience preferences while meeting broadcast standards.",
+                        "Yes. We create bus ad designs optimized for real-world viewing—high contrast, bold messaging, correct sizing, and layouts that stay readable at distance and in motion.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Do you handle rebranding for an existing news channel?",
+                name: "How long should a bus branding campaign run?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Yes. We can refresh or fully rebrand your channel with a structured approach—brand audit, identity evolution, on-air package redesign, rollout plan, and style guides to ensure a smooth transition.",
+                        "Most campaigns run 2-8 weeks depending on goals. Longer durations increase frequency and recall, especially when targeting multiple routes or city zones.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Why choose Brand Banao.Ai for TV news channel branding?",
+                name: "Why choose Brand Banao.Ai for bus branding?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Brand Banao.Ai delivers strategy-led TV news branding with strong visual systems, on-air packaging, and execution support—helping channels look credible, consistent, and distinct across platforms.",
+                        "We handle strategy, creative, planning, and execution—so your campaign gets the right routes, strong design, and consistent visibility with measurable outcomes.",
                 },
             },
         ],
@@ -103,36 +103,37 @@ const AirportBranding = () => {
 
     const faqItems = [
         {
-            question: "What is TV news channel branding?",
+            question: "What is bus branding?",
             answer:
-                "TV news channel branding is the complete visual identity and on-air design system of a news network—logo, colors, typography, motion style, lower-thirds, tickers, transitions, show packaging, and brand guidelines for consistency.",
+                "Bus branding is outdoor advertising on buses using formats like full wraps, side panels, and back-of-bus creatives. It turns moving buses into high-frequency ads across multiple locations daily.",
         },
         {
-            question: "What all is included in on-air branding for news channels?",
+            question: "Which bus advertising formats do you offer?",
             answer:
-                "We can build a full on-air package: channel identity system, lower-thirds, tickers, bugs, stings, wipes, promos, breaking-news graphics, show openers, and an easy-to-follow style guide for daily use.",
+                "We offer full bus wraps, side ads, back-of-bus ads, panel ads, and route-wise planning for city and metro corridors—based on your campaign goals and budget.",
         },
         {
-            question: "Do you create motion graphics packages for 24x7 news?",
+            question: "How do you select routes and coverage?",
             answer:
-                "Yes. We design modular motion graphics and templates that are quick to operate during live broadcasts while keeping the overall look premium and consistent.",
+                "We plan coverage by matching routes with your target areas (markets, neighborhoods, high-footfall corridors), then balance reach + frequency for strong recall and efficient spend.",
         },
         {
-            question: "Can you brand regional language news channels (Marathi and others)?",
+            question: "Do you also design the bus creatives?",
             answer:
-                "Yes. We create culturally relevant branding for regional channels including Marathi—aligned with audience preferences while meeting broadcast standards.",
+                "Yes. We create bus ad designs optimized for real-world viewing—high contrast, bold messaging, correct sizing, and layouts that stay readable at distance and in motion.",
         },
         {
-            question: "Do you handle rebranding for an existing news channel?",
+            question: "How long should a bus branding campaign run?",
             answer:
-                "Yes. We offer refresh and full rebrand options, including audit, redesign, rollout planning, and guidelines to ensure the new identity launches smoothly.",
+                "Most campaigns run 2-8 weeks depending on goals. Longer durations increase frequency and recall, especially when targeting multiple routes or city zones.",
         },
         {
-            question: "Why choose Brand Banao.Ai for TV news channel branding?",
+            question: "Why choose Brand Banao.Ai for bus branding?",
             answer:
-                "We combine strategy + design + execution support to make your channel look credible, consistent, and distinct across daily bulletins, special shows, and breaking news.",
+                "We handle strategy, creative, planning, and execution—so your campaign gets the right routes, strong design, and consistent visibility with measurable outcomes.",
         },
     ];
+
 
 
 
@@ -142,24 +143,24 @@ const AirportBranding = () => {
             <Helmet>
                 {/* Basic SEO */}
                 <title>Brand Banao.Ai | Bus Branding</title>
-                <meta name="author" content="Brand Banao.AI" />
-                <meta name="description" content="TV News Channel Branding by Brand Banao.Ai. On-air branding, motion graphics, lower-thirds, tickers, show packaging and channel identity systems for regional and national news networks." />
-                <meta name="keywords" content="tv news channel branding, news channel branding, on-air branding, broadcast design, tv channel identity, news channel rebranding, motion graphics for news, lower thirds design, ticker design, breaking news graphics, tv news graphics package, tv channel logo design, brand banao ai" />
+                <meta name="author" content="Brand Banao.Ai" />
+                <meta name="description" content="Bus branding and bus advertising services by Brand Banao.Ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall." />
+                <meta name="keywords" content="bus branding, bus advertising, bus wrap advertising, full bus wrap, bus side ads, back of bus advertising, bus panel ads, city bus advertisement, metro bus ads, bus stop advertising, bus shelter ads, outdoor advertising india" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
 
                 {/* Canonical */}
-                <link rel="canonical" href="https://brandbanao.ai/TVNewsChanelBranding" />
+                <link rel="canonical" href="https://brandbanao.ai/BusBranding" />
 
                 {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
-                <meta property="og:title" content="TV News Channel Branding Services" />
-                <meta property="og:description" content="On-air branding and broadcast design for TV news channels: identity, motion graphics, lower-thirds, tickers, show packaging and rebranding." />
+                <meta property="og:title" content="Bus Branding & Bus Advertising Services" />
+                <meta property="og:description" content="High-impact bus branding: full wraps, side ads, back-of-bus ads, route planning, and creative execution for strong reach and recall." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://brandbanao.ai/TVNewsChanelBranding" />
+                <meta property="og:url" content="https://brandbanao.ai/BusBranding" />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1000" />
@@ -169,8 +170,8 @@ const AirportBranding = () => {
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="TV News Channel Branding Services" />
-                <meta name="twitter:description" content="TV News Channel Branding by Brand Banao.Ai: on-air identity, motion graphics, lower-thirds, tickers and show packaging." />
+                <meta name="twitter:title" content="Bus Branding & Bus Advertising Services" />
+                <meta name="twitter:description" content="Bus branding by Brand Banao.Ai: wraps, side ads, back-of-bus ads, route planning, and creative execution." />
                 <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
                 {/* Structured Data */}
@@ -188,7 +189,7 @@ const AirportBranding = () => {
 
                 <div className="hoarding-image-wrap">
                     <img
-                        src={airport}
+                        src={BusBranding}
                         alt="TV News Channel Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
