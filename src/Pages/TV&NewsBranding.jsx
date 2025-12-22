@@ -141,7 +141,7 @@ const TVNewsBranding = () => {
         <>
             <Helmet>
                 {/* Basic SEO */}
-                <title>Brand Banao.Ai | TV News Branding</title>
+                <title>TV News Branding | Brand Banao.Ai</title>
                 <meta name="author" content="Brand Banao.AI" />
                 <meta name="description" content="TV News Channel Branding by Brand Banao.Ai. On-air branding, motion graphics, lower-thirds, tickers, show packaging and channel identity systems for regional and national news networks." />
                 <meta name="keywords" content="tv news channel branding, news channel branding, on-air branding, broadcast design, tv channel identity, news channel rebranding, motion graphics for news, lower thirds design, ticker design, breaking news graphics, tv news graphics package, tv channel logo design, brand banao ai" />

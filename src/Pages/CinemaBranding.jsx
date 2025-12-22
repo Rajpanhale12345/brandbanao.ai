@@ -135,7 +135,7 @@ const CinemaBranding = () => {
     <>
       <Helmet>
         {/* Basic SEO */}
-        <title>Brand Banao.Ai | Cinema Branding</title>
+        <title>Cinema Branding | Brand Banao.Ai</title>
         <meta name="author" content="Brand Banao.AI" />
         <meta
           name="description"
