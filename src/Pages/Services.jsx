@@ -115,7 +115,7 @@ export default function Services() {
             <ServiceCard
               title="Cycle Branding"
               image={cycle}
-              // path="/cycle-branding"
+              path="/CycleeBranding"
             />
           </div>
         </div>

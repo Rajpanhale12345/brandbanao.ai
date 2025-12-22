@@ -145,61 +145,35 @@ const AutoooBranding = () => {
   return (
     <>
       <Helmet>
-        {/* Basic SEO */}
         <title>Brand Banao.Ai | Auto Branding</title>
         <meta name="author" content="Brand Banao.AI" />
-        <meta
-          name="description"
-          content="Auto branding and auto rickshaw advertising by Brand Banao.Ai. High-visibility mobile ads with wraps, back panels, and route-based hyperlocal campaigns with reporting for hyperlocal reach."
-        />
-        <meta
-          name="keywords"
-          content="auto branding, auto rickshaw advertising, auto advertising, auto wrap ads, mobile outdoor advertising, back panel branding, side panel branding, hyperlocal advertising, brand banao ai"
-        />
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-video-preview:-1"
-        />
+        <meta name="description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai. High-visibility mobile ads with wraps, back panels, and route-based hyperlocal campaigns with reporting for hyperlocal reach." />
+        <meta name="keywords" content="auto branding, auto rickshaw advertising, auto advertising, auto wrap ads, mobile outdoor advertising, back panel branding, side panel branding, hyperlocal advertising, brand banao ai" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="MobileOptimized" content="width" />
         <meta name="HandheldFriendly" content="true" />
 
-        {/* Canonical */}
         <link rel="canonical" href="https://brandbanao.ai/AutoBranding" />
 
-        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="BrandBanao.Ai" />
         <meta property="og:title" content="Auto Branding Services" />
-        <meta
-          property="og:description"
-          content="Auto branding and auto rickshaw advertising: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting."
-        />
+        <meta property="og:description" content="Auto branding and auto rickshaw advertising: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/AutoBranding" />
-        <meta
-          property="og:image"
-          content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
-        />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />
         <meta property="og:latitude" content="20.00293012347024" />
         <meta property="og:longitude" content="73.75462348408139" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Auto Branding Services" />
-        <meta
-          name="twitter:description"
-          content="Auto branding and auto rickshaw advertising by Brand Banao.Ai: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting."
-        />
-        <meta
-          name="twitter:image"
-          content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
-        />
+        <meta name="twitter:description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting." />
+        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
-        {/* ✅ Structured Data (JSON-LD) */}
         <script type="application/ld+json">
           {JSON.stringify(webPageSchema)}
         </script>

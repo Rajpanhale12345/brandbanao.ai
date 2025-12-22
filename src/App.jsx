@@ -23,6 +23,7 @@ import TVNewsChanelBranding from "./Pages/TV&NewsBranding"
 import ScrollToTop from "./Pages/ScrollToTop";
 import BusBranding from "./Pages/BusBranding";
 import AutoBranding from "./Pages/AutoBranding";
+import CycleeBranding from "./Pages/CycleBranding";
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/TVNewsChanelBranding" element={< TVNewsChanelBranding />} />
         <Route path="/BusBranding" element={< BusBranding />} />
         <Route path="/AutoBranding" element={< AutoBranding />} />
+        <Route path="/CycleeBranding" element={< CycleeBranding />} />
       </Routes>
       <Footer />
     </Router>
