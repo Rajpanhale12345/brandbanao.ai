@@ -20,26 +20,25 @@ const DigitallMarketing = () => {
     const PAGE_TITLE =
         "Digital Marketing | Brand Banao.Ai";
     const PAGE_DESC =
-        "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
-    const PAGE_URL = "https://brandbanao.ai/RailwayyBranding"; // update if your actual route differs
+        "Grow your business with Brand Banao.Ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics and conversion optimisation.";
+    const PAGE_URL = "https://brandbanao.ai/DigitallMarketing";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
     const webPageSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        name: "Railway Branding Services - Brand Banao.Ai",
-        headline: "Railway Branding & Railway Station Advertising - Brand Banao.Ai",
-        description:
-            "Railway branding and railway station advertising by Brand Banao.Ai. High-impact transit ads including station hoardings, platform panels, foot overbridge displays, train wraps, and digital screens with end-to-end planning, execution, and reporting.",
-        image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/RailwayBranding",
+        name: "Digital Marketing - Brand Banao.Ai",
+        headline: "Digital Marketing Services by Brand Banao.Ai",
+        description: PAGE_DESC,
+        image: OG_IMAGE,
+        url: PAGE_URL,
         publisher: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
             url: "https://brandbanao.ai/",
             logo: {
                 "@type": "ImageObject",
-                url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+                url: OG_IMAGE,
             },
         },
         author: {
@@ -51,21 +50,21 @@ const DigitallMarketing = () => {
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        name: "Railway Branding & Railway Station Advertising",
-        serviceType: "Transit & Outdoor Advertising",
+        name: "Digital Marketing Services",
+        serviceType: "Digital Marketing",
         provider: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
             url: "https://brandbanao.ai/",
             logo: {
                 "@type": "ImageObject",
-                url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+                url: OG_IMAGE,
             },
         },
         areaServed: "IN",
-        url: "https://brandbanao.ai/RailwayBranding",
+        url: PAGE_URL,
         description:
-            "Railway advertising services including station hoardings, platform branding, foot overbridge panels, waiting-area media, train wraps, and digital screens. Includes permissions support, planning, production, deployment, monitoring, and reporting.",
+            "End-to-end digital marketing: SEO (technical & on-page), Google Ads (PPC), social media marketing, content marketing, performance marketing, analytics, conversion rate optimisation and reporting.",
     };
 
 
@@ -75,56 +74,56 @@ const DigitallMarketing = () => {
         mainEntity: [
             {
                 "@type": "Question",
-                name: "What is railway branding?",
+                name: "What digital marketing services does Brand Banao.Ai offer?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Railway branding is transit advertising that uses railway stations and trains to promote brands through formats like station hoardings, platform displays, foot overbridge panels, train wraps, and digital screens for repeated high-volume visibility.",
+                        "We provide SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, conversion optimisation, and reporting—tailored to your goals and budget.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Where can railway advertisements be placed?",
+                name: "How long does SEO take to show results?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Railway ads can be placed at entry and exit zones, station premises, platforms, foot overbridges, waiting areas, concourse locations, trains, and digital screens depending on availability and campaign objectives.",
+                        "SEO timelines vary by industry and competition, but many websites start seeing early improvements within 8–12 weeks, with stronger results typically building over 3–6 months through consistent optimisation.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Why does railway advertising work well for brands?",
+                name: "Do you manage Google Ads and paid social campaigns?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Railway advertising works due to mass reach, high frequency, longer dwell time at stations, and audience diversity—helping brands build recall and trust through repeated exposure.",
+                        "Yes. We plan, set up and optimise search, display and social campaigns with conversion tracking, audience targeting, creative testing and ongoing performance optimisation.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Do you manage permissions and end-to-end execution?",
+                name: "Can you help with local SEO for Nashik and nearby areas?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Yes. Brand Banao.Ai supports planning, artwork guidance, production, placement execution, monitoring, and reporting for railway branding campaigns.",
+                        "Yes. We improve local visibility with Google Business Profile optimisation, location pages, local keyword targeting, citations, reviews strategy and local ranking improvements.",
                 },
             },
             {
                 "@type": "Question",
-                name: "What types of campaigns are suitable for railway branding?",
+                name: "How do you measure performance?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Railway branding is suitable for FMCG promotions, retail launches, tourism campaigns, education and healthcare awareness, real estate launches, automotive promotions, and seasonal or event-based campaigns.",
+                        "We track the metrics that matter—qualified leads, conversions, revenue, CAC/ROAS, traffic quality and engagement—supported by analytics dashboards and regular reporting.",
                 },
             },
             {
                 "@type": "Question",
-                name: "Why choose Brand Banao.Ai for railway advertising?",
+                name: "Why choose Brand Banao.Ai as your digital marketing partner?",
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Brand Banao.Ai combines strategic planning, creative execution, and on-ground operations to deliver scalable railway branding with consistent visibility, monitoring, and measurable coverage.",
+                        "We combine strategy, creativity and analytics to build scalable marketing systems—focusing on measurable outcomes, continuous optimisation and transparent reporting.",
                 },
             },
         ],
@@ -132,37 +131,36 @@ const DigitallMarketing = () => {
 
     const faqItems = [
         {
-            question: "What is railway branding?",
+            question: "What digital marketing services does Brand Banao.Ai offer?",
             answer:
-                "Railway branding is transit advertising that uses railway stations and trains to promote your brand through formats like station hoardings, platform displays, foot overbridge panels, train wraps, and digital screens for repeated visibility.",
+                "We provide SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, conversion optimisation and reporting—tailored to your goals.",
         },
         {
-            question: "Where can railway advertisements be placed?",
+            question: "How long does SEO take to show results?",
             answer:
-                "Railway ads can be placed at station entry/exit zones, concourse areas, platforms, foot overbridges, waiting areas, trains, and digital screens based on location availability and campaign goals.",
+                "SEO results depend on competition and your starting point, but many sites see early improvements in 8–12 weeks, with stronger gains over 3–6 months of consistent work.",
         },
         {
-            question: "Which railway advertising formats do you offer?",
+            question: "Do you manage Google Ads and paid social campaigns?",
             answer:
-                "We offer station hoardings, platform panels, foot overbridge displays, waiting-area placements, train wraps, and digital screen advertising at railway stations for targeted and mass-reach campaigns.",
+                "Yes. We plan, launch and optimise paid campaigns across search, display and social with conversion tracking, targeting, creative testing and ongoing optimisation.",
         },
         {
-            question: "Do you handle planning, production, and deployment?",
+            question: "Can you help with local SEO for Nashik?",
             answer:
-                "Yes. We support end-to-end execution—campaign planning, artwork guidance, production, placement execution, on-ground coordination, and schedule management.",
+                "Yes. We improve local visibility via Google Business Profile optimisation, local keywords, location pages, citations and review strategy.",
         },
         {
-            question: "Do you provide monitoring and reporting?",
+            question: "How do you measure performance?",
             answer:
-                "Yes. Campaigns include monitoring and reporting to help ensure placements run as planned and deliver consistent visibility and frequency in target stations and routes.",
+                "We measure qualified leads, conversions, ROAS/CAC, revenue impact, traffic quality and engagement—shared via dashboards and regular reporting.",
         },
         {
-            question: "Why choose Brand Banao.Ai for railway advertising?",
+            question: "Why choose Brand Banao.Ai for digital marketing?",
             answer:
-                "Brand Banao.Ai combines strategy, creative execution, and on-ground operations to deliver scalable railway branding with strong recall, consistent visibility, and measurable coverage.",
+                "We combine strategy, creativity and analytics to deliver scalable growth, continuous optimisation and transparent reporting.",
         },
     ];
-
 
     return (
         <>
@@ -171,14 +169,8 @@ const DigitallMarketing = () => {
                 <title>{PAGE_TITLE}</title>
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
-                <meta
-                    name="keywords"
-                    content="railway branding, railway station advertising, railway advertising agency, station branding, platform branding, foot overbridge advertising, train wrap advertising, railway hoarding, digital screens railway station, outdoor advertising India, transit advertising, Brand Banao Ai"
-                />
-                <meta
-                    name="robots"
-                    content="index, follow, max-image-preview:large, max-video-preview:-1"
-                />
+                <meta name="keywords" content="digital marketing, digital marketing agency, online marketing, digital marketing company, online advertising, marketing strategy, google digital marketing, digital marketing services, digital advertising, online digital marketing, digital marketing website, digital marketing specialist, seo digital marketing, performance marketing agencies, best marketing agencies, digital media marketing, seo advertising, best digital marketing companies, content marketing agencies, digital advertising companies, digital marketing agency website, top digital marketing companies, seo and digital marketing, local seo agency, best marketing agency websites, digital agency services, best digital marketing websites, brand advertising,  digital marketing, digital media advertising, best digital marketing agency in the world, best local seo company, top digital marketing, best digital marketing services, full service digital marketing agency, lead digital, social media marketing, web seo services" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
@@ -348,8 +340,8 @@ const DigitallMarketing = () => {
                     </p>
 
                     <p>
-                        If you need top-of-the-line digital marketing services, top-tier digital marketing services or reliable 
-                        digital marketing firms to strategically develop your brand, then let Brand Banao.Ai assist you in 
+                        If you need top-of-the-line digital marketing services, top-tier digital marketing services or reliable
+                        digital marketing firms to strategically develop your brand, then let Brand Banao.Ai assist you in
                         achieving sustainable, intelligent growth for your company.
                     </p>
 
@@ -359,7 +351,7 @@ const DigitallMarketing = () => {
 
                 {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
                 <div className="hoarding-content faq-section">
-                    <h2>Railways Branding FAQs</h2>
+                    <h2>Digital Marketing FAQs</h2>
                     <div className="faq-list">
                         {faqItems.map((faq, index) => {
                             const isActive = activeFaqIndex === index;
