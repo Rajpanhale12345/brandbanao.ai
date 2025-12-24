@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import airport from "../Images/railwaybranding.jpg";
+import airport from "../Images/digital.jpg";
 import "./tvNews.css";
 
-const RailwayyBranding = () => {
+const DigitallMarketing = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
@@ -16,9 +16,9 @@ const RailwayyBranding = () => {
     };
 
     // ✅ SEO: Consistent page identity for Railway Branding
-    const PAGE_NAME = "Railway Branding Services";
+    const PAGE_NAME = "Digital Marketing Service";
     const PAGE_TITLE =
-        "Railway Branding | Brand Banao.Ai";
+        "Digital Marketing | Brand Banao.Ai";
     const PAGE_DESC =
         "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
     const PAGE_URL = "https://brandbanao.ai/RailwayyBranding"; // update if your actual route differs
@@ -217,7 +217,7 @@ const RailwayyBranding = () => {
             </Helmet>
 
             <div className="hoarding-page">
-                <h1 className="hoarding-title">Railway Branding</h1>
+                <h1 className="hoarding-title">Digital Marketing</h1>
 
                 <div className="hoarding-image-wrap">
                     <img
@@ -241,103 +241,120 @@ const RailwayyBranding = () => {
                 )}
 
                 <div className="hoarding-content">
-                    <h2>Railway Branding - Brand Banao.Ai</h2>
+                    <h2>Digital Marketing - Brand Banao.Ai</h2>
                     <p>
-                        Indian Railways still remain one of the biggest mass-connectors across the world. With daily
-                        commuters and travelers in millions, plus long-distance passengers, rail branding gives brands
-                        steady visibility across all sorts of people. At Brand Banao.AI, we roll out smart, railway-focused
-                        campaigns that turn transit spaces into punchy brand moments.
+                        In the era of fast-paced life, brands grow through precision rather than just having an existence.
+                        Brand Banao.Ai's Digital Marketing team will provide brands with measurable support using the
+                        platforms where brands can grow and are most visible.
                     </p>
                     <p>
-                        Rail advertising keeps your brand in front of people along the whole journey-from walking into
-                        the station to waiting on the platform and even while they're riding. It's not just a quick hit,
-                        either. Station ads are longer-lasting and better-received and can reach people across city and
-                        semi-urban areas.
-                    </p>
-                    <p>
-                        We handle everything, from train ads to static and digital stuff inside the stations, with a
-                        solid grasp of passenger behavior to deliver recall, trust, and engagement for rail station formats.
+                        We're a forward-thinking digital marketing agency helping businesses cruise through the online
+                        world with clarity and confidence. Our unique, mix of creativity, technology and analytics creates
+                        campaigns that are purposeful, scalable and results driven. We do not chase trends, we build the
+                        systems that convert consumer interest to action.
                     </p>
 
                     <br />
 
-                    <h2>Comprehensive Railway Media Formats</h2>
+                    <h2>A Strategy-First Approach</h2>
                     <p>
-                        We offer a wide variety of placements: train station advertisements, platform displays, foot
-                        overbridge panels, and big-time train wrap adverts for large campaigns. Being one of the leading
-                        railway station branding agencies in Nashik, Maharashtra, we take care of permissions, planning,
-                        execution, and reporting all under one roof.
+                        Every great campaign begins with the right strategy. We research your audience, competitors,
+                        and category trends to create a plan that connects your brand objectives to tangible results.
+                        If you're launching, growing, or changing, our planning drives consistency across channels and
+                        clarity in how we talk to people.
                     </p>
                     <p>
-                        Our portfolio of services ranges from premium railway advertisements across India to customized
-                        rail branding solutions for SMEs seeking hyperlocal targeting. Whether you are simply looking
-                        for a railway station outdoor advertisement agency in your vicinity or large-format platform
-                        branding and station hoardings, our team undertakes smart placements and creative excellence.
-                    </p>
-                    <p>
-                        We provide clear understanding and transparent guidance for Nashik railway station billboard
-                        advertisements to help you have seamless planning for the same. Our campaigns support railway
-                        branding and engagement for FMCG brands, backed by digital screens at the railway station that
-                        grab motion-driven attention.
-                    </p>
-
-
-                    <br />
-
-                    <h2>Industry-specific campaign experience</h2>
-                    <p>
-                        We design focused railway ad strategies for travel brands and double up as a go-to railway
-                        station advertising agency for national players. We are experienced in utilizing local market
-                        knowledge as a rail advertising agency based in Nashik (Maharashtra, India) to run large
-                        multi-city advertising campaigns through branding services across Mumbai and Nashik.
-                    </p>
-                    <p>
-                        As an advertising agency located near the Nashik railway station, we are able to utilise
-                        our vast local connections for all of our 'on-the-ground' execution requirements for clients.
-                        Our team manages the railway hoarding advertisements for many cities throughout Maharashtra
-                        as well as providing integrated branding services in the major metropolitan areas of
-                        Maharashtra (Mumbai, Pune, Nashik).
+                        As a trusted digital marketing company, Brand Banao.Ai is a holistic solutions provider across
+                        platforms. Be it an online campaign or advanced digital advertising; rest assured that your brand
+                        will say the right thing to the right people at the right time.
                     </p>
 
                     <br />
 
-                    <h2>Why Railway Advertising Works</h2>
+                    <h2>Performance-driven campaigns</h2>
                     <p>
-                        People often ask why rail ads drive better brand visibility. Repetition, scale, and diversity
-                        of the audience is the answer. Through our management and marketing of hoardings at railway
-                        stations, we can demonstrate to local advertisers how station hoardings can be used to engage
-                        consumers. We provide advertisers with accurate metrics by which to follow their ROI back to
-                        their respective advertising campaigns.
+                        With extensive expertise in Google Marketing, we are able to deliver campaigns with a high intent
+                        of driving quality traffic to generate measurable return on investment. As a performance marketing
+                        agency that is rising to prominence, we use the best metrics including leads, conversion and
+                        revenue as our primary success indicators. Each and every investment is continually tracked,
+                        updated and optimised.
                     </p>
                     <p>
-                        All artwork created for railway advertisements reflects our efforts to comply with the latest
-                        outdoor advertising trends and adhere to the best practices set forth in order to meet our
-                        clients' needs throughout 2026. We offer sector-specific solutions for retail and hospitality,
-                        rail ads for tourism, and scalable branding for FMCG.
-                    </p>
-                    <p>
-                        In addition, we also provide clients with advertising packages for automotive launches as well
-                        as providing timely and seasonal rail branding for special promotional campaigns.
+                        We manage online ads, including search, display, and social, using pinpoint targeting and
+                        compelling creative. Our background with digital advertising teams helps brands compete in
+                        crowded markets while keeping costs in check.
                     </p>
 
                     <br />
 
-                    <h2>Planning, Cost & Consultation</h2>
-
+                    <h2>Search, Content & Visibility</h2>
                     <p>
-                        If you're interested in learning more about the various benefits of outdoor rail branding or
-                        comparing your options between rail and airport advertising, our highly trained experts are
-                        here to assist you with data-based analysis. We help brands in the planning of a station
-                        branding campaign with a clear cost and budget guide.
+                        Strong visibility begins with proper search engine optimisation. At our agency, we have experienced
+                        professionals that marry expertise in technical audits and content optimisation with building
+                        authority to create the conditions for sustained growth. Advanced search engine optimisation,
+                        combined with web services, will allow brands to be found in more locations, load their websites
+                        faster, and convert at an improved rate.
                     </p>
                     <p>
-                        From solid design examples to helping you book rail station billboards in Maharashtra, we
-                        support end-to-end execution. This also includes small business railway ad proposals in India,
-                        pricing estimates for rail campaigns, and personalized branding quotes and consultations in Nashik.
+                        We assist content marketing teams in developing the message and manner by which audiences connect
+                        with your brand through providing them with value, and substance rather than fluff. When you mix
+                        this with SEO and digital marketing, organic reach grows alongside paid efforts.
+                    </p>
+                    <p>
+                        For region-focused brands, our local SEO solutions power up discoverability where it matters most.
+                        We position ourselves as a top digital marketing company in Nashik for those seeking to own their
+                        city or area.
                     </p>
 
-                    <h3 style={{ textAlign: "center" }}><i><b>With railway advertising media planner services from Brand
-                        Banao.Ai, your brand rides where India rides-on railways.</b></i></h3>
+                    <br />
+
+                    <h2>Full-Service Digital Execution</h2>
+
+                    <p>
+                        As a full-service digital marketing agency, Brand Banao.Ai integrates social media marketing, digital
+                        media marketing, and digital media advertising all in one seamless system. We also back brand ad
+                        campaigns that boost recall and trust across digital touchpoints.
+                    </p>
+                    <p>
+                        The digital marketing team behind our agency is full of professionals with expertise in every
+                        aspect of the digital marketing process, from concept to optimization. As such, we're not just
+                        vendors; instead, we are your digital partner for all your digital marketing initiatives.
+                        We aren't just vendors; we're your go-to digital partner.
+                    </p>
+
+                    <br />
+
+                    <h2>Why Brands choose Brand Banao.Ai</h2>
+
+                    <p>
+                        We are considered one of the most prominent digital marketing companies, blending speed with
+                        strategy.
+                    </p>
+
+                    <p>
+                        <b>Digital Marketing Partners at Every Stage of Development:</b> Our digital marketing team
+                        includes highly skilled digital marketers who will help you create a complete and effective
+                        online marketing strategy, as well as optimize that strategy for maximum effectiveness. By being
+                        your digital partner, we provide a collaborative, consultative approach to developing an effective
+                        digital marketing approach.
+                    </p>
+
+                    <p>
+                        We provide our clients with the same level of clarity and effectiveness we have achieved on our site,
+                        we have gained international recognition as one of the leading digital marketing agency websites,
+                        along with being among the best marketing agency websites. A number of people view our multi-faceted
+                        approach to be a strong frontrunner in terms of who is the best digital marketing agency in the world
+                        based on the outcomes we have experience with.
+                    </p>
+
+                    <p>
+                        If you need top-of-the-line digital marketing services, top-tier digital marketing services or reliable 
+                        digital marketing firms to strategically develop your brand, then let Brand Banao.Ai assist you in 
+                        achieving sustainable, intelligent growth for your company.
+                    </p>
+
+                    {/* <h3 style={{ textAlign: "center" }}><i><b>With railway advertising media planner services from Brand
+                        Banao.Ai, your brand rides where India rides-on railways.</b></i></h3> */}
                 </div>
 
                 {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
@@ -375,4 +392,4 @@ const RailwayyBranding = () => {
     );
 };
 
-export default RailwayyBranding;
+export default DigitallMarketing;

@@ -77,7 +77,7 @@ export default function Services() {
             <ServiceCard
               title="Digital Marketing"
               image={digital}
-              // path="/digital"
+              path="/DigitallMarketing"
             />
 
             <ServiceCard

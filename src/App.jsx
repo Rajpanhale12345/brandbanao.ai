@@ -25,6 +25,7 @@ import BusBranding from "./Pages/BusBranding";
 import AutoBranding from "./Pages/AutoBranding";
 import CycleeBranding from "./Pages/CycleBranding";
 import RailwayyBranding from "./Pages/RailwayBranding";
+import DigitallMarketing from "./Pages/DigitalMarketing";
 
 export default function App() {
   return (
@@ -54,6 +55,7 @@ export default function App() {
         <Route path="/AutoBranding" element={< AutoBranding />} />
         <Route path="/CycleeBranding" element={< CycleeBranding />} />
         <Route path="/RailwayyBranding" element={< RailwayyBranding />} />
+        <Route path="/DigitallMarketing" element={< DigitallMarketing />} />
       </Routes>
       <Footer />
     </Router>
