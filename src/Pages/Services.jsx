@@ -45,27 +45,27 @@ export default function Services() {
             <ServiceCard
               title="Hoardings/Billboards"
               image={hoarding}
-              path="/hoardings"
+              path="/Hoardings"
               style={{ height : "200px"}}
             />
 
             <ServiceCard
               title="Bus Shelter"
               image={busshelter}
-              path="/bus-shelter"
+              path="/Bus_Shelter"
             />
 
             <ServiceCard
               title="Cinema Branding"
               image={cinema}
-              path="/cinema"
+              path="/Cinema"
              
             />
 
             <ServiceCard
               title="Radio FM Branding"
               image={radio}
-              path="/radio"
+              path="/Radio"
             />
 
             <ServiceCard
@@ -77,13 +77,13 @@ export default function Services() {
             <ServiceCard
               title="Digital Marketing"
               image={digital}
-              path="/DigitallMarketing"
+              path="/DigitalMarketing"
             />
 
             <ServiceCard
               title="Railway Branding"
               image={railway}
-              path="/RailwayyBranding"
+              path="/RailwayBranding"
             />
 
             <ServiceCard
@@ -109,13 +109,13 @@ export default function Services() {
             <ServiceCard
               title="Website/App Development"
               image={app}
-              // path="/app-development"
+              path="/WebDevelopment"
             />
 
             <ServiceCard
               title="Cycle Branding"
               image={cycle}
-              path="/CycleeBranding"
+              path="/CycleBranding"
             />
           </div>
         </div>

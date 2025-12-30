@@ -26,6 +26,7 @@ import AutoBranding from "./Pages/AutoBranding";
 import CycleeBranding from "./Pages/CycleBranding";
 import RailwayyBranding from "./Pages/RailwayBranding";
 import DigitallMarketing from "./Pages/DigitalMarketing";
+import WebDevelopmentt from "./Pages/WebDevelopment";
 
 export default function App() {
   return (
@@ -39,10 +40,10 @@ export default function App() {
         <Route path="/contact" element={< Contact />} />
         <Route path="/services" element={< Services />} />
         <Route path="/careers" element={< Careers />} />
-        <Route path="/cinema" element={< CinemaBranding />} />
-        <Route path="/radio" element={< RadioBranding />} />
-        <Route path="/hoardings" element={< Hoardings />} />
-        <Route path="/bus-shelter" element={< BusShelterBranding />} />
+        <Route path="/Cinema" element={< CinemaBranding />} />
+        <Route path="/Radio" element={< RadioBranding />} />
+        <Route path="/Hoardings" element={< Hoardings />} />
+        <Route path="/Bus_Shelter" element={< BusShelterBranding />} />
         <Route path="/AirportBranding" element={< AirportBranding />} />
         <Route path="/Careers/DigitalMarketingExecutive" element={< DigitalMarketingExecutiveRole />} />
         <Route path="/Careers/DigitalMarketingManager" element={< DigitalMarketingManager />} />
@@ -53,9 +54,10 @@ export default function App() {
         <Route path="/TVNewsChanelBranding" element={< TVNewsChanelBranding />} />
         <Route path="/BusBranding" element={< BusBranding />} />
         <Route path="/AutoBranding" element={< AutoBranding />} />
-        <Route path="/CycleeBranding" element={< CycleeBranding />} />
-        <Route path="/RailwayyBranding" element={< RailwayyBranding />} />
-        <Route path="/DigitallMarketing" element={< DigitallMarketing />} />
+        <Route path="/CycleBranding" element={< CycleeBranding />} />
+        <Route path="/RailwayBranding" element={< RailwayyBranding />} />
+        <Route path="/DigitalMarketing" element={< DigitallMarketing />} />
+        <Route path="/WebDevelopment" element={< WebDevelopmentt />} />
       </Routes>
       <Footer />
     </Router>
