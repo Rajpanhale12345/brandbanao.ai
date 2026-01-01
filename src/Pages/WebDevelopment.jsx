@@ -188,8 +188,6 @@ const WebDevelopmentt = () => {
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1000" />
                 <meta property="og:image:height" content="630" />
-
-                {/* (Optional) keep lat/long if you intentionally use it; otherwise remove */}
                 <meta property="og:latitude" content="20.00293012347024" />
                 <meta property="og:longitude" content="73.75462348408139" />
 

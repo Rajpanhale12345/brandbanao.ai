@@ -167,12 +167,15 @@ export default function Home() {
     <>
 
       <Helmet>
+
+        <meta charSet="utf-8" />
         <title>Brand Banao.ai | 360° Marketing & Branding Agency in Maharashtra</title>
-        <meta name="author" content="Brand Banao.AI" />
+        <meta name="author" content="Brand Banao.Ai" />
         <meta name="description" content="BrandBanao.Ai is a 360° marketing and branding agency in Maharashtra delivering outdoor advertising, hoardings, bus shelter branding, cinema ads, radio branding and digital marketing with 16+ years of experience."/>
         <meta name="keywords" content="best 360° advertising agency in nashik, best digital marketing agency in nashik, best IT company in nashik, top 360° advertising agency in nashik, top digital marketing agency in nashik" />
 
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://brandbanao.ai/" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="MobileOptimized" content="width" />
@@ -196,11 +199,9 @@ export default function Home() {
         <meta name="twitter:description" content="BrandBanao.Ai offers 360° expert digital, outdoor, and print marketing services across Maharashtra." />
         <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
-        {/* ✅ Correct JSON-LD injection */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-
 
       </Helmet>
 
@@ -210,10 +211,7 @@ export default function Home() {
 
         <div className="hero">
           <p className="title-1">THE BEST 360° BRANDING AND ADVERTISING</p>
-          <h2 className="title-2">
-            AGENCY IN
-            <br /><div className="highlight">MAHARASHTRA</div>
-          </h2>
+          <h2 className="title-2">AGENCY IN <br /><div className="highlight">MAHARASHTRA</div> </h2>
         </div>
 
         {/* NEW: floating scroll-down arrow */}
