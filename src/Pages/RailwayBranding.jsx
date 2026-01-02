@@ -169,6 +169,24 @@ const RailwayyBranding = () => {
             <Helmet>
                 {/* ✅ Primary SEO */}
                 <title>{PAGE_TITLE}</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="publisher" content="Brand Banao.Ai" />
+                <meta name="creator" content="Brand Banao.Ai" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="theme-color" content="#0d1117" />
+                <meta name="color-scheme" content="light dark" />
+                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" />
+                <meta name="twitter:image:alt" content="Railway Branding - Brand Banao.Ai" />
+                <meta name="twitter:site" content="@BrandBanaoAi" />
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
                 <meta

@@ -20,107 +20,144 @@ export default function Services() {
 
     <>
 
-    <Helmet>
+      <Helmet>
 
-      <title>Services | Brand Banao.ai</title>
-      <meta name="author" content="Brand Banao.AI" />
-      
-    </Helmet>
+        <title>Services | Brand Banao.ai</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Brand Banao.AI" />
+        <meta name="publisher" content="Brand Banao.Ai" />
+        <meta name="creator" content="Brand Banao.Ai" />
+        <meta name="description" content="Explore Brand Banao.Ai services: hoardings, bus shelter ads, cinema branding, radio FM campaigns, airport branding, digital marketing, railway branding, bus and auto branding, TV news channel branding, web/app development, and cycle branding." />
+        <meta name="keywords" content="Brand Banao services, outdoor advertising, hoardings, billboards, bus shelter advertising, cinema branding, radio FM branding, airport branding, digital marketing, railway branding, bus branding, auto branding, TV news channel branding, website development, app development, cycle branding" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="color-scheme" content="light dark" />
+        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="canonical" href="https://brandbanao.ai/services" />
+        <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content="BrandBanao.Ai" />
+        <meta property="og:title" content="Services | Brand Banao.Ai" />
+        <meta property="og:description" content="Explore Brand Banao.Ai services across outdoor advertising, branding, digital marketing, and web/app development." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://brandbanao.ai/services" />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Brand Banao.Ai - Services" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Services | Brand Banao.Ai" />
+        <meta name="twitter:description" content="Explore Brand Banao.Ai services across outdoor advertising, branding, digital marketing, and web/app development." />
+        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta name="twitter:image:alt" content="Brand Banao.Ai - Services" />
+        <meta name="twitter:site" content="@BrandBanaoAi" />
 
-    <div style={{ minHeight: "100vh", background: "#fafafa" }}>
-      <StyleBlock />
+      </Helmet>
 
-      {/* Hero */}
-      <section style={{ position: "relative" }}>
-        <div className="container">
-          <h1 className="title" style={{ color: "#d94f5c" }}>Our Services</h1>
-        </div>
-      </section>
+      <div style={{ minHeight: "100vh", background: "#fafafa" }}>
+        <StyleBlock />
 
-      {/* Grid */}
-      <section>
-        <div className="container">
-          <div className="grid">
-            {/* Each card declared separately so you can give unique links */}
-            <ServiceCard
-              title="Hoardings/Billboards"
-              image={hoarding}
-              path="/Hoardings"
-              style={{ height : "200px"}}
-            />
-
-            <ServiceCard
-              title="Bus Shelter"
-              image={busshelter}
-              path="/Bus_Shelter"
-            />
-
-            <ServiceCard
-              title="Cinema Branding"
-              image={cinema}
-              path="/Cinema"
-             
-            />
-
-            <ServiceCard
-              title="Radio FM Branding"
-              image={radio}
-              path="/Radio"
-            />
-
-            <ServiceCard
-              title="Airport Branding"
-              image={airport}
-              path={"/AirportBranding"}              
-            />
-
-            <ServiceCard
-              title="Digital Marketing"
-              image={digital}
-              path="/DigitalMarketing"
-            />
-
-            <ServiceCard
-              title="Railway Branding"
-              image={railway}
-              path="/RailwayBranding"
-            />
-
-            <ServiceCard
-              title="Bus Branding"
-              image={bus}
-              path="/BusBranding"
-            />
-
-            <ServiceCard
-              title="TV News Channel Branding"
-              image={news}
-              path="/TVNewsChanelBranding"
-              // example of custom img style on a single card:
-              imgStyle={{ objectFit: "contain", background: "#fff" }}
-            />
-
-            <ServiceCard
-              title="Auto Branding"
-              image={auto}
-              path="/AutoBranding"
-            />
-
-            <ServiceCard
-              title="Website/App Development"
-              image={app}
-              path="/WebDevelopment"
-            />
-
-            <ServiceCard
-              title="Cycle Branding"
-              image={cycle}
-              path="/CycleBranding"
-            />
+        {/* Hero */}
+        <section style={{ position: "relative" }}>
+          <div className="container">
+            <h1 className="title" style={{ color: "#d94f5c" }}>Our Services</h1>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* Grid */}
+        <section>
+          <div className="container">
+            <div className="grid">
+              {/* Each card declared separately so you can give unique links */}
+              <ServiceCard
+                title="Hoardings/Billboards"
+                image={hoarding}
+                path="/Hoardings"
+                style={{ height: "200px" }}
+              />
+
+              <ServiceCard
+                title="Bus Shelter"
+                image={busshelter}
+                path="/Bus_Shelter"
+              />
+
+              <ServiceCard
+                title="Cinema Branding"
+                image={cinema}
+                path="/Cinema"
+
+              />
+
+              <ServiceCard
+                title="Radio FM Branding"
+                image={radio}
+                path="/Radio"
+              />
+
+              <ServiceCard
+                title="Airport Branding"
+                image={airport}
+                path={"/AirportBranding"}
+              />
+
+              <ServiceCard
+                title="Digital Marketing"
+                image={digital}
+                path="/DigitalMarketing"
+              />
+
+              <ServiceCard
+                title="Railway Branding"
+                image={railway}
+                path="/RailwayBranding"
+              />
+
+              <ServiceCard
+                title="Bus Branding"
+                image={bus}
+                path="/BusBranding"
+              />
+
+              <ServiceCard
+                title="TV News Channel Branding"
+                image={news}
+                path="/TVNewsChanelBranding"
+                // example of custom img style on a single card:
+                imgStyle={{ objectFit: "contain", background: "#fff" }}
+              />
+
+              <ServiceCard
+                title="Auto Branding"
+                image={auto}
+                path="/AutoBranding"
+              />
+
+              <ServiceCard
+                title="Website/App Development"
+                image={app}
+                path="/WebDevelopment"
+              />
+
+              <ServiceCard
+                title="Cycle Branding"
+                image={cycle}
+                path="/CycleBranding"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
 
     </>
   );
@@ -196,7 +233,7 @@ function ServiceCard({
         </div>
       </div>
     </article>
-    
+
   );
 }
 

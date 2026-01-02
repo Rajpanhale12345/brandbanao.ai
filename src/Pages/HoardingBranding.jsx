@@ -131,13 +131,18 @@ const HoardingBranding = () => {
   return (
     <>
       <Helmet>
-
+        <meta charSet="UTF-8" />
         <title>Hoarding | Brand Banao.AI </title>
         <meta name="author" content="Brand Banao.AI" />
         <meta name="description" content="Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra." />
-        <meta name="keywords" content="best hoardings near me, best hoardings in Nashik, best billborads in nashik, top billboards in nashik, best 360 degree advertising agency in Maharashtra, best 360 degree advertisiing company in maharashtra, top 360 degree advertising agency in maharashtra, top 360 degree advertising company in maharashtra, best outdoor advertising agency in Maharashtra, top billboard advertising companies in India, digital billboard advertising services near me, affordable hoarding advertising in Mumbai, billboard advertising agency for political campaigns, programmatic DOOH advertising India, best flex printing for hoardings in Maharashtra, hoarding advertising rates in Nashik, where to rent billboards in Nashik, how effective is billboard advertising in India, billboard advertising Maharashtra, hoarding ads India, outdoor advertising agency, OOH advertising company, digital billboards Maharashtra, LED hoardings Mumbai, affordable billboard ads, programmatic DOOH India, brand visibility hoardings, hyperlocal billboard targeting, high impact OOH marketing, AI outdoor advertising, traditional vs digital billboards, billboard design experts, top hoarding agency Maharashtra" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="keywords" content="best hoardings in Nashik, billboard advertising Maharashtra, outdoor advertising agency, OOH advertising, digital hoardings, LED billboards" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="publisher" content="Brand Banao.AI" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="MobileOptimized" content="width" />
         <meta name="HandheldFriendly" content="true" />
 
@@ -152,10 +157,13 @@ const HoardingBranding = () => {
         <meta property="og:url" content="https://brandbanao.ai/hoardings" />
         <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:latitude" content="20.00293012347024" />
-        <meta property="og:longitude" content="73.75462348408139" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="20.00293;73.75462" />
+        <meta name="ICBM" content="20.00293, 73.75462" />
+
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hoarding/Billboard | Brand Banao.AI" />

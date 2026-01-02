@@ -12,9 +12,29 @@ const About = () => {
     <>
 
       <Helmet>
-        <title>About | Brand Banao.Ai</title>
-        <meta name="author" content="Brand Banao.AI" />
+        <title>About | Best Branding & Advertising Agency in Nashik</title>
+
+        <meta name="description" content="Learn about Brand Banao.Ai, a 360-degree branding and advertising agency in Nashik led by industry experts. Discover our vision, leadership, achievements, and growth journey." />
+
+        <meta name="author" content="Brand Banao.Ai" />
+
+        <link rel="canonical" href="https://brandbanao.ai/about" />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="About Brand Banao.Ai | 360° Branding Agency in Nashik" />
+        <meta property="og:description" content="Meet the leadership and vision behind Brand Banao.Ai, a leading 360° branding and advertising agency delivering strategic growth for businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://brandbanao.ai/about" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Brand Banao.Ai" />
+        <meta
+          name="twitter:description"
+          content="Discover the vision, leadership, and journey of Brand Banao.Ai, a 360° branding agency in Nashik."
+        />
       </Helmet>
+
 
       <div>
 

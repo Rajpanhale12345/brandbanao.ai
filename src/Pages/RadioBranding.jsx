@@ -134,7 +134,28 @@ const RadioFMBranding = () => {
     <>
       <Helmet>
         <title>Radio &amp; FM Branding | Brand Banao.ai</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="publisher" content="Brand Banao.AI" />
+        <meta name="creator" content="Brand Banao.AI" />
         <meta name="author" content="Brand Banao.AI" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="color-scheme" content="light dark" />
+        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Brand Banao.AI" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <meta property="og:image:alt" content="Radio & FM Branding - Brand Banao.AI" />
+        <meta name="twitter:image:alt" content="Radio & FM Branding - Brand Banao.AI" />
+        <meta name="twitter:site" content="@BrandBanaoAi" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta name="description" content="Brand Banao.AI is a top radio advertising agency in India, crafting natural Radio & FM ads that boost recall, drive response and align with your digital campaigns." />
         <meta name="keywords" content="radio advertising agency India, FM radio advertising, radio branding, radio commercials, radio ad production, creative radio scripts, conversational radio ads, audio branding, radio marketing, radio ads Mumbai, radio ads Nashik, radio branding Maharashtra, best radio ad agency, top radio advertising company, FM radio campaigns, radio media buying, RJ mentions, radio brand integration, radio and digital campaigns, Brand Banao.AI" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
@@ -181,7 +202,7 @@ const RadioFMBranding = () => {
         <div className="hoarding-image-wrap">
           <img
             src={radioimg}
-            alt="Bus Shelter branding example by Brand Banao.AI"
+            alt="Radio & FM Branding example by Brand Banao.AI"
             className="hoarding-image"
             onClick={() => openGallery(0)}
           />
@@ -195,7 +216,7 @@ const RadioFMBranding = () => {
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
               <img
                 src={images[currentIndex]}
-                alt="Bus shelter advertising gallery - Brand Banao.AI"
+                alt="Radio & FM Branding gallery - Brand Banao.AI"
                 className="gallery-img"
               />
             </div>

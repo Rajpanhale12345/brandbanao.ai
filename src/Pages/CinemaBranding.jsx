@@ -134,61 +134,48 @@ const CinemaBranding = () => {
   return (
     <>
       <Helmet>
-        {/* Basic SEO */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Cinema Branding | Brand Banao.Ai</title>
         <meta name="author" content="Brand Banao.AI" />
-        <meta
-          name="description"
-          content="Cinema Branding Services by Brand Banao.Ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution."
-        />
-        <meta
-          name="keywords"
-          content="cinema branding, cinema advertising, movie theater advertising, theatre advertising, movie screen advertising, on-screen advertising, off-screen advertising, lobby advertising, foyer advertising, multiplex advertising, PVR Cinemas advertising, Cinépolis advertising, cinema and video advertising, brand banao ai, cinema advertising agency india"
-        />
-        <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-video-preview:-1"
-        />
+        <meta name="description" content="Cinema Branding Services by Brand Banao.Ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution." />
+        <meta name="keywords" content="cinema branding, cinema advertising, movie theater advertising, theatre advertising, movie screen advertising, on-screen advertising, off-screen advertising, lobby advertising, foyer advertising, multiplex advertising, PVR Cinemas advertising, Cinépolis advertising, cinema and video advertising, brand banao ai, cinema advertising agency india" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="MobileOptimized" content="width" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta property="og:image:alt" content="Brand Banao.Ai logo" />        
+        <meta name="twitter:image:alt" content="Brand Banao.Ai logo" />
+        <meta name="twitter:site" content="@BrandBanaoAi" />
         <meta name="HandheldFriendly" content="true" />
-
-        {/* Canonical */}
+        <meta name="publisher" content="Brand Banao.Ai" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="creator" content="Brand Banao.Ai" />
+        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+        <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
         <link rel="canonical" href="https://brandbanao.ai/CinemaBranding" />
-
-        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="BrandBanao.Ai" />
         <meta property="og:title" content="Cinema Branding Service" />
-        <meta
-          property="og:description"
-          content="Cinema Branding Services by Brand Banao.Ai. Immersive on-screen and off-screen theatre advertising across multiplexes and regional cinema networks with end-to-end execution."
-        />
+        <meta property="og:description" content="Cinema Branding Services by Brand Banao.Ai. Immersive on-screen and off-screen theatre advertising across multiplexes and regional cinema networks with end-to-end execution." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/CinemaBranding" />
-        <meta
-          property="og:image"
-          content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
-        />
+        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1000" />
         <meta property="og:image:height" content="630" />
         <meta property="og:latitude" content="20.00293012347024" />
         <meta property="og:longitude" content="73.75462348408139" />
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cinema Branding Service" />
-        <meta
-          name="twitter:description"
-          content="Turn movie halls into storytelling platforms with immersive cinema branding: on-screen & off-screen theatre advertising with end-to-end execution by Brand Banao.Ai."
-        />
-        <meta
-          name="twitter:image"
-          content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
-        />
-
-        {/* Structured Data */}
+        <meta name="twitter:description" content="Turn movie halls into storytelling platforms with immersive cinema branding: on-screen & off-screen theatre advertising with end-to-end execution by Brand Banao.Ai." />
+        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>

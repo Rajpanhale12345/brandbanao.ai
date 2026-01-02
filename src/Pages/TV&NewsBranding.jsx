@@ -24,7 +24,7 @@ const TVNewsBranding = () => {
         name: "TV News Channel Branding Services - Brand Banao.Ai",
         description: "TV News Channel Branding by Brand Banao.Ai. End-to-end on-air branding, motion graphics, channel identity, lower-thirds, tickers, show packaging, and visual systems for regional and national news networks.",
         image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/AirportBranding",
+        url: "https://brandbanao.ai/TVNewsChanelBranding",
         publisher: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
@@ -142,11 +142,29 @@ const TVNewsBranding = () => {
             <Helmet>
                 {/* Basic SEO */}
                 <title>TV News Branding | Brand Banao.Ai</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Brand Banao.AI" />
+                <meta name="publisher" content="Brand Banao.Ai" />
+                <meta name="creator" content="Brand Banao.Ai" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta name="description" content="TV News Channel Branding by Brand Banao.Ai. On-air branding, motion graphics, lower-thirds, tickers, show packaging and channel identity systems for regional and national news networks." />
                 <meta name="keywords" content="tv news channel branding, news channel branding, on-air branding, broadcast design, tv channel identity, news channel rebranding, motion graphics for news, lower thirds design, ticker design, breaking news graphics, tv news graphics package, tv channel logo design, brand banao ai" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+                <meta name="theme-color" content="#0d1117" />
+                <meta name="color-scheme" content="light dark" />
+                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta property="og:image:alt" content="TV News Channel Branding - Brand Banao.Ai" />
+                <meta name="twitter:image:alt" content="TV News Channel Branding - Brand Banao.Ai" />
+                <meta name="twitter:site" content="@BrandBanaoAi" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
 
@@ -203,7 +221,7 @@ const TVNewsBranding = () => {
                         <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
                             <img
                                 src={images[currentIndex]}
-                                alt="Airport Branding"
+                                alt="TV News Channel Branding Gallery"
                                 className="gallery-img"
                             />
                         </div>
@@ -347,7 +365,7 @@ const TVNewsBranding = () => {
                         that will provide your new TV news channel with long-lasting credibility, which will provide
                         your new business with client continuity for many years to come.</p>
 
-                    <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai stands for building credible brands 
+                    <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai stands for building credible brands
                         that audiences trust on every screen, every day.</b></i></h3>
                 </div>
 

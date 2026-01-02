@@ -34,8 +34,8 @@ const AirportBranding = () => {
         },
         author: {
             "@type": "Organization",
-            name: "Brand Banao.Ai",
-        },
+            name: "Brand Banao.Ai"
+        }
     };
 
 
@@ -143,16 +143,12 @@ const AirportBranding = () => {
                 <title>Airport Branding | Brand Banao.Ai</title>
                 <meta name="author" content="Brand Banao.AI" />
                 <meta name="description" content="Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
-                <meta name="keywords" content="airport branding, airport advertising, airport media, airport hoarding, airport digital screens advertising, airport LED advertising, baggage belt branding, baggage claim advertising, lounge branding, check-in counter branding, boarding gate branding, terminal branding, airport OOH, out of home advertising, premium advertising, brand banao ai, brand banao airport branding, airport branding agency india, airport branding pan india, airport advertising company" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="keywords" content="airport branding, airport advertising India, airport media agency, airport OOH advertising, premium airport branding" />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
-
-                {/* Canonical */}
                 <link rel="canonical" href="https://brandbanao.ai/AirportBranding" />
-
-                {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content="Airport Branding Service" />
@@ -161,12 +157,15 @@ const AirportBranding = () => {
                 <meta property="og:url" content="https://brandbanao.ai/AirportBranding" />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
-
-                {/* Twitter */}
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="20.00293;73.75462" />
+                <meta name="ICBM" content="20.00293, 73.75462" />
+                <meta name="publisher" content="Brand Banao.Ai" />
+                <meta name="theme-color" content="#000000" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Airport Branding Service" />
                 <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by Brand Banao.Ai." />
@@ -220,8 +219,8 @@ const AirportBranding = () => {
                     </p>
                     <p>
                         <b>Airports naturally mean minimum 90 minutes to 120 minutes spans: travelers
-                        hang out in check-in lines, lounge areas near boarding gates, at baggage
-                        belts, and scrolling digital screens around the terminal.</b> That extra exposure
+                            hang out in check-in lines, lounge areas near boarding gates, at baggage
+                            belts, and scrolling digital screens around the terminal.</b> That extra exposure
                         will stick better, build real brand connection, and beat traditional outdoor
                         ads. Our aim is to have your brand part of every traveler's journey-from the
                         time they land to when they take off.
@@ -230,7 +229,7 @@ const AirportBranding = () => {
                     <h2>Why Airports' Unique Branding Opportunities</h2>
                     <p>
                         The extended unit of time that people have in airports, <b>usually 90 minutes to
-                        2 hours before their flight, provides an opportunity for branding</b> that cannot
+                            2 hours before their flight, provides an opportunity for branding</b> that cannot
                         be missed, avoided, or passed up. This is a perfect setting for building brand
                         recognition and advocacy through repeated exposure to your brand in an
                         uninterrupted manner and creating trust.
@@ -240,8 +239,8 @@ const AirportBranding = () => {
                         of being a secure, aspirational, international, and premium location that
                         automatically enhances both the perceived quality and how credible each piece
                         of advertising is. Therefore, <b>if you are looking to impress your probable investors,
-                        joint ventures (JV), partnerships, or high-end collaborations, having a presence in
-                        an airport indicates size, seriousness, and market maturity</b>.
+                            joint ventures (JV), partnerships, or high-end collaborations, having a presence in
+                            an airport indicates size, seriousness, and market maturity</b>.
                     </p>
 
                     <h2>Talent Acquisition: An Effective Method</h2>

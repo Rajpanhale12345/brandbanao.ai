@@ -166,8 +166,26 @@ const WebDevelopmentt = () => {
             <Helmet>
                 {/* ✅ Primary SEO */}
                 <title>{PAGE_TITLE}</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="theme-color" content="#0d1117" />
+                <meta name="color-scheme" content="light dark" />
+                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta property="og:image:alt" content="Website & App Development - Brand Banao.Ai" />
+                <meta name="twitter:image:alt" content="Website & App Development - Brand Banao.Ai" />
+                <meta name="twitter:site" content="@BrandBanaoAi" />
                 <meta name="keywords" content="website development, web development company, web app development, mobile app development, app development company, ecommerce website development, responsive web design, React website development, custom web application development, web development services, app development services, performance-focused websites, UI UX design, full-cycle web development, business website development, online store development, web development agency, website design and development, web application development company" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />

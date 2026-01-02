@@ -15,7 +15,7 @@ const DigitallMarketing = () => {
         setShowGallery(true);
     };
 
-    // ✅ SEO: Consistent page identity for Railway Branding
+    // ✅ SEO: Consistent page identity for Digital Marketing
     const PAGE_NAME = "Digital Marketing Service";
     const PAGE_TITLE =
         "Digital Marketing | Brand Banao.Ai";
@@ -165,20 +165,33 @@ const DigitallMarketing = () => {
     return (
         <>
             <Helmet>
-                {/* ✅ Primary SEO */}
                 <title>{PAGE_TITLE}</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
+                <meta name="publisher" content="Brand Banao.Ai" />
+                <meta name="creator" content="Brand Banao.Ai" />
                 <meta name="keywords" content="digital marketing, digital marketing agency, online marketing, digital marketing company, online advertising, marketing strategy, google digital marketing, digital marketing services, digital advertising, online digital marketing, digital marketing website, digital marketing specialist, seo digital marketing, performance marketing agencies, best marketing agencies, digital media marketing, seo advertising, best digital marketing companies, content marketing agencies, digital advertising companies, digital marketing agency website, top digital marketing companies, seo and digital marketing, local seo agency, best marketing agency websites, digital agency services, best digital marketing websites, brand advertising,  digital marketing, digital media advertising, best digital marketing agency in the world, best local seo company, top digital marketing, best digital marketing services, full service digital marketing agency, lead digital, social media marketing, web seo services" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="theme-color" content="#0d1117" />
+                <meta name="color-scheme" content="light dark" />
+                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta property="og:image:alt" content="Brand Banao.Ai logo" />
+                <meta name="twitter:image:alt" content="Brand Banao.Ai logo" />
+                <meta name="twitter:site" content="@BrandBanaoAi" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
-
-                {/* ✅ Canonical */}
                 <link rel="canonical" href={PAGE_URL} />
-
-                {/* ✅ Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content={PAGE_TITLE} />
@@ -214,7 +227,7 @@ const DigitallMarketing = () => {
                 <div className="hoarding-image-wrap">
                     <img
                         src={airport}
-                        alt="Railway Branding"
+                        alt="Digital Marketing"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
                     />
@@ -225,7 +238,7 @@ const DigitallMarketing = () => {
                         <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
                             <img
                                 src={images[currentIndex]}
-                                alt="Railway Branding Gallery"
+                                alt="Digital Marketing Gallery"
                                 className="gallery-img"
                             />
                         </div>

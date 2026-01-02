@@ -148,14 +148,15 @@ const AutoooBranding = () => {
         <title>Auto Branding | Brand Banao.Ai</title>
         <meta name="author" content="Brand Banao.AI" />
         <meta name="description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai. High-visibility mobile ads with wraps, back panels, and route-based hyperlocal campaigns with reporting for hyperlocal reach." />
-        <meta name="keywords" content="auto branding, auto rickshaw advertising, auto advertising, auto wrap ads, mobile outdoor advertising, back panel branding, side panel branding, hyperlocal advertising, brand banao ai" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="keywords" content="auto branding, auto rickshaw advertising India, mobile outdoor advertising, hyperlocal auto advertising" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="MobileOptimized" content="width" />
         <meta name="HandheldFriendly" content="true" />
-
+        <meta name="publisher" content="Brand Banao.Ai" />
+        <meta name="theme-color" content="#000000" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <link rel="canonical" href="https://brandbanao.ai/AutoBranding" />
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="BrandBanao.Ai" />
         <meta property="og:title" content="Auto Branding Services" />
@@ -164,11 +165,12 @@ const AutoooBranding = () => {
         <meta property="og:url" content="https://brandbanao.ai/AutoBranding" />
         <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:latitude" content="20.00293012347024" />
-        <meta property="og:longitude" content="73.75462348408139" />
-
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="20.00293;73.75462" />
+        <meta name="ICBM" content="20.00293, 73.75462" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Auto Branding Services" />
         <meta name="twitter:description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting." />
@@ -209,135 +211,135 @@ const AutoooBranding = () => {
           </div>
         )}
 
-                <div className="hoarding-content">
-                    <h2>Auto Branding & Advertising - Brand Banao.Ai</h2>
-                    <p>
-                        Auto branding is one of the most powerful ways to turn everyday city hustle into non-stop
-                        brand visibility. At Brand Banao.AI, we transform ordinary auto-rickshaws into mobile brand
-                        assets that work for your business day in and day out. Cruising through busy streets,
-                        markets, neighborhoods, and traffic lights, autos give you killer exposure right at street
-                        level where people's buying choices often happen.
-                    </p>
-                    <p>
-                        Auto advertising extends the reach of your message to approximately a thousand pedestrians,
-                        commuters and drivers per day in multiple locations, allowing for a much broader audience to
-                        see your advertisement than would be possible with static ads. It creates repeated impressions,
-                        builds familiarity, and keeps your brand top of mind among locals without a break.
-                    </p>
+        <div className="hoarding-content">
+          <h2>Auto Branding & Advertising - Brand Banao.Ai</h2>
+          <p>
+            Auto branding is one of the most powerful ways to turn everyday city hustle into non-stop
+            brand visibility. At Brand Banao.AI, we transform ordinary auto-rickshaws into mobile brand
+            assets that work for your business day in and day out. Cruising through busy streets,
+            markets, neighborhoods, and traffic lights, autos give you killer exposure right at street
+            level where people's buying choices often happen.
+          </p>
+          <p>
+            Auto advertising extends the reach of your message to approximately a thousand pedestrians,
+            commuters and drivers per day in multiple locations, allowing for a much broader audience to
+            see your advertisement than would be possible with static ads. It creates repeated impressions,
+            builds familiarity, and keeps your brand top of mind among locals without a break.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Our campaigns</h2>
-                    <p>
-                        Strike a balance between creativity and practicality. With durable materials, bright colors, and
-                        clear messaging, we offer auto wrap ads that protect look and feel while staying highly memorable.
-                        Whether you're looking to generate brand awareness, store visits, or the kickoff of new products,
-                        our approach keeps things clear, consistent, and built for long-term impact.
-                    </p>
-                    <p>
-                        For brands chasing hyper-local reach, this medium hits the common “auto advertising near me” search
-                        by putting visibility precisely where your customers live, work, and travel. Autos cruise through
-                        narrow lanes, busy neighborhoods, and commercial hubs—places big media can't reach as effectively.
-                    </p>
-
-
-                    <br />
-
-                    <h2>Placement is everything</h2>
-                    <p>
-                        We increase awareness through smart positioning: back-of-auto ads that capture the attention of traffic
-                        and commuters, side ads that engage pedestrians and roadstop audiences when stopped or slowed. We utilize
-                        every surface to maximize viewing time without overwhelming anyone.
-                    </p>
-
-                    <br />
-
-                    <h2>What really makes auto ads effective?</h2>
-                    <p>
-                        Though, is the humanization of brands. A message seen time and again amidst familiar surroundings builds
-                        trust and relatability. It's a medium that just fits right into everyday life while subtly boosting brand
-                        presence.
-                    </p>
-
-                    <br />
-
-                    <h2>City auto advertising</h2>
-
-                    <p>
-                        It can be scaled by brands wishing to target certain geographic areas/routings usually based on density
-                        mapping. It can be tailored from busy hotspots to residential pockets to match business goals and how the
-                        audience behaves.
-                    </p>
-
-                    <br />
+          <h2>Our campaigns</h2>
+          <p>
+            Strike a balance between creativity and practicality. With durable materials, bright colors, and
+            clear messaging, we offer auto wrap ads that protect look and feel while staying highly memorable.
+            Whether you're looking to generate brand awareness, store visits, or the kickoff of new products,
+            our approach keeps things clear, consistent, and built for long-term impact.
+          </p>
+          <p>
+            For brands chasing hyper-local reach, this medium hits the common “auto advertising near me” search
+            by putting visibility precisely where your customers live, work, and travel. Autos cruise through
+            narrow lanes, busy neighborhoods, and commercial hubs—places big media can't reach as effectively.
+          </p>
 
 
-                    <h2>Our agency supports</h2>
+          <br />
 
-                    <p>
-                        Brands through the use of effective auto advertising, ensuring that our clients see measurable results
-                        in terms of increased visibility, recall of the brand and overall effectiveness of the advertisement.
-                        Each auto ad campaign is provided with detailed analytical reporting and mapping to ensure that campaigns
-                        have maximum coverage and frequency.
-                    </p>
+          <h2>Placement is everything</h2>
+          <p>
+            We increase awareness through smart positioning: back-of-auto ads that capture the attention of traffic
+            and commuters, side ads that engage pedestrians and roadstop audiences when stopped or slowed. We utilize
+            every surface to maximize viewing time without overwhelming anyone.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Why Choose Brand Banao.AI</h2>
+          <h2>What really makes auto ads effective?</h2>
+          <p>
+            Though, is the humanization of brands. A message seen time and again amidst familiar surroundings builds
+            trust and relatability. It's a medium that just fits right into everyday life while subtly boosting brand
+            presence.
+          </p>
 
-                    <p>The unique value provided by local auto advertising is its ability to position an advertisement next to the
-                        area where the consumer would make an immediate purchase. This allows for increased sales and service
-                        inquiries and customers to walk into stores. In effect, local auto advertising provides a great deal of
-                        cost efficiency in terms of reaching the targeted audience and is a great way for brands to establish a
-                        presence in the community. Mixing creative excellence with tight operations and on-the-ground know-how,
-                        Brand Banao.AI delivers the best auto branding solutions.</p>
+          <br />
 
-                    <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai move with your audience-literally-driving awareness,
-                        trust, and growth across the city.</b></i></h3>
-                </div>
+          <h2>City auto advertising</h2>
 
-                {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
-                <div className="hoarding-content faq-section">
-                    <h2>Auto Branding FAQs</h2>
-                    <div className="faq-list">
-                        {faqItems.map((faq, index) => {
-                            const isActive = activeFaqIndex === index;
+          <p>
+            It can be scaled by brands wishing to target certain geographic areas/routings usually based on density
+            mapping. It can be tailored from busy hotspots to residential pockets to match business goals and how the
+            audience behaves.
+          </p>
 
-                            return (
-                                <div
-                                    className={`faq-item ${isActive ? "active" : ""}`}
-                                    key={index}
-                                >
-                                    <button
-                                        type="button"
-                                        className="faq-question"
-                                        onClick={() =>
-                                            setActiveFaqIndex(isActive ? null : index)
-                                        }
-                                    >
-                                        <span className="faq-question-text">{faq.question}</span>
-                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                                    </button>
+          <br />
 
-                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                                        <div className="faq-answer-inner">
-                                            <p>{faq.answer}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+
+          <h2>Our agency supports</h2>
+
+          <p>
+            Brands through the use of effective auto advertising, ensuring that our clients see measurable results
+            in terms of increased visibility, recall of the brand and overall effectiveness of the advertisement.
+            Each auto ad campaign is provided with detailed analytical reporting and mapping to ensure that campaigns
+            have maximum coverage and frequency.
+          </p>
+
+          <br />
+
+          <h2>Why Choose Brand Banao.AI</h2>
+
+          <p>The unique value provided by local auto advertising is its ability to position an advertisement next to the
+            area where the consumer would make an immediate purchase. This allows for increased sales and service
+            inquiries and customers to walk into stores. In effect, local auto advertising provides a great deal of
+            cost efficiency in terms of reaching the targeted audience and is a great way for brands to establish a
+            presence in the community. Mixing creative excellence with tight operations and on-the-ground know-how,
+            Brand Banao.AI delivers the best auto branding solutions.</p>
+
+          <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai move with your audience-literally-driving awareness,
+            trust, and growth across the city.</b></i></h3>
+        </div>
+
+        {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
+        <div className="hoarding-content faq-section">
+          <h2>Auto Branding FAQs</h2>
+          <div className="faq-list">
+            {faqItems.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
+
+              return (
+                <div
+                  className={`faq-item ${isActive ? "active" : ""}`}
+                  key={index}
+                >
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() =>
+                      setActiveFaqIndex(isActive ? null : index)
+                    }
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
+
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
                     </div>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
 
 
 
-                <div className="hoarding-content">
-                    {/* Reserved for any additional blocks, forms, CTAs, etc. */}
-                </div>
-            </div>
-        </>
-    );
+        <div className="hoarding-content">
+          {/* Reserved for any additional blocks, forms, CTAs, etc. */}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default AutoooBranding;

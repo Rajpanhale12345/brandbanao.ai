@@ -160,16 +160,31 @@ const CycleeBranding = () => {
         <>
             <Helmet>
                 <title>Cycle Branding | Brand Banao.Ai</title>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="publisher" content="Brand Banao.Ai" />
+                <meta name="creator" content="Brand Banao.Ai" />
+                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="theme-color" content="#0d1117" />
+                <meta name="color-scheme" content="light dark" />
                 <meta name="author" content="Brand Banao.AI" />
                 <meta name="description" content="Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting." />
                 <meta name="keywords" content="cycle branding, branded cycle advertising, cycle advertising, bicycle advertising, hyperlocal advertising, eco friendly advertising, mobile outdoor advertising, neighborhood marketing, route based advertising, local promotions, Brand Banao Ai" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="MobileOptimized" content="width" />
+                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta name="twitter:image:alt" content="Brand Banao.Ai logo" />
+                <meta name="twitter:site" content="@BrandBanaoAi" />
+                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
                 <meta name="HandheldFriendly" content="true" />
-
                 <link rel="canonical" href="https://brandbanao.ai/CycleeBranding" />
-
+                <meta name="mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content="Cycle Branding Services" />

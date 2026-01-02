@@ -145,16 +145,15 @@ const BussBranding = () => {
                 <title>Bus Branding | Brand Banao.Ai</title>
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content="Bus branding and bus advertising services by Brand Banao.Ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall." />
-                <meta name="keywords" content="bus branding, bus advertising, bus wrap advertising, full bus wrap, bus side ads, back of bus advertising, bus panel ads, city bus advertisement, metro bus ads, bus stop advertising, bus shelter ads, outdoor advertising india" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="keywords" content="bus branding, bus advertising, bus wrap advertising, full bus wrap, bus side ads, back of bus advertising, city bus advertisement, metro bus ads, bus shelter advertising, outdoor advertising india" />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
-
-                {/* Canonical */}
+                <meta name="publisher" content="Brand Banao.Ai" />
+                <meta name="theme-color" content="#000000" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <link rel="canonical" href="https://brandbanao.ai/BusBranding" />
-
-                {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content="Bus Branding & Bus Advertising Services" />
@@ -163,12 +162,12 @@ const BussBranding = () => {
                 <meta property="og:url" content="https://brandbanao.ai/BusBranding" />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
-
-                {/* Twitter */}
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="20.00293;73.75462" />
+                <meta name="ICBM" content="20.00293, 73.75462" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Bus Branding & Bus Advertising Services" />
                 <meta name="twitter:description" content="Bus branding by Brand Banao.Ai: wraps, side ads, back-of-bus ads, route planning, and creative execution." />

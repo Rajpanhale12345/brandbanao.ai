@@ -32,7 +32,7 @@ export default function Home() {
       "logo": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
     },
     "author": {
-      "@type": "Organization",
+      "@type": "Person",
       "name": "Amit Hemant Patil"
     }
   };
@@ -169,17 +169,21 @@ export default function Home() {
       <Helmet>
 
         <meta charSet="utf-8" />
-        <title>Brand Banao.ai | Best Marketing & Branding Agency in Maharashtra</title>
+        <title>Brand Banao.Ai | Best Marketing & Branding Agency in Maharashtra</title>
         <meta name="author" content="Brand Banao.Ai" />
-        <meta name="description" content="BrandBanao.Ai is a 360° marketing and branding agency in Maharashtra delivering outdoor advertising, hoardings, bus shelter branding, cinema ads, radio branding and digital marketing with 16+ years of experience."/>
-        <meta name="keywords" content="best 360° advertising agency in nashik, best digital marketing agency in nashik, best IT company in nashik, top 360° advertising agency in nashik, top digital marketing agency in nashik" />
-
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="description" content="BrandBanao.Ai is a 360° marketing and branding agency in Maharashtra delivering outdoor advertising, hoardings, bus shelter branding, cinema ads, radio branding and digital marketing with 16+ years of experience." />
+        <meta name="keywords" content="360 degree advertising agency Nashik, branding agency Maharashtra, digital marketing Nashik, outdoor advertising agency" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://brandbanao.ai/" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="MobileOptimized" content="width" />
         <meta name="HandheldFriendly" content="true" />
+        <meta name="publisher" content="Brand Banao.Ai" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="theme-color" content="#000000" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
 
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="Brand Banao.Ai" />
@@ -189,10 +193,12 @@ export default function Home() {
         <meta property="og:url" content="https://brandbanao.ai/" />
         <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:latitude" content="20.00293012347024" />
-        <meta property="og:longitude" content="73.75462348408139" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="20.00293;73.75462" />
+        <meta name="ICBM" content="20.00293, 73.75462" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="BrandBanao.Ai 360° Marketing & Branding Agency" />
