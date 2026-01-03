@@ -87,29 +87,57 @@ export default function Contact() {
         throw new Error(`SheetDB error: ${res.status} ${text}`);
       }
 
-      alert("Thanks! We’ve received your message.");
+      alert("Thanks! We've received your message.");
       setForm(initialState);
       setTouched({});
     } catch (err) {
       console.error(err);
-      alert("Oops—couldn’t submit right now. Please try again in a bit.");
+      alert("Oops—couldn't submit right now. Please try again in a bit.");
     } finally {
       setIsSubmitting(false);
     }
   };
 
+
+  const PAGE_URL = "https://brandbanao.ai/contact";
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  
   return (
     <>
 
-    <Helmet>
-      <title>Contact | Brand Banao.ai</title>
-      <meta name="author" content="Brand Banao.AI" />
-    </Helmet>
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <meta charSet="utf-8" />
+        <title>Contact | Brand Banao.ai</title>
+        <meta name="description" content="Contact Brand Banao.ai for branding, marketing, and AI-driven growth. Reach our team in Nashik and Mumbai for campaigns, design, and outdoor advertising." />
+        <meta name="author" content="Brand Banao.AI" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+        <meta name="theme-color" content="#d94f5c" />
+        <meta name="application-name" content="Brand Banao.ai" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Brand Banao.ai" />
+        <meta property="og:title" content="Contact | Brand Banao.ai" />
+        <meta property="og:description" content="Get in touch with Brand Banao.ai. Tell us your requirement and we'll respond quickly." />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:secure_url" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="Brand Banao.ai - Contact" />
+        <meta property="og:locale" content="en_IN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact | Brand Banao.ai" />
+        <meta name="twitter:description" content="Contact Brand Banao.ai for branding, marketing, and AI-driven growth." />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image:alt" content="Brand Banao.ai - Contact" />
+        <meta name="twitter:url" content={PAGE_URL} />
+      </Helmet>
 
-    
+
       <section className="hero" aria-labelledby="hero-title" style={{ marginTop: "-120px" }}>
         <h1 id="hero-title" style={{ color: "#d94f5c" }}>Contact us</h1>
-
         <div className="perks" id="life" aria-label="Perks">
           <div className="perk">
             <h2> 📍 Command - Registered office</h2>
@@ -199,7 +227,7 @@ export default function Contact() {
                 onChange={set("email")}
                 onBlur={touch("email")}
                 className={`input ${touched.email && errors.email ? "invalid" : ""}`}
-              
+
                 required
               />
               {touched.email && errors.email && (
@@ -208,10 +236,10 @@ export default function Contact() {
             </div>
 
             {/* Company */}
-      
+
 
             {/* Designation */}
-           
+
 
             {/* Message */}
             <div className="field span-2">
