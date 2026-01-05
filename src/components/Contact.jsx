@@ -16,7 +16,7 @@ const SHEETDB_URL = "https://sheetdb.io/api/v1/svdrh2yfsfqkm";
 const SHEETDB_TOKEN = ""; // e.g. "your_long_bearer_token" if enabled; otherwise leave empty
 
 const initialState = {
-  officeLocation: "Nashik",
+  officeLocation: "NASHIK",
   fullName: "",
   phone: "",
   email: "",
