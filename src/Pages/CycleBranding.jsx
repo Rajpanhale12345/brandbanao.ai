@@ -159,7 +159,7 @@ const CycleeBranding = () => {
     return (
         <>
             <Helmet>
-                <title>Cycle Branding | Brand Banao.Ai</title>
+                <title>Best Cycle Branding in Nashik | Brand Banao.Ai</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="publisher" content="Brand Banao.Ai" />
@@ -193,11 +193,12 @@ const CycleeBranding = () => {
                 <meta property="og:url" content="https://brandbanao.ai/CycleeBranding" />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
-
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Cycle Branding Services" />
                 <meta name="twitter:description" content="Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting." />

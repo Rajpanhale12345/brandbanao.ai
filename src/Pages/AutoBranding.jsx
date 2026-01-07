@@ -1,14 +1,41 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import airport from "../Images/autobranding.jpg";
 import "./tvNews.css";
+
+const FAQ_ITEMS = [
+  {
+    question: "What is auto branding?",
+    answer:
+      "Auto branding is mobile outdoor advertising using auto-rickshaw wraps and panels to promote your brand across streets, markets, and neighborhoods with repeated daily visibility.",
+  },
+  {
+    question: "What branding options are available for auto rickshaws?",
+    answer:
+      "You can choose full wraps, back panels, or side panels. We can also plan route-based campaigns to focus on hyperlocal areas.",
+  },
+  {
+    question: "How many people can an auto branding campaign reach?",
+    answer:
+      "Reach depends on routes and city density, but autos generate frequent daily impressions as they move through high-traffic areas and local hotspots.",
+  },
+  {
+    question: "Do you provide reporting for auto branding campaigns?",
+    answer:
+      "Yes. We provide monitoring, mapping, and analytical reporting to ensure maximum coverage and frequency.",
+  },
+  {
+    question: "Why choose Brand Banao.AI for auto branding?",
+    answer:
+      "We blend strategy, creative execution, and operations to deliver strong street-level visibility, brand recall, and consistent campaign coverage.",
+  },
+];
 
 const AutoooBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  // You can add more auto branding images here later if you have them
   const images = [airport];
 
   const openGallery = (index) => {
@@ -16,175 +43,148 @@ const AutoooBranding = () => {
     setShowGallery(true);
   };
 
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    headline: "Auto Branding Services - Brand Banao.Ai",
-    name: "Auto Branding - Brand Banao.Ai",
-    description:
-      "Auto branding and auto rickshaw advertising by Brand Banao.Ai. High-visibility mobile ads with wraps, back panels, and route-based campaigns with reporting for hyperlocal reach.",
-    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    url: "https://brandbanao.ai/AutoBranding",
-    publisher: {
-      "@type": "Organization",
-      name: "Brand Banao.Ai",
-      url: "https://brandbanao.ai/",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-      },
-    },
-    author: {
-      "@type": "Organization",
-      name: "Brand Banao.Ai",
-    },
-  };
+  const SITE_URL = "https://brandbanao.ai/";
+  const PAGE_URL = "https://brandbanao.ai/auto-branding";
+  const BRAND_NAME = "Brand Banao.AI";
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-  // ✅ This was "erroring" because it was defined but not used.
-  // Fix: we render it inside Helmet as JSON-LD below.
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Auto Branding & Auto Rickshaw Advertising",
-    serviceType: "Outdoor Advertising",
-    provider: {
+  const schemas = useMemo(() => {
+    const webPageSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Auto Branding in Nashik | Brand Banao.AI",
+      headline: "Auto Branding & Auto Rickshaw Advertising",
+      description:
+        "Auto branding and auto rickshaw advertising by Brand Banao.AI. High-visibility mobile ads with wraps, back panels, and route-based campaigns with monitoring and reporting for hyperlocal reach.",
+      image: OG_IMAGE,
+      url: PAGE_URL,
+      inLanguage: "en-IN",
+      publisher: {
+        "@type": "Organization",
+        name: BRAND_NAME,
+        url: SITE_URL,
+        logo: { "@type": "ImageObject", url: OG_IMAGE },
+      },
+    };
+
+    const serviceSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Auto Branding & Auto Rickshaw Advertising",
+      serviceType: ["Mobile Outdoor Advertising", "OOH Advertising"],
+      provider: {
+        "@type": "Organization",
+        name: BRAND_NAME,
+        url: SITE_URL,
+        logo: { "@type": "ImageObject", url: OG_IMAGE },
+      },
+      areaServed: [
+        { "@type": "Country", name: "India" },
+        { "@type": "State", name: "Maharashtra" },
+        { "@type": "City", name: "Nashik" },
+      ],
+      url: PAGE_URL,
+      description:
+        "Mobile outdoor advertising using auto rickshaw branding: full wraps, back panels, side panels, route-based hyperlocal campaigns with monitoring and reporting.",
+    };
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services` },
+        { "@type": "ListItem", position: 3, name: "Auto Branding", item: PAGE_URL },
+      ],
+    };
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: FAQ_ITEMS.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    };
+
+    const organizationSchema = {
+      "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Brand Banao.Ai",
-      url: "https://brandbanao.ai/",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-      },
-    },
-    areaServed: "IN",
-    url: "https://brandbanao.ai/AutoBranding",
-    description:
-      "Mobile outdoor advertising using auto rickshaw branding: full wraps, back panels, side panels, route-based hyperlocal campaigns with monitoring and reporting.",
-  };
+      name: BRAND_NAME,
+      url: SITE_URL,
+      logo: OG_IMAGE,
+      sameAs: [
+        "https://www.instagram.com/brandbanao.ai",
+        "https://www.linkedin.com/company/brandbanao-ai",
+        "https://www.facebook.com/brandbanao.ai",
+      ],
+    };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is auto branding?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Auto branding is a form of mobile outdoor advertising where auto-rickshaws display your brand using wraps and panels, generating repeated local visibility across busy streets and neighborhoods.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What branding options are available for auto rickshaws?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Common options include full wraps, back panels, and side panels. Campaigns can also be route-based to focus on specific localities for hyperlocal reach.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How many people can an auto branding campaign reach?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Reach varies by city and routes, but auto ads can generate high-frequency impressions daily as autos travel through markets, residential areas, and traffic hotspots.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you provide reporting for auto branding campaigns?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Yes. Campaigns can include monitoring, mapping, and reporting to track coverage and ensure consistent visibility across target areas.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why choose Brand Banao.Ai for auto branding?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Brand Banao.Ai combines creative execution with on-ground operations to deliver durable, high-visibility auto branding campaigns designed for strong local recall and measurable coverage.",
-        },
-      },
-    ],
-  };
-
-  const faqItems = [
-    {
-      question: "What is auto branding?",
-      answer:
-        "Auto branding is mobile outdoor advertising using auto-rickshaw wraps and panels to promote your brand across streets, markets, and neighborhoods with repeated daily visibility.",
-    },
-    {
-      question: "What branding options are available for auto rickshaws?",
-      answer:
-        "You can choose full wraps, back panels, or side panels. We can also plan route-based campaigns to focus on hyperlocal areas.",
-    },
-    {
-      question: "How many people can an auto branding campaign reach?",
-      answer:
-        "Reach depends on routes and city density, but autos generate frequent daily impressions as they move through high-traffic areas and local hotspots.",
-    },
-    {
-      question: "Do you provide reporting for auto branding campaigns?",
-      answer:
-        "Yes. We provide monitoring, mapping, and analytical reporting to ensure maximum coverage and frequency.",
-    },
-    {
-      question: "Why choose Brand Banao.Ai for auto branding?",
-      answer:
-        "We blend strategy, creative execution, and operations to deliver strong street-level visibility, brand recall, and consistent campaign coverage.",
-    },
-  ];
+    return { webPageSchema, serviceSchema, breadcrumbSchema, faqSchema, organizationSchema };
+  }, [BRAND_NAME, OG_IMAGE, PAGE_URL, SITE_URL]);
 
   return (
     <>
       <Helmet>
-        <title>Auto Branding | Brand Banao.Ai</title>
-        <meta name="author" content="Brand Banao.AI" />
-        <meta name="description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai. High-visibility mobile ads with wraps, back panels, and route-based hyperlocal campaigns with reporting for hyperlocal reach." />
+        {/* ✅ Primary SEO */}
+        <title>Auto Branding in Nashik | Auto Rickshaw Advertising | Brand Banao.AI</title>
+        <meta
+          name="description"
+          content="Auto branding and auto rickshaw advertising by Brand Banao.AI in Nashik & Maharashtra. High-visibility mobile ads with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting."
+        />
+        <meta
+          name="keywords"
+          content="auto branding Nashik, auto rickshaw advertising, mobile outdoor advertising, hyperlocal advertising, auto wrap advertising, back panel auto ads, Brand Banao AI"
+        />
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="publisher" content={BRAND_NAME} />
         <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="keywords" content="auto branding, auto rickshaw advertising India, mobile outdoor advertising, hyperlocal auto advertising" />
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta name="MobileOptimized" content="width" />
-        <meta name="HandheldFriendly" content="true" />
-        <meta name="publisher" content="Brand Banao.Ai" />
-        <meta name="theme-color" content="#000000" />
+        <link rel="canonical" href={PAGE_URL} />
+
+        {/* ✅ Technical */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="canonical" href="https://brandbanao.ai/AutoBranding" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta name="theme-color" content="#000000" />
+
+        {/* ✅ Geo / Local */}
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="19.9975;73.7898" />
+        <meta name="ICBM" content="19.9975, 73.7898" />
+
+        {/* ✅ Open Graph */}
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content="BrandBanao.Ai" />
-        <meta property="og:title" content="Auto Branding Services" />
-        <meta property="og:description" content="Auto branding and auto rickshaw advertising: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting." />
+        <meta property="og:site_name" content={BRAND_NAME} />
+        <meta property="og:title" content="Auto Branding in Nashik | Brand Banao.AI" />
+        <meta
+          property="og:description"
+          content="High-visibility auto rickshaw advertising with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting by Brand Banao.AI."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brandbanao.ai/AutoBranding" />
-        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="Brand Banao.AI - Auto Branding Services" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="20.00293;73.75462" />
-        <meta name="ICBM" content="20.00293, 73.75462" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Auto Branding Services" />
-        <meta name="twitter:description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai: wraps, panels, route-based hyperlocal campaigns with monitoring and reporting." />
-        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
-        <script type="application/ld+json">
-          {JSON.stringify(webPageSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        {/* ✅ Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Auto Branding in Nashik | Brand Banao.AI" />
+        <meta
+          name="twitter:description"
+          content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
+        />
+        <meta name="twitter:image" content={OG_IMAGE} />
+
+        {/* ✅ Structured Data */}
+        <script type="application/ld+json">{JSON.stringify(schemas.organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemas.webPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
       </Helmet>
 
       <div className="hoarding-page">
@@ -302,20 +302,15 @@ const AutoooBranding = () => {
         <div className="hoarding-content faq-section">
           <h2>Auto Branding FAQs</h2>
           <div className="faq-list">
-            {faqItems.map((faq, index) => {
+            {FAQ_ITEMS.map((faq, index) => {
               const isActive = activeFaqIndex === index;
 
               return (
-                <div
-                  className={`faq-item ${isActive ? "active" : ""}`}
-                  key={index}
-                >
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
                   <button
                     type="button"
                     className="faq-question"
-                    onClick={() =>
-                      setActiveFaqIndex(isActive ? null : index)
-                    }
+                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>
@@ -330,12 +325,6 @@ const AutoooBranding = () => {
               );
             })}
           </div>
-        </div>
-
-
-
-        <div className="hoarding-content">
-          {/* Reserved for any additional blocks, forms, CTAs, etc. */}
         </div>
       </div>
     </>

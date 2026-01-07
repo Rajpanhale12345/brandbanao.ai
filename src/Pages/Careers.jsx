@@ -90,7 +90,7 @@ export default function Careers() {
   return (
     <>
       <Helmet>
-        <title>Careers | Brand Banao.ai</title>
+        <title>Jobs in Nashik | Brand Banao.ai</title>
         <meta name="author" content="Brand Banao.AI" />
       </Helmet>
 

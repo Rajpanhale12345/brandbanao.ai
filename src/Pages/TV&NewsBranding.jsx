@@ -141,7 +141,7 @@ const TVNewsBranding = () => {
         <>
             <Helmet>
                 {/* Basic SEO */}
-                <title>TV News Branding | Brand Banao.Ai</title>
+                <title>BestTV News Branding in Nashik | Brand Banao.Ai</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Brand Banao.AI" />
@@ -167,11 +167,7 @@ const TVNewsBranding = () => {
                 <meta name="twitter:site" content="@BrandBanaoAi" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
-
-                {/* Canonical */}
                 <link rel="canonical" href="https://brandbanao.ai/TVNewsChanelBranding" />
-
-                {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content="TV News Channel Branding Services" />
@@ -180,12 +176,12 @@ const TVNewsBranding = () => {
                 <meta property="og:url" content="https://brandbanao.ai/TVNewsChanelBranding" />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
-
-                {/* Twitter */}
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="TV News Channel Branding Services" />
                 <meta name="twitter:description" content="TV News Channel Branding by Brand Banao.Ai: on-air identity, motion graphics, lower-thirds, tickers and show packaging." />

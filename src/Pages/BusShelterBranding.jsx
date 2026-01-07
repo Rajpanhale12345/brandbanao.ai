@@ -139,7 +139,7 @@ const BusShelterBranding = () => {
     <>
       <Helmet htmlAttributes={{ lang: "en" }}>
         <meta charSet="utf-8" />
-        <title>Bus Shelter | Brand Banao.ai</title>
+        <title>Best Bus Shelter in Nashik | Brand Banao.ai</title>
         <meta name="author" content="Brand Banao.Ai" />
         <meta name="description" content="Boost your brand visibility with Bus Shelter Advertising by Brand Banao.Ai. 24x7 street-level ads with wide reach, local targeting, PAN India presence, and complete campaign execution." />
         <meta name="keywords" content="best bus shelter advertising mumbai, top bus shelter branding in mumbai, best bus shelter branding in nashik, top bus shelter advertising in nashik, best bus stop advertising in Nashik, bus shelter advertising in mumbai, bus shelter branding nashik, bus shelter advertising cost, bus shelter advertising price, bus stop cover, shelter bus, bus shelter advertising company near me, bus shelter branding agency near me, bus shelter branding company in nashik, best bus shelter advertising agency in nashik, best digital bus shelter advertising agency in nashik, top digital bus shelter branding agency in nashik, best outdoor bus shelter branding in nashik, best outdoor bus shelter advertising agency in nashik, outdoor advertising India, OOH advertising, affordable advertising, street level ads, local targeting ads, brand visibility, real estate advertising, healthcare ads, education advertising, fashion advertising, jewellery advertising, hotel advertising, restaurant advertising, BrandBanao.Ai" />
@@ -148,8 +148,6 @@ const BusShelterBranding = () => {
         <meta name="application-name" content="Brand Banao.AI" />
         <meta name="theme-color" content="#000000" />
         <meta name="generator" content="Brand Banao.AI React App" />
-        <meta name="MobileOptimized" content="width" />
-        <meta name="HandheldFriendly" content="true" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
         <meta name="MobileOptimized" content="width" />
@@ -167,8 +165,8 @@ const BusShelterBranding = () => {
         <meta property="og:image:height" content="630" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="20.00293;73.75462" />
-        <meta name="ICBM" content="20.00293, 73.75462" />
+        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bus Shelter" />
         <meta name="twitter:description" content="Make your brand unforgettable with Bus Shelter Ads by BrandBanao.Ai. Low cost, 24x7 visibility, local targeting, and PAN India reach — ideal for Real Estate, Healthcare, Education, Fashion, Hotels & more." />

@@ -183,8 +183,6 @@ export default function Home() {
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="theme-color" content="#000000" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="Brand Banao.Ai" />
         <meta property="og:title" content="Brand Banao.Ai 360° Marketing & Branding Agency" />
@@ -197,8 +195,8 @@ export default function Home() {
         <meta property="og:image:height" content="630" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="20.00293;73.75462" />
-        <meta name="ICBM" content="20.00293, 73.75462" />
+        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="BrandBanao.Ai 360° Marketing & Branding Agency" />

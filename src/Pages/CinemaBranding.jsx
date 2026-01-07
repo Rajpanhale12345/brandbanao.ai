@@ -136,7 +136,7 @@ const CinemaBranding = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cinema Branding | Brand Banao.Ai</title>
+        <title>Best Cinema Branding in Nashik | Brand Banao.Ai</title>
         <meta name="author" content="Brand Banao.AI" />
         <meta name="description" content="Cinema Branding Services by Brand Banao.Ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution." />
         <meta name="keywords" content="cinema branding, cinema advertising, movie theater advertising, theatre advertising, movie screen advertising, on-screen advertising, off-screen advertising, lobby advertising, foyer advertising, multiplex advertising, PVR Cinemas advertising, Cinépolis advertising, cinema and video advertising, brand banao ai, cinema advertising agency india" />
@@ -168,10 +168,12 @@ const CinemaBranding = () => {
         <meta property="og:url" content="https://brandbanao.ai/CinemaBranding" />
         <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:latitude" content="20.00293012347024" />
-        <meta property="og:longitude" content="73.75462348408139" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cinema Branding Service" />
         <meta name="twitter:description" content="Turn movie halls into storytelling platforms with immersive cinema branding: on-screen & off-screen theatre advertising with end-to-end execution by Brand Banao.Ai." />

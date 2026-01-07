@@ -18,9 +18,9 @@ const WebDevelopmentt = () => {
     };
 
     // ✅ SEO: Consistent page identity for Railway Branding
-    const PAGE_NAME = "Web & App Development Services";
+    const PAGE_NAME = "Best Web & App Development Services in Nashik | Brand Banao.Ai";
     const PAGE_TITLE = "Website & App Development | Brand Banao.Ai";
-    const PAGE_DESC = "Custom website and mobile app development by Brand Banao.AI – responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
+    const PAGE_DESC = "Custom website and mobile app development by Brand Banao.AI - responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
     const PAGE_URL = "https://brandbanao.ai/WebDevelopmentt";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
@@ -164,7 +164,6 @@ const WebDevelopmentt = () => {
     return (
         <>
             <Helmet>
-                {/* ✅ Primary SEO */}
                 <title>{PAGE_TITLE}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -191,11 +190,7 @@ const WebDevelopmentt = () => {
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
-
-                {/* ✅ Canonical */}
                 <link rel="canonical" href={PAGE_URL} />
-
-                {/* ✅ Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content={PAGE_TITLE} />
@@ -204,18 +199,16 @@ const WebDevelopmentt = () => {
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
-
-                {/* ✅ Twitter */}
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={PAGE_TITLE} />
                 <meta name="twitter:description" content={PAGE_DESC} />
                 <meta name="twitter:image" content={OG_IMAGE} />
-
-                {/* ✅ Structured Data */}
                 <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
                 <script type="application/ld+json">
                     {JSON.stringify(serviceSchema)}

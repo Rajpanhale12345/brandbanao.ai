@@ -133,7 +133,7 @@ const RadioFMBranding = () => {
   return (
     <>
       <Helmet>
-        <title>Radio &amp; FM Branding | Brand Banao.ai</title>
+        <title>Best Radio &amp; FM Branding agency in Nashik | Brand Banao.ai</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="publisher" content="Brand Banao.AI" />
@@ -175,12 +175,12 @@ const RadioFMBranding = () => {
         <meta property="og:url" content="https://brandbanao.ai/radio" />
         <meta property="og:image" content="https://brandbanao.ai/assets/radio-flTFxuUH.jpg" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:latitude" content="20.00293012347024" />
-        <meta property="og:longitude" content="73.75462348408139" />
-
-        {/* Twitter */}
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Radio &amp; FM Advertising Scripts &amp; Branding" />
         <meta name="twitter:description" content="Crisp, conversational radio & FM ad scripts built for recall 10-30 sec formats, voice-ready flow, and integrated radio + digital messaging." />

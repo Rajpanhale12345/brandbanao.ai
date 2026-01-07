@@ -22,7 +22,7 @@ export default function Services() {
 
       <Helmet>
 
-        <title>Services | Brand Banao.ai</title>
+        <title>Best Outdoor Services in Nashik | Brand Banao.ai</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Brand Banao.AI" />
@@ -54,6 +54,10 @@ export default function Services() {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta name="geo.region" content="IN-MH" />
+        <meta name="geo.placename" content="Nashik" />
+        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
         <meta property="og:image:alt" content="Brand Banao.Ai - Services" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services | Brand Banao.Ai" />

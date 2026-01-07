@@ -18,7 +18,7 @@ const DigitallMarketing = () => {
     // ✅ SEO: Consistent page identity for Digital Marketing
     const PAGE_NAME = "Digital Marketing Service";
     const PAGE_TITLE =
-        "Digital Marketing | Brand Banao.Ai";
+        "Best Digital Marketing in Nashik | Brand Banao.Ai";
     const PAGE_DESC =
         "Grow your business with Brand Banao.Ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics and conversion optimisation.";
     const PAGE_URL = "https://brandbanao.ai/DigitallMarketing";
@@ -200,12 +200,12 @@ const DigitallMarketing = () => {
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-
-                {/* (Optional) keep lat/long if you intentionally use it; otherwise remove */}
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
 
                 {/* ✅ Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />

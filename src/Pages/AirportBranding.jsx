@@ -17,6 +17,15 @@ const AirportBranding = () => {
         setShowGallery(true);
     };
 
+    const schemas = {
+        organizationSchema: { /* ... */ },
+        webPageSchema,
+        faqSchema,
+        serviceSchema: { /* ... */ },
+        breadcrumbSchema: { /* ... */ },
+    };
+
+
     const webPageSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -140,12 +149,14 @@ const AirportBranding = () => {
         <>
             <Helmet>
                 {/* Basic SEO */}
-                <title>Airport Branding | Brand Banao.Ai</title>
+                <title>Best Airport Branding in Nashik | Brand Banao.Ai</title>
                 <meta name="author" content="Brand Banao.AI" />
                 <meta name="description" content="Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
                 <meta name="keywords" content="airport branding, airport advertising India, airport media agency, airport OOH advertising, premium airport branding" />
                 <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta property="og:image:alt" content="Brand Banao.AI - Airport Branding Services" />
                 <meta name="MobileOptimized" content="width" />
                 <meta name="HandheldFriendly" content="true" />
                 <link rel="canonical" href="https://brandbanao.ai/AirportBranding" />
@@ -161,13 +172,15 @@ const AirportBranding = () => {
                 <meta property="og:image:height" content="630" />
                 <meta name="geo.region" content="IN-MH" />
                 <meta name="geo.placename" content="Nashik" />
-                <meta name="geo.position" content="20.00293;73.75462" />
-                <meta name="ICBM" content="20.00293, 73.75462" />
+                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
                 <meta name="publisher" content="Brand Banao.Ai" />
                 <meta name="theme-color" content="#000000" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Airport Branding Service" />
+                <meta name="twitter:site" content="@brandbanaoai" />
+                <meta name="twitter:creator" content="@brandbanaoai" />
                 <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by Brand Banao.Ai." />
                 <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
@@ -178,6 +191,13 @@ const AirportBranding = () => {
                 <script type="application/ld+json">
                     {JSON.stringify(faqSchema)}
                 </script>
+
+                <script type="application/ld+json">{JSON.stringify(schemas.organizationSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(schemas.webPageSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
+                <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
+
             </Helmet>
 
             {/* Using the same structure / classes as Hoarding.jsx for styling */}

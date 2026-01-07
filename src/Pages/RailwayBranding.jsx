@@ -18,7 +18,7 @@ const RailwayyBranding = () => {
     // ✅ SEO: Consistent page identity for Railway Branding
     const PAGE_NAME = "Railway Branding Services";
     const PAGE_TITLE =
-        "Railway Branding | Brand Banao.Ai";
+        "Best Railway Branding Agency in Nashik | Brand Banao.Ai";
     const PAGE_DESC =
         "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
     const PAGE_URL = "https://brandbanao.ai/RailwayyBranding"; // update if your actual route differs
@@ -213,14 +213,12 @@ const RailwayyBranding = () => {
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1000" />
+                <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-
-                {/* (Optional) keep lat/long if you intentionally use it; otherwise remove */}
-                <meta property="og:latitude" content="20.00293012347024" />
-                <meta property="og:longitude" content="73.75462348408139" />
-
-                {/* ✅ Twitter */}
+                <meta name="geo.region" content="IN-MH" />
+                <meta name="geo.placename" content="Nashik" />
+                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
+                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={PAGE_TITLE} />
                 <meta name="twitter:description" content={PAGE_DESC} />
