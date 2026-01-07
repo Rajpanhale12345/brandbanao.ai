@@ -1,19 +1,29 @@
 import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 
-const SITE_URL = "https://brandbanao.ai/"; // <-- CHANGE THIS
+const SITE_URL = "https://brandbanao.ai"; // no trailing slash is cleaner
 
-// All your routes
+// Routes from App.jsx (match EXACT paths/case)
 const routes = [
-  "/", 
+  "/",
   "/about",
   "/contact",
   "/services",
   "/careers",
-  "/cinema",
-  "/radio",
-  "/hoardings",
-  "/bus-shelter",
+
+  "/Cinema",
+  "/Radio",
+  "/Hoardings",
+  "/Bus_Shelter",
+  "/AirportBranding",
+  "/TVNewsChanelBranding",
+
+  "/BusBranding",
+  "/AutoBranding",
+  "/CycleBranding",
+  "/RailwayBranding",
+  "/DigitalMarketing",
+  "/WebDevelopment",
 
   // Career pages
   "/Careers/DigitalMarketingExecutive",
@@ -25,19 +35,16 @@ const routes = [
 ];
 
 async function generateSitemap() {
-  // Create stream
   const sitemap = new SitemapStream({ hostname: SITE_URL });
 
-  // Write to public/sitemap.xml
   const writeStream = createWriteStream("./public/sitemap.xml");
   sitemap.pipe(writeStream);
 
-  // Add each route
   for (const route of routes) {
     sitemap.write({
       url: route,
       changefreq: "weekly",
-      priority: 0.8,
+      priority: route === "/" ? 1.0 : 0.8,
     });
   }
 

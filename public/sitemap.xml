@@ -7,7 +7,7 @@
     <url>
         <loc>https://brandbanao.ai/</loc>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://brandbanao.ai/about</loc>
@@ -30,22 +30,62 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://brandbanao.ai/cinema</loc>
+        <loc>https://brandbanao.ai/Cinema</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://brandbanao.ai/radio</loc>
+        <loc>https://brandbanao.ai/Radio</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://brandbanao.ai/hoardings</loc>
+        <loc>https://brandbanao.ai/Hoardings</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://brandbanao.ai/bus-shelter</loc>
+        <loc>https://brandbanao.ai/Bus_Shelter</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/AirportBranding</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/TVNewsChanelBranding</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/BusBranding</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/AutoBranding</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/CycleBranding</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/RailwayBranding</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/DigitalMarketing</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://brandbanao.ai/WebDevelopment</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
