@@ -1,42 +1,60 @@
 // scripts/generate-rss-txt.js
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 // Resolve __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// 1. Change this to your real domain
-const SITE_URL = 'https://brandbanao.ai';
+// Domain
+const SITE_URL = "https://brandbanao.ai";
 
-// 2. Define the feeds you want to expose via rss.txt
-// NOTE: These should be real RSS/Atom/JSON feeds,
-// not just pages. For now, you can keep placeholders
-// and later point them to real feed.xml files.
-const feeds = [
+// Public directory (Vite serves /public at site root)
+const PUBLIC_DIR = path.join(__dirname, "..", "public");
+
+// Define possible feeds (only included if the file exists in /public)
+const candidateFeeds = [
   {
-    path: '/feed.xml',
-    type: 'rss',
-    title: 'Main Site Feed',
-    description: 'All new updates from the site.',
+    path: "/feed.xml",
+    type: "rss",
+    title: "Brand Banao.Ai — Updates",
+    description: "Latest updates, insights, and announcements from Brand Banao.Ai.",
+    language: "en-IN",
+    tags: ["marketing", "advertising", "outdoor", "branding", "nashik", "maharashtra"],
   },
   {
-    path: '/careers/feed.xml',
-    type: 'rss',
-    title: 'Careers Feed',
-    description: 'Job openings and career updates.',
+    path: "/careers/feed.xml",
+    type: "rss",
+    title: "Brand Banao.Ai — Careers",
+    description: "Latest job openings and hiring updates.",
+    language: "en-IN",
+    tags: ["careers", "jobs", "hiring", "marketing", "nashik"],
   },
-  // Add more feeds when you create them
+
+  // Optional future feeds (won't be listed unless you actually generate these files)
+  // { path: "/feed.atom", type: "atom", title: "...", description: "...", language: "en-IN", tags: ["..."] },
+  // { path: "/feed.json", type: "json", title: "...", description: "...", language: "en-IN", tags: ["..."] },
 ];
 
-// Build the rss.txt content
+function existsInPublic(feedPath) {
+  // Convert "/careers/feed.xml" => "<repo>/public/careers/feed.xml"
+  const fsPath = path.join(PUBLIC_DIR, feedPath.replace(/^\//, ""));
+  return fs.existsSync(fsPath);
+}
+
 function buildRssTxt(feeds) {
   const lines = [];
-
-  lines.push('# rss.txt');
-  lines.push('# Auto-generated list of RSS/Atom/JSON feeds for this site.');
-  lines.push('');
+  lines.push("# rss.txt");
+  lines.push(`# Feeds for ${SITE_URL}`);
+  lines.push("# Format:");
+  lines.push("# <feed-url>");
+  lines.push("# type: rss|atom|json");
+  lines.push("# title: ...");
+  lines.push("# description: ...");
+  lines.push("# language: ...");
+  lines.push("# tags: ...");
+  lines.push("");
 
   for (const feed of feeds) {
     const fullUrl = `${SITE_URL}${feed.path}`;
@@ -44,23 +62,27 @@ function buildRssTxt(feeds) {
     lines.push(`type: ${feed.type}`);
     if (feed.title) lines.push(`title: ${feed.title}`);
     if (feed.description) lines.push(`description: ${feed.description}`);
-    lines.push(''); // blank line between entries
+    if (feed.language) lines.push(`language: ${feed.language}`);
+    if (feed.tags?.length) lines.push(`tags: ${feed.tags.join(", ")}`);
+    lines.push("");
   }
 
-  return lines.join('\n');
+  return lines.join("\n");
 }
 
 function main() {
-  const content = buildRssTxt(feeds);
+  // Only publish feeds that exist in /public
+  const feedsToPublish = candidateFeeds.filter((f) => existsInPublic(f.path));
 
-  // Write to public/rss.txt so Vite serves it at /rss.txt
-  const outputPath = path.join(__dirname, '..', 'public', 'rss.txt');
+  const content = buildRssTxt(feedsToPublish);
 
-  // Ensure public/ exists
+  const outputPath = path.join(PUBLIC_DIR, "rss.txt");
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, content, "utf8");
 
-  fs.writeFileSync(outputPath, content, 'utf8');
   console.log(`✅ rss.txt generated at: ${outputPath}`);
+  console.log(`✅ Feeds listed: ${feedsToPublish.length}`);
+  for (const f of feedsToPublish) console.log(`   - ${SITE_URL}${f.path}`);
 }
 
 main();

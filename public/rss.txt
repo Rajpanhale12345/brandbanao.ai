@@ -1,12 +1,23 @@
 # rss.txt
-# Auto-generated list of RSS/Atom/JSON feeds for this site.
+# Feeds for https://brandbanao.ai
+# Format:
+# <feed-url>
+# type: rss|atom|json
+# title: ...
+# description: ...
+# language: ...
+# tags: ...
 
 https://brandbanao.ai/feed.xml
 type: rss
-title: Main Site Feed
-description: All new updates from the site.
+title: Brand Banao.Ai — Updates
+description: Latest updates, insights, and announcements from Brand Banao.Ai.
+language: en-IN
+tags: marketing, advertising, outdoor, branding, nashik, maharashtra
 
 https://brandbanao.ai/careers/feed.xml
 type: rss
-title: Careers Feed
-description: Job openings and career updates.
+title: Brand Banao.Ai — Careers
+description: Latest job openings and hiring updates.
+language: en-IN
+tags: careers, jobs, hiring, marketing, nashik
