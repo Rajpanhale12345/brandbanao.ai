@@ -169,7 +169,7 @@ export default function Home() {
       <Helmet>
 
         <meta charSet="utf-8" />
-        <title>Brand Banao.Ai | Best Marketing & Branding Agency in Maharashtra</title>
+        <title>Brand Banao.Ai | Best Branding & Advertising Agency in Maharashtra</title>
         <meta name="author" content="Brand Banao.Ai" />
         <meta name="description" content="BrandBanao.Ai is a 360° marketing and branding agency in Maharashtra delivering outdoor advertising, hoardings, bus shelter branding, cinema ads, radio branding and digital marketing with 16+ years of experience." />
         <meta name="keywords" content="360 degree advertising agency Nashik, branding agency Maharashtra, digital marketing Nashik, outdoor advertising agency" />
