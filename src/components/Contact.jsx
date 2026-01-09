@@ -207,7 +207,7 @@ export default function Contact() {
                 onChange={set("phone")}
                 onBlur={touch("phone")}
                 className={`input ${touched.phone && errors.phone ? "invalid" : ""}`}
-                placeholder="+91 98765 43210"
+                placeholder="+91 91567 85678"
               />
               {touched.phone && errors.phone && (
                 <p className="error">{errors.phone}</p>

@@ -127,41 +127,25 @@ const AutoooBranding = () => {
   return (
     <>
       <Helmet>
-        {/* ✅ Primary SEO */}
         <title>Auto Branding in Nashik | Auto Rickshaw Advertising | Brand Banao.AI</title>
-        <meta
-          name="description"
-          content="Auto branding and auto rickshaw advertising by Brand Banao.AI in Nashik & Maharashtra. High-visibility mobile ads with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting."
-        />
-        <meta
-          name="keywords"
-          content="auto branding Nashik, auto rickshaw advertising, mobile outdoor advertising, hyperlocal advertising, auto wrap advertising, back panel auto ads, Brand Banao AI"
-        />
+        <meta name="description" content="Auto branding and auto rickshaw advertising by Brand Banao.AI in Nashik & Maharashtra. High-visibility mobile ads with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting." />
+        <meta name="keywords" content="auto branding Nashik, auto rickshaw advertising, mobile outdoor advertising, hyperlocal advertising, auto wrap advertising, back panel auto ads, Brand Banao AI" />
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
-
-        {/* ✅ Technical */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#000000" />
-
-        {/* ✅ Geo / Local */}
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Nashik" />
         <meta name="geo.position" content="19.9975;73.7898" />
         <meta name="ICBM" content="19.9975, 73.7898" />
-
-        {/* ✅ Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content="Auto Branding in Nashik | Brand Banao.AI" />
-        <meta
-          property="og:description"
-          content="High-visibility auto rickshaw advertising with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting by Brand Banao.AI."
-        />
+        <meta property="og:description" content="High-visibility auto rickshaw advertising with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting by Brand Banao.AI." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
@@ -169,17 +153,10 @@ const AutoooBranding = () => {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-
-        {/* ✅ Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Auto Branding in Nashik | Brand Banao.AI" />
-        <meta
-          name="twitter:description"
-          content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
-        />
+        <meta name="twitter:description" content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="twitter:image" content={OG_IMAGE} />
-
-        {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(schemas.organizationSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(schemas.webPageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
