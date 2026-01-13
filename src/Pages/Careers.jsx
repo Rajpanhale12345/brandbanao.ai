@@ -2,8 +2,10 @@ import React, { useMemo, useState } from "react";
 import "../components/Careers.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { HashLink  } from 'react-router-hash-link';
 
+const SITE_URL = "https://brandbanao.ai";
+const CANONICAL_URL = `https://brandbanao.ai/careers`;
+const OG_IMAGE = `https://brandbanao.ai/assets/logopng-CGGCs8OD.png`;
 
 const JOBS = [
   {
@@ -36,7 +38,7 @@ const JOBS = [
     link: "https://brandbanao.ai/Careers/DigitalMarketingExecutive#header", // internal route example
     // desc: "Lead end-to-end growth strategy across paid, owned, and earned channels."
   },
-    {
+  {
     id: "be-platform",
     title: "Digital Marketing Manager",
     type: "Full-time",
@@ -46,7 +48,7 @@ const JOBS = [
     link: "https://brandbanao.ai/Careers/DigitalMarketingManager#header", // internal route example
     // desc: "Lead end-to-end growth strategy across paid, owned, and earned channels."
   },
-    {
+  {
     id: "be-platform",
     title: "Operations Head",
     type: "Full-time",
@@ -56,7 +58,7 @@ const JOBS = [
     link: "https://brandbanao.ai/Careers/OperationsHead#header", // internal route example
     // desc: "Lead end-to-end growth strategy across paid, owned, and earned channels."
   },
-     {
+  {
     id: "be-platform",
     title: "Sales & Marketing Manager",
     type: "Full-time",
@@ -85,13 +87,121 @@ export default function Careers() {
   }, [active]);
 
   // Helper to decide internal vs external link
-  const isExternal = (url = "") => /^https?:\/\//i.test(url);
+  const isExternal = (url = "") => {
+    try {
+      const u = new URL(url, SITE_URL);
+      return u.origin !== new URL(SITE_URL).origin;
+    } catch {
+      return false;
+    }
+  }; const schema = useMemo(() => {
+    const org = {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Brand Banao.ai",
+      url: SITE_URL,
+      // logo: `${SITE_URL}/assets/logo.png`, // optional (add if you have it)
+      sameAs: [
+        // add your socials if available
+        // "https://www.linkedin.com/company/...",
+        // "https://www.instagram.com/..."
+      ],
+    };
+
+    const webPage = {
+      "@type": "WebPage",
+      "@id": `${CANONICAL_URL}#webpage`,
+      url: CANONICAL_URL,
+      name: "Careers | Brand Banao.ai",
+      description: "Explore open roles at Brand Banao.ai in Nashik, India. Join our team in media planning, sales, digital marketing, and operations.",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
+      about: { "@id": `${SITE_URL}/#organization` },
+      inLanguage: "en",
+    };
+
+    // Use each job link as the posting URL
+    const jobPostings = JOBS.map((job) => ({
+      "@type": "JobPosting",
+      title: job.title,
+      employmentType: job.type,
+      hiringOrganization: { "@id": `${SITE_URL}/#organization` },
+      jobLocation: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Nashik",
+          addressCountry: "IN",
+        },
+      },
+      applicantLocationRequirements: {
+        "@type": "Country",
+        name: "India",
+      },
+      // Use the job link as the posting URL
+      url: job.link,
+      // Strongly recommended for JobPosting, but optional if you don’t have it:
+      description:
+        job.desc ||
+        `Apply for the ${job.title} position at Brand Banao.ai in Nashik, India.`,
+      identifier: {
+        "@type": "PropertyValue",
+        name: "Brand Banao.ai",
+        value: job.id,
+      },
+    }));
+
+    const itemList = {
+      "@type": "ItemList",
+      name: "Open roles at Brand Banao.ai",
+      itemListElement: jobPostings.map((jp, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        item: jp,
+      })),
+    };
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${SITE_URL}/#website`,
+          url: SITE_URL,
+          name: "Brand Banao.ai",
+          publisher: { "@id": `${SITE_URL}/#organization` },
+          inLanguage: "en",
+        },
+        org,
+        webPage,
+        itemList,
+      ],
+    };
+  }, []);
+
+  const metaDescription = "Explore open roles at Brand Banao.ai in Nashik, India. Join our team in media planning, sales, digital marketing, and operations.";
 
   return (
     <>
       <Helmet>
-        <title>Jobs in Nashik | Brand Banao.ai</title>
-        <meta name="author" content="Brand Banao.AI" />
+        <title>Careers | Brand Banao.ai</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="author" content="Brand Banao.ai" />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta name="theme-color" content="#d94f5c" />
+        <link rel="canonical" href={CANONICAL_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Brand Banao.ai" />
+        <meta property="og:url" content={CANONICAL_URL} />
+        <meta property="og:title" content="Careers | Brand Banao.ai" />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Careers | Brand Banao.ai" />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
       </Helmet>
 
       <div className="careers-page">
@@ -180,7 +290,7 @@ export default function Careers() {
                         Apply
                       </a>
                     ) : (
-                    <Link to={`/${job.link}`}>
+                      <Link to={`/${job.link}`}>
                         <button className="apply">Apply</button>
                       </Link>
                     )}
