@@ -183,7 +183,7 @@ export default function Careers() {
   return (
     <>
       <Helmet>
-        <title>Careers | Brand Banao.ai</title>
+        <title>Careers | Brand Banao.Ai</title>
         <meta name="description" content={metaDescription} />
         <meta name="author" content="Brand Banao.ai" />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
