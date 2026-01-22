@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import airport from "../Images/airport.jpg";
-import "./busShelter.css"
+import "./busShelter.css";
 
 const AirportBranding = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-
-    // You can add more bus shelter images here later if you have them
     const images = [airport];
 
     const openGallery = (index) => {
@@ -17,15 +15,7 @@ const AirportBranding = () => {
         setShowGallery(true);
     };
 
-    const schemas = {
-        organizationSchema: { /* ... */ },
-        webPageSchema,
-        faqSchema,
-        serviceSchema: { /* ... */ },
-        breadcrumbSchema: { /* ... */ },
-    };
-
-
+    // ✅ Define schemas FIRST
     const webPageSchema = {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -43,10 +33,9 @@ const AirportBranding = () => {
         },
         author: {
             "@type": "Organization",
-            name: "Brand Banao.Ai"
-        }
+            name: "Brand Banao.Ai",
+        },
     };
-
 
     const faqSchema = {
         "@context": "https://schema.org",
@@ -109,6 +98,12 @@ const AirportBranding = () => {
         ],
     };
 
+    // Optional: if you track page views with gtag, guard it (prevents "gtag is not defined")
+    useEffect(() => {
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+            window.gtag("event", "page_view", { page_path: "/AirportBranding" });
+        }
+    }, []);
 
     const faqItems = [
         {
@@ -142,8 +137,6 @@ const AirportBranding = () => {
                 "With 15+ years in OOH, we bring data-driven planning, pan-India airport media access, premium creative support, smooth coordination, and reporting with campaign documentation and post-campaign analysis.",
         },
     ];
-
-
 
     return (
         <>
@@ -191,11 +184,6 @@ const AirportBranding = () => {
                     {JSON.stringify(faqSchema)}
                 </script>
 
-                <script type="application/ld+json">{JSON.stringify(schemas.organizationSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(schemas.webPageSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
-                <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
 
             </Helmet>
 

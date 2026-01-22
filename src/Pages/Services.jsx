@@ -112,7 +112,7 @@ export default function Services() {
               <ServiceCard
                 title="Airport Branding"
                 image={airport}
-                path={"/AirportBranding"}
+                path="/AirportBranding"
               />
 
               <ServiceCard
