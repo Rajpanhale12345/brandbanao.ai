@@ -1,6 +1,6 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import airport from "../Images/autobranding.jpg";
+import Autobranding from "../Images/autobranding.jpg";
 import "./tvNews.css";
 
 const FAQ_ITEMS = [
@@ -25,143 +25,181 @@ const FAQ_ITEMS = [
       "Yes. We provide monitoring, mapping, and analytical reporting to ensure maximum coverage and frequency.",
   },
   {
-    question: "Why choose Brand Banao.AI for auto branding?",
+    question: "Why choose BrandBanao.ai for auto branding?",
     answer:
       "We blend strategy, creative execution, and operations to deliver strong street-level visibility, brand recall, and consistent campaign coverage.",
   },
 ];
 
-const AutoooBranding = () => {
+const AutoBranding = () => { // ✅ FIX: cleaner component name (avoid “Autooo”)
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = [airport];
+  const images = useMemo(() => [AutoBranding], []); // ✅ FIX: memoize and use correct img
 
-  const openGallery = (index) => {
+  const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
-  };
+  }, []);
+
+  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX: reusable close handler
+
+  // ✅ FIX: ESC closes gallery
+  useEffect(() => {
+    if (!showGallery) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeGallery();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/auto-branding";
-  const BRAND_NAME = "Brand Banao.AI";
+  const PAGE_URL = "https://brandbanao.ai/auto-branding"; // ✅ FIX: keep lowercase canonical (best practice)
+  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming (you mixed Brand Banao.AI / Brand Banao.Ai)
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-  const schemas = useMemo(() => {
-    const webPageSchema = {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: "Auto Branding in Nashik | Brand Banao.AI",
-      headline: "Auto Branding & Auto Rickshaw Advertising",
-      description:
-        "Auto branding and auto rickshaw advertising by Brand Banao.AI. High-visibility mobile ads with wraps, back panels, and route-based campaigns with monitoring and reporting for hyperlocal reach.",
-      image: OG_IMAGE,
-      url: PAGE_URL,
-      inLanguage: "en-IN",
-      publisher: {
-        "@type": "Organization",
-        name: BRAND_NAME,
-        url: SITE_URL,
-        logo: { "@type": "ImageObject", url: OG_IMAGE },
-      },
-    };
+  // ✅ FIX: Keep keywords SHORT (meta keywords are ignored by Google; long lists can look spammy)
+  const keywordsContent = useMemo(
+    () =>
+      [
+        "auto branding Nashik",
+        "auto rickshaw advertising Nashik",
+        "auto rickshaw branding",
+        "mobile outdoor advertising",
+        "OOH advertising Nashik",
+        "transit advertising",
+        "BrandBanao.ai",
+      ].join(", "),
+    []
+  );
 
-    const serviceSchema = {
+  // ✅ FIX: One JSON-LD graph is cleaner than 5 separate blocks
+  const structuredData = useMemo(() => {
+    const orgId = "https://brandbanao.ai/#organization";
+    const pageId = `${PAGE_URL}#webpage`;
+    const serviceId = `${PAGE_URL}#service`;
+
+    return {
       "@context": "https://schema.org",
-      "@type": "Service",
-      name: "Auto Branding & Auto Rickshaw Advertising",
-      serviceType: ["Mobile Outdoor Advertising", "OOH Advertising"],
-      provider: {
-        "@type": "Organization",
-        name: BRAND_NAME,
-        url: SITE_URL,
-        logo: { "@type": "ImageObject", url: OG_IMAGE },
-      },
-      areaServed: [
-        { "@type": "Country", name: "India" },
-        { "@type": "State", name: "Maharashtra" },
-        { "@type": "City", name: "Nashik" },
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://brandbanao.ai/#website",
+          "url": SITE_URL,
+          "name": BRAND_NAME,
+          "publisher": { "@id": orgId },
+          "inLanguage": "en-IN",
+        },
+        {
+          "@type": "Organization",
+          "@id": orgId,
+          "name": BRAND_NAME,
+          "url": SITE_URL,
+          "logo": OG_IMAGE,
+          "sameAs": [
+            "https://www.instagram.com/brandbanao.ai",
+            "https://www.linkedin.com/company/brandbanao-ai",
+            "https://www.facebook.com/brandbanao.ai",
+          ],
+        },
+        {
+          "@type": "WebPage",
+          "@id": pageId,
+          "url": PAGE_URL,
+          "name": "Auto Branding in Nashik | Auto Rickshaw Advertising",
+          "description":
+            "Auto branding and auto rickshaw advertising for hyperlocal reach in Nashik and Maharashtra. Mobile outdoor ads with wraps, panels, route-based campaigns, monitoring and reporting.",
+          "inLanguage": "en-IN",
+          "isPartOf": { "@id": "https://brandbanao.ai/#website" },
+          "about": { "@id": orgId },
+          "mainEntity": { "@id": serviceId },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": OG_IMAGE,
+          },
+        },
+        {
+          "@type": "Service",
+          "@id": serviceId,
+          "name": "Auto Branding & Auto Rickshaw Advertising",
+          "serviceType": ["Mobile Outdoor Advertising", "OOH Advertising"],
+          "provider": { "@id": orgId },
+          "areaServed": [
+            { "@type": "Country", "name": "India" },
+            { "@type": "State", "name": "Maharashtra" },
+            { "@type": "City", "name": "Nashik" },
+          ],
+          "url": PAGE_URL,
+          "description":
+            "Mobile outdoor advertising using auto rickshaw branding: full wraps, back panels, side panels, and route-based hyperlocal campaigns with monitoring and reporting.",
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${PAGE_URL}#breadcrumbs`,
+          "itemListElement": [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` }, // ✅ FIX: trailing slash & correct path style
+            { "@type": "ListItem", position: 3, name: "Auto Branding", item: PAGE_URL },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${PAGE_URL}#faq`,
+          "mainEntity": FAQ_ITEMS.map((f) => ({
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+          })),
+        },
       ],
-      url: PAGE_URL,
-      description:
-        "Mobile outdoor advertising using auto rickshaw branding: full wraps, back panels, side panels, route-based hyperlocal campaigns with monitoring and reporting.",
     };
-
-    const breadcrumbSchema = {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services` },
-        { "@type": "ListItem", position: 3, name: "Auto Branding", item: PAGE_URL },
-      ],
-    };
-
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: FAQ_ITEMS.map((f) => ({
-        "@type": "Question",
-        name: f.question,
-        acceptedAnswer: { "@type": "Answer", text: f.answer },
-      })),
-    };
-
-    const organizationSchema = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: BRAND_NAME,
-      url: SITE_URL,
-      logo: OG_IMAGE,
-      sameAs: [
-        "https://www.instagram.com/brandbanao.ai",
-        "https://www.linkedin.com/company/brandbanao-ai",
-        "https://www.facebook.com/brandbanao.ai",
-      ],
-    };
-
-    return { webPageSchema, serviceSchema, breadcrumbSchema, faqSchema, organizationSchema };
   }, [BRAND_NAME, OG_IMAGE, PAGE_URL, SITE_URL]);
 
   return (
     <>
       <Helmet>
-        <title>Auto Branding in Nashik | Auto Rickshaw Advertising | Brand Banao.AI</title>
-        <meta name="description" content="Auto branding and auto rickshaw advertising by Brand Banao.AI in Nashik & Maharashtra. High-visibility mobile ads with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting." />
-        <meta name="keywords" content="auto branding Nashik, auto rickshaw advertising, mobile outdoor advertising, hyperlocal advertising, auto wrap advertising, back panel auto ads, Brand Banao AI" />
+        <title>Auto Branding in Nashik | Auto Rickshaw Advertising | BrandBanao.ai</title>
+
+        <meta
+          name="description"
+          content="Auto branding and auto rickshaw advertising by BrandBanao.ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
+        />
+
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#000000" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="19.9975;73.7898" />
-        <meta name="ICBM" content="19.9975, 73.7898" />
+
+        {/* ✅ FIX: Optional (short) keywords */}
+        <meta name="keywords" content={keywordsContent} />
+
+        {/* ✅ FIX: Keep OG/Twitter clean */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Auto Branding in Nashik | Brand Banao.AI" />
-        <meta property="og:description" content="High-visibility auto rickshaw advertising with wraps, back panels, route-based hyperlocal campaigns, monitoring and reporting by Brand Banao.AI." />
+        <meta property="og:title" content="Auto Branding in Nashik | BrandBanao.ai" />
+        <meta
+          property="og:description"
+          content="High-visibility auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Brand Banao.AI - Auto Branding Services" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="BrandBanao.ai - Auto Branding Services" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Auto Branding in Nashik | Brand Banao.AI" />
-        <meta name="twitter:description" content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
+        <meta name="twitter:title" content="Auto Branding in Nashik | BrandBanao.ai" />
+        <meta
+          name="twitter:description"
+          content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
+        />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <script type="application/ld+json">{JSON.stringify(schemas.organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemas.webPageSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemas.serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemas.breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemas.faqSchema)}</script>
+
+        {/* ✅ FIX: Single JSON-LD output */}
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="hoarding-page">
@@ -169,7 +207,7 @@ const AutoooBranding = () => {
 
         <div className="hoarding-image-wrap">
           <img
-            src={airport}
+            src={Autobranding}
             alt="Auto Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
@@ -308,4 +346,4 @@ const AutoooBranding = () => {
   );
 };
 
-export default AutoooBranding;
+export default AutoBranding;

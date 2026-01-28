@@ -9,7 +9,6 @@ export default function Home() {
   const canvasRef = useRef(null);
   const bgRef = useRef(null);
 
-  // NEW: target to scroll to, and visibility for arrow
   const belowHeroRef = useRef(null);
   const [showArrow, setShowArrow] = useState(true);
 

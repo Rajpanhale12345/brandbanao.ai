@@ -7,72 +7,106 @@ import Innovation from '../components/Innovation';
 import { Helmet } from 'react-helmet';
 
 const About = () => {
+
+   // ✅ FIX: Use JSON.stringify instead of template string (safer, no formatting issues)
+  // ✅ FIX: Use @graph to describe AboutPage + Organization (better entity clarity)
+  // ✅ FIX: Use a logo URL that actually exists on your site (update if different)
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage", // ✅ FIX: More accurate than generic WebPage
+        "@id": "https://brandbanao.ai/about#aboutpage",
+        "url": "https://brandbanao.ai/about",
+        "name": "About BrandBanao.ai | 360° Branding & Advertising Agency in Nashik",
+        "description":
+          "BrandBanao.ai is a 360-degree branding & advertising agency in Nashik, Maharashtra. Founded by Amit Hemant Patil, we deliver strategic branding, OOH advertising, and digital marketing for growth-driven campaigns.",
+        "inLanguage": "en-IN",
+        "about": { "@id": "https://brandbanao.ai/#organization" },
+        "isPartOf": { "@id": "https://brandbanao.ai/#website" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://brandbanao.ai/#website",
+        "url": "https://brandbanao.ai/",
+        "name": "BrandBanao.ai",
+        "publisher": { "@id": "https://brandbanao.ai/#organization" },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "AdvertisingAgency", // ✅ FIX: More specific than Organization
+        "@id": "https://brandbanao.ai/#organization",
+        "name": "BrandBanao.ai",
+        "url": "https://brandbanao.ai/",
+        // ✅ FIX: Use same logo as other pages for consistency
+        "logo": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+        "image": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+        "foundingDate": "2008",
+        "description":
+          "A 360-degree branding and advertising agency based in Nashik, Maharashtra, specializing in strategic branding, outdoor advertising, and digital marketing.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nashik",
+          "addressRegion": "MH",
+          "addressCountry": "IN"
+          // ✅ FIX: Add streetAddress/postalCode if you have them (recommended)
+          // "streetAddress": "YOUR STREET ADDRESS",
+          // "postalCode": "YOUR PINCODE"
+        },
+        "geo": {
+          // ✅ FIX: Use proper GeoCoordinates (you used geo meta tags only)
+          "@type": "GeoCoordinates",
+          "latitude": 19.9975,
+          "longitude": 73.7898
+        },
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Amit Hemant Patil",
+            "jobTitle": "Founder & CEO"
+          },
+          {
+            "@type": "Person",
+            "name": "Prajakta Amit Patil",
+            "jobTitle": "Co-Founder & CFO"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/brandbanao.ai",
+          "https://www.linkedin.com/company/brandbanao-ai",
+          "https://www.facebook.com/brandbanao.ai"
+        ]
+      }
+    ]
+  };
+
   return (
 
     <>
 
       <Helmet>
-        <title>About | Best Branding & Advertising Agency in Nashik</title>
-        <meta name="description" content="Brand Banao.AI is a leading 360-degree branding & advertising agency in Nashik, Maharashtra. Founded by Amit Hemant Patil, we specialize in strategic branding, digital marketing, OOH advertising, and growth-driven campaigns." />
-        <meta name="keywords" content="Brand Banao AI, branding agency Nashik, advertising agency Nashik, digital marketing Nashik, 360 degree branding company, hoarding advertising Nashik, BrandBanao.ai" />
-        <meta name="author" content="Brand Banao.AI" />
+        <title>About BrandBanao.ai | 360° Branding & Advertising Agency in Nashik</title>
+        <meta name="description" content="BrandBanao.ai is a leading 360-degree branding & advertising agency in Nashik, Maharashtra. Founded by Amit Hemant Patil, we specialize in strategic branding, digital marketing, OOH advertising, and growth-driven campaigns." />
+        <meta name="author" content="BrandBanao.ai" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://brandbanao.ai/about" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="19.9975;73.7898" />
-        <meta name="ICBM" content="19.9975, 73.7898" />
-        <meta property="og:title" content="About Brand Banao.AI | 360° Branding Agency in Nashik" />
-        <meta property="og:description" content="Meet the visionaries behind Brand Banao.AI — a Nashik-based 360° branding and advertising agency delivering measurable business growth." />
+        <meta property="og:title" content="About BrandBanao.ai | 360° Branding Agency in Nashik" />
+        <meta property="og:description" content="Meet the visionaries behind BrandBanao.ai — a Nashik-based 360° branding and advertising agency delivering measurable business growth." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/about" />
-        <meta property="og:site_name" content="Brand Banao.AI" />
+        <meta property="og:site_name" content="BrandBanao.ai" />
         <meta property="og:image" content="https://brandbanao.ai/assets/brandbanao-og.jpg" />
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Brand Banao.AI | Branding Agency in Nashik" />
-        <meta name="twitter:description" content="Discover Brand Banao.AI — a results-driven branding and advertising agency helping businesses scale with strategy and creativity." />
+        <meta name="twitter:title" content="About BrandBanao.ai | Branding Agency in Nashik" />
+        <meta name="twitter:description" content="Discover BrandBanao.ai — a results-driven branding and advertising agency helping businesses scale with strategy and creativity." />
         <meta name="twitter:image" content="https://brandbanao.ai/assets/brandbanao-og.jpg" />
-        <meta name="application-name" content="Brand Banao.AI" />
-        <meta name="theme-color" content="#d94f5c" /> 
-        
-        <script type="application/ld+json">
-          {`
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Brand Banao.AI",
-            "url": "https://brandbanao.ai",
-            "logo": "https://brandbanao.ai/logo.png",
-            "foundingDate": "2008",
-            "description": "A 360-degree branding and advertising agency based in Nashik, Maharashtra.",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Nashik",
-              "addressRegion": "MH",
-              "addressCountry": "IN"
-            },
-            "founder": [
-              {
-                "@type": "Person",
-                "name": "Amit Hemant Patil",
-                "jobTitle": "Founder & CEO"
-              },
-              {
-                "@type": "Person",
-                "name": "Prajakta Amit Patil",
-                "jobTitle": "Co-Founder & CFO"
-              }
-            ],
-            "sameAs": [
-              "https://www.instagram.com/brandbanao.ai",
-              "https://www.linkedin.com/company/brandbanao-ai",
-              "https://www.facebook.com/brandbanao.ai"
-            ]
-          }
-          `}
-        </script>
+        <meta name="application-name" content="BrandBanao.ai" />
+        <meta name="theme-color" content="#d94f5c" />
+
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
+
 
 
       <div>

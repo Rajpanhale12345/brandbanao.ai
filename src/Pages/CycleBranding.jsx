@@ -1,218 +1,202 @@
-import React, { useState } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import airport from "../Images/cycle.jpg";
+import cycleImg from "../Images/cycle.jpg"; // ✅ FIX: correct variable name
 import "./tvNews.css";
 
-const CycleeBranding = () => {
+const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    // You can add more auto branding images here later if you have them
-    const images = [airport];
+    const images = useMemo(() => [cycleImg], []); // ✅ FIX: memoize
 
-    const openGallery = (index) => {
+    const openGallery = useCallback((index) => {
         setCurrentIndex(index);
         setShowGallery(true);
-    };
+    }, []);
 
-    const webPageSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Cycle Branding - Brand Banao.Ai",
-        headline: "Cycle Branding Services - Brand Banao.Ai",
-        description:
-            "Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting.",
-        image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/CycleeBranding",
-        publisher: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-            },
-        },
-        author: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-        },
-    };
+    const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
 
+    // ✅ FIX: ESC closes gallery
+    useEffect(() => {
+        if (!showGallery) return;
+        const onKeyDown = (e) => {
+            if (e.key === "Escape") closeGallery();
+        };
+        window.addEventListener("keydown", onKeyDown);
+        return () => window.removeEventListener("keydown", onKeyDown);
+    }, [showGallery, closeGallery]);
 
-    const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Auto Branding & Auto Rickshaw Advertising",
-        serviceType: "Outdoor Advertising",
-        provider: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-            },
-        },
-        areaServed: "IN",
-        url: "https://brandbanao.ai/CycleeBranding",
-        description:
-            "Mobile outdoor advertising using auto rickshaw branding: full wraps, back panels, side panels, route-based hyperlocal campaigns with monitoring and reporting.",
-    };
+    const SITE_URL = "https://brandbanao.ai/";
+    const PAGE_URL = "https://brandbanao.ai/cycle-branding"; // ✅ FIX: recommended lowercase canonical
+    const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
+    const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
+    // ✅ FIX: ONE FAQ list used for both UI + JSON-LD
+    const FAQ_ITEMS = useMemo(
+        () => [
             {
-                "@type": "Question",
-                name: "What is cycle branding?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Cycle branding is a form of mobile outdoor advertising where branded bicycles carry your message through neighborhoods, markets, campuses, and community areas to create repeated local visibility and brand recall.",
-                },
+                question: "What is cycle branding?",
+                answer:
+                    "Cycle branding is a mobile outdoor advertising format where branded bicycles carry your message through neighborhoods, markets, campuses, and community spaces to build repeated local visibility and recall.",
             },
             {
-                "@type": "Question",
-                name: "Where does cycle advertising work best?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Cycle advertising works best in residential neighborhoods, markets, campuses, housing societies, and local hotspots where people repeatedly encounter the brand during daily routines.",
-                },
+                question: "Where does cycle advertising work best?",
+                answer:
+                    "Cycle advertising performs best in residential neighborhoods, markets, campuses, housing societies, and local hotspots where people repeatedly see the message during daily routines.",
             },
             {
-                "@type": "Question",
-                name: "What types of campaigns are suitable for cycle branding?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Cycle branding is ideal for local product launches, retail promotions, public awareness and CSR campaigns, real estate site launches, healthcare and education awareness, and event promotions.",
-                },
+                question: "What campaign types can cycle branding support?",
+                answer:
+                    "Cycle branding is ideal for local launches, retail promotions, public awareness and CSR initiatives, real estate site launches, healthcare and education awareness, and event promotions.",
             },
             {
-                "@type": "Question",
-                name: "Do you provide route planning and campaign management?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. We handle route planning, campaign duration, branding production, deployment, monitoring, and reporting to ensure consistent coverage and maximum impressions.",
-                },
+                question: "Do you handle route planning and deployment?",
+                answer:
+                    "Yes. We plan routes based on your target areas, schedule campaign timing and duration, produce branding materials, and manage on-ground deployment.",
             },
             {
-                "@type": "Question",
-                name: "Is cycle branding eco-friendly?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. Cycle branding is an eco-friendly advertising medium that delivers high visibility without fuel consumption or emissions, making it suitable for sustainable brand campaigns.",
-                },
+                question: "Do you provide monitoring and reporting?",
+                answer:
+                    "Yes. Campaigns include monitoring and reporting to help ensure cycles follow planned routes and deliver consistent visibility and frequency in your target locations.",
             },
             {
-                "@type": "Question",
-                name: "Why choose Brand Banao.Ai for cycle branding?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Brand Banao.Ai combines strategic planning, creative execution, and on-ground operations to deliver scalable, hyperlocal cycle branding campaigns with measurable reach and strong brand recall.",
-                },
+                question: "Why choose BrandBanao.ai for cycle branding?",
+                answer:
+                    "We combine strategy, creative execution, and on-ground operations to deliver scalable hyperlocal cycle branding campaigns with measurable coverage and strong brand recall.",
             },
         ],
-    };
+        []
+    );
 
+    // ✅ FIX: keep keywords short
+    const keywordsContent = useMemo(
+        () =>
+            [
+                "cycle branding",
+                "branded cycle advertising",
+                "bicycle advertising",
+                "hyperlocal advertising",
+                "eco friendly advertising",
+                "mobile outdoor advertising",
+                "BrandBanao.ai",
+            ].join(", "),
+        []
+    );
 
-    const faqItems = [
-        {
-            question: "What is cycle branding?",
-            answer:
-                "Cycle branding is a form of mobile outdoor advertising where branded bicycles carry your message through neighborhoods, markets, campuses, and other high-footfall areas to build repeated local visibility.",
-        },
-        {
-            question: "Where does cycle advertising work best?",
-            answer:
-                "Cycle advertising performs best in neighborhoods, markets, campuses, housing areas, community spaces, and locations where people repeatedly see the message during daily routines.",
-        },
-        {
-            question: "What campaign types can cycle branding support?",
-            answer:
-                "Cycle branding is ideal for local product launches, retail and showroom promotions, public awareness and CSR initiatives, real estate site launches, education and healthcare awareness, and event promotions.",
-        },
-        {
-            question: "Do you handle route planning and deployment?",
-            answer:
-                "Yes. We plan routes based on target areas, schedule campaign timing and duration, produce branding materials, and manage on-ground deployment.",
-        },
-        {
-            question: "Do you provide monitoring and reporting?",
-            answer:
-                "Yes. Campaigns include monitoring and reporting to help ensure cycles follow planned routes and deliver consistent visibility and frequency in target areas.",
-        },
-        {
-            question: "Why choose Brand Banao.Ai for cycle branding?",
-            answer:
-                "Brand Banao.Ai combines strategy, creative execution, and on-ground operations to deliver consistent hyperlocal visibility with scalable campaigns and measurable coverage.",
-        },
-    ];
+    // ✅ FIX: Single JSON-LD graph (WebPage + Service + FAQ + Breadcrumbs)
+    const structuredData = useMemo(() => {
+        const orgId = "https://brandbanao.ai/#organization";
+        const pageId = `${PAGE_URL}#webpage`;
+        const serviceId = `${PAGE_URL}#service`;
+
+        return {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://brandbanao.ai/#website",
+                    url: SITE_URL,
+                    name: BRAND_NAME,
+                    publisher: { "@id": orgId },
+                    inLanguage: "en-IN",
+                },
+                {
+                    "@type": "Organization",
+                    "@id": orgId,
+                    name: BRAND_NAME,
+                    url: SITE_URL,
+                    logo: OG_IMAGE,
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": pageId,
+                    name: "Cycle Branding in Nashik | Branded Cycle Advertising",
+                    headline: "Cycle Branding Services",
+                    description:
+                        "Cycle branding and branded cycle advertising by BrandBanao.ai. Eco-friendly, hyperlocal mobile ads with route planning, deployment, monitoring, and reporting.",
+                    image: OG_IMAGE,
+                    url: PAGE_URL,
+                    inLanguage: "en-IN",
+                    isPartOf: { "@id": "https://brandbanao.ai/#website" },
+                    about: { "@id": orgId },
+                    mainEntity: { "@id": serviceId },
+                },
+                {
+                    "@type": "Service",
+                    "@id": serviceId,
+                    name: "Cycle Branding & Branded Cycle Advertising", // ✅ FIX: correct service name
+                    serviceType: ["Mobile Outdoor Advertising", "OOH Advertising", "Hyperlocal Advertising"], // ✅ FIX
+                    provider: { "@id": orgId },
+                    areaServed: [
+                        { "@type": "Country", name: "India" },
+                        { "@type": "State", name: "Maharashtra" },
+                        { "@type": "City", name: "Nashik" },
+                    ],
+                    url: PAGE_URL,
+                    description:
+                        "Eco-friendly hyperlocal advertising using branded cycles with route planning, deployment, monitoring, and reporting for repeated neighborhood visibility.",
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": `${PAGE_URL}#breadcrumbs`,
+                    itemListElement: [
+                        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+                        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
+                        { "@type": "ListItem", position: 3, name: "Cycle Branding", item: PAGE_URL },
+                    ],
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": `${PAGE_URL}#faq`,
+                    mainEntity: FAQ_ITEMS.map((f) => ({
+                        "@type": "Question",
+                        name: f.question,
+                        acceptedAnswer: { "@type": "Answer", text: f.answer },
+                    })),
+                },
+            ],
+        };
+    }, [FAQ_ITEMS, PAGE_URL]);
+
+    const metaDescription =
+        "Cycle branding and branded cycle advertising by BrandBanao.ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting.";
 
     return (
         <>
-            <Helmet>
-                <title>Best Cycle Branding in Nashik | Brand Banao.Ai</title>
+            <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+                <title>Cycle Branding in Nashik | Branded Cycle Advertising | BrandBanao.ai</title> {/* ✅ FIX */}
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="publisher" content="Brand Banao.Ai" />
-                <meta name="creator" content="Brand Banao.Ai" />
-                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-                <meta name="theme-color" content="#0d1117" />
-                <meta name="color-scheme" content="light dark" />
-                <meta name="author" content="Brand Banao.AI" />
-                <meta name="description" content="Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting." />
-                <meta name="keywords" content="cycle branding, branded cycle advertising, cycle advertising, bicycle advertising, hyperlocal advertising, eco friendly advertising, mobile outdoor advertising, neighborhood marketing, route based advertising, local promotions, Brand Banao Ai" />
+                <meta name="author" content={BRAND_NAME} />
+                <meta name="publisher" content={BRAND_NAME} />
+                <meta name="description" content={metaDescription} />
+                <meta name="keywords" content={keywordsContent} />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-                <meta name="MobileOptimized" content="width" />
-                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <meta name="twitter:image:alt" content="Brand Banao.Ai logo" />
-                <meta name="twitter:site" content="@BrandBanaoAi" />
-                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-                <meta name="HandheldFriendly" content="true" />
-                <link rel="canonical" href="https://brandbanao.ai/CycleeBranding" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-                <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.Ai" />
-                <meta property="og:title" content="Cycle Branding Services" />
-                <meta property="og:description" content="Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://brandbanao.ai/CycleeBranding" />
-                <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta name="geo.region" content="IN-MH" />
-                <meta name="geo.placename" content="Nashik" />
-                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Cycle Branding Services" />
-                <meta name="twitter:description" content="Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting." />
-                <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta name="theme-color" content="#0d1117" />
 
-                <script type="application/ld+json">
-                    {JSON.stringify(webPageSchema)}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(serviceSchema)}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(faqSchema)}
-                </script>
+                <link rel="icon" href={OG_IMAGE} />
+                <link rel="apple-touch-icon" href={OG_IMAGE} />
+
+                <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX */}
+
+                <meta property="og:locale" content="en_IN" />
+                <meta property="og:site_name" content={BRAND_NAME} />
+                <meta property="og:title" content="Cycle Branding Services | BrandBanao.ai" />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={PAGE_URL} /> {/* ✅ FIX */}
+                <meta property="og:image" content={OG_IMAGE} />
+                <meta property="og:image:alt" content="BrandBanao.ai - Cycle Branding" /> {/* ✅ FIX */}
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Cycle Branding | BrandBanao.ai" />
+                <meta name="twitter:description" content={metaDescription} />
+                <meta name="twitter:image" content={OG_IMAGE} />
+                <meta name="twitter:image:alt" content="BrandBanao.ai - Cycle Branding" /> {/* ✅ FIX */}
+
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script> {/* ✅ FIX: one JSON-LD */}
             </Helmet>
 
             <div className="hoarding-page">
@@ -220,7 +204,7 @@ const CycleeBranding = () => {
 
                 <div className="hoarding-image-wrap">
                     <img
-                        src={airport}
+                        src={cycleImg}
                         alt="Auto Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
@@ -351,48 +335,38 @@ const CycleeBranding = () => {
                         trust, and growth across the city.</b></i></h3> */}
                 </div>
 
-                {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
-                <div className="hoarding-content faq-section">
-                    <h2>Cycle Branding FAQs</h2>
-                    <div className="faq-list">
-                        {faqItems.map((faq, index) => {
-                            const isActive = activeFaqIndex === index;
+                 <div className="hoarding-content faq-section">
+          <h2>Cycle Branding FAQs</h2>
+          <div className="faq-list">
+            {FAQ_ITEMS.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
+              return (
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                    aria-expanded={isActive} // ✅ FIX
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
 
-                            return (
-                                <div
-                                    className={`faq-item ${isActive ? "active" : ""}`}
-                                    key={index}
-                                >
-                                    <button
-                                        type="button"
-                                        className="faq-question"
-                                        onClick={() =>
-                                            setActiveFaqIndex(isActive ? null : index)
-                                        }
-                                    >
-                                        <span className="faq-question-text">{faq.question}</span>
-                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                                    </button>
-
-                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                                        <div className="faq-answer-inner">
-                                            <p>{faq.answer}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
                     </div>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
 
-
-
-                <div className="hoarding-content">
-                    {/* Reserved for any additional blocks, forms, CTAs, etc. */}
-                </div>
-            </div>
-        </>
-    );
+        <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
+      </div>
+    </>
+  );
 };
 
-export default CycleeBranding;
+export default CycleBranding;

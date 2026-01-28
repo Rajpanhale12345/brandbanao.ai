@@ -1,232 +1,213 @@
-import React, { useState } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import airport from "../Images/digital.jpg";
+import digitalImg from "../Images/digital.jpg"; // ✅ FIX: proper variable name
 import "./tvNews.css";
 
-const DigitallMarketing = () => {
-    const [showGallery, setShowGallery] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+const DigitalMarketing = () => { // ✅ FIX: correct component name
+  const [showGallery, setShowGallery] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = [airport];
+  const images = useMemo(() => [digitalImg], []); // ✅ FIX: memoize
 
-    const openGallery = (index) => {
-        setCurrentIndex(index);
-        setShowGallery(true);
+  const openGallery = useCallback((index) => {
+    setCurrentIndex(index);
+    setShowGallery(true);
+  }, []);
+
+  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
+
+  // ✅ FIX: ESC closes gallery
+  useEffect(() => {
+    if (!showGallery) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeGallery();
     };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showGallery, closeGallery]);
 
-    // ✅ SEO: Consistent page identity for Digital Marketing
-    const PAGE_NAME = "Digital Marketing Service";
-    const PAGE_TITLE =
-        "Best Digital Marketing in Nashik | Brand Banao.Ai";
-    const PAGE_DESC =
-        "Grow your business with Brand Banao.Ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics and conversion optimisation.";
-    const PAGE_URL = "https://brandbanao.ai/DigitallMarketing";
-    const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const SITE_URL = "https://brandbanao.ai/";
+  const PAGE_URL = "https://brandbanao.ai/digital-marketing"; // ✅ FIX: lowercase canonical recommended
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
 
-    const webPageSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Digital Marketing - Brand Banao.Ai",
-        headline: "Digital Marketing Services by Brand Banao.Ai",
-        description: PAGE_DESC,
-        image: OG_IMAGE,
-        url: PAGE_URL,
-        publisher: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: {
-                "@type": "ImageObject",
-                url: OG_IMAGE,
-            },
+  const PAGE_TITLE = "Digital Marketing in Nashik | SEO, PPC & Social | BrandBanao.ai"; // ✅ FIX: less spammy
+  const PAGE_DESC =
+    "Grow your business with BrandBanao.ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
+
+  // ✅ FIX: ONE FAQ list (used for both UI + JSON-LD)
+  const FAQ_ITEMS = useMemo(
+    () => [
+      {
+        question: "What digital marketing services does BrandBanao.ai offer?",
+        answer:
+          "We provide SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, conversion rate optimisation, and reporting—tailored to your goals and budget.",
+      },
+      {
+        question: "How long does SEO take to show results?",
+        answer:
+          "SEO timelines vary by industry and competition, but many websites see early improvements within 8–12 weeks. Stronger results often build over 3–6 months with consistent optimisation.",
+      },
+      {
+        question: "Do you manage Google Ads and paid social campaigns?",
+        answer:
+          "Yes. We plan, set up and optimise search, display and social campaigns with conversion tracking, audience targeting, creative testing, and ongoing performance optimisation.",
+      },
+      {
+        question: "Can you help with local SEO for Nashik and nearby areas?",
+        answer:
+          "Yes. We improve local visibility through Google Business Profile optimisation, local keyword targeting, location pages, citations, and review strategy.",
+      },
+      {
+        question: "How do you measure performance?",
+        answer:
+          "We track qualified leads, conversions, ROAS/CAC, revenue impact, traffic quality, and engagement—shared through dashboards and regular reporting.",
+      },
+      {
+        question: "Why choose BrandBanao.ai as your digital marketing partner?",
+        answer:
+          "We combine strategy, creativity and analytics to build scalable growth systems, focusing on measurable outcomes, continuous optimisation, and transparent reporting.",
+      },
+    ],
+    []
+  );
+
+  // ✅ FIX: Short keywords (optional; Google ignores meta keywords)
+  const keywordsContent = useMemo(
+    () =>
+      [
+        "digital marketing Nashik",
+        "SEO services Nashik",
+        "Google Ads PPC",
+        "social media marketing",
+        "performance marketing",
+        "local SEO",
+        "BrandBanao.ai",
+      ].join(", "),
+    []
+  );
+
+  // ✅ FIX: Single JSON-LD @graph (better for AI search understanding)
+  const structuredData = useMemo(() => {
+    const orgId = "https://brandbanao.ai/#organization";
+    const pageId = `${PAGE_URL}#webpage`;
+    const serviceId = `${PAGE_URL}#service`;
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://brandbanao.ai/#website",
+          url: SITE_URL,
+          name: BRAND_NAME,
+          publisher: { "@id": orgId },
+          inLanguage: "en-IN",
         },
-        author: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
+        {
+          "@type": "Organization",
+          "@id": orgId,
+          name: BRAND_NAME,
+          url: SITE_URL,
+          logo: OG_IMAGE,
         },
+        {
+          "@type": "WebPage",
+          "@id": pageId,
+          url: PAGE_URL,
+          name: "Digital Marketing Services in Nashik",
+          headline: "Digital Marketing Services by BrandBanao.ai",
+          description: PAGE_DESC,
+          inLanguage: "en-IN",
+          isPartOf: { "@id": "https://brandbanao.ai/#website" },
+          about: { "@id": orgId },
+          mainEntity: { "@id": serviceId },
+          primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
+        },
+        {
+          "@type": "Service",
+          "@id": serviceId,
+          name: "Digital Marketing Services",
+          serviceType: ["SEO", "PPC", "Social Media Marketing", "Performance Marketing"],
+          provider: { "@id": orgId },
+          areaServed: [
+            { "@type": "Country", name: "India" },
+            { "@type": "State", name: "Maharashtra" },
+            { "@type": "City", name: "Nashik" },
+          ],
+          url: PAGE_URL,
+          description:
+            "End-to-end digital marketing: SEO (technical & on-page), Google Ads (PPC), social media marketing, content marketing, analytics, conversion rate optimisation and reporting.",
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${PAGE_URL}#breadcrumbs`,
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
+            { "@type": "ListItem", position: 3, name: "Digital Marketing", item: PAGE_URL },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${PAGE_URL}#faq`,
+          mainEntity: FAQ_ITEMS.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        },
+      ],
     };
+  }, [FAQ_ITEMS, PAGE_URL, PAGE_DESC]);
 
-    const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Digital Marketing Services",
-        serviceType: "Digital Marketing",
-        provider: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: {
-                "@type": "ImageObject",
-                url: OG_IMAGE,
-            },
-        },
-        areaServed: "IN",
-        url: PAGE_URL,
-        description:
-            "End-to-end digital marketing: SEO (technical & on-page), Google Ads (PPC), social media marketing, content marketing, performance marketing, analytics, conversion rate optimisation and reporting.",
-    };
+  return (
+    <>
+      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+        <title>{PAGE_TITLE}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="publisher" content={BRAND_NAME} />
+        <meta name="description" content={PAGE_DESC} />
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "What digital marketing services does Brand Banao.Ai offer?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "We provide SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, conversion optimisation, and reporting—tailored to your goals and budget.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "How long does SEO take to show results?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "SEO timelines vary by industry and competition, but many websites start seeing early improvements within 8–12 weeks, with stronger results typically building over 3–6 months through consistent optimisation.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Do you manage Google Ads and paid social campaigns?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. We plan, set up and optimise search, display and social campaigns with conversion tracking, audience targeting, creative testing and ongoing performance optimisation.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Can you help with local SEO for Nashik and nearby areas?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. We improve local visibility with Google Business Profile optimisation, location pages, local keyword targeting, citations, reviews strategy and local ranking improvements.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "How do you measure performance?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "We track the metrics that matter—qualified leads, conversions, revenue, CAC/ROAS, traffic quality and engagement—supported by analytics dashboards and regular reporting.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Why choose Brand Banao.Ai as your digital marketing partner?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "We combine strategy, creativity and analytics to build scalable marketing systems—focusing on measurable outcomes, continuous optimisation and transparent reporting.",
-                },
-            },
-        ],
-    };
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
 
-    const faqItems = [
-        {
-            question: "What digital marketing services does Brand Banao.Ai offer?",
-            answer:
-                "We provide SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, conversion optimisation and reporting—tailored to your goals.",
-        },
-        {
-            question: "How long does SEO take to show results?",
-            answer:
-                "SEO results depend on competition and your starting point, but many sites see early improvements in 8–12 weeks, with stronger gains over 3–6 months of consistent work.",
-        },
-        {
-            question: "Do you manage Google Ads and paid social campaigns?",
-            answer:
-                "Yes. We plan, launch and optimise paid campaigns across search, display and social with conversion tracking, targeting, creative testing and ongoing optimisation.",
-        },
-        {
-            question: "Can you help with local SEO for Nashik?",
-            answer:
-                "Yes. We improve local visibility via Google Business Profile optimisation, local keywords, location pages, citations and review strategy.",
-        },
-        {
-            question: "How do you measure performance?",
-            answer:
-                "We measure qualified leads, conversions, ROAS/CAC, revenue impact, traffic quality and engagement—shared via dashboards and regular reporting.",
-        },
-        {
-            question: "Why choose Brand Banao.Ai for digital marketing?",
-            answer:
-                "We combine strategy, creativity and analytics to deliver scalable growth, continuous optimisation and transparent reporting.",
-        },
-    ];
+        {/* ✅ FIX: optional + short */}
+        <meta name="keywords" content={keywordsContent} />
 
-    return (
-        <>
-            <Helmet>
-                <title>{PAGE_TITLE}</title>
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="author" content="Brand Banao.Ai" />
-                <meta name="description" content={PAGE_DESC} />
-                <meta name="publisher" content="Brand Banao.Ai" />
-                <meta name="creator" content="Brand Banao.Ai" />
-                <meta name="keywords" content="digital marketing, digital marketing agency, online marketing, digital marketing company, online advertising, marketing strategy, google digital marketing, digital marketing services, digital advertising, online digital marketing, digital marketing website, digital marketing specialist, seo digital marketing, performance marketing agencies, best marketing agencies, digital media marketing, seo advertising, best digital marketing companies, content marketing agencies, digital advertising companies, digital marketing agency website, top digital marketing companies, seo and digital marketing, local seo agency, best marketing agency websites, digital agency services, best digital marketing websites, brand advertising,  digital marketing, digital media advertising, best digital marketing agency in the world, best local seo company, top digital marketing, best digital marketing services, full service digital marketing agency, lead digital, social media marketing, web seo services" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-                <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-                <meta name="theme-color" content="#0d1117" />
-                <meta name="color-scheme" content="light dark" />
-                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <meta property="og:image:alt" content="Brand Banao.Ai logo" />
-                <meta name="twitter:image:alt" content="Brand Banao.Ai logo" />
-                <meta name="twitter:site" content="@BrandBanaoAi" />
-                <meta name="MobileOptimized" content="width" />
-                <meta name="HandheldFriendly" content="true" />
-                <link rel="canonical" href={PAGE_URL} />
-                <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.Ai" />
-                <meta property="og:title" content={PAGE_TITLE} />
-                <meta property="og:description" content={PAGE_DESC} />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={PAGE_URL} />
-                <meta property="og:image" content={OG_IMAGE} />
-                <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta name="geo.region" content="IN-MH" />
-                <meta name="geo.placename" content="Nashik" />
-                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
+        <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX */}
+        <link rel="icon" href={OG_IMAGE} />
+        <link rel="apple-touch-icon" href={OG_IMAGE} />
 
-                {/* ✅ Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={PAGE_TITLE} />
-                <meta name="twitter:description" content={PAGE_DESC} />
-                <meta name="twitter:image" content={OG_IMAGE} />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content={BRAND_NAME} />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="BrandBanao.ai - Digital Marketing" /> {/* ✅ FIX */}
 
-                {/* ✅ Structured Data */}
-                <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
-                <script type="application/ld+json">
-                    {JSON.stringify(serviceSchema)}
-                </script>
-                <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-            </Helmet>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image:alt" content="BrandBanao.ai - Digital Marketing" /> {/* ✅ FIX */}
+
+        {/* ✅ FIX: single JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
 
             <div className="hoarding-page">
                 <h1 className="hoarding-title">Digital Marketing</h1>
 
                 <div className="hoarding-image-wrap">
                     <img
-                        src={airport}
+                        src={digitalImg}
                         alt="Digital Marketing"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
@@ -362,39 +343,38 @@ const DigitallMarketing = () => {
                         Banao.Ai, your brand rides where India rides-on railways.</b></i></h3> */}
                 </div>
 
-                {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
                 <div className="hoarding-content faq-section">
-                    <h2>Digital Marketing FAQs</h2>
-                    <div className="faq-list">
-                        {faqItems.map((faq, index) => {
-                            const isActive = activeFaqIndex === index;
+          <h2>Digital Marketing FAQs</h2>
+          <div className="faq-list">
+            {FAQ_ITEMS.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
+              return (
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                    aria-expanded={isActive} // ✅ FIX
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
 
-                            return (
-                                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
-                                    <button
-                                        type="button"
-                                        className="faq-question"
-                                        onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                    >
-                                        <span className="faq-question-text">{faq.question}</span>
-                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                                    </button>
-
-                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                                        <div className="faq-answer-inner">
-                                            <p>{faq.answer}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
                     </div>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
 
-                <div className="hoarding-content">{/* Reserved */}</div>
-            </div>
-        </>
-    );
+        <div className="hoarding-content">{/* Reserved */}</div>
+      </div>
+    </>
+  );
 };
 
-export default DigitallMarketing;
+export default DigitalMarketing;

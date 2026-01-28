@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import cinema from "../Images/cinemabranding.webp"; // <-- add/replace with your actual cinema image
+import cinemaImg from "../Images/cinemabranding.webp"; // ✅ FIX: clearer variable name
 import "./tvNews.css";
 
 const CinemaBranding = () => {
@@ -8,179 +8,200 @@ const CinemaBranding = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  // You can add more cinema images here later if you have them
-  const images = [cinema];
+  const images = useMemo(() => [cinemaImg], []); // ✅ FIX: memoize
 
-  const openGallery = (index) => {
+  const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
-  };
+  }, []);
 
-  const webPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    headline: "Cinema Branding Services - Brand Banao.Ai",
-    name: "Cinema Branding Services - Brand Banao.Ai",
-    description:
-      "Cinema Branding Services by Brand Banao.Ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution.",
-    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    url: "https://brandbanao.ai/CinemaBranding",
-    publisher: {
-      "@type": "Organization",
-      name: "Brand Banao.Ai",
-      url: "https://brandbanao.ai/",
-      logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    },
-    author: {
-      "@type": "Organization",
-      name: "Brand Banao.Ai",
-    },
-  };
+  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
+  // ✅ FIX: ESC closes gallery
+  useEffect(() => {
+    if (!showGallery) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeGallery();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showGallery, closeGallery]);
+
+  const SITE_URL = "https://brandbanao.ai/";
+  const PAGE_URL = "https://brandbanao.ai/cinema-branding"; // ✅ FIX: lowercase canonical (recommended)
+  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+
+  // ✅ FIX: ONE FAQ source used for UI + JSON-LD (no duplicates)
+  const FAQ_ITEMS = useMemo(
+    () => [
       {
-        "@type": "Question",
-        name: "What is cinema branding and how does cinema advertising work?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Cinema branding is advertising within the movie theatre ecosystem using on-screen ads (before/during intervals) and off-screen placements like lobbies, foyers, standees and displays. Viewers are seated, attentive and distraction-free, which creates strong emotional connection and high recall.",
-        },
+        question: "What is cinema branding and how does cinema advertising work?",
+        answer:
+          "Cinema branding is advertising inside the movie theatre ecosystem using on-screen ads (pre-show/interval) and off-screen placements like lobby and foyer displays, standees, and posters. Viewers are seated and attentive, so cinema delivers high recall and emotional impact.",
       },
       {
-        "@type": "Question",
-        name: "Why does cinema work better than many other offline advertising formats?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Cinema offers controlled lighting, large-format visuals and immersive audio in a captive environment. Ads run repeatedly across shows and days, delivering frequency without fatigue and ensuring real visibility and message retention.",
-        },
+        question: "Why does cinema work better than many other offline formats?",
+        answer:
+          "Cinema is immersive: controlled lighting, large-format visuals and powerful sound in a distraction-free environment. Ads repeat across shows and days, improving frequency and retention.",
       },
       {
-        "@type": "Question",
-        name: "Do you provide end-to-end cinema advertising execution?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Yes. Brand Banao.Ai handles campaign planning, creative coordination, cinema network selection, scheduling, approvals, and execution. We also coordinate multi-touchpoint placements within the cinema ecosystem to maximize visibility.",
-        },
+        question: "Do you provide end-to-end cinema advertising execution?",
+        answer:
+          "Yes. We handle planning, creative coordination, theatre network selection, scheduling, approvals, and execution. We can also combine on-screen with off-screen placements to maximize visibility.",
       },
       {
-        "@type": "Question",
-        name: "Can you run campaigns across multiplexes and regional cinema networks?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "Yes. We execute campaigns across premium multiplex chains and regional cinema networks. We also support regional targeting in metro and non-metro markets for deeper local relevance and community-level brand affinity.",
-        },
+        question: "Can you run campaigns across multiplexes and regional cinema networks?",
+        answer:
+          "Yes. We can plan campaigns across multiplex and regional networks with city-tier targeting to reach both metro and non-metro audiences.",
       },
       {
-        "@type": "Question",
-        name: "What on-screen and off-screen cinema advertising options do you offer?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "We offer high-impact on-screen formats and off-screen options like lobby and foyer advertising placements. We also plan premium placements suited for high-income and metro audiences, depending on the theatre network and location.",
-        },
+        question: "What on-screen and off-screen cinema advertising options do you offer?",
+        answer:
+          "We offer on-screen ad slots plus off-screen placements such as lobby/foyer branding, standees and other in-cinema touchpoints. The right mix depends on the audience and objectives.",
       },
       {
-        "@type": "Question",
-        name: "How do you plan for ROI and the best cinema advertising mix?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text:
-            "We tailor campaigns based on audience behavior, city tier, film category, show timings, locations, reach and frequency. The goal is to build lasting impressions while optimizing the investment through a powerful mix of cinema advertising options.",
-        },
+        question: "How do you plan the best cinema advertising mix for ROI?",
+        answer:
+          "We plan by audience behavior, city tier, film category, show timings, and reach-frequency targets. The goal is strong recall with an efficient budget and measurable outcomes.",
       },
     ],
-  };
+    []
+  );
 
-  const faqItems = [
-    {
-      question: "What is cinema branding and how does cinema advertising work?",
-      answer:
-        "Cinema branding is advertising within the movie theatre ecosystem using on-screen ads (before/during intervals) and off-screen placements like lobbies, foyers, standees and displays. Because viewers are seated and attentive, cinema creates strong emotional connection and high recall.",
-    },
-    {
-      question: "Why does cinema work so well for brands?",
-      answer:
-        "Cinema is immersive: controlled lighting, large-format visuals, and powerful sound in a distraction-free environment. Ads run repeatedly across shows and days, delivering frequency without fatigue and ensuring real visibility and message retention.",
-    },
-    {
-      question: "Do you handle end-to-end cinema advertising solutions?",
-      answer:
-        "Yes. We manage planning through execution so you don’t have to worry about any part of the process. Along with on-screen ads, we coordinate cinema ecosystem touchpoints to maximize campaign visibility.",
-    },
-    {
-      question: "Can you execute across multiplexes and regional cinema networks?",
-      answer:
-        "Yes. We work with premium multiplexes and regional cinema networks. Our regional targeting helps brands reach audiences in metro and non-metro markets for deeper local relevance and community-level affinity.",
-    },
-    {
-      question: "What on-screen and off-screen options are available?",
-      answer:
-        "We plan high-impact on-screen formats plus off-screen placements such as lobby and foyer advertising. Campaigns can also include premium theatre network placements depending on audience, city, and objectives.",
-    },
-    {
-      question: "How do you plan campaigns for ROI?",
-      answer:
-        "Campaigns are customized based on audience behavior, city tier, film category, and the ideal reach-frequency mix. We help you choose the best cinema advertising options to create lasting impressions and measurable impact.",
-    },
-  ];
+  // ✅ FIX: keep keywords short (meta keywords are ignored by Google)
+  const keywordsContent = useMemo(
+    () =>
+      [
+        "cinema branding",
+        "cinema advertising",
+        "movie theatre advertising",
+        "on-screen advertising",
+        "lobby advertising",
+        "foyer branding",
+        "BrandBanao.ai",
+      ].join(", "),
+    []
+  );
+
+  // ✅ FIX: Single JSON-LD @graph (WebSite + Org + WebPage + Service + FAQ + Breadcrumbs)
+  const structuredData = useMemo(() => {
+    const orgId = "https://brandbanao.ai/#organization";
+    const pageId = `${PAGE_URL}#webpage`;
+    const serviceId = `${PAGE_URL}#service`;
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://brandbanao.ai/#website",
+          url: SITE_URL,
+          name: BRAND_NAME,
+          publisher: { "@id": orgId },
+          inLanguage: "en-IN",
+        },
+        {
+          "@type": "Organization",
+          "@id": orgId,
+          name: BRAND_NAME,
+          url: SITE_URL,
+          logo: OG_IMAGE,
+        },
+        {
+          "@type": "WebPage",
+          "@id": pageId,
+          url: PAGE_URL,
+          name: "Cinema Branding in Nashik | Cinema Advertising Services",
+          headline: "Cinema Branding & Advertising Services",
+          description:
+            "Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising, planned and executed end-to-end by BrandBanao.ai.",
+          inLanguage: "en-IN",
+          isPartOf: { "@id": "https://brandbanao.ai/#website" },
+          about: { "@id": orgId },
+          mainEntity: { "@id": serviceId },
+          primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
+        },
+        {
+          "@type": "Service",
+          "@id": serviceId,
+          name: "Cinema Branding & Cinema Advertising",
+          serviceType: ["Cinema Advertising", "Offline Advertising", "Branding"],
+          provider: { "@id": orgId },
+          areaServed: [
+            { "@type": "Country", name: "India" },
+            { "@type": "State", name: "Maharashtra" },
+            { "@type": "City", name: "Nashik" },
+          ],
+          url: PAGE_URL,
+          description:
+            "Cinema advertising with on-screen and off-screen placements across multiplex and regional networks, including planning, scheduling, approvals, and execution.",
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${PAGE_URL}#breadcrumbs`,
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
+            { "@type": "ListItem", position: 3, name: "Cinema Branding", item: PAGE_URL },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${PAGE_URL}#faq`,
+          mainEntity: FAQ_ITEMS.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        },
+      ],
+    };
+  }, [BRAND_NAME, FAQ_ITEMS, PAGE_URL]);
+
+  const metaDescription =
+    "Cinema Branding Services by BrandBanao.ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution.";
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Best Cinema Branding in Nashik | Brand Banao.Ai</title>
-        <meta name="author" content="Brand Banao.AI" />
-        <meta name="description" content="Cinema Branding Services by Brand Banao.Ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution." />
-        <meta name="keywords" content="cinema branding, cinema advertising, movie theater advertising, theatre advertising, movie screen advertising, on-screen advertising, off-screen advertising, lobby advertising, foyer advertising, multiplex advertising, PVR Cinemas advertising, Cinépolis advertising, cinema and video advertising, brand banao ai, cinema advertising agency india" />
+
+        {/* ✅ FIX: Title less spammy; still includes location intent */}
+        <title>Cinema Branding in Nashik | Cinema Advertising | BrandBanao.ai</title>
+
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta name="MobileOptimized" content="width" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-        <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-        <meta property="og:image:alt" content="Brand Banao.Ai logo" />        
-        <meta name="twitter:image:alt" content="Brand Banao.Ai logo" />
-        <meta name="twitter:site" content="@BrandBanaoAi" />
-        <meta name="HandheldFriendly" content="true" />
-        <meta name="publisher" content="Brand Banao.Ai" />
-        <meta name="theme-color" content="#0d1117" />
-        <meta name="color-scheme" content="light dark" />
-        <meta name="creator" content="Brand Banao.Ai" />
-        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-        <link rel="canonical" href="https://brandbanao.ai/CinemaBranding" />
+
+        {/* ✅ FIX: optional + short */}
+        <meta name="keywords" content={keywordsContent} />
+
+        <link rel="icon" href={OG_IMAGE} />
+        <link rel="apple-touch-icon" href={OG_IMAGE} />
+        <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX: canonical matches PAGE_URL */}
+
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content="BrandBanao.Ai" />
-        <meta property="og:title" content="Cinema Branding Service" />
-        <meta property="og:description" content="Cinema Branding Services by Brand Banao.Ai. Immersive on-screen and off-screen theatre advertising across multiplexes and regional cinema networks with end-to-end execution." />
+        <meta property="og:site_name" content={BRAND_NAME} />
+        <meta property="og:title" content="Cinema Branding & Advertising | BrandBanao.ai" />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brandbanao.ai/CinemaBranding" />
-        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
+        <meta property="og:url" content={PAGE_URL} /> {/* ✅ FIX */}
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="BrandBanao.ai - Cinema Branding" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cinema Branding Service" />
-        <meta name="twitter:description" content="Turn movie halls into storytelling platforms with immersive cinema branding: on-screen & off-screen theatre advertising with end-to-end execution by Brand Banao.Ai." />
-        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-        <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <meta name="twitter:title" content="Cinema Branding | BrandBanao.ai" />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image:alt" content="BrandBanao.ai - Cinema Branding" />
+
+        {/* ✅ FIX: One JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
+
 
       {/* Same structure/classes as your other service pages */}
       <div className="hoarding-page">
@@ -188,7 +209,7 @@ const CinemaBranding = () => {
 
         <div className="hoarding-image-wrap">
           <img
-            src={cinema}
+            src={cinemaImg}
             alt="Cinema Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
@@ -320,19 +341,18 @@ const CinemaBranding = () => {
           </p>
         </div>
 
-        {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
         <div className="hoarding-content faq-section">
           <h2>Cinema Advertising FAQs</h2>
           <div className="faq-list">
-            {faqItems.map((faq, index) => {
+            {FAQ_ITEMS.map((faq, index) => {
               const isActive = activeFaqIndex === index;
-
               return (
                 <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
                   <button
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                    aria-expanded={isActive} // ✅ FIX
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>
@@ -349,7 +369,7 @@ const CinemaBranding = () => {
           </div>
         </div>
 
-        <div className="hoarding-content">{/* Reserved for CTAs, forms, etc. */}</div>
+        <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
       </div>
     </>
   );

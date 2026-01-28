@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import airport from "../Images/app.png";
-import newImage from "../Images/Web Dev.png";
-import NewImage from "../Images/SEO Dev.png";
+import appImg from "../Images/app.png";
+import webDevImg from "../Images/Web Dev.png";
+import seoDevImg from "../Images/SEO Dev.png";
 import "./tvNews.css";
 
 const WebDevelopmentt = () => {
@@ -10,17 +10,18 @@ const WebDevelopmentt = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = [airport];
+    // If you want the lightbox gallery to include all images, add them here:
+    const images = [appImg, webDevImg, seoDevImg];
 
     const openGallery = (index) => {
         setCurrentIndex(index);
         setShowGallery(true);
     };
 
-    // ✅ SEO: Consistent page identity for Railway Branding
-    const PAGE_NAME = "Best Web & App Development Services in Nashik | Brand Banao.Ai";
+    // ✅ Page identity
     const PAGE_TITLE = "Website & App Development | Brand Banao.Ai";
-    const PAGE_DESC = "Custom website and mobile app development by Brand Banao.AI - responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
+    const PAGE_DESC =
+        "Custom website and mobile app development by Brand Banao.AI — responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
     const PAGE_URL = "https://brandbanao.ai/WebDevelopmentt";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
@@ -32,7 +33,13 @@ const WebDevelopmentt = () => {
         description: PAGE_DESC,
         image: OG_IMAGE,
         url: PAGE_URL,
-        about: ["Website Development", "App Development", "Ecommerce Development", "Responsive Web Design"],
+        inLanguage: "en-IN",
+        about: [
+            "Website Development",
+            "App Development",
+            "Ecommerce Development",
+            "Responsive Web Design",
+        ],
         publisher: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
@@ -52,7 +59,7 @@ const WebDevelopmentt = () => {
         "@context": "https://schema.org",
         "@type": "Service",
         name: "Website & App Development Services",
-        serviceType: "Website Development, App Development, Ecommerce Development",
+        serviceType: "Website Development / App Development / Ecommerce Development",
         provider: {
             "@type": "Organization",
             name: "Brand Banao.Ai",
@@ -62,10 +69,11 @@ const WebDevelopmentt = () => {
                 url: OG_IMAGE,
             },
         },
+        areaServed: "IN",
         url: PAGE_URL,
-        description: "End-to-end website and mobile app development services, including responsive design, React-based web apps, ecommerce stores, and performance-focused digital platforms.",
+        description:
+            "End-to-end website and mobile app development services, including responsive design, React-based web apps, ecommerce stores, performance optimisation, and ongoing support.",
     };
-
 
     const faqSchema = {
         "@context": "https://schema.org",
@@ -86,7 +94,7 @@ const WebDevelopmentt = () => {
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "We leverage modern technologies with a strong focus on React for scalable, fast, and future-ready web applications, along with other reliable frameworks and tools based on project needs.",
+                        "We use modern technologies with a strong focus on React for scalable, fast, and future-ready web applications, along with other reliable frameworks and tools depending on project needs.",
                 },
             },
             {
@@ -104,7 +112,7 @@ const WebDevelopmentt = () => {
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Absolutely. We create ecommerce websites with intuitive product displays, categories, carts, and secure payment systems—designed to shorten decision time and increase conversions.",
+                        "Yes. We create ecommerce websites with intuitive product displays, categories, carts and secure payments—designed to shorten decision time and increase conversions.",
                 },
             },
             {
@@ -113,7 +121,7 @@ const WebDevelopmentt = () => {
                 acceptedAnswer: {
                     "@type": "Answer",
                     text:
-                        "Timelines depend on the scope, features and integrations. Simple websites may take a few weeks, while complex web apps or mobile apps can take several weeks to a few months. We define clear milestones before starting.",
+                        "Timelines depend on scope, features and integrations. Simple websites may take a few weeks, while complex web apps or mobile apps can take several weeks to a few months. We define clear milestones before starting.",
                 },
             },
             {
@@ -137,60 +145,54 @@ const WebDevelopmentt = () => {
         {
             question: "Which technologies do you use for web and app development?",
             answer:
-                "We use modern tech stacks with a strong focus on React for web applications, alongside robust backend and cloud technologies selected according to your project’s scale and requirements.",
+                "We use modern tech stacks with a strong focus on React for web applications, alongside backend and cloud technologies selected according to your project’s scale and requirements.",
         },
         {
             question: "Do you build responsive and mobile-first websites?",
             answer:
-                "Yes. All our websites are responsive and mobile-first, ensuring they look clear, consistent and easy to use on phones, tablets and desktops without zooming or layout breaks.",
+                "Yes. All our websites are responsive and mobile-first, ensuring they look clear and consistent on phones, tablets and desktops.",
         },
         {
             question: "Can you develop ecommerce websites and online stores?",
             answer:
-                "Yes. We create ecommerce-ready websites with product catalogues, carts, checkout flows and payment integration designed to simplify user journeys and improve conversions.",
+                "Yes. We create ecommerce-ready websites with product catalogues, carts, checkout flows and payment integration—designed to simplify journeys and improve conversions.",
         },
         {
             question: "How long does it take to develop a website or app?",
             answer:
-                "It depends on the complexity of design, features and integrations. After understanding your requirements, we share an estimated timeline with clear phases for design, development, testing and launch.",
+                "It depends on the complexity of design, features and integrations. After understanding your requirements, we share a clear timeline with phases for design, development, testing and launch.",
         },
         {
             question: "Do you provide ongoing support and maintenance?",
             answer:
-                "We offer ongoing maintenance, updates and performance optimisation so your site or app remains stable, secure and capable of scaling with your business.",
+                "We offer ongoing maintenance, updates and performance optimisation so your site or app remains stable, secure and ready to scale.",
         },
     ];
 
     return (
         <>
-            <Helmet>
+            <Helmet htmlAttributes={{ lang: "en-IN" }}>
                 <title>{PAGE_TITLE}</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta
+                    name="keywords"
+                    content="website development, web development company, web app development, mobile app development, app development company, ecommerce website development, responsive web design, React website development, custom web application development, web development services, app development services, performance-focused websites, UI UX design, business website development, online store development, web development agency"
+                />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="theme-color" content="#0d1117" />
                 <meta name="color-scheme" content="light dark" />
                 <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
                 <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <meta property="og:image:alt" content="Website & App Development - Brand Banao.Ai" />
-                <meta name="twitter:image:alt" content="Website & App Development - Brand Banao.Ai" />
-                <meta name="twitter:site" content="@BrandBanaoAi" />
-                <meta name="keywords" content="website development, web development company, web app development, mobile app development, app development company, ecommerce website development, responsive web design, React website development, custom web application development, web development services, app development services, performance-focused websites, UI UX design, full-cycle web development, business website development, online store development, web development agency, website design and development, web application development company" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-                <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-                <meta name="MobileOptimized" content="width" />
-                <meta name="HandheldFriendly" content="true" />
+
                 <link rel="canonical" href={PAGE_URL} />
+
+                {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content={PAGE_TITLE} />
@@ -201,18 +203,17 @@ const WebDevelopmentt = () => {
                 <meta property="og:image:type" content="image/png" />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
-                <meta name="geo.region" content="IN-MH" />
-                <meta name="geo.placename" content="Nashik" />
-                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
+                <meta property="og:image:alt" content="Website & App Development - Brand Banao.Ai" />
+
+                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={PAGE_TITLE} />
                 <meta name="twitter:description" content={PAGE_DESC} />
                 <meta name="twitter:image" content={OG_IMAGE} />
+
+                {/* Structured Data */}
                 <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
-                <script type="application/ld+json">
-                    {JSON.stringify(serviceSchema)}
-                </script>
+                <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 
@@ -221,7 +222,7 @@ const WebDevelopmentt = () => {
 
                 <div className="hoarding-image-wrap">
                     <img
-                        src={airport}
+                        src={appImg}
                         alt="Railway Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
@@ -269,7 +270,7 @@ const WebDevelopmentt = () => {
 
                     <div style={{ textAlign: "center", margin: "30px 0" }}>
                         <img
-                            src={newImage}        // change to airport if using same image
+                            src={webDevImg}        // change to airport if using same image
                             alt="Web Development at Brand Banao"
                             style={{ width: "100%", maxWidth: "700px", borderRadius: "10px" }}
                         />
@@ -302,7 +303,7 @@ const WebDevelopmentt = () => {
 
                     <div style={{ textAlign: "center", margin: "30px 0" }}>
                         <img
-                            src={NewImage}        // change to airport if using same image
+                            src={seoDevImg}        // change to airport if using same image
                             alt="Web Development at Brand Banao"
                             style={{ width: "100%", maxWidth: "700px", borderRadius: "10px" }}
                         />
@@ -335,39 +336,38 @@ const WebDevelopmentt = () => {
                         digital experiences that people trust and will return to again.</b></i></h3>
                 </div>
 
-                {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
                 <div className="hoarding-content faq-section">
-                    <h2>Web/App Development FAQs</h2>
-                    <div className="faq-list">
-                        {faqItems.map((faq, index) => {
-                            const isActive = activeFaqIndex === index;
+          <h2>Web/App Development FAQs</h2>
+          <div className="faq-list">
+            {faqItems.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
 
-                            return (
-                                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
-                                    <button
-                                        type="button"
-                                        className="faq-question"
-                                        onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                    >
-                                        <span className="faq-question-text">{faq.question}</span>
-                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                                    </button>
+              return (
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
 
-                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                                        <div className="faq-answer-inner">
-                                            <p>{faq.answer}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
                     </div>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
 
-                <div className="hoarding-content">{/* Reserved */}</div>
-            </div>
-        </>
-    );
+        <div className="hoarding-content">{/* Reserved */}</div>
+      </div>
+    </>
+  );
 };
 
 export default WebDevelopmentt;

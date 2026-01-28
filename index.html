@@ -16,17 +16,17 @@
     rel="stylesheet">
 
 
-  <link rel="icon" type="image/png" sizes="76x76" href="./src/Images/32X32.png" />
-  <link rel="icon" type="image/png" sizes="120x120" href="./src/Images/190x190.png" />
-  <link rel="icon" type="image/png" sizes="152x152" href="./src/Images/190x190.png" />
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon-192x192.png" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
 
-  <link rel="apple-touch-icon" href="./src/Images/32X32.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="./src/Images/32X32.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="./src/Images/190x190.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="./src/Images/190x190.png">
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="/favicon-192x192.png">
 
-  <link rel="icon" href="./src/Images/32X32.png" />
-
+  <!-- Optional PWA -->
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#d94f5c">
   <!-- If you want to preload Google fonts instead of @import in CSS, you can add here:
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +38,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;

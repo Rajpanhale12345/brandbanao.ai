@@ -1,193 +1,229 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { Helmet } from "react-helmet";
 import airport from "../Images/airport.jpg";
 import "./busShelter.css";
+
 
 const AirportBranding = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = [airport];
+    const images = useMemo(() => [airport], []);
 
-    const openGallery = (index) => {
+    const openGallery = useCallback((index) => {
         setCurrentIndex(index);
         setShowGallery(true);
-    };
-
-    // ✅ Define schemas FIRST
-    const webPageSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        headline: "Airport Branding Services - Brand Banao.Ai",
-        name: "Airport Branding Services - Brand Banao.Ai",
-        description:
-            "Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens with end-to-end planning, creatives, permissions, and execution.",
-        image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/AirportBranding",
-        publisher: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        },
-        author: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-        },
-    };
-
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "What is airport branding and how does it work?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Airport branding is advertising inside airport environments such as terminals, check-in zones, security lanes, boarding gates, lounges, baggage claim, and digital screens. Since travelers spend 90–120 minutes in the airport, your brand gets repeated visibility that builds strong recall and trust.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Which airport touchpoints are best for high visibility?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "High-visibility airport touchpoints include Arrival & Departure Terminals, check-in counters, security lanes, boarding gates, baggage claim & conveyor belts, premium lounges, and digital LED screens. The best mix depends on your audience and campaign objective.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Do you handle permissions, creatives, printing and installation?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. Brand Banao.Ai provides end-to-end airport branding execution: media planning, creative design, approvals/permissions, printing/production, logistics, and on-ground installation for a smooth campaign rollout.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Is airport branding useful for premium brands and partnerships?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. Airports are aspirational and premium environments, which elevates the credibility of your message. Airport presence signals scale, seriousness, and market maturity—helpful for investors, JV discussions, partnerships, and high-end collaborations.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Can airport branding help with talent acquisition?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. Many senior professionals, consultants, and international experts travel through airports daily. Airport branding boosts employer branding by positioning your organization as elite, growth-driven, and globally engaged.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Why choose Brand Banao.Ai for airport branding?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "With 15+ years of OOH experience, Brand Banao.Ai offers pan-India airport media access, data-driven placement strategy, premium creative support, end-to-end execution, and performance reporting with campaign documentation and post-campaign analysis.",
-                },
-            },
-        ],
-    };
-
-    // Optional: if you track page views with gtag, guard it (prevents "gtag is not defined")
-    useEffect(() => {
-        if (typeof window !== "undefined" && typeof window.gtag === "function") {
-            window.gtag("event", "page_view", { page_path: "/AirportBranding" });
-        }
     }, []);
 
-    const faqItems = [
-        {
-            question: "What is airport branding and how does it work?",
-            answer:
-                "Airport branding is advertising inside airports across terminals, check-in zones, security lanes, boarding gates, lounges, baggage claim areas, and digital screens. Since travelers spend 90–120 minutes inside airports, your brand gets repeated, high-quality exposure that builds strong recall and trust.",
-        },
-        {
-            question: "Which airport touchpoints give the best visibility?",
-            answer:
-                "The best touchpoints include Arrival & Departure Terminals, check-in counters, security lanes, boarding gates, premium lounges, baggage claim & conveyor belts, and digital LED screens. We recommend the mix based on your audience, budget, and objective (awareness, premium positioning, launch, etc.).",
-        },
-        {
-            question: "Do you provide creative design and production support?",
-            answer:
-                "Yes. Our team supports premium airport-ready creatives with high visual impact. We also coordinate with production requirements so your brand looks sharp, clean, and premium across formats.",
-        },
-        {
-            question: "Do you handle media booking, permissions and execution?",
-            answer:
-                "Yes. We provide end-to-end execution: planning, media booking, permissions, production coordination, logistics, and on-ground installation for a smooth rollout.",
-        },
-        {
-            question: "Is airport branding useful for premium brands and partnerships?",
-            answer:
-                "Absolutely. Airports are aspirational, secure, and premium environments. Advertising here improves perceived credibility and helps you impress investors, partners, and high-value audiences.",
-        },
-        {
-            question: "Why choose Brand Banao.Ai for airport branding?",
-            answer:
-                "With 15+ years in OOH, we bring data-driven planning, pan-India airport media access, premium creative support, smooth coordination, and reporting with campaign documentation and post-campaign analysis.",
-        },
-    ];
+    // ✅ FIX: Add a close function (reused in click + ESC)
+    const closeGallery = useCallback(() => {
+        setShowGallery(false);
+    }, []);
+
+    // ✅ FIX: ESC to close gallery (better UX)
+    useEffect(() => {
+        if (!showGallery) return;
+        const onKeyDown = (e) => {
+            if (e.key === "Escape") closeGallery();
+        };
+        window.addEventListener("keydown", onKeyDown);
+        return () => window.removeEventListener("keydown", onKeyDown);
+    }, [showGallery, closeGallery]);
+
+    const targetCities = useMemo(
+        () => [
+            "Nashik",
+            "Dhule",
+            "Jalgaon",
+            "Chhatrapati Sambhaji Nagar",
+            "Pune",
+            "Ahilyanagar",
+            "Mumbai",
+            "Thane",
+            "Nandurbar",
+            "Nagpur",
+        ],
+        []
+    );
+
+    // ✅ FIX: Keep meta keywords short (Google ignores it; very long can look spammy)
+    const keywordsContent = useMemo(() => {
+        const short = [
+            "airport branding",
+            "airport advertising",
+            "airport OOH advertising",
+            "airport LED advertising",
+            "airport lounge branding",
+            "baggage belt branding",
+            "terminal branding",
+            "BrandBanao.ai",
+            "Maharashtra",
+            "Nashik",
+            "Pune",
+            "Mumbai",
+        ];
+        return short.join(", ");
+    }, []);
+
+    // ✅ FIX: Prefer lowercase canonical for consistency (change if your real route is uppercase!)
+    const canonicalUrl = "https://brandbanao.ai/airport-branding";
+
+    // ✅ FIX: Create a REAL FAQ data array for UI rendering (your code was broken)
+    const faqs = useMemo(
+        () => [
+            {
+                question: "What is airport branding and how does it work?",
+                answer:
+                    "Airport branding is advertising inside airport environments such as terminals, check-in zones, security lanes, boarding gates, lounges, baggage claim, and digital screens. Since travelers spend 90–120 minutes in the airport, your brand gets repeated visibility that builds strong recall and trust.",
+            },
+            {
+                question: "Which airport touchpoints are best for high visibility?",
+                answer:
+                    "High-visibility touchpoints include Arrival & Departure Terminals, check-in counters, security lanes, boarding gates, baggage claim & conveyor belts, premium lounges, and digital LED screens. The best mix depends on your audience and campaign objective.",
+            },
+            {
+                question: "Do you handle permissions, creatives, printing and installation?",
+                answer:
+                    "Yes. BrandBanao.ai provides end-to-end airport branding execution: media planning, creative design, approvals/permissions, printing/production, logistics, and on-ground installation.",
+            },
+            {
+                question: "Why choose BrandBanao.ai for airport branding?",
+                answer:
+                    "With 15+ years of OOH experience, BrandBanao.ai offers airport media planning, premium creative support, end-to-end execution, and campaign reporting with documentation and post-campaign analysis.",
+            },
+        ],
+        []
+    );
+
+    // ✅ FIX: Use @graph to connect WebPage + Service + FAQPage (cleaner for SEO + AI search)
+    const structuredData = useMemo(() => {
+        const orgId = "https://brandbanao.ai/#organization";
+        const pageId = `${canonicalUrl}#webpage`;
+        const serviceId = `${canonicalUrl}#service`;
+
+        return {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "@id": pageId,
+                    "url": canonicalUrl,
+                    "name": "Airport Branding Services in Maharashtra | BrandBanao.ai",
+                    "description":
+                        "Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens with end-to-end planning, creatives, permissions, and execution.",
+                    "inLanguage": "en-IN",
+                    "isPartOf": { "@id": "https://brandbanao.ai/#website" },
+                    "about": { "@id": orgId },
+                    "mainEntity": { "@id": serviceId },
+                    "primaryImageOfPage": {
+                        "@type": "ImageObject",
+                        "url": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+                    },
+                },
+                {
+                    "@type": "Service",
+                    "@id": serviceId,
+                    "name": "Airport Branding Services",
+                    "serviceType": "Airport Advertising / Airport Branding / OOH Media",
+                    "provider": {
+                        "@type": "Organization",
+                        "@id": orgId,
+                        "name": "BrandBanao.ai",
+                        "url": "https://brandbanao.ai/",
+                        "logo": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+                    },
+                    "areaServed": targetCities.map((city) => ({
+                        "@type": "City",
+                        "name": city,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressRegion": "MH",
+                            "addressCountry": "IN",
+                        },
+                    })),
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Airport Branding Inventory",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": { "@type": "Service", "name": "Terminals (Arrival/Departure)" },
+                            },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lounges" } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Baggage Belts" } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Check-in & Security" } },
+                            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital LED Screens" } },
+                        ],
+                    },
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": `${canonicalUrl}#faq`,
+                    "mainEntity": faqs.map((f) => ({
+                        "@type": "Question",
+                        "name": f.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": f.answer,
+                        },
+                    })),
+                },
+            ],
+        };
+    }, [canonicalUrl, targetCities, faqs]);
+
+    // ✅ FIX: GA page path should match canonical/route convention
+    useEffect(() => {
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+            window.gtag("event", "page_view", { page_path: "/airport-branding" });
+        }
+    }, []);
 
     return (
         <>
             <Helmet>
-                <title>Best Airport Branding in Nashik | Brand Banao.Ai</title>
-                <meta name="author" content="Brand Banao.AI" />
-                <meta name="description" content="Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
-                <meta name="keywords" content="best airport branding agency in nashik, top airport advertising agency in nashik, top 3 airport branding agency in nashik, airport branding, airport advertising India, airport media agency, airport OOH advertising, premium airport branding" />
+                {/* ✅ FIX: More specific title (intent + location) */}
+                <title>Airport Branding & Advertising in Maharashtra | BrandBanao.ai</title>
+
+                <meta name="author" content="BrandBanao.ai" />
+                <meta
+                    name="description"
+                    content="Airport Branding Services by BrandBanao.ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution."
+                />
+
+                {/* ✅ FIX: Optional; keep short (Google ignores it) */}
+                <meta name="keywords" content={keywordsContent} />
+
                 <meta name="robots" content="index, follow, max-image-preview:large" />
-                <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta property="og:image:alt" content="Brand Banao.AI - Airport Branding Services" />
-                <meta name="MobileOptimized" content="width" />
-                <meta name="HandheldFriendly" content="true" />
-                <link rel="canonical" href="https://brandbanao.ai/AirportBranding" />
+                <link rel="canonical" href={canonicalUrl} />
+
                 <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.Ai" />
-                <meta property="og:title" content="Airport Branding Service" />
-                <meta property="og:description" content="Airport Branding Services by Brand Banao.Ai. Premium visibility across terminals, lounges, baggage belts, and digital screens with end-to-end execution." />
+                <meta property="og:site_name" content="BrandBanao.ai" />
+                <meta property="og:title" content="Airport Branding & Advertising in Maharashtra | BrandBanao.ai" />
+                <meta
+                    property="og:description"
+                    content="Premium airport branding across terminals, lounges, baggage belts and digital screens with end-to-end execution."
+                />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://brandbanao.ai/AirportBranding" />
+                <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta name="geo.region" content="IN-MH" />
-                <meta name="geo.placename" content="Nashik" />
-                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
-                <meta name="publisher" content="Brand Banao.Ai" />
-                <meta name="theme-color" content="#000000" />
-                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta property="og:image:alt" content="BrandBanao.ai - Airport Branding Services" />
+
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Airport Branding Service" />
-                <meta name="twitter:site" content="@brandbanaoai" />
-                <meta name="twitter:creator" content="@brandbanaoai" />
-                <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by Brand Banao.Ai." />
+                <meta name="twitter:title" content="Airport Branding & Advertising | BrandBanao.ai" />
+                <meta
+                    name="twitter:description"
+                    content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by BrandBanao.ai."
+                />
                 <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
-                {/* Structured Data */}
-                <script type="application/ld+json">
-                    {JSON.stringify(webPageSchema)}
-                </script>
-                <script type="application/ld+json">
-                    {JSON.stringify(faqSchema)}
-                </script>
-
-
+                {/* ✅ FIX: One JSON-LD block (connected graph) */}
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
-            {/* Using the same structure / classes as Hoarding.jsx for styling */}
+
             <div className="hoarding-page">
                 <h1 className="hoarding-title">Airport Branding</h1>
 
@@ -349,24 +385,18 @@ const AirportBranding = () => {
                     <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai stands for making every journey memorable, one traveller at a time.</b></i></h3>
                 </div>
 
-                {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
                 <div className="hoarding-content faq-section">
                     <h2>Airport Branding FAQs</h2>
                     <div className="faq-list">
-                        {faqItems.map((faq, index) => {
+                        {faqs.map((faq, index) => {
                             const isActive = activeFaqIndex === index;
-
                             return (
-                                <div
-                                    className={`faq-item ${isActive ? "active" : ""}`}
-                                    key={index}
-                                >
+                                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
                                     <button
                                         type="button"
                                         className="faq-question"
-                                        onClick={() =>
-                                            setActiveFaqIndex(isActive ? null : index)
-                                        }
+                                        onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                                        aria-expanded={isActive} // ✅ FIX: accessibility
                                     >
                                         <span className="faq-question-text">{faq.question}</span>
                                         <span className="faq-icon">{isActive ? "−" : "+"}</span>
@@ -383,11 +413,7 @@ const AirportBranding = () => {
                     </div>
                 </div>
 
-
-
-                <div className="hoarding-content">
-                    {/* Reserved for any additional blocks, forms, CTAs, etc. */}
-                </div>
+                <div className="hoarding-content">{/* Reserved for CTAs, forms, etc. */}</div>
             </div>
         </>
     );

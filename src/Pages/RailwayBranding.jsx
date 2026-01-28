@@ -1,243 +1,194 @@
-import React, { useState } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react"; // ✅ FIX: added hooks for memo/callback/esc
 import { Helmet } from "react-helmet";
-import airport from "../Images/railwaybranding.jpg";
+import railwayImg from "../Images/railwaybranding.jpg"; // ✅ FIX: rename for clarity
 import "./tvNews.css";
 
 const RailwayyBranding = () => {
-    const [showGallery, setShowGallery] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+  const [showGallery, setShowGallery] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = [airport];
+  // ✅ FIX: One consistent route URL everywhere (Helmet + schema + canonical)
+  const SITE_URL = "https://brandbanao.ai/";
+  const PAGE_URL = "https://brandbanao.ai/RailwayyBranding"; // ✅ FIX: match your actual route
+  const BRAND_NAME = "Brand Banao.Ai";
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-    const openGallery = (index) => {
-        setCurrentIndex(index);
-        setShowGallery(true);
+  const PAGE_TITLE = "Best Railway Branding Agency in Nashik | Brand Banao.Ai";
+  const PAGE_DESC =
+    "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
+
+  const images = useMemo(() => [railwayImg], []); // ✅ FIX: memoize images array
+
+  const openGallery = useCallback((index) => {
+    setCurrentIndex(index);
+    setShowGallery(true);
+  }, []);
+
+  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX: helper
+
+  // ✅ FIX: ESC closes gallery
+  useEffect(() => {
+    if (!showGallery) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeGallery();
     };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showGallery, closeGallery]);
 
-    // ✅ SEO: Consistent page identity for Railway Branding
-    const PAGE_NAME = "Railway Branding Services";
-    const PAGE_TITLE =
-        "Best Railway Branding Agency in Nashik | Brand Banao.Ai";
-    const PAGE_DESC =
-        "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
-    const PAGE_URL = "https://brandbanao.ai/RailwayyBranding"; // update if your actual route differs
-    const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  // ✅ FIX: ONE FAQ source (used for UI + JSON-LD)
+  const FAQ_ITEMS = useMemo(
+    () => [
+      {
+        question: "What is railway branding?",
+        answer:
+          "Railway branding is transit advertising that uses railway stations and trains to promote brands through formats like station hoardings, platform displays, foot overbridge panels, train wraps, and digital screens for repeated high-volume visibility.",
+      },
+      {
+        question: "Where can railway advertisements be placed?",
+        answer:
+          "Railway ads can be placed at entry/exit zones, station premises, concourse areas, platforms, foot overbridges, waiting areas, trains, and digital screens depending on availability and campaign objectives.",
+      },
+      {
+        question: "Why does railway advertising work well for brands?",
+        answer:
+          "Railway advertising works due to mass reach, high frequency, longer dwell time at stations, and audience diversity—helping brands build recall and trust through repeated exposure.",
+      },
+      {
+        question: "Do you manage permissions and end-to-end execution?",
+        answer:
+          "Yes. Brand Banao.Ai supports planning, artwork guidance, production, permissions/coordination where applicable, placement execution, monitoring, and reporting for railway branding campaigns.",
+      },
+      {
+        question: "What types of campaigns are suitable for railway branding?",
+        answer:
+          "Railway branding is suitable for FMCG promotions, retail launches, tourism campaigns, education and healthcare awareness, real estate launches, automotive promotions, and seasonal or event-based campaigns.",
+      },
+      {
+        question: "Why choose Brand Banao.Ai for railway advertising?",
+        answer:
+          "Brand Banao.Ai combines strategic planning, creative execution, and on-ground operations to deliver scalable railway branding with consistent visibility, monitoring, and measurable coverage.",
+      },
+    ],
+    []
+  );
 
-    const webPageSchema = {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        name: "Railway Branding Services - Brand Banao.Ai",
-        headline: "Railway Branding & Railway Station Advertising - Brand Banao.Ai",
-        description:
-            "Railway branding and railway station advertising by Brand Banao.Ai. High-impact transit ads including station hoardings, platform panels, foot overbridge displays, train wraps, and digital screens with end-to-end planning, execution, and reporting.",
-        image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-        url: "https://brandbanao.ai/RailwayBranding",
-        publisher: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-            },
+  // ✅ FIX: Single JSON-LD graph (better for AI search + consistency)
+  const structuredData = useMemo(() => {
+    const orgId = "https://brandbanao.ai/#organization";
+    const pageId = `${PAGE_URL}#webpage`;
+    const serviceId = `${PAGE_URL}#service`;
+    const faqId = `${PAGE_URL}#faq`;
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://brandbanao.ai/#website",
+          url: SITE_URL,
+          name: BRAND_NAME,
+          publisher: { "@id": orgId },
+          inLanguage: "en-IN",
         },
-        author: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
+        {
+          "@type": "Organization",
+          "@id": orgId,
+          name: BRAND_NAME,
+          url: SITE_URL,
+          logo: OG_IMAGE,
         },
+        {
+          "@type": "WebPage",
+          "@id": pageId,
+          url: PAGE_URL,
+          name: "Railway Branding",
+          headline: "Railway Branding & Railway Station Advertising",
+          description: PAGE_DESC,
+          inLanguage: "en-IN",
+          isPartOf: { "@id": "https://brandbanao.ai/#website" },
+          about: { "@id": orgId },
+          primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
+          mainEntity: { "@id": serviceId },
+        },
+        {
+          "@type": "Service",
+          "@id": serviceId,
+          name: "Railway Branding & Railway Station Advertising",
+          serviceType: ["Transit Advertising", "Outdoor Advertising", "OOH Media"],
+          provider: { "@id": orgId },
+          areaServed: [
+            { "@type": "Country", name: "India" },
+            { "@type": "State", name: "Maharashtra" },
+            { "@type": "City", name: "Nashik" },
+          ],
+          url: PAGE_URL,
+          description:
+            "Railway advertising services including station hoardings, platform branding, foot overbridge panels, waiting-area media, train wraps, and digital screens with planning, production, execution, monitoring, and reporting.",
+        },
+        {
+          "@type": "FAQPage",
+          "@id": faqId,
+          mainEntity: FAQ_ITEMS.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        },
+      ],
     };
+  }, [FAQ_ITEMS, PAGE_DESC, PAGE_URL]);
 
-    const serviceSchema = {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Railway Branding & Railway Station Advertising",
-        serviceType: "Transit & Outdoor Advertising",
-        provider: {
-            "@type": "Organization",
-            name: "Brand Banao.Ai",
-            url: "https://brandbanao.ai/",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-            },
-        },
-        areaServed: "IN",
-        url: "https://brandbanao.ai/RailwayBranding",
-        description:
-            "Railway advertising services including station hoardings, platform branding, foot overbridge panels, waiting-area media, train wraps, and digital screens. Includes permissions support, planning, production, deployment, monitoring, and reporting.",
-    };
+  return (
+    <>
+      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+        <title>{PAGE_TITLE}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <meta name="author" content={BRAND_NAME} /> {/* ✅ FIX */}
+        <meta name="publisher" content={BRAND_NAME} /> {/* ✅ FIX */}
+        <meta name="description" content={PAGE_DESC} /> {/* ✅ FIX */}
+        <meta
+          name="keywords"
+          content="railway branding, railway station advertising, station branding, platform branding, foot overbridge advertising, train wrap advertising, transit advertising, Brand Banao Ai"
+        /> {/* ✅ FIX: shorter keywords */}
 
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "What is railway branding?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Railway branding is transit advertising that uses railway stations and trains to promote brands through formats like station hoardings, platform displays, foot overbridge panels, train wraps, and digital screens for repeated high-volume visibility.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Where can railway advertisements be placed?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Railway ads can be placed at entry and exit zones, station premises, platforms, foot overbridges, waiting areas, concourse locations, trains, and digital screens depending on availability and campaign objectives.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Why does railway advertising work well for brands?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Railway advertising works due to mass reach, high frequency, longer dwell time at stations, and audience diversity—helping brands build recall and trust through repeated exposure.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Do you manage permissions and end-to-end execution?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Yes. Brand Banao.Ai supports planning, artwork guidance, production, placement execution, monitoring, and reporting for railway branding campaigns.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "What types of campaigns are suitable for railway branding?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Railway branding is suitable for FMCG promotions, retail launches, tourism campaigns, education and healthcare awareness, real estate launches, automotive promotions, and seasonal or event-based campaigns.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Why choose Brand Banao.Ai for railway advertising?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text:
-                        "Brand Banao.Ai combines strategic planning, creative execution, and on-ground operations to deliver scalable railway branding with consistent visibility, monitoring, and measurable coverage.",
-                },
-            },
-        ],
-    };
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="theme-color" content="#0d1117" />
 
-    const faqItems = [
-        {
-            question: "What is railway branding?",
-            answer:
-                "Railway branding is transit advertising that uses railway stations and trains to promote your brand through formats like station hoardings, platform displays, foot overbridge panels, train wraps, and digital screens for repeated visibility.",
-        },
-        {
-            question: "Where can railway advertisements be placed?",
-            answer:
-                "Railway ads can be placed at station entry/exit zones, concourse areas, platforms, foot overbridges, waiting areas, trains, and digital screens based on location availability and campaign goals.",
-        },
-        {
-            question: "Which railway advertising formats do you offer?",
-            answer:
-                "We offer station hoardings, platform panels, foot overbridge displays, waiting-area placements, train wraps, and digital screen advertising at railway stations for targeted and mass-reach campaigns.",
-        },
-        {
-            question: "Do you handle planning, production, and deployment?",
-            answer:
-                "Yes. We support end-to-end execution—campaign planning, artwork guidance, production, placement execution, on-ground coordination, and schedule management.",
-        },
-        {
-            question: "Do you provide monitoring and reporting?",
-            answer:
-                "Yes. Campaigns include monitoring and reporting to help ensure placements run as planned and deliver consistent visibility and frequency in target stations and routes.",
-        },
-        {
-            question: "Why choose Brand Banao.Ai for railway advertising?",
-            answer:
-                "Brand Banao.Ai combines strategy, creative execution, and on-ground operations to deliver scalable railway branding with strong recall, consistent visibility, and measurable coverage.",
-        },
-    ];
+        <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX */}
 
+        {/* Open Graph */}
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content={BRAND_NAME} /> {/* ✅ FIX */}
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={PAGE_URL} /> {/* ✅ FIX */}
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" /> {/* ✅ FIX */}
 
-    return (
-        <>
-            <Helmet>
-                {/* ✅ Primary SEO */}
-                <title>{PAGE_TITLE}</title>
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="publisher" content="Brand Banao.Ai" />
-                <meta name="creator" content="Brand Banao.Ai" />
-                <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-                <meta name="theme-color" content="#0d1117" />
-                <meta name="color-scheme" content="light dark" />
-                <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-                <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-                <meta name="mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content="Brand Banao.Ai" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-                <link rel="icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <link rel="apple-touch-icon" href="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
-                <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" />
-                <meta name="twitter:image:alt" content="Railway Branding - Brand Banao.Ai" />
-                <meta name="twitter:site" content="@BrandBanaoAi" />
-                <meta name="author" content="Brand Banao.Ai" />
-                <meta name="description" content={PAGE_DESC} />
-                <meta
-                    name="keywords"
-                    content="railway branding, railway station advertising, railway advertising agency, station branding, platform branding, foot overbridge advertising, train wrap advertising, railway hoarding, digital screens railway station, outdoor advertising India, transit advertising, Brand Banao Ai"
-                />
-                <meta
-                    name="robots"
-                    content="index, follow, max-image-preview:large, max-video-preview:-1"
-                />
-                <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-                <meta name="MobileOptimized" content="width" />
-                <meta name="HandheldFriendly" content="true" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image:alt" content="Railway Branding - Brand Banao.Ai" /> {/* ✅ FIX */}
 
-                {/* ✅ Canonical */}
-                <link rel="canonical" href={PAGE_URL} />
-
-                {/* ✅ Open Graph */}
-                <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.Ai" />
-                <meta property="og:title" content={PAGE_TITLE} />
-                <meta property="og:description" content={PAGE_DESC} />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={PAGE_URL} />
-                <meta property="og:image" content={OG_IMAGE} />
-                <meta property="og:image:type" content="image/png" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta name="geo.region" content="IN-MH" />
-                <meta name="geo.placename" content="Nashik" />
-                <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-                <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={PAGE_TITLE} />
-                <meta name="twitter:description" content={PAGE_DESC} />
-                <meta name="twitter:image" content={OG_IMAGE} />
-
-                {/* ✅ Structured Data */}
-                <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
-                <script type="application/ld+json">
-                    {JSON.stringify(serviceSchema)}
-                </script>
-                <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-            </Helmet>
+        {/* ✅ FIX: single JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Helmet>
 
             <div className="hoarding-page">
                 <h1 className="hoarding-title">Railway Branding</h1>
 
                 <div className="hoarding-image-wrap">
                     <img
-                        src={airport}
+                        src={railwayImg}
                         alt="Railway Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
@@ -356,39 +307,39 @@ const RailwayyBranding = () => {
                         Banao.Ai, your brand rides where India rides-on railways.</b></i></h3>
                 </div>
 
-                {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
                 <div className="hoarding-content faq-section">
-                    <h2>Railways Branding FAQs</h2>
-                    <div className="faq-list">
-                        {faqItems.map((faq, index) => {
-                            const isActive = activeFaqIndex === index;
+          <h2>Railway Branding FAQs</h2>
+          <div className="faq-list">
+            {FAQ_ITEMS.map((faq, index) => {
+              const isActive = activeFaqIndex === index;
 
-                            return (
-                                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
-                                    <button
-                                        type="button"
-                                        className="faq-question"
-                                        onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                    >
-                                        <span className="faq-question-text">{faq.question}</span>
-                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                                    </button>
+              return (
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                  <button
+                    type="button"
+                    className="faq-question"
+                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                    aria-expanded={isActive} // ✅ FIX
+                  >
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                  </button>
 
-                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                                        <div className="faq-answer-inner">
-                                            <p>{faq.answer}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                    <div className="faq-answer-inner">
+                      <p>{faq.answer}</p>
                     </div>
+                  </div>
                 </div>
+              );
+            })}
+          </div>
+        </div>
 
-                <div className="hoarding-content">{/* Reserved */}</div>
-            </div>
-        </>
-    );
+        <div className="hoarding-content">{/* Reserved */}</div>
+      </div>
+    </>
+  );
 };
 
 export default RailwayyBranding;

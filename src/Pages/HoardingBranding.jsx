@@ -1,181 +1,189 @@
-import React, { useState } from "react";
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import "./busShelter.css"
+import "./busShelter.css";
 
-import hoarding from "../Images/hoarding.jpg";
+import hoarding1 from "../Images/hoarding.jpg";
 import hoarding2 from "../Images/award2.png";
 import hoarding3 from "../Images/award5.png";
 import hoarding4 from "../Images/busbranding.jpg";
 
 const HoardingBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);;
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = [hoarding, hoarding2, hoarding3, hoarding4];
+  const images = useMemo(() => [hoarding1, hoarding2, hoarding3, hoarding4], []);
 
-  const openGallery = (index) => {
+  const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
-  };
+  }, []);
 
-  // Page-specific JSON-LD schemas
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    headline: "Best Hoarding in Maharashtra",
-    name: "Hoarding / Billboard Advertising - Brand Banao.AI",
-    description:
-      "Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra.",
-    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    url: "https://brandbanao.ai/hoardings",
-    publisher: {
-      "@type": "Organization",
-      name: "Brand Banao.AI",
-      url: "https://brandbanao.ai/",
-      logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    },
-  };
+  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
+  // ✅ FIX: ESC closes gallery
+  useEffect(() => {
+    if (!showGallery) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeGallery();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showGallery, closeGallery]);
+
+  const SITE_URL = "https://brandbanao.ai/";
+  const PAGE_URL = "https://brandbanao.ai/hoardings";
+  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+
+  const PAGE_TITLE = "Hoardings in Nashik | Billboard Advertising | BrandBanao.ai"; // ✅ FIX: less “Best” spam
+  const PAGE_DESC =
+    "Billboard and hoarding advertising by BrandBanao.ai. Prime locations, creative design, printing, installation, maintenance, and reporting for strong visibility across Maharashtra.";
+
+  // ✅ FIX: ONE FAQ source used for UI + JSON-LD (no duplicates)
+  const FAQ_ITEMS = useMemo(
+    () => [
       {
-        "@type": "Question",
-        name: "Which is the best 360 degree advertising agency in Maharashtra",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Brand Banao.ai is a strong contender, known for its 360-degree Outdoor and digital marketing approach delivering impactful branding across digital, outdoor, print, TV, & radio with over 16+ years of experience.",
-        },
+        question: "Which is a trusted 360° advertising agency in Maharashtra?",
+        answer:
+          "BrandBanao.ai provides a 360° mix of outdoor and digital marketing services, combining strategy, creative and execution with 16+ years of experience.",
       },
       {
-        "@type": "Question",
-        name: "Which is the best hoarding company in Maharashtra?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "The best hoarding company in Maharashtra is undoubtedly Brand Banao.AI, known for delivering high-impact billboard advertising across Maharashtra’s prime urban and semi-urban locations. With expertise in hyperlocal OOH branding, Brand Banao.AI places your message strategically in high-traffic areas like Mumbai, Nashik, Pune, Nagpur, and Tier 2–3 cities. They offer cost-effective hoarding solutions with 24/7 visibility, massive daily impressions, and unmatched brand recall. Brand Banao.AI specializes in flexible billboard sizes, AI-powered digital hoardings (DOOH), and region-specific emotional messaging—targeting local audiences in Marathi, Hindi, and Hinglish with messages that build trust and credibility. If you're looking for a reliable hoarding advertising agency in Maharashtra that blends creative design, strategic location planning, and real-world visibility, Brand Banao.AI is your ultimate partner for budget-friendly billboard marketing with high ROI.",
-        },
+        question: "Do you provide hoarding and billboard advertising across Maharashtra?",
+        answer:
+          "Yes. We plan and execute hoarding campaigns across key cities and highways in Maharashtra, including location planning, creative support, printing, installation, and maintenance.",
       },
       {
-        "@type": "Question",
-        name: "Which is the best hoarding provider company in Maharashtra?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Brand Banao.ai is one of the best hoarding-providing companies in India. BrandBanao.ai provides impactful and cost-effective out-of-home advertising platforms. They are focused on tier 2 and tier 3 cities and build visibility through a proper billboard placement strategy. Their work is actionable, and they allow for branding execution and creative assistance support. If your goals are brand awareness or measurable advertisement outcomes based on your brand's efforts, BrandBanao.ai is worth investigating.",
-        },
+        question: "How do you choose hoarding locations?",
+        answer:
+          "Locations are selected using traffic flow, sightlines, audience relevance, and proximity to commercial hubs—so campaigns balance reach and frequency effectively.",
       },
       {
-        "@type": "Question",
-        name: "Which is the best hoarding provider company in India?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Based in India, Brand Banao.ai is one of the best hoarding and the biggest providers of coverage in Maharashtra, with opportunities in Mumbai, Nagpur, and Nashik. Whether you know BrandBanao.ai for innovative outdoor advertising or 40-foot 4k digital and 3D hoarding, Brand Banao.ai provides logo brand name recognition solutions and combines data and creative strategy, delivering high-impact campaign reach to preferred local audiences.",
-        },
+        question: "Which industries benefit from hoarding advertising?",
+        answer:
+          "Real estate, retail, healthcare, education, hospitality, FMCG and corporate brands commonly use hoardings for high visibility and brand recall.",
       },
       {
-        "@type": "Question",
-        name: "Who is the top hoardings provider agency in India?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Brand Banao.ai is one of the leading hoardings provider agencies in India, providing impactful and strategic outdoor advertising solutions across tier 2 and tier 3 cities. Specializing in high-visibility hoardings in tier 2 and tier 3 cities, Brand Banao.ai provides targeted and results-oriented campaigns by advertising through high-impact metrics of out-of-home (OOH) media.",
-        },
+        question: "Do you offer LED/digital hoardings?",
+        answer:
+          "Yes. Depending on availability, we can plan digital/LED hoardings and advise the best format based on objectives and budget.",
       },
       {
-        "@type": "Question",
-        name: "Who is the top hoardings provider agency in Maharashtra?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Brand Banao.AI is one of the top hoardings provider agencies in Maharashtra for delivering impactful outdoor advertising with an emphasis on major tier 2 and tier 3 cities. The agency's competence is in Nashik, Dhule, and Jalgaon, where the company specializes in high-visibility and data-supported hoarding solutions that enable marketers to target local areas and drum up local engagement for their brand.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Who is the top hoardings provider agency in Nashik?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Brand Banao.ai is the ultimate hoardings provider agency located in Nashik. The agency delivers high-impact outdoor advertising across key cities through the ability to secure strategic placements and the strategic and creative designs for the hoardings, and offers end-to-end OOH solutions for their clients to maximize brand visibility and promote their brand. Brand Banao.ai is the agency of choice for impactful hoarding campaigns in Nashik.",
-        },
+        question: "How can I book a hoarding with BrandBanao.ai?",
+        answer:
+          "You can connect via phone/WhatsApp or the website. Share your target locations, timeline and budget, and our team will propose the best available options.",
       },
     ],
-  };
+    []
+  );
 
-  const faqItems = [
-    {
-      question: "What makes BrandBanao.ai the best hoarding advertising company in Nashik?",
-      answer:
-        "Brand Banao.ai blends a blend of creative storytelling, exceptional production quality, strategic placement of media, and 24/7 continuous visibility in outdoor locations by designing each static billboard or medium as a city landmark for memory and measurable brand impact.",
-    },
-    {
-      question: "What hoarding advertising services does BrandBanao.ai offer?",
-      answer:
-        "Creative billboard design, top-notch printing, digital billboard advertising, outdoor installation, and maintenance services, as well as environmentally friendly options. Temporary construction hoarding and custom design templates are also available.",
-    },
-    {
-      question: "How does BrandBanao.ai choose the best hoarding locations?",
-      answer:
-        "Locations are selected according to what route/location has traffic, sight angles for visibility, demographic connection of the area, and overall goal for the brand. Therefore, the best locations are offered throughout Nashik, as well as in heavily trafficked areas of Maharashtra, such as around malls and markets, and near the major corridors of real estate.",
-    },
-    {
-      question: "Which industries do you serve with hoarding advertising?",
-      answer:
-        "Industries serviced include commercial property, retail, health care, education, hospitality, as well as corporate entities. Each sector gets an individualized and customized creative solution.",
-    },
-    {
-      question: "How can I book a hoarding with BrandBanao.ai?",
-      answer:
-        "The team can be reached via phone, WhatsApp, or via their web page to find out how to begin developing an outdoor advertising campaign with Brand Banao.ai. Please provide the team with the goals of your brand placement, where you would like the locations to be, what your budget is, and when you would like to begin your campaign.",
-    },
-  ];
+  // ✅ FIX: Single JSON-LD @graph (stronger for AI search)
+  const structuredData = useMemo(() => {
+    const orgId = "https://brandbanao.ai/#organization";
+    const pageId = `${PAGE_URL}#webpage`;
+    const serviceId = `${PAGE_URL}#service`;
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://brandbanao.ai/#website",
+          url: SITE_URL,
+          name: BRAND_NAME,
+          publisher: { "@id": orgId },
+          inLanguage: "en-IN",
+        },
+        {
+          "@type": "Organization",
+          "@id": orgId,
+          name: BRAND_NAME,
+          url: SITE_URL,
+          logo: OG_IMAGE,
+        },
+        {
+          "@type": "WebPage",
+          "@id": pageId,
+          url: PAGE_URL,
+          name: "Hoarding / Billboard Advertising",
+          headline: "Hoarding & Billboard Advertising in Maharashtra",
+          description: PAGE_DESC,
+          inLanguage: "en-IN",
+          isPartOf: { "@id": "https://brandbanao.ai/#website" },
+          about: { "@id": orgId },
+          mainEntity: { "@id": serviceId },
+          primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
+        },
+        {
+          "@type": "Service",
+          "@id": serviceId,
+          name: "Hoarding & Billboard Advertising",
+          serviceType: ["OOH Advertising", "Billboard Advertising", "Outdoor Advertising"],
+          provider: { "@id": orgId },
+          areaServed: [
+            { "@type": "Country", name: "India" },
+            { "@type": "State", name: "Maharashtra" },
+          ],
+          url: PAGE_URL,
+          description:
+            "Outdoor hoarding and billboard advertising including location planning, creative design, printing, installation, maintenance and reporting across Maharashtra.",
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${PAGE_URL}#breadcrumbs`,
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
+            { "@type": "ListItem", position: 3, name: "Hoardings", item: PAGE_URL },
+          ],
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${PAGE_URL}#faq`,
+          mainEntity: FAQ_ITEMS.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        },
+      ],
+    };
+  }, [FAQ_ITEMS, PAGE_URL, PAGE_DESC]);
 
   return (
     <>
-      <Helmet>
-        <meta charSet="UTF-8" />
-        <title>Best Hoardings in Nashik | Brand Banao.AI </title>
-        <meta name="author" content="Brand Banao.AI" />
-        <meta name="description" content="Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra." />
-        <meta name="keywords" content="best hoardings in Nashik, billboard advertising Maharashtra, outdoor advertising agency, OOH advertising, digital hoardings, LED billboards" />
+      <Helmet htmlAttributes={{ lang: "en-IN" }}> 
+        <meta charSet="utf-8" />
+        <title>{PAGE_TITLE}</title> 
+        <meta name="author" content={BRAND_NAME} /> 
+        <meta name="description" content={PAGE_DESC} />         
+        <meta name="keywords" content="hoardings Nashik, billboard advertising Maharashtra, outdoor advertising, OOH advertising, digital hoardings, LED billboards" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="publisher" content="Brand Banao.AI" />
+        <meta name="publisher" content={BRAND_NAME} /> 
         <meta name="theme-color" content="#000000" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="MobileOptimized" content="width" />
         <meta name="HandheldFriendly" content="true" />
-
-        <link rel="canonical" href="https://brandbanao.ai/hoardings" />
-
-        {/* Open Graph */}
+        <link rel="canonical" href={PAGE_URL} /> 
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content="BrandBanao.Ai" />
-        <meta property="og:title" content="Hoarding/Billboard | Brand Banao.AI" />
-        <meta property="og:description" content="Billboard advertising with Brand Banao.AI! From prime hoarding locations, we create lasting brand recall & unparalleled visibility across Maharashtra." />
+        <meta property="og:site_name" content={BRAND_NAME} /> 
+        <meta property="og:title" content={PAGE_TITLE} /> 
+        <meta property="og:description" content={PAGE_DESC} /> 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brandbanao.ai/hoardings" />
-        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta property="og:url" content={PAGE_URL} /> 
+        <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="geo.region" content="IN-MH" />
-        <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hoarding/Billboard | Brand Banao.AI" />
-        <meta name="twitter:description" content="Brand Banao.AI provides strategic, eye-catching billboard advertising solutions virtually all across Maharashtra." />
-        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta name="twitter:title" content={PAGE_TITLE} /> 
+        <meta name="twitter:description" content={PAGE_DESC} /> 
+        <meta name="twitter:image" content={OG_IMAGE} /> 
 
-        {/* Page-specific structured data */}
-        <script type="application/ld+json">
-          {JSON.stringify(websiteSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="hoarding-page">
@@ -183,7 +191,7 @@ const HoardingBranding = () => {
 
         <div className="hoarding-image-wrap">
           <img
-            src={hoarding}
+            src={hoarding1}
             alt="Hoarding branding example by Brand Banao.AI"
             className="hoarding-image"
             onClick={() => openGallery(0)}
@@ -342,27 +350,22 @@ const HoardingBranding = () => {
         </div>
 
 
-        {/* FAQ SECTION – ACCORDION STYLE */}
         <div className="hoarding-content faq-section">
           <h2>Hoarding Advertising FAQs</h2>
           <div className="faq-list">
-            {faqItems.map((faq, index) => {
+            {FAQ_ITEMS.map((faq, index) => {
               const isActive = activeFaqIndex === index;
 
               return (
-                <div
-                  className={`faq-item ${isActive ? "active" : ""}`}
-                  key={index}
-                >
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
                   <button
                     type="button"
                     className="faq-question"
-                    onClick={() =>
-                      setActiveFaqIndex(isActive ? null : index)
-                    }
+                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                    aria-expanded={isActive} // ✅ FIX
                   >
                     <span className="faq-question-text">{faq.question}</span>
-                    <span className="faq-icon">{isActive ? "-" : "+"}</span>
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span> {/* ✅ FIX: consistent */}
                   </button>
 
                   <div className={`faq-answer ${isActive ? "open" : ""}`}>
@@ -376,9 +379,7 @@ const HoardingBranding = () => {
           </div>
         </div>
 
-        <div className="hoarding-content">
-          {/* Reserved for any additional blocks, forms, CTAs, etc. */}
-        </div>
+        <div className="hoarding-content">{/* Reserved */}</div>
       </div>
     </>
   );
