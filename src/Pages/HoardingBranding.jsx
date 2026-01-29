@@ -12,6 +12,43 @@ const HoardingBranding = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
+  const SITE_URL = "https://brandbanao.ai/";
+  const PAGE_URL = "https://brandbanao.ai/hoardings";
+  const BRAND_NAME = "BrandBanao.ai";
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+
+  const PAGE_TITLE =
+    "Hoardings in Nashik | Billboard & Outdoor Advertising | BrandBanao.ai";
+  const PAGE_DESC =
+    "Book hoardings and billboards in Nashik with BrandBanao.ai. Location planning, creative design, printing, installation, maintenance and campaign reporting.";
+
+  // ✅ Make BUSINESS stable so Hooks deps don't warn
+  // Fill with REAL values (or keep placeholders and schema won't output LocalBusiness)
+  const BUSINESS = useMemo(
+    () => ({
+      name: BRAND_NAME,
+      telephone: "+919156785678",
+      email: "hello@brandbanao.ai",
+      address: {
+        streetAddress: "",
+        addressLocality: "Nashik",
+        addressRegion: "MH",
+        postalCode: "",
+        addressCountry: "IN",
+      },
+      geo: {
+        latitude: null,
+        longitude: null,
+      },
+      sameAs: [
+        // "https://www.instagram.com/yourhandle",
+        // "https://www.linkedin.com/company/yourcompany",
+        // "https://www.facebook.com/yourpage",
+      ],
+    }),
+    [BRAND_NAME]
+  );
+
   const images = useMemo(() => [hoarding1, hoarding2, hoarding3, hoarding4], []);
 
   const openGallery = useCallback((index) => {
@@ -19,9 +56,9 @@ const HoardingBranding = () => {
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
+  const closeGallery = useCallback(() => setShowGallery(false), []);
 
-  // ✅ FIX: ESC closes gallery
+  // ✅ ESC closes gallery
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -31,169 +68,209 @@ const HoardingBranding = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [showGallery, closeGallery]);
 
-  const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/hoardings";
-  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
-
-  const PAGE_TITLE = "Hoardings in Nashik | Billboard Advertising | BrandBanao.ai"; // ✅ FIX: less “Best” spam
-  const PAGE_DESC =
-    "Billboard and hoarding advertising by BrandBanao.ai. Prime locations, creative design, printing, installation, maintenance, and reporting for strong visibility across Maharashtra.";
-
-  // ✅ FIX: ONE FAQ source used for UI + JSON-LD (no duplicates)
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question: "Which is a trusted 360° advertising agency in Maharashtra?",
+        question: "Do you provide hoardings and billboards in Nashik?",
         answer:
-          "BrandBanao.ai provides a 360° mix of outdoor and digital marketing services, combining strategy, creative and execution with 16+ years of experience.",
+          "Yes. BrandBanao.ai plans and executes hoarding and billboard campaigns in Nashik including location planning, creative support, printing, installation, maintenance, and reporting.",
       },
       {
-        question: "Do you provide hoarding and billboard advertising across Maharashtra?",
+        question: "How do you choose hoarding locations in Nashik?",
         answer:
-          "Yes. We plan and execute hoarding campaigns across key cities and highways in Maharashtra, including location planning, creative support, printing, installation, and maintenance.",
-      },
-      {
-        question: "How do you choose hoarding locations?",
-        answer:
-          "Locations are selected using traffic flow, sightlines, audience relevance, and proximity to commercial hubs—so campaigns balance reach and frequency effectively.",
-      },
-      {
-        question: "Which industries benefit from hoarding advertising?",
-        answer:
-          "Real estate, retail, healthcare, education, hospitality, FMCG and corporate brands commonly use hoardings for high visibility and brand recall.",
+          "We shortlist locations using traffic flow, sightlines, audience relevance, and proximity to key commercial areas to balance reach and frequency.",
       },
       {
         question: "Do you offer LED/digital hoardings?",
         answer:
-          "Yes. Depending on availability, we can plan digital/LED hoardings and advise the best format based on objectives and budget.",
+          "Yes. Subject to availability, we can plan LED/digital hoardings and recommend formats based on your goals and budget.",
+      },
+      {
+        question: "Which industries benefit from hoarding advertising?",
+        answer:
+          "Real estate, retail, healthcare, education, hospitality, FMCG and corporate brands commonly use hoardings for high visibility and recall.",
       },
       {
         question: "How can I book a hoarding with BrandBanao.ai?",
         answer:
-          "You can connect via phone/WhatsApp or the website. Share your target locations, timeline and budget, and our team will propose the best available options.",
+          "Share your target areas, timeline and budget via phone/WhatsApp or the website. Our team will propose available options and next steps.",
       },
     ],
     []
   );
 
-  // ✅ FIX: Single JSON-LD @graph (stronger for AI search)
   const structuredData = useMemo(() => {
-    const orgId = "https://brandbanao.ai/#organization";
+    const orgId = `${SITE_URL}#organization`;
+    const websiteId = `${SITE_URL}#website`;
     const pageId = `${PAGE_URL}#webpage`;
     const serviceId = `${PAGE_URL}#service`;
+    const faqId = `${PAGE_URL}#faq`;
+    const breadcrumbsId = `${PAGE_URL}#breadcrumbs`;
+    const localBusinessId = `${SITE_URL}#localbusiness`;
+
+    const hasRealPhone =
+      typeof BUSINESS.telephone === "string" &&
+      BUSINESS.telephone.startsWith("+") &&
+      BUSINESS.telephone.length >= 12;
+
+
+    const localBusiness = hasRealPhone
+      ? {
+        "@type": "ProfessionalService",
+        "@id": localBusinessId,
+        name: BUSINESS.name,
+        url: SITE_URL,
+        telephone: BUSINESS.telephone,
+        email: BUSINESS.email,
+        areaServed: [{ "@type": "City", name: "Nashik" }],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: BUSINESS.address.streetAddress || undefined,
+          addressLocality: BUSINESS.address.addressLocality || "Nashik",
+          addressRegion: BUSINESS.address.addressRegion || "MH",
+          postalCode: BUSINESS.address.postalCode || undefined,
+          addressCountry: BUSINESS.address.addressCountry || "IN",
+        },
+        geo:
+          BUSINESS.geo.latitude && BUSINESS.geo.longitude
+            ? {
+              "@type": "GeoCoordinates",
+              latitude: BUSINESS.geo.latitude,
+              longitude: BUSINESS.geo.longitude,
+            }
+            : undefined,
+        sameAs: Array.isArray(BUSINESS.sameAs) ? BUSINESS.sameAs : undefined,
+      }
+      : null;
+
+    const graph = [
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        url: SITE_URL,
+        name: BRAND_NAME,
+        publisher: { "@id": orgId },
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "Organization",
+        "@id": orgId,
+        name: BRAND_NAME,
+        url: SITE_URL,
+        logo: OG_IMAGE,
+      },
+      {
+        "@type": "WebPage",
+        "@id": pageId,
+        url: PAGE_URL,
+        name: "Hoarding / Billboard Advertising in Nashik",
+        headline: "Hoardings & Billboards in Nashik",
+        description: PAGE_DESC,
+        inLanguage: "en-IN",
+        isPartOf: { "@id": websiteId },
+        about: { "@id": orgId },
+        mainEntity: { "@id": serviceId },
+        primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
+        breadcrumb: { "@id": breadcrumbsId },
+      },
+      {
+        "@type": "Service",
+        "@id": serviceId,
+        name: "Hoarding & Billboard Advertising in Nashik",
+        serviceType: ["OOH Advertising", "Billboard Advertising", "Outdoor Advertising"],
+        provider: { "@id": orgId },
+        areaServed: [
+          { "@type": "City", name: "Nashik" },
+          { "@type": "State", name: "Maharashtra" },
+          { "@type": "Country", name: "India" },
+        ],
+        url: PAGE_URL,
+        description:
+          "Outdoor hoarding and billboard advertising in Nashik including location planning, creative design, printing, installation, maintenance and reporting.",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbsId,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
+          { "@type": "ListItem", position: 3, name: "Hoardings", item: PAGE_URL },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": faqId,
+        mainEntity: FAQ_ITEMS.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      },
+    ];
+
+    if (localBusiness) graph.push(localBusiness);
 
     return {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://brandbanao.ai/#website",
-          url: SITE_URL,
-          name: BRAND_NAME,
-          publisher: { "@id": orgId },
-          inLanguage: "en-IN",
-        },
-        {
-          "@type": "Organization",
-          "@id": orgId,
-          name: BRAND_NAME,
-          url: SITE_URL,
-          logo: OG_IMAGE,
-        },
-        {
-          "@type": "WebPage",
-          "@id": pageId,
-          url: PAGE_URL,
-          name: "Hoarding / Billboard Advertising",
-          headline: "Hoarding & Billboard Advertising in Maharashtra",
-          description: PAGE_DESC,
-          inLanguage: "en-IN",
-          isPartOf: { "@id": "https://brandbanao.ai/#website" },
-          about: { "@id": orgId },
-          mainEntity: { "@id": serviceId },
-          primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
-        },
-        {
-          "@type": "Service",
-          "@id": serviceId,
-          name: "Hoarding & Billboard Advertising",
-          serviceType: ["OOH Advertising", "Billboard Advertising", "Outdoor Advertising"],
-          provider: { "@id": orgId },
-          areaServed: [
-            { "@type": "Country", name: "India" },
-            { "@type": "State", name: "Maharashtra" },
-          ],
-          url: PAGE_URL,
-          description:
-            "Outdoor hoarding and billboard advertising including location planning, creative design, printing, installation, maintenance and reporting across Maharashtra.",
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": `${PAGE_URL}#breadcrumbs`,
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-            { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
-            { "@type": "ListItem", position: 3, name: "Hoardings", item: PAGE_URL },
-          ],
-        },
-        {
-          "@type": "FAQPage",
-          "@id": `${PAGE_URL}#faq`,
-          mainEntity: FAQ_ITEMS.map((f) => ({
-            "@type": "Question",
-            name: f.question,
-            acceptedAnswer: { "@type": "Answer", text: f.answer },
-          })),
-        },
-      ],
+      "@graph": graph,
     };
-  }, [FAQ_ITEMS, PAGE_URL, PAGE_DESC]);
+  }, [FAQ_ITEMS, SITE_URL, PAGE_URL, BRAND_NAME, PAGE_DESC, OG_IMAGE, BUSINESS]);
+
+  // ✅ Lock scroll while gallery open
+  useEffect(() => {
+    if (!showGallery) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [showGallery]);
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}> 
+      <Helmet htmlAttributes={{ lang: "en-IN" }}>
         <meta charSet="utf-8" />
-        <title>{PAGE_TITLE}</title> 
-        <meta name="author" content={BRAND_NAME} /> 
-        <meta name="description" content={PAGE_DESC} />         
-        <meta name="keywords" content="hoardings Nashik, billboard advertising Maharashtra, outdoor advertising, OOH advertising, digital hoardings, LED billboards" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <title>{PAGE_TITLE}</title>
+
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="description" content={PAGE_DESC} />
+        <meta name="robots" content="index,follow,max-image-preview:large" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="publisher" content={BRAND_NAME} /> 
-        <meta name="theme-color" content="#000000" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <meta name="MobileOptimized" content="width" />
-        <meta name="HandheldFriendly" content="true" />
-        <link rel="canonical" href={PAGE_URL} /> 
+
+        <link rel="canonical" href={PAGE_URL} />
+
+        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content={BRAND_NAME} /> 
-        <meta property="og:title" content={PAGE_TITLE} /> 
-        <meta property="og:description" content={PAGE_DESC} /> 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={PAGE_URL} /> 
+        <meta property="og:site_name" content={BRAND_NAME} />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={PAGE_TITLE} /> 
-        <meta name="twitter:description" content={PAGE_DESC} /> 
-        <meta name="twitter:image" content={OG_IMAGE} /> 
 
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+
+        {/* ✅ JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <div className="hoarding-page">
-        <h1 className="hoarding-title">Hoarding / Billboard Advertising</h1>
+        <h1 className="hoarding-title">Hoarding / Billboard Advertising in Nashik</h1>
 
         <div className="hoarding-image-wrap">
           <img
             src={hoarding1}
-            alt="Hoarding branding example by Brand Banao.AI"
+            alt="Hoarding branding example in Nashik by BrandBanao.ai"
             className="hoarding-image"
+            loading="eager"
             onClick={() => openGallery(0)}
           />
         </div>
@@ -201,13 +278,26 @@ const HoardingBranding = () => {
         {showGallery && (
           <div
             className="gallery-overlay"
-            onClick={() => setShowGallery(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Hoarding image gallery"
+            onClick={closeGallery}
           >
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
+              <button
+                type="button"
+                onClick={closeGallery}
+                aria-label="Close gallery"
+                className="gallery-close-btn"
+              >
+                x
+              </button>
+
               <img
                 src={images[currentIndex]}
-                alt="Hoarding advertising gallery - Brand Banao.AI"
+                alt={`Hoarding advertising gallery image ${currentIndex + 1} of ${images.length}`}
                 className="gallery-img"
+                loading="lazy"
               />
             </div>
           </div>
@@ -357,18 +447,25 @@ const HoardingBranding = () => {
               const isActive = activeFaqIndex === index;
 
               return (
-                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                <div className={`faq-item ${isActive ? "active" : ""}`} key={faq.question}>
                   <button
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} // ✅ FIX
+                    aria-expanded={isActive}
+                    aria-controls={`faq-panel-${index}`}
+                    id={`faq-button-${index}`}
                   >
                     <span className="faq-question-text">{faq.question}</span>
-                    <span className="faq-icon">{isActive ? "−" : "+"}</span> {/* ✅ FIX: consistent */}
+                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
                   </button>
 
-                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                  <div
+                    id={`faq-panel-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-button-${index}`}
+                    className={`faq-answer ${isActive ? "open" : ""}`}
+                  >
                     <div className="faq-answer-inner">
                       <p>{faq.answer}</p>
                     </div>
