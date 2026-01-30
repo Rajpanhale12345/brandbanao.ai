@@ -13,11 +13,11 @@ const JOBS = [
   {
     id: "media-planner",
     title: "Media Planner",
-    type: "Full-time",
+    type: "Full-time", 
     location: "Nashik (India)",
-    exp: "01 - 05 years", // ✅ FIX: rename comp -> exp (clarity)
+    exp: "01 - 05 years", 
     tags: ["media"],
-    link: "/careers/media-planner#header", // ✅ FIX: internal path
+    link: "careers/MediaPlanner#header", 
     desc: "Own media planning, buying coordination, budgeting support, and channel mix for client campaigns.",
   },
   {
@@ -27,7 +27,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "01 - 05 years",
     tags: ["sales"],
-    link: "/careers/sales-marketing-executive-female#header", // ✅ FIX: internal path
+    link: "careers/SalesMarketingExecutiveFemale#header",
     desc: "Drive new business, manage leads, and maintain client relationships.",
   },
   {
@@ -37,7 +37,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "02+ years",
     tags: ["marketing", "digital"],
-    link: "/careers/digital-marketing-executive#header", // ✅ FIX
+    link: "careers/DigitalMarketingExecutive#header", 
     desc: "Execute digital campaigns, content plans, and performance tracking for growth.",
   },
   {
@@ -47,7 +47,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "05+ years",
     tags: ["marketing", "digital"],
-    link: "/careers/digital-marketing-manager#header", // ✅ FIX
+    link: "careers/DigitalMarketingManager#header", 
     desc: "Lead strategy across paid, owned, and earned channels; manage team and reporting.",
   },
   {
@@ -57,7 +57,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "02+ years",
     tags: ["operations"],
-    link: "/careers/operations-head#header", // ✅ FIX
+    link: "careers/OperationsHead#header", 
     desc: "Own operational excellence, vendor coordination, timelines, and campaign execution quality.",
   },
   {
@@ -67,7 +67,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "02+ years",
     tags: ["sales", "marketing"],
-    link: "/careers/sales-marketing-manager#header", // ✅ FIX
+    link: "careers/SalesMarketingManager#header", 
     desc: "Lead sales pipeline + marketing alignment to scale revenue and partnerships.",
   },
 ];
@@ -301,7 +301,7 @@ export default function Careers() {
                     </div>
                   </div>
 
-                  {job.desc ? <p className="desc">{job.desc}</p> : null}
+                 
 
                   <div className="actions">
                     {isExternal(job.link) ? (

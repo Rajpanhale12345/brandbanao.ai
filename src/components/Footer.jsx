@@ -46,8 +46,8 @@ import "./Footer.css";
               clientservicing@brandbanao.ai
             </a>
              <br />
-           <a className="sf-pill" href="tel:91 5678 1718 ">
-             91 5678 1718
+           <a className="sf-pill" href="tel:9156784242 ">
+             91 5678 4242
             </a>
          
           </div>
