@@ -69,35 +69,35 @@ const HoardingBranding = () => {
   }, [showGallery, closeGallery]);
 
   const FAQ_ITEMS = useMemo(
-    () => [
-      {
-        question: "Do you provide hoardings and billboards in Nashik?",
-        answer:
-          "Yes. BrandBanao.ai plans and executes hoarding and billboard campaigns in Nashik including location planning, creative support, printing, installation, maintenance, and reporting.",
-      },
-      {
-        question: "How do you choose hoarding locations in Nashik?",
-        answer:
-          "We shortlist locations using traffic flow, sightlines, audience relevance, and proximity to key commercial areas to balance reach and frequency.",
-      },
-      {
-        question: "Do you offer LED/digital hoardings?",
-        answer:
-          "Yes. Subject to availability, we can plan LED/digital hoardings and recommend formats based on your goals and budget.",
-      },
-      {
-        question: "Which industries benefit from hoarding advertising?",
-        answer:
-          "Real estate, retail, healthcare, education, hospitality, FMCG and corporate brands commonly use hoardings for high visibility and recall.",
-      },
-      {
-        question: "How can I book a hoarding with BrandBanao.ai?",
-        answer:
-          "Share your target areas, timeline and budget via phone/WhatsApp or the website. Our team will propose available options and next steps.",
-      },
-    ],
-    []
-  );
+  () => [
+    {
+      question: "Do you provide hoarding and billboard advertising in Nashik, Maharashtra, and across India?",
+      answer:
+        "Yes. Brand Banao.AI manages hoarding and billboard advertising campaigns in Nashik, across Maharashtra, and in major cities throughout India. We handle location planning, creative design, printing, installation, and maintenance to give your brand consistent outdoor visibility wherever your audience is.",
+    },
+    {
+      question: "How much does hoarding advertising cost in Nashik and Maharashtra?",
+      answer:
+        "Hoarding costs depend on location traffic, visibility, hoarding size, and campaign duration. Premium junctions and highways cost more than inner roads. We provide transparent pricing that includes media space, printing, installation, and maintenance so you clearly understand your total investment.",
+    },
+    {
+      question: "Which are the best locations for hoardings in Nashik?",
+      answer:
+        "The best hoarding locations in Nashik are high-traffic intersections, commercial roads, highways, and areas near malls, hospitals, education hubs, and real estate corridors. We select sites based on traffic flow, sightline visibility, and audience relevance to maximize brand recall.",
+    },
+    {
+      question: "Do you handle hoarding design, printing, and installation?",
+      answer:
+        "Yes. We offer complete end-to-end hoarding services from creative design and large-format printing to safe installation and ongoing maintenance checks. You work with one team from concept to campaign execution.",
+    },
+    {
+      question: "How effective is hoarding advertising compared to digital ads?",
+      answer:
+        "Hoardings build strong local trust and brand recall because people see your message repeatedly in the real world. Digital ads capture intent online. Brands that combine hoardings with digital marketing usually see better recognition, credibility, and overall campaign performance.",
+    },
+  ],
+  []
+);
 
   const structuredData = useMemo(() => {
     const orgId = `${SITE_URL}#organization`;
@@ -240,7 +240,6 @@ const HoardingBranding = () => {
 
         <link rel="canonical" href={PAGE_URL} />
 
-        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -252,13 +251,11 @@ const HoardingBranding = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        {/* ✅ JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -306,26 +303,28 @@ const HoardingBranding = () => {
         <div className="hoarding-content">
           <h2>About Our Hoarding Services</h2>
           <p>
-            Every morning, Nashik wakes up to a city full of stories. Some fade
-            with the sunlight, some whisper behind the billboards, but some?
-            Some own the streets. Their colors spread across crossroads, their
-            words walk through the traffic, and their impact spills over long
-            after people have already passed.
+            Each day, the city of Nashik comes alive with untold tales. You may forget some stories
+            by the time you've finished your day, while others remain hidden behind billboards;
+            yet still others claim their place in the city and onto the roads themselves. You can
+            see their colours at intersections, hear their messages in traffic, and feel their
+            effects long after you've moved on.
           </p>
           <p>That is what a hoarding done right can do.</p>
           <p>That is the magic BrandBanao.ai brings to your brand.</p>
-          <p>We don't put up hoardings, we create landmarks.</p>
+          <p>BrandBanao.ai does not provide hoardings; instead, we construct landmarks, thus earning
+            our reputation as the leading service provider of hoardings in Nashik, providing a service
+            that is truly part of the city, not simply part of the building on which they are erected.</p>
 
-          <h2>Our Approach to Hoarding Advertising</h2>
-          <p>At BrandBanao.ai, every hoarding is a conversation with the city.</p>
-          <p>It begins with your brand story yet doesn't end with it.</p>
+          <h2>Our Philosophy Toward Hoarding Advertising</h2>
+          <p>Hoarding is a dialogue between the city and Brand Banao.AI.</p>
+          <p>It begins with your brand story, yet doesn't end with it.</p>
           <p>
             It speaks in visuals, in fonts, in emotions, everything that
             transcends noise and compels people to look up.
           </p>
           <p>
-            We are the hoarding advertising company that ensures your brand not
-            only “appears” but arrives.
+            We are not here to make your brand “appear.” We make it arrive. That mindset is what places
+            us among the top hoarding agencies in Nashik, trusted by growing and established brands alike.
           </p>
 
           <h2>Complete Hoarding Advertising Services</h2>
@@ -399,16 +398,9 @@ const HoardingBranding = () => {
             <li>Healthcare</li>
             <li>Education</li>
           </ul>
-          <p>Our designs have:</p>
-          <ul>
-            <li>Sold homes</li>
-            <li>Launched hospitals</li>
-            <li>Promoted schools</li>
-            <li>Celebrated causes</li>
-          </ul>
-          <p>
-            Creative hoardings for new property launches, construction safety
-            boards, and corporate campaigns.
+          <p>Our hoardings have sold homes, launched hospitals, promoted schools, 
+            and celebrated causes, making us a trusted top outdoor agency in 
+            Maharashtra for brands that want real-world visibility with real impact.
           </p>
 
           <h2>Brand Impact</h2>
