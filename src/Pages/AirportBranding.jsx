@@ -233,6 +233,11 @@ const AirportBranding = () => {
                         alt="Airport Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
+                        width="1200"
+                        height="675"
                     />
                 </div>
 
@@ -246,6 +251,8 @@ const AirportBranding = () => {
                                 src={images[currentIndex]}
                                 alt="Airport Branding"
                                 className="gallery-img"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>

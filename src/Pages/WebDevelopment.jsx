@@ -226,6 +226,11 @@ const WebDevelopmentt = () => {
                         alt="Railway Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
+                        width="1200"
+                        height="675"
                     />
                 </div>
 
@@ -236,6 +241,8 @@ const WebDevelopmentt = () => {
                                 src={images[currentIndex]}
                                 alt="Railway Branding Gallery"
                                 className="gallery-img"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>
@@ -337,37 +344,37 @@ const WebDevelopmentt = () => {
                 </div>
 
                 <div className="hoarding-content faq-section">
-          <h2>Web/App Development FAQs</h2>
-          <div className="faq-list">
-            {faqItems.map((faq, index) => {
-              const isActive = activeFaqIndex === index;
+                    <h2>Web/App Development FAQs</h2>
+                    <div className="faq-list">
+                        {faqItems.map((faq, index) => {
+                            const isActive = activeFaqIndex === index;
 
-              return (
-                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
-                  <button
-                    type="button"
-                    className="faq-question"
-                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                  >
-                    <span className="faq-question-text">{faq.question}</span>
-                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                  </button>
+                            return (
+                                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                                    <button
+                                        type="button"
+                                        className="faq-question"
+                                        onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                                    >
+                                        <span className="faq-question-text">{faq.question}</span>
+                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                                    </button>
 
-                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                    <div className="faq-answer-inner">
-                      <p>{faq.answer}</p>
+                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                                        <div className="faq-answer-inner">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
 
-        <div className="hoarding-content">{/* Reserved */}</div>
-      </div>
-    </>
-  );
+                <div className="hoarding-content">{/* Reserved */}</div>
+            </div>
+        </>
+    );
 };
 
 export default WebDevelopmentt;

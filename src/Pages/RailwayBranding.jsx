@@ -183,131 +183,138 @@ const RailwayyBranding = () => {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-            <div className="hoarding-page">
-                <h1 className="hoarding-title">Railway Branding</h1>
+      <div className="hoarding-page">
+        <h1 className="hoarding-title">Railway Branding</h1>
 
-                <div className="hoarding-image-wrap">
-                    <img
-                        src={railwayImg}
-                        alt="Railway Branding"
-                        className="hoarding-image"
-                        onClick={() => openGallery(0)}
-                    />
-                </div>
+        <div className="hoarding-image-wrap">
+          <img
+            src={railwayImg}
+            alt="Railway Branding"
+            className="hoarding-image"
+            onClick={() => openGallery(0)}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1200"
+            height="675"
+          />
+        </div>
 
-                {showGallery && (
-                    <div className="gallery-overlay" onClick={() => setShowGallery(false)}>
-                        <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
-                            <img
-                                src={images[currentIndex]}
-                                alt="Railway Branding Gallery"
-                                className="gallery-img"
-                            />
-                        </div>
-                    </div>
-                )}
+        {showGallery && (
+          <div className="gallery-overlay" onClick={() => setShowGallery(false)}>
+            <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={images[currentIndex]}
+                alt="Railway Branding Gallery"
+                className="gallery-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        )}
 
-                <div className="hoarding-content">
-                    <h2>Railway Branding - Brand Banao.Ai</h2>
-                    <p>
-                        Indian Railways still remain one of the biggest mass-connectors across the world. With daily
-                        commuters and travelers in millions, plus long-distance passengers, rail branding gives brands
-                        steady visibility across all sorts of people. At Brand Banao.AI, we roll out smart, railway-focused
-                        campaigns that turn transit spaces into punchy brand moments.
-                    </p>
-                    <p>
-                        Rail advertising keeps your brand in front of people along the whole journey-from walking into
-                        the station to waiting on the platform and even while they're riding. It's not just a quick hit,
-                        either. Station ads are longer-lasting and better-received and can reach people across city and
-                        semi-urban areas.
-                    </p>
-                    <p>
-                        We handle everything, from train ads to static and digital stuff inside the stations, with a
-                        solid grasp of passenger behavior to deliver recall, trust, and engagement for rail station formats.
-                    </p>
+        <div className="hoarding-content">
+          <h2>Railway Branding - Brand Banao.Ai</h2>
+          <p>
+            Indian Railways still remain one of the biggest mass-connectors across the world. With daily
+            commuters and travelers in millions, plus long-distance passengers, rail branding gives brands
+            steady visibility across all sorts of people. At Brand Banao.AI, we roll out smart, railway-focused
+            campaigns that turn transit spaces into punchy brand moments.
+          </p>
+          <p>
+            Rail advertising keeps your brand in front of people along the whole journey-from walking into
+            the station to waiting on the platform and even while they're riding. It's not just a quick hit,
+            either. Station ads are longer-lasting and better-received and can reach people across city and
+            semi-urban areas.
+          </p>
+          <p>
+            We handle everything, from train ads to static and digital stuff inside the stations, with a
+            solid grasp of passenger behavior to deliver recall, trust, and engagement for rail station formats.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Comprehensive Railway Media Formats</h2>
-                    <p>
-                        We offer a wide variety of placements: train station advertisements, platform displays, foot
-                        overbridge panels, and big-time train wrap adverts for large campaigns. Being one of the leading
-                        railway station branding agencies in Nashik, Maharashtra, we take care of permissions, planning,
-                        execution, and reporting all under one roof.
-                    </p>
-                    <p>
-                        Our portfolio of services ranges from premium railway advertisements across India to customized
-                        rail branding solutions for SMEs seeking hyperlocal targeting. Whether you are simply looking
-                        for a railway station outdoor advertisement agency in your vicinity or large-format platform
-                        branding and station hoardings, our team undertakes smart placements and creative excellence.
-                    </p>
-                    <p>
-                        We provide clear understanding and transparent guidance for Nashik railway station billboard
-                        advertisements to help you have seamless planning for the same. Our campaigns support railway
-                        branding and engagement for FMCG brands, backed by digital screens at the railway station that
-                        grab motion-driven attention.
-                    </p>
+          <h2>Comprehensive Railway Media Formats</h2>
+          <p>
+            We offer a wide variety of placements: train station advertisements, platform displays, foot
+            overbridge panels, and big-time train wrap adverts for large campaigns. Being one of the leading
+            railway station branding agencies in Nashik, Maharashtra, we take care of permissions, planning,
+            execution, and reporting all under one roof.
+          </p>
+          <p>
+            Our portfolio of services ranges from premium railway advertisements across India to customized
+            rail branding solutions for SMEs seeking hyperlocal targeting. Whether you are simply looking
+            for a railway station outdoor advertisement agency in your vicinity or large-format platform
+            branding and station hoardings, our team undertakes smart placements and creative excellence.
+          </p>
+          <p>
+            We provide clear understanding and transparent guidance for Nashik railway station billboard
+            advertisements to help you have seamless planning for the same. Our campaigns support railway
+            branding and engagement for FMCG brands, backed by digital screens at the railway station that
+            grab motion-driven attention.
+          </p>
 
 
-                    <br />
+          <br />
 
-                    <h2>Industry-specific campaign experience</h2>
-                    <p>
-                        We design focused railway ad strategies for travel brands and double up as a go-to railway
-                        station advertising agency for national players. We are experienced in utilizing local market
-                        knowledge as a rail advertising agency based in Nashik (Maharashtra, India) to run large
-                        multi-city advertising campaigns through branding services across Mumbai and Nashik.
-                    </p>
-                    <p>
-                        As an advertising agency located near the Nashik railway station, we are able to utilise
-                        our vast local connections for all of our 'on-the-ground' execution requirements for clients.
-                        Our team manages the railway hoarding advertisements for many cities throughout Maharashtra
-                        as well as providing integrated branding services in the major metropolitan areas of
-                        Maharashtra (Mumbai, Pune, Nashik).
-                    </p>
+          <h2>Industry-specific campaign experience</h2>
+          <p>
+            We design focused railway ad strategies for travel brands and double up as a go-to railway
+            station advertising agency for national players. We are experienced in utilizing local market
+            knowledge as a rail advertising agency based in Nashik (Maharashtra, India) to run large
+            multi-city advertising campaigns through branding services across Mumbai and Nashik.
+          </p>
+          <p>
+            As an advertising agency located near the Nashik railway station, we are able to utilise
+            our vast local connections for all of our 'on-the-ground' execution requirements for clients.
+            Our team manages the railway hoarding advertisements for many cities throughout Maharashtra
+            as well as providing integrated branding services in the major metropolitan areas of
+            Maharashtra (Mumbai, Pune, Nashik).
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Why Railway Advertising Works</h2>
-                    <p>
-                        People often ask why rail ads drive better brand visibility. Repetition, scale, and diversity
-                        of the audience is the answer. Through our management and marketing of hoardings at railway
-                        stations, we can demonstrate to local advertisers how station hoardings can be used to engage
-                        consumers. We provide advertisers with accurate metrics by which to follow their ROI back to
-                        their respective advertising campaigns.
-                    </p>
-                    <p>
-                        All artwork created for railway advertisements reflects our efforts to comply with the latest
-                        outdoor advertising trends and adhere to the best practices set forth in order to meet our
-                        clients' needs throughout 2026. We offer sector-specific solutions for retail and hospitality,
-                        rail ads for tourism, and scalable branding for FMCG.
-                    </p>
-                    <p>
-                        In addition, we also provide clients with advertising packages for automotive launches as well
-                        as providing timely and seasonal rail branding for special promotional campaigns.
-                    </p>
+          <h2>Why Railway Advertising Works</h2>
+          <p>
+            People often ask why rail ads drive better brand visibility. Repetition, scale, and diversity
+            of the audience is the answer. Through our management and marketing of hoardings at railway
+            stations, we can demonstrate to local advertisers how station hoardings can be used to engage
+            consumers. We provide advertisers with accurate metrics by which to follow their ROI back to
+            their respective advertising campaigns.
+          </p>
+          <p>
+            All artwork created for railway advertisements reflects our efforts to comply with the latest
+            outdoor advertising trends and adhere to the best practices set forth in order to meet our
+            clients' needs throughout 2026. We offer sector-specific solutions for retail and hospitality,
+            rail ads for tourism, and scalable branding for FMCG.
+          </p>
+          <p>
+            In addition, we also provide clients with advertising packages for automotive launches as well
+            as providing timely and seasonal rail branding for special promotional campaigns.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Planning, Cost & Consultation</h2>
+          <h2>Planning, Cost & Consultation</h2>
 
-                    <p>
-                        If you're interested in learning more about the various benefits of outdoor rail branding or
-                        comparing your options between rail and airport advertising, our highly trained experts are
-                        here to assist you with data-based analysis. We help brands in the planning of a station
-                        branding campaign with a clear cost and budget guide.
-                    </p>
-                    <p>
-                        From solid design examples to helping you book rail station billboards in Maharashtra, we
-                        support end-to-end execution. This also includes small business railway ad proposals in India,
-                        pricing estimates for rail campaigns, and personalized branding quotes and consultations in Nashik.
-                    </p>
+          <p>
+            If you're interested in learning more about the various benefits of outdoor rail branding or
+            comparing your options between rail and airport advertising, our highly trained experts are
+            here to assist you with data-based analysis. We help brands in the planning of a station
+            branding campaign with a clear cost and budget guide.
+          </p>
+          <p>
+            From solid design examples to helping you book rail station billboards in Maharashtra, we
+            support end-to-end execution. This also includes small business railway ad proposals in India,
+            pricing estimates for rail campaigns, and personalized branding quotes and consultations in Nashik.
+          </p>
 
-                    <h3 style={{ textAlign: "center" }}><i><b>With railway advertising media planner services from Brand
-                        Banao.Ai, your brand rides where India rides-on railways.</b></i></h3>
-                </div>
+          <h3 style={{ textAlign: "center" }}><i><b>With railway advertising media planner services from Brand
+            Banao.Ai, your brand rides where India rides-on railways.</b></i></h3>
+        </div>
 
-                <div className="hoarding-content faq-section">
+        <div className="hoarding-content faq-section">
           <h2>Railway Branding FAQs</h2>
           <div className="faq-list">
             {FAQ_ITEMS.map((faq, index) => {

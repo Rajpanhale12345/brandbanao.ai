@@ -213,6 +213,11 @@ const CinemaBranding = () => {
             alt="Cinema Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1200"
+            height="675"
           />
         </div>
 
@@ -223,6 +228,8 @@ const CinemaBranding = () => {
                 src={images[currentIndex]}
                 alt="Cinema Branding"
                 className="gallery-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

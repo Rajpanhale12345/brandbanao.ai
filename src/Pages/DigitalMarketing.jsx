@@ -202,148 +202,155 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-            <div className="hoarding-page">
-                <h1 className="hoarding-title">Digital Marketing</h1>
+      <div className="hoarding-page">
+        <h1 className="hoarding-title">Digital Marketing</h1>
 
-                <div className="hoarding-image-wrap">
-                    <img
-                        src={digitalImg}
-                        alt="Digital Marketing"
-                        className="hoarding-image"
-                        onClick={() => openGallery(0)}
-                    />
-                </div>
+        <div className="hoarding-image-wrap">
+          <img
+            src={digitalImg}
+            alt="Digital Marketing"
+            className="hoarding-image"
+            onClick={() => openGallery(0)}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1200"
+            height="675"
+          />
+        </div>
 
-                {showGallery && (
-                    <div className="gallery-overlay" onClick={() => setShowGallery(false)}>
-                        <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
-                            <img
-                                src={images[currentIndex]}
-                                alt="Digital Marketing Gallery"
-                                className="gallery-img"
-                            />
-                        </div>
-                    </div>
-                )}
+        {showGallery && (
+          <div className="gallery-overlay" onClick={() => setShowGallery(false)}>
+            <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={images[currentIndex]}
+                alt="Digital Marketing Gallery"
+                className="gallery-img"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        )}
 
-                <div className="hoarding-content">
-                    <h2>Digital Marketing - Brand Banao.Ai</h2>
-                    <p>
-                        In the era of fast-paced life, brands grow through precision rather than just having an existence.
-                        Brand Banao.Ai's Digital Marketing team will provide brands with measurable support using the
-                        platforms where brands can grow and are most visible.
-                    </p>
-                    <p>
-                        We're a forward-thinking digital marketing agency helping businesses cruise through the online
-                        world with clarity and confidence. Our unique, mix of creativity, technology and analytics creates
-                        campaigns that are purposeful, scalable and results driven. We do not chase trends, we build the
-                        systems that convert consumer interest to action.
-                    </p>
+        <div className="hoarding-content">
+          <h2>Digital Marketing - Brand Banao.Ai</h2>
+          <p>
+            In the era of fast-paced life, brands grow through precision rather than just having an existence.
+            Brand Banao.Ai's Digital Marketing team will provide brands with measurable support using the
+            platforms where brands can grow and are most visible.
+          </p>
+          <p>
+            We're a forward-thinking digital marketing agency helping businesses cruise through the online
+            world with clarity and confidence. Our unique, mix of creativity, technology and analytics creates
+            campaigns that are purposeful, scalable and results driven. We do not chase trends, we build the
+            systems that convert consumer interest to action.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>A Strategy-First Approach</h2>
-                    <p>
-                        Every great campaign begins with the right strategy. We research your audience, competitors,
-                        and category trends to create a plan that connects your brand objectives to tangible results.
-                        If you're launching, growing, or changing, our planning drives consistency across channels and
-                        clarity in how we talk to people.
-                    </p>
-                    <p>
-                        As a trusted digital marketing company, Brand Banao.Ai is a holistic solutions provider across
-                        platforms. Be it an online campaign or advanced digital advertising; rest assured that your brand
-                        will say the right thing to the right people at the right time.
-                    </p>
+          <h2>A Strategy-First Approach</h2>
+          <p>
+            Every great campaign begins with the right strategy. We research your audience, competitors,
+            and category trends to create a plan that connects your brand objectives to tangible results.
+            If you're launching, growing, or changing, our planning drives consistency across channels and
+            clarity in how we talk to people.
+          </p>
+          <p>
+            As a trusted digital marketing company, Brand Banao.Ai is a holistic solutions provider across
+            platforms. Be it an online campaign or advanced digital advertising; rest assured that your brand
+            will say the right thing to the right people at the right time.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Performance-driven campaigns</h2>
-                    <p>
-                        With extensive expertise in Google Marketing, we are able to deliver campaigns with a high intent
-                        of driving quality traffic to generate measurable return on investment. As a performance marketing
-                        agency that is rising to prominence, we use the best metrics including leads, conversion and
-                        revenue as our primary success indicators. Each and every investment is continually tracked,
-                        updated and optimised.
-                    </p>
-                    <p>
-                        We manage online ads, including search, display, and social, using pinpoint targeting and
-                        compelling creative. Our background with digital advertising teams helps brands compete in
-                        crowded markets while keeping costs in check.
-                    </p>
+          <h2>Performance-driven campaigns</h2>
+          <p>
+            With extensive expertise in Google Marketing, we are able to deliver campaigns with a high intent
+            of driving quality traffic to generate measurable return on investment. As a performance marketing
+            agency that is rising to prominence, we use the best metrics including leads, conversion and
+            revenue as our primary success indicators. Each and every investment is continually tracked,
+            updated and optimised.
+          </p>
+          <p>
+            We manage online ads, including search, display, and social, using pinpoint targeting and
+            compelling creative. Our background with digital advertising teams helps brands compete in
+            crowded markets while keeping costs in check.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Search, Content & Visibility</h2>
-                    <p>
-                        Strong visibility begins with proper search engine optimisation. At our agency, we have experienced
-                        professionals that marry expertise in technical audits and content optimisation with building
-                        authority to create the conditions for sustained growth. Advanced search engine optimisation,
-                        combined with web services, will allow brands to be found in more locations, load their websites
-                        faster, and convert at an improved rate.
-                    </p>
-                    <p>
-                        We assist content marketing teams in developing the message and manner by which audiences connect
-                        with your brand through providing them with value, and substance rather than fluff. When you mix
-                        this with SEO and digital marketing, organic reach grows alongside paid efforts.
-                    </p>
-                    <p>
-                        For region-focused brands, our local SEO solutions power up discoverability where it matters most.
-                        We position ourselves as a top digital marketing company in Nashik for those seeking to own their
-                        city or area.
-                    </p>
+          <h2>Search, Content & Visibility</h2>
+          <p>
+            Strong visibility begins with proper search engine optimisation. At our agency, we have experienced
+            professionals that marry expertise in technical audits and content optimisation with building
+            authority to create the conditions for sustained growth. Advanced search engine optimisation,
+            combined with web services, will allow brands to be found in more locations, load their websites
+            faster, and convert at an improved rate.
+          </p>
+          <p>
+            We assist content marketing teams in developing the message and manner by which audiences connect
+            with your brand through providing them with value, and substance rather than fluff. When you mix
+            this with SEO and digital marketing, organic reach grows alongside paid efforts.
+          </p>
+          <p>
+            For region-focused brands, our local SEO solutions power up discoverability where it matters most.
+            We position ourselves as a top digital marketing company in Nashik for those seeking to own their
+            city or area.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Full-Service Digital Execution</h2>
+          <h2>Full-Service Digital Execution</h2>
 
-                    <p>
-                        As a full-service digital marketing agency, Brand Banao.Ai integrates social media marketing, digital
-                        media marketing, and digital media advertising all in one seamless system. We also back brand ad
-                        campaigns that boost recall and trust across digital touchpoints.
-                    </p>
-                    <p>
-                        The digital marketing team behind our agency is full of professionals with expertise in every
-                        aspect of the digital marketing process, from concept to optimization. As such, we're not just
-                        vendors; instead, we are your digital partner for all your digital marketing initiatives.
-                        We aren't just vendors; we're your go-to digital partner.
-                    </p>
+          <p>
+            As a full-service digital marketing agency, Brand Banao.Ai integrates social media marketing, digital
+            media marketing, and digital media advertising all in one seamless system. We also back brand ad
+            campaigns that boost recall and trust across digital touchpoints.
+          </p>
+          <p>
+            The digital marketing team behind our agency is full of professionals with expertise in every
+            aspect of the digital marketing process, from concept to optimization. As such, we're not just
+            vendors; instead, we are your digital partner for all your digital marketing initiatives.
+            We aren't just vendors; we're your go-to digital partner.
+          </p>
 
-                    <br />
+          <br />
 
-                    <h2>Why Brands choose Brand Banao.Ai</h2>
+          <h2>Why Brands choose Brand Banao.Ai</h2>
 
-                    <p>
-                        We are considered one of the most prominent digital marketing companies, blending speed with
-                        strategy.
-                    </p>
+          <p>
+            We are considered one of the most prominent digital marketing companies, blending speed with
+            strategy.
+          </p>
 
-                    <p>
-                        <b>Digital Marketing Partners at Every Stage of Development:</b> Our digital marketing team
-                        includes highly skilled digital marketers who will help you create a complete and effective
-                        online marketing strategy, as well as optimize that strategy for maximum effectiveness. By being
-                        your digital partner, we provide a collaborative, consultative approach to developing an effective
-                        digital marketing approach.
-                    </p>
+          <p>
+            <b>Digital Marketing Partners at Every Stage of Development:</b> Our digital marketing team
+            includes highly skilled digital marketers who will help you create a complete and effective
+            online marketing strategy, as well as optimize that strategy for maximum effectiveness. By being
+            your digital partner, we provide a collaborative, consultative approach to developing an effective
+            digital marketing approach.
+          </p>
 
-                    <p>
-                        We provide our clients with the same level of clarity and effectiveness we have achieved on our site,
-                        we have gained international recognition as one of the leading digital marketing agency websites,
-                        along with being among the best marketing agency websites. A number of people view our multi-faceted
-                        approach to be a strong frontrunner in terms of who is the best digital marketing agency in the world
-                        based on the outcomes we have experience with.
-                    </p>
+          <p>
+            We provide our clients with the same level of clarity and effectiveness we have achieved on our site,
+            we have gained international recognition as one of the leading digital marketing agency websites,
+            along with being among the best marketing agency websites. A number of people view our multi-faceted
+            approach to be a strong frontrunner in terms of who is the best digital marketing agency in the world
+            based on the outcomes we have experience with.
+          </p>
 
-                    <p>
-                        If you need top-of-the-line digital marketing services, top-tier digital marketing services or reliable
-                        digital marketing firms to strategically develop your brand, then let Brand Banao.Ai assist you in
-                        achieving sustainable, intelligent growth for your company.
-                    </p>
+          <p>
+            If you need top-of-the-line digital marketing services, top-tier digital marketing services or reliable
+            digital marketing firms to strategically develop your brand, then let Brand Banao.Ai assist you in
+            achieving sustainable, intelligent growth for your company.
+          </p>
 
-                    {/* <h3 style={{ textAlign: "center" }}><i><b>With railway advertising media planner services from Brand
+          {/* <h3 style={{ textAlign: "center" }}><i><b>With railway advertising media planner services from Brand
                         Banao.Ai, your brand rides where India rides-on railways.</b></i></h3> */}
-                </div>
+        </div>
 
-                <div className="hoarding-content faq-section">
+        <div className="hoarding-content faq-section">
           <h2>Digital Marketing FAQs</h2>
           <div className="faq-list">
             {FAQ_ITEMS.map((faq, index) => {

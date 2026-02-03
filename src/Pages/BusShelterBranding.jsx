@@ -32,36 +32,36 @@ const BusShelterBranding = () => {
   const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
- const FAQ_ITEMS = useMemo(
-  () => [
-    {
-      question: "Do you provide bus shelter advertising in Nashik, Maharashtra, and across India?",
-      answer:
-        "Yes. BrandBanao.ai plans and executes bus shelter advertising in Nashik, across Maharashtra, and in major cities across India through a strong OOH network. We help you choose the right routes and locations, then manage design, printing, installation, and campaign reporting so your brand gets consistent street-level visibility.",
-    },
-    {
-      question: "How much does bus shelter advertising cost in Nashik and Maharashtra?",
-      answer:
-        "Bus shelter advertising cost depends on the city, the exact location (footfall and traffic), format (non-lit, backlit, or digital), and campaign duration. We share transparent pricing with a clear split of media charges, production/printing, and installation so you can decide confidently without hidden surprises.",
-    },
-    {
-      question: "Which are the best bus shelter advertising locations in Nashik?",
-      answer:
-        "The best bus shelter locations in Nashik are typically near high-traffic junctions, markets, schools/colleges, hospitals, business districts, and commuter-heavy corridors. We shortlist shelters based on visibility, dwell time, and the kind of audience you want so you're not just seen, you're remembered.",
-    },
-    {
-      question: "What formats do you offer non-lit, backlit, or digital bus shelters?",
-      answer:
-        "We offer non-lit shelters for cost-effective reach, backlit shelters for strong night visibility, and digital shelters (where available) for high-impact creatives and changing messages. We recommend the format mix based on your goal brand awareness, local trust, store walk-ins, or a launch campaign.",
-    },
-    {
-      question: "Do you handle everything end-to-end creative, printing, installation, and reporting?",
-      answer:
-        "Yes. We provide complete execution: creative design that's readable in real-world conditions, outdoor-grade printing, professional installation, and proof-of-performance reporting (including photo documentation). You get one accountable team from planning to rollout.",
-    },
-  ],
-  []
-);
+  const FAQ_ITEMS = useMemo(
+    () => [
+      {
+        question: "Do you provide bus shelter advertising in Nashik, Maharashtra, and across India?",
+        answer:
+          "Yes. BrandBanao.ai plans and executes bus shelter advertising in Nashik, across Maharashtra, and in major cities across India through a strong OOH network. We help you choose the right routes and locations, then manage design, printing, installation, and campaign reporting so your brand gets consistent street-level visibility.",
+      },
+      {
+        question: "How much does bus shelter advertising cost in Nashik and Maharashtra?",
+        answer:
+          "Bus shelter advertising cost depends on the city, the exact location (footfall and traffic), format (non-lit, backlit, or digital), and campaign duration. We share transparent pricing with a clear split of media charges, production/printing, and installation so you can decide confidently without hidden surprises.",
+      },
+      {
+        question: "Which are the best bus shelter advertising locations in Nashik?",
+        answer:
+          "The best bus shelter locations in Nashik are typically near high-traffic junctions, markets, schools/colleges, hospitals, business districts, and commuter-heavy corridors. We shortlist shelters based on visibility, dwell time, and the kind of audience you want so you're not just seen, you're remembered.",
+      },
+      {
+        question: "What formats do you offer non-lit, backlit, or digital bus shelters?",
+        answer:
+          "We offer non-lit shelters for cost-effective reach, backlit shelters for strong night visibility, and digital shelters (where available) for high-impact creatives and changing messages. We recommend the format mix based on your goal brand awareness, local trust, store walk-ins, or a launch campaign.",
+      },
+      {
+        question: "Do you handle everything end-to-end creative, printing, installation, and reporting?",
+        answer:
+          "Yes. We provide complete execution: creative design that's readable in real-world conditions, outdoor-grade printing, professional installation, and proof-of-performance reporting (including photo documentation). You get one accountable team from planning to rollout.",
+      },
+    ],
+    []
+  );
 
 
   const keywordsContent = useMemo(
@@ -210,6 +210,11 @@ const BusShelterBranding = () => {
             alt="Bus Shelter branding example by Brand Banao.AI"
             className="hoarding-image"
             onClick={() => openGallery(0)}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1200"
+            height="675"
           />
         </div>
 
@@ -223,6 +228,8 @@ const BusShelterBranding = () => {
                 src={images[currentIndex]}
                 alt="Bus shelter advertising gallery - Brand Banao.AI"
                 className="gallery-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -491,12 +498,12 @@ const BusShelterBranding = () => {
             </li>
 
           </ol>
-          <p>When you compare the top 3 advertising agencies specialising in bus shelters 
-            within Maharashtra, it's fair to say that Brand Banao.AI is an excellent option 
-            because it offers an integrated solution through proprietary inventory, planning 
-            proficiency, creativity, and operational rigour. We have extensive on-the-ground 
-            activity with a performance-first outlook and are one of the leading top outdoor 
-            advertising agencies in Maharashtra to support brands looking for measurable 
+          <p>When you compare the top 3 advertising agencies specialising in bus shelters
+            within Maharashtra, it's fair to say that Brand Banao.AI is an excellent option
+            because it offers an integrated solution through proprietary inventory, planning
+            proficiency, creativity, and operational rigour. We have extensive on-the-ground
+            activity with a performance-first outlook and are one of the leading top outdoor
+            advertising agencies in Maharashtra to support brands looking for measurable
             impressions, trustworthy data, and superior placement strategies.</p>
         </div>
 

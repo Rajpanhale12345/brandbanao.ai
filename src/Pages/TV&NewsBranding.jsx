@@ -217,6 +217,11 @@ const TVNewsBranding = () => {
                         alt="TV News Channel Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
+                        width="1200"
+                        height="675"
                     />
                 </div>
 
@@ -230,6 +235,8 @@ const TVNewsBranding = () => {
                                 src={images[currentIndex]}
                                 alt="TV News Channel Branding Gallery"
                                 className="gallery-img"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>

@@ -69,35 +69,35 @@ const HoardingBranding = () => {
   }, [showGallery, closeGallery]);
 
   const FAQ_ITEMS = useMemo(
-  () => [
-    {
-      question: "Do you provide hoarding and billboard advertising in Nashik, Maharashtra, and across India?",
-      answer:
-        "Yes. Brand Banao.AI manages hoarding and billboard advertising campaigns in Nashik, across Maharashtra, and in major cities throughout India. We handle location planning, creative design, printing, installation, and maintenance to give your brand consistent outdoor visibility wherever your audience is.",
-    },
-    {
-      question: "How much does hoarding advertising cost in Nashik and Maharashtra?",
-      answer:
-        "Hoarding costs depend on location traffic, visibility, hoarding size, and campaign duration. Premium junctions and highways cost more than inner roads. We provide transparent pricing that includes media space, printing, installation, and maintenance so you clearly understand your total investment.",
-    },
-    {
-      question: "Which are the best locations for hoardings in Nashik?",
-      answer:
-        "The best hoarding locations in Nashik are high-traffic intersections, commercial roads, highways, and areas near malls, hospitals, education hubs, and real estate corridors. We select sites based on traffic flow, sightline visibility, and audience relevance to maximize brand recall.",
-    },
-    {
-      question: "Do you handle hoarding design, printing, and installation?",
-      answer:
-        "Yes. We offer complete end-to-end hoarding services from creative design and large-format printing to safe installation and ongoing maintenance checks. You work with one team from concept to campaign execution.",
-    },
-    {
-      question: "How effective is hoarding advertising compared to digital ads?",
-      answer:
-        "Hoardings build strong local trust and brand recall because people see your message repeatedly in the real world. Digital ads capture intent online. Brands that combine hoardings with digital marketing usually see better recognition, credibility, and overall campaign performance.",
-    },
-  ],
-  []
-);
+    () => [
+      {
+        question: "Do you provide hoarding and billboard advertising in Nashik, Maharashtra, and across India?",
+        answer:
+          "Yes. Brand Banao.AI manages hoarding and billboard advertising campaigns in Nashik, across Maharashtra, and in major cities throughout India. We handle location planning, creative design, printing, installation, and maintenance to give your brand consistent outdoor visibility wherever your audience is.",
+      },
+      {
+        question: "How much does hoarding advertising cost in Nashik and Maharashtra?",
+        answer:
+          "Hoarding costs depend on location traffic, visibility, hoarding size, and campaign duration. Premium junctions and highways cost more than inner roads. We provide transparent pricing that includes media space, printing, installation, and maintenance so you clearly understand your total investment.",
+      },
+      {
+        question: "Which are the best locations for hoardings in Nashik?",
+        answer:
+          "The best hoarding locations in Nashik are high-traffic intersections, commercial roads, highways, and areas near malls, hospitals, education hubs, and real estate corridors. We select sites based on traffic flow, sightline visibility, and audience relevance to maximize brand recall.",
+      },
+      {
+        question: "Do you handle hoarding design, printing, and installation?",
+        answer:
+          "Yes. We offer complete end-to-end hoarding services from creative design and large-format printing to safe installation and ongoing maintenance checks. You work with one team from concept to campaign execution.",
+      },
+      {
+        question: "How effective is hoarding advertising compared to digital ads?",
+        answer:
+          "Hoardings build strong local trust and brand recall because people see your message repeatedly in the real world. Digital ads capture intent online. Brands that combine hoardings with digital marketing usually see better recognition, credibility, and overall campaign performance.",
+      },
+    ],
+    []
+  );
 
   const structuredData = useMemo(() => {
     const orgId = `${SITE_URL}#organization`;
@@ -267,8 +267,12 @@ const HoardingBranding = () => {
             src={hoarding1}
             alt="Hoarding branding example in Nashik by BrandBanao.ai"
             className="hoarding-image"
-            loading="eager"
             onClick={() => openGallery(0)}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1200"
+            height="675"
           />
         </div>
 
@@ -295,6 +299,7 @@ const HoardingBranding = () => {
                 alt={`Hoarding advertising gallery image ${currentIndex + 1} of ${images.length}`}
                 className="gallery-img"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -398,8 +403,8 @@ const HoardingBranding = () => {
             <li>Healthcare</li>
             <li>Education</li>
           </ul>
-          <p>Our hoardings have sold homes, launched hospitals, promoted schools, 
-            and celebrated causes, making us a trusted top outdoor agency in 
+          <p>Our hoardings have sold homes, launched hospitals, promoted schools,
+            and celebrated causes, making us a trusted top outdoor agency in
             Maharashtra for brands that want real-world visibility with real impact.
           </p>
 

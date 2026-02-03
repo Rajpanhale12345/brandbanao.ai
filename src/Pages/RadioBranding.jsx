@@ -149,41 +149,41 @@ const RadioFMBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>  
+      <Helmet htmlAttributes={{ lang: "en-IN" }}>
         <title>{PAGE_TITLE}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta name="author" content={BRAND_NAME} />  
-        <meta name="publisher" content={BRAND_NAME} />  
-        <meta name="description" content={PAGE_DESC} />  
-        <meta name="keywords" content={keywordsContent} />  
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="publisher" content={BRAND_NAME} />
+        <meta name="description" content={PAGE_DESC} />
+        <meta name="keywords" content={keywordsContent} />
 
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-        <link rel="canonical" href={PAGE_URL} />  
+        <link rel="canonical" href={PAGE_URL} />
         <link rel="icon" href={LOGO} />
         <link rel="apple-touch-icon" href={LOGO} />
 
         {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content={BRAND_NAME} />  
-        <meta property="og:title" content={PAGE_TITLE} />  
-        <meta property="og:description" content={PAGE_DESC} />  
+        <meta property="og:site_name" content={BRAND_NAME} />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={PAGE_URL} />  
-        <meta property="og:image" content={OG_IMAGE} />  
-        <meta property="og:image:alt" content="Radio & FM Branding - BrandBanao.ai" />  
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={PAGE_TITLE} />  
-        <meta name="twitter:description" content={PAGE_DESC} />  
-        <meta name="twitter:image" content={OG_IMAGE} />  
-        <meta name="twitter:image:alt" content="Radio & FM Branding - BrandBanao.ai" />  
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
 
         {/* ✅ FIX: single JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -199,6 +199,11 @@ const RadioFMBranding = () => {
             alt="Radio & FM Branding example by Brand Banao.AI"
             className="hoarding-image"
             onClick={() => openGallery(0)}
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            width="1200"
+            height="675"
           />
         </div>
 
@@ -212,6 +217,8 @@ const RadioFMBranding = () => {
                 src={images[currentIndex]}
                 alt="Radio & FM Branding gallery - Brand Banao.AI"
                 className="gallery-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

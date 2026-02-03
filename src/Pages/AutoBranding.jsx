@@ -210,7 +210,12 @@ const AutoBranding = () => { // ✅ FIX: cleaner component name (avoid “Autooo
             src={Autobranding}
             alt="Auto Branding"
             className="hoarding-image"
-            onClick={() => openGallery(0)}
+                onClick={() => openGallery(0)}
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+                width="1200"
+                height="675"
           />
         </div>
 
@@ -221,6 +226,8 @@ const AutoBranding = () => { // ✅ FIX: cleaner component name (avoid “Autooo
                 src={images[currentIndex]}
                 alt="Auto Branding Gallery"
                 className="gallery-img"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

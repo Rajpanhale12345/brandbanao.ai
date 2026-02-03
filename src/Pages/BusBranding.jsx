@@ -213,6 +213,11 @@ const BussBranding = () => { // ✅ FIX: component name corrected (no double “
                         alt="TV News Channel Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
+                        loading="eager"
+                        decoding="async"
+                        fetchpriority="high"
+                        width="1200"
+                        height="675"
                     />
                 </div>
 
@@ -226,6 +231,8 @@ const BussBranding = () => { // ✅ FIX: component name corrected (no double “
                                 src={images[currentIndex]}
                                 alt="Airport Branding"
                                 className="gallery-img"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </div>
@@ -317,38 +324,38 @@ const BussBranding = () => { // ✅ FIX: component name corrected (no double “
                     <h3 style={{ textAlign: "center" }}><i><b>Your brand doesn't wait at signals. It moves. And it leads.</b></i></h3>
                 </div>
 
-               <div className="hoarding-content faq-section">
-          <h2>Bus Branding FAQs</h2>
-          <div className="faq-list">
-            {FAQ_ITEMS.map((faq, index) => {
-              const isActive = activeFaqIndex === index;
-              return (
-                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
-                  <button
-                    type="button"
-                    className="faq-question"
-                    onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} // ✅ FIX
-                  >
-                    <span className="faq-question-text">{faq.question}</span>
-                    <span className="faq-icon">{isActive ? "−" : "+"}</span>
-                  </button>
+                <div className="hoarding-content faq-section">
+                    <h2>Bus Branding FAQs</h2>
+                    <div className="faq-list">
+                        {FAQ_ITEMS.map((faq, index) => {
+                            const isActive = activeFaqIndex === index;
+                            return (
+                                <div className={`faq-item ${isActive ? "active" : ""}`} key={index}>
+                                    <button
+                                        type="button"
+                                        className="faq-question"
+                                        onClick={() => setActiveFaqIndex(isActive ? null : index)}
+                                        aria-expanded={isActive} // ✅ FIX
+                                    >
+                                        <span className="faq-question-text">{faq.question}</span>
+                                        <span className="faq-icon">{isActive ? "−" : "+"}</span>
+                                    </button>
 
-                  <div className={`faq-answer ${isActive ? "open" : ""}`}>
-                    <div className="faq-answer-inner">
-                      <p>{faq.answer}</p>
+                                    <div className={`faq-answer ${isActive ? "open" : ""}`}>
+                                        <div className="faq-answer-inner">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
-        </div>
 
-        <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
-      </div>
-    </>
-  );
+                <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
+            </div>
+        </>
+    );
 };
 
 export default BussBranding;
