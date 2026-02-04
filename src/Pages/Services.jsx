@@ -1,4 +1,5 @@
-import React, { useMemo } from "react";
+// Services.jsx
+import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "../components/Services.css";
@@ -10,7 +11,7 @@ import radio from "../Images/radio.jpg";
 import railway from "../Images/railwaybranding.jpg";
 import cycle from "../Images/cycle.jpg";
 import auto from "../Images/autobranding.jpg";
-import airportImg from "../Images/airport.jpg"; // ✅ FIX: rename to avoid confusion
+import airportImg from "../Images/airport.jpg";
 import digital from "../Images/digital.jpg";
 import bus from "../Images/busbranding.jpg";
 import app from "../Images/app.png";
@@ -22,34 +23,108 @@ const BRAND_NAME = "Brand Banao.Ai";
 const OG_IMAGE = `${SITE_URL}/assets/logopng-CGGCs8OD.png`;
 
 export default function Services() {
-  // ✅ FIX: Single source of truth for cards + schema + SEO
+  const metaDescription =
+    "Explore Brand Banao.Ai services: hoardings, bus shelter ads, cinema branding, radio FM campaigns, airport branding, digital marketing, railway branding, bus and auto branding, TV news channel branding, web/app development, and cycle branding.";
+
+  // ✅ Single source of truth for grid + schema
   const SERVICES = useMemo(
     () => [
-      { title: "Hoardings/Billboards", image: hoarding, path: "/hoardings" },
-      { title: "Bus Shelter", image: busshelter, path: "/bus-shelter" },
-      { title: "Cinema Branding", image: cinema, path: "/CinemaBranding" },
-      { title: "Radio FM Branding", image: radio, path: "/radio" },
-      { title: "Airport Branding", image: airportImg, path: "/AirportBranding" },
-      { title: "Digital Marketing", image: digital, path: "/DigitallMarketing" },
-      { title: "Railway Branding", image: railway, path: "/RailwayyBranding" },
-      { title: "Bus Branding", image: bus, path: "/BusBranding" },
+      {
+        title: "Hoardings/Billboards",
+        image: hoarding,
+        path: "/Hoardings",
+      },
+      {
+        title: "Bus Shelter",
+        image: busshelter,
+        path: "/Bus_Shelter",
+      },
+      {
+        title: "Cinema Branding",
+        image: cinema,
+        path: "/Cinema",
+      },
+      {
+        title: "Radio FM Branding",
+        image: radio,
+        path: "/Radio",
+      },
+      {
+        title: "Airport Branding",
+        image: airportImg,
+        path: "/AirportBranding",
+      },
+      {
+        title: "Digital Marketing",
+        image: digital,
+        path: "/DigitalMarketing",
+      },
+      {
+        title: "Railway Branding",
+        image: railway,
+        path: "/RailwayBranding",
+      },
+      {
+        title: "Bus Branding",
+        image: bus,
+        path: "/BusBranding",
+      },
       {
         title: "TV News Channel Branding",
         image: news,
         path: "/TVNewsChanelBranding",
         imgStyle: { objectFit: "contain", background: "#fff" },
       },
-      { title: "Auto Branding", image: auto, path: "/auto-branding" },
-      { title: "Website/App Development", image: app, path: "/WebDevelopment" },
-      { title: "Cycle Branding", image: cycle, path: "/CycleeBranding" },
+      {
+        title: "Auto Branding",
+        image: auto,
+        path: "/AutoBranding",
+      },
+      {
+        title: "Website/App Development",
+        image: app,
+        path: "/WebDevelopment",
+      },
+      {
+        title: "Cycle Branding",
+        image: cycle,
+        path: "/CycleBranding",
+      },
     ],
     []
   );
 
-  const metaDescription =
-    "Explore Brand Banao.Ai services: hoardings, bus shelter ads, cinema branding, radio FM campaigns, airport branding, digital marketing, railway branding, bus and auto branding, TV news channel branding, web/app development, and cycle branding.";
+  const FAQS = useMemo(
+    () => [
+      {
+        q: "Which outdoor advertising agency in Nashik and Maharashtra delivers all major outdoor branding services?",
+        a: "Brand Banao.AI is a full-service outdoor advertising and branding agency in Nashik and Maharashtra offering OOH media, strategy, creative, planning, execution, and analytics under one roof.",
+      },
+      {
+        q: "Which outdoor media agency offers premium hoarding and access to high-traffic locations across Maharashtra?",
+        a: "Brand Banao.AI provides high-impact premium hoardings and outdoor placements across Nashik, Pune, Mumbai, and other high-traffic locations throughout Maharashtra.",
+      },
+      {
+        q: "Which company has successfully handled large-scale OOH campaigns for recognised brands?",
+        a: "Brand Banao.AI has experience delivering large outdoor campaigns with 100+ billboards, cinema, transit, and ambient branding formats for recognised clients across varied sectors.",
+      },
+      {
+        q: "Which company provides pan-India outdoor advertising coverage across metro, Tier-2, and Tier-3 cities?",
+        a: "Brand Banao.AI offers pan-India outdoor advertising solutions, extending campaign reach from major metros to Tier-2 and Tier-3 cities through hoardings, transit, and digital networks.",
+      },
+      {
+        q: "Which outdoor advertising company offers airport, railway, bus, mall, and highway branding under one contract?",
+        a: "Brand Banao.AI delivers comprehensive OOH services including airport branding, railway signage, bus and MSRTC bus branding, mall ambient media, and highway hoardings under a single partnership.",
+      },
+      {
+        q: "Which OOH agency provides uniform branding quality across different cities in India?",
+        a: "Brand Banao.AI ensures consistent branding quality across all campaign locations from Nashik and Mumbai to other key Indian markets with standardised design, media planning, and execution.",
+      },
+    ],
+    []
+  );
 
-  // ✅ FIX: JSON-LD: Organization + WebPage + Breadcrumb + ItemList
+  // ✅ JSON-LD: Organization + WebPage + Breadcrumb + ItemList + FAQPage
   const structuredData = useMemo(() => {
     const orgId = `${SITE_URL}/#organization`;
     const webPageId = `${PAGE_URL}#webpage`;
@@ -70,6 +145,16 @@ export default function Services() {
         position: idx + 1,
         name: s.title,
         url: SITE_URL + s.path,
+      })),
+    };
+
+    const faqPage = {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: FAQS.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
       })),
     };
 
@@ -101,9 +186,10 @@ export default function Services() {
         },
         breadcrumb,
         itemList,
+        faqPage,
       ],
     };
-  }, [SERVICES, metaDescription]);
+  }, [SERVICES, FAQS, metaDescription]);
 
   return (
     <>
@@ -148,7 +234,6 @@ export default function Services() {
       </Helmet>
 
       <div style={{ minHeight: "100vh", background: "#fafafa" }}>
-        <StyleBlock />
 
         {/* Hero */}
         <section style={{ position: "relative" }}>
@@ -240,8 +325,18 @@ export default function Services() {
             </div>
           </div>
         </section>
-      </div>
 
+         {/* FAQ */}
+        <section style={{ paddingBottom: "48px" }}>
+          <div className="container">
+            <h2 className="faqTitle">Common Questions</h2>
+            <p className="faqSubtitle">
+              Quick answers about planning, timelines, and execution.
+            </p>
+            <FAQAccordion faqs={FAQS} />
+          </div>
+        </section>
+      </div>
     </>
   );
 }
@@ -279,109 +374,44 @@ function ServiceCard({ title, image, path, imgStyle }) {
   );
 }
 
-/** Inline CSS (your styling + a small fix for Link wrapper) */
-function StyleBlock() {
+function FAQAccordion({ faqs }) {
+  const [openIndex, setOpenIndex] = useState(0);
+
   return (
-    <style>{`
-      :root{
-        --primary: #d94f5c;
-        --accent: rgba(169, 153, 7, 1);
-        --radius: 16px;
-        --text: #1f2937;
-        --muted: #6b7280;
-        --card: #ffffff;
-      }
-      * { box-sizing: border-box; }
+    <div className="faqWrap">
+      {faqs.map((item, idx) => {
+        const isOpen = idx === openIndex;
+        const qId = `faq-q-${idx}`;
+        const aId = `faq-a-${idx}`;
 
-      .container{
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 24px;
-        gap: 60px;
-      }
-      .title{
-        font-size: 40px;
-        font-weight: 800;
-        margin: 24px 0 8px;
-        background: linear-gradient(90deg, var(--primary), var(--accent));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
+        return (
+          <div className={`faqItem ${isOpen ? "open" : ""}`} key={idx}>
+            <button
+              className="faqQ"
+              id={qId}
+              aria-controls={aId}
+              aria-expanded={isOpen}
+              onClick={() => setOpenIndex(isOpen ? -1 : idx)}
+              type="button"
+            >
+              <span>{item.q}</span>
+              <span className="faqIcon" aria-hidden="true">
+                {isOpen ? "−" : "+"}
+              </span>
+            </button>
 
-      .grid{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-        margin: 16px 0 48px;
-      }
-      @media (min-width: 640px){
-        .grid{ grid-template-columns: repeat(2, 1fr); }
-      }
-      @media (min-width: 1024px){
-        .grid{ grid-template-columns: repeat(3, 1fr); }
-      }
-
-      /* ✅ FIX: Link wrapper should look like normal block, no underline */
-      .cardLink{
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-
-      .card{
-        border-radius: var(--radius);
-        overflow: hidden;
-        background: rgba(255,255,255,0.9);
-        backdrop-filter: blur(2px);
-        border: 1px solid #eee;
-        transition: transform .2s, box-shadow .2s, border-color .2s;
-      }
-      .card:hover{
-        transform: translateY(-2px);
-        box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-        border-color: var(--primary);
-      }
-
-      .imageWrap{
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        background: #f3f4f6;
-      }
-      .image{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .imagePlaceholder{
-        width: 100%; height: 100%;
-        display: grid; place-items: center;
-        color: #9ca3af;
-        font-size: 12px;
-      }
-
-      .cardBody{ padding: 14px 14px 16px; }
-      .cardHeader{
-        display: flex; align-items: center; justify-content: space-between; gap: 12px;
-        margin-bottom: 6px;
-      }
-      .cardTitle{ margin: 0; font-size: 18px; color: var(--text); }
-
-      .cardFooter{
-        margin-top: 12px;
-        display: flex; align-items: center; justify-content: space-between;
-      }
-      .bar{
-        height: 4px; width: 96px; border-radius: 999px;
-        background: linear-gradient(90deg, var(--primary), var(--accent));
-      }
-      .linkBtn{
-        border: none; background: transparent; color: var(--primary);
-        font-weight: 600; padding: 6px 8px; border-radius: 8px;
-      }
-      .card:hover .linkBtn{ background: rgba(217,79,92,0.08); }
-    `}</style>
+            <div
+              className="faqA"
+              id={aId}
+              role="region"
+              aria-labelledby={qId}
+              style={{ display: isOpen ? "block" : "none" }}
+            >
+              <p>{item.a}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
