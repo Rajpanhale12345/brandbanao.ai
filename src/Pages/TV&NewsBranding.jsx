@@ -15,12 +15,11 @@ const TVNewsBranding = () => {
         setShowGallery(true);
     };
 
-    // ✅ Single source of truth for page identity
     const PAGE_TITLE = "Best TV News Branding in Nashik | Brand Banao.Ai";
     const PAGE_DESC =
         "TV News Channel Branding by Brand Banao.Ai. End-to-end on-air branding, motion graphics, channel identity, lower-thirds, tickers, show packaging, and visual systems for regional and national news networks.";
     const PAGE_URL = "https://brandbanao.ai/TVNewsChanelBranding";
-    const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+    const OG_IMAGE = "https://brandbanao.ai/assets/news-3vk9foU8.png";
 
     const webPageSchema = {
         "@context": "https://schema.org",
@@ -42,7 +41,6 @@ const TVNewsBranding = () => {
         },
     };
 
-    // ✅ Recommended (you used this pattern in other pages)
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -170,10 +168,7 @@ const TVNewsBranding = () => {
                 <meta name="publisher" content="Brand Banao.Ai" />
                 <meta name="creator" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
-                <meta
-                    name="keywords"
-                    content="tv news channel branding, news channel branding, on-air branding, broadcast design, tv channel identity, news channel rebranding, motion graphics for news, lower thirds design, ticker design, breaking news graphics, tv news graphics package, tv channel logo design, brand banao ai"
-                />
+                <meta name="keywords" content="tv news channel branding, news channel branding, on-air branding, broadcast design, tv channel identity, news channel rebranding, motion graphics for news, lower thirds design, ticker design, breaking news graphics, tv news graphics package, tv channel logo design, brand banao ai" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="theme-color" content="#0d1117" />
@@ -183,7 +178,6 @@ const TVNewsBranding = () => {
 
                 <link rel="canonical" href={PAGE_URL} />
 
-                {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content="TV News Channel Branding Services" />
@@ -196,20 +190,17 @@ const TVNewsBranding = () => {
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="TV News Channel Branding - Brand Banao.Ai" />
 
-                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="TV News Channel Branding Services" />
                 <meta name="twitter:description" content={PAGE_DESC} />
                 <meta name="twitter:image" content={OG_IMAGE} />
                 <meta name="twitter:image:alt" content="TV News Channel Branding - Brand Banao.Ai" />
 
-                {/* Structured Data */}
                 <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
             </Helmet>
 
-            {/* Using the same structure / classes as Hoarding.jsx for styling */}
             <div className="hoarding-page">
                 <h1 className="hoarding-title">TV News Channels Branding</h1>
 

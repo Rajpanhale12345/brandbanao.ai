@@ -20,7 +20,7 @@ import news from "../Images/news.png";
 const SITE_URL = "https://brandbanao.ai";
 const PAGE_URL = `${SITE_URL}/services`;
 const BRAND_NAME = "Brand Banao.Ai";
-const OG_IMAGE = `${SITE_URL}/assets/logopng-CGGCs8OD.png`;
+const OG_IMAGE = `https://brandbanao.ai/assets/logopng-CGGCs8OD.png`;
 
 export default function Services() {
   const metaDescription =

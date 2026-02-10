@@ -10,7 +10,6 @@ const WebDevelopmentt = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    // If you want the lightbox gallery to include all images, add them here:
     const images = [appImg, webDevImg, seoDevImg];
 
     const openGallery = (index) => {
@@ -18,7 +17,6 @@ const WebDevelopmentt = () => {
         setShowGallery(true);
     };
 
-    // ✅ Page identity
     const PAGE_TITLE = "Website & App Development | Brand Banao.Ai";
     const PAGE_DESC =
         "Custom website and mobile app development by Brand Banao.AI — responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
@@ -193,7 +191,6 @@ const WebDevelopmentt = () => {
 
                 <link rel="canonical" href={PAGE_URL} />
 
-                {/* Open Graph */}
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content={PAGE_TITLE} />
@@ -206,13 +203,11 @@ const WebDevelopmentt = () => {
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="Website & App Development - Brand Banao.Ai" />
 
-                {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={PAGE_TITLE} />
                 <meta name="twitter:description" content={PAGE_DESC} />
                 <meta name="twitter:image" content={OG_IMAGE} />
 
-                {/* Structured Data */}
                 <script type="application/ld+json">{JSON.stringify(webPageSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
                 <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import cinemaImg from "../Images/cinemabranding.webp"; // ✅ FIX: clearer variable name
+import cinemaImg from "../Images/cinemabranding.webp"; 
 import "./tvNews.css";
 
 const CinemaBranding = () => {
@@ -8,16 +8,16 @@ const CinemaBranding = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [cinemaImg], []); // ✅ FIX: memoize
+  const images = useMemo(() => [cinemaImg], []); 
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
+  const closeGallery = useCallback(() => setShowGallery(false), []);  
 
-  // ✅ FIX: ESC closes gallery
+ 
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -28,9 +28,9 @@ const CinemaBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/cinema-branding"; // ✅ FIX: lowercase canonical (recommended)
-  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const PAGE_URL = "https://brandbanao.ai/Cinema";
+  const BRAND_NAME = "BrandBanao.ai";
+  const OG_IMAGE = "https://brandbanao.ai/assets/cinemabranding-BROdYWzQ.webp";
 
   const FAQ_ITEMS = useMemo(
     () => [
@@ -88,7 +88,6 @@ const CinemaBranding = () => {
   );
 
 
-  // ✅ FIX: Single JSON-LD @graph (WebSite + Org + WebPage + Service + FAQ + Breadcrumbs)
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";
     const pageId = `${PAGE_URL}#webpage`;
@@ -168,31 +167,31 @@ const CinemaBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+      <Helmet htmlAttributes={{ lang: "en-IN" }}>  
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* ✅ FIX: Title less spammy; still includes location intent */}
-        <title>Cinema Branding in Nashik | Cinema Advertising | BrandBanao.ai</title>
+    
+        <title>Cinema Branding in Nashik | BrandBanao.ai</title>
 
         <meta name="author" content={BRAND_NAME} />
         <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
 
-        {/* ✅ FIX: optional + short */}
+     
         <meta name="keywords" content={keywordsContent} />
 
         <link rel="icon" href={OG_IMAGE} />
         <link rel="apple-touch-icon" href={OG_IMAGE} />
-        <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX: canonical matches PAGE_URL */}
+        <link rel="canonical" href={PAGE_URL} /> 
 
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content="Cinema Branding & Advertising | BrandBanao.ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={PAGE_URL} /> {/* ✅ FIX */}
+        <meta property="og:url" content={PAGE_URL} />  
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Cinema Branding" />
 
@@ -202,12 +201,9 @@ const CinemaBranding = () => {
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="BrandBanao.ai - Cinema Branding" />
 
-        {/* ✅ FIX: One JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-
-      {/* Same structure/classes as your other service pages */}
       <div className="hoarding-page">
         <h1 className="hoarding-title">Cinema Branding</h1>
 
@@ -363,7 +359,7 @@ const CinemaBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} // ✅ FIX
+                    aria-expanded={isActive}  
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

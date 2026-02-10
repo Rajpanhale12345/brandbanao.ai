@@ -1,6 +1,6 @@
-import React, { useMemo, useState, useCallback, useEffect } from "react"; // ✅ FIX: added hooks for memo/callback/esc
+import React, { useMemo, useState, useCallback, useEffect } from "react"; 
 import { Helmet } from "react-helmet";
-import railwayImg from "../Images/railwaybranding.jpg"; // ✅ FIX: rename for clarity
+import railwayImg from "../Images/railwaybranding.jpg"; 
 import "./tvNews.css";
 
 const RailwayyBranding = () => {
@@ -8,26 +8,24 @@ const RailwayyBranding = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  // ✅ FIX: One consistent route URL everywhere (Helmet + schema + canonical)
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/RailwayyBranding"; // ✅ FIX: match your actual route
+  const PAGE_URL = "https://brandbanao.ai/RailwayBranding"; 
   const BRAND_NAME = "Brand Banao.Ai";
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const OG_IMAGE = "https://brandbanao.ai/assets/railwaybranding-B3y0GcSB.jpg";
 
   const PAGE_TITLE = "Best Railway Branding Agency in Nashik | Brand Banao.Ai";
   const PAGE_DESC =
     "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
 
-  const images = useMemo(() => [railwayImg], []); // ✅ FIX: memoize images array
+  const images = useMemo(() => [railwayImg], []); 
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX: helper
+  const closeGallery = useCallback(() => setShowGallery(false), []); 
 
-  // ✅ FIX: ESC closes gallery
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -156,7 +154,6 @@ const RailwayyBranding = () => {
 
         <link rel="canonical" href={PAGE_URL} />
 
-        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -166,14 +163,12 @@ const RailwayyBranding = () => {
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Railway Branding - Brand Banao.Ai" />
 
-        {/* ✅ FIX: single JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

@@ -1,23 +1,22 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import cycleImg from "../Images/cycle.jpg"; // ✅ FIX: correct variable name
+import cycleImg from "../Images/cycle.jpg";
 import "./tvNews.css";
 
-const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
+const CycleBranding = () => { 
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = useMemo(() => [cycleImg], []); // ✅ FIX: memoize
+    const images = useMemo(() => [cycleImg], []); 
 
     const openGallery = useCallback((index) => {
         setCurrentIndex(index);
         setShowGallery(true);
     }, []);
 
-    const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
+    const closeGallery = useCallback(() => setShowGallery(false), []);
 
-    // ✅ FIX: ESC closes gallery
     useEffect(() => {
         if (!showGallery) return;
         const onKeyDown = (e) => {
@@ -28,8 +27,8 @@ const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
     }, [showGallery, closeGallery]);
 
     const SITE_URL = "https://brandbanao.ai/";
-    const PAGE_URL = "https://brandbanao.ai/cycle-branding"; // ✅ FIX: recommended lowercase canonical
-    const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
+    const PAGE_URL = "https://brandbanao.ai/CycleBranding"; 
+    const BRAND_NAME = "BrandBanao.ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
     const FAQ_ITEMS = useMemo(
@@ -87,7 +86,6 @@ const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
         []
     );
 
-    // ✅ FIX: Single JSON-LD graph (WebPage + Service + FAQ + Breadcrumbs)
     const structuredData = useMemo(() => {
         const orgId = "https://brandbanao.ai/#organization";
         const pageId = `${PAGE_URL}#webpage`;
@@ -128,8 +126,8 @@ const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
                 {
                     "@type": "Service",
                     "@id": serviceId,
-                    name: "Cycle Branding & Branded Cycle Advertising", // ✅ FIX: correct service name
-                    serviceType: ["Mobile Outdoor Advertising", "OOH Advertising", "Hyperlocal Advertising"], // ✅ FIX
+                    name: "Cycle Branding & Branded Cycle Advertising",
+                    serviceType: ["Mobile Outdoor Advertising", "OOH Advertising", "Hyperlocal Advertising"],
                     provider: { "@id": orgId },
                     areaServed: [
                         { "@type": "Country", name: "India" },
@@ -167,8 +165,8 @@ const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
 
     return (
         <>
-            <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
-                <title>Cycle Branding in Nashik | Branded Cycle Advertising | BrandBanao.ai</title> {/* ✅ FIX */}
+            <Helmet htmlAttributes={{ lang: "en-IN" }}>  
+                <title>Cycle Branding in Nashik | Branded Cycle Advertising | BrandBanao.ai</title>  
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content={BRAND_NAME} />
@@ -182,24 +180,24 @@ const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
                 <link rel="icon" href={OG_IMAGE} />
                 <link rel="apple-touch-icon" href={OG_IMAGE} />
 
-                <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX */}
+                <link rel="canonical" href={PAGE_URL} />  
 
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
                 <meta property="og:title" content="Cycle Branding Services | BrandBanao.ai" />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={PAGE_URL} /> {/* ✅ FIX */}
+                <meta property="og:url" content={PAGE_URL} />  
                 <meta property="og:image" content={OG_IMAGE} />
-                <meta property="og:image:alt" content="BrandBanao.ai - Cycle Branding" /> {/* ✅ FIX */}
+                <meta property="og:image:alt" content="BrandBanao.ai - Cycle Branding" />  
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Cycle Branding | BrandBanao.ai" />
                 <meta name="twitter:description" content={metaDescription} />
                 <meta name="twitter:image" content={OG_IMAGE} />
-                <meta name="twitter:image:alt" content="BrandBanao.ai - Cycle Branding" /> {/* ✅ FIX */}
+                <meta name="twitter:image:alt" content="BrandBanao.ai - Cycle Branding" />  
 
-                <script type="application/ld+json">{JSON.stringify(structuredData)}</script> {/* ✅ FIX: one JSON-LD */}
+                <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
             <div className="hoarding-page">

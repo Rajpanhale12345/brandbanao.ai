@@ -26,9 +26,9 @@ const BussBranding = () => {
     }, [showGallery, closeGallery]);
 
     const SITE_URL = "https://brandbanao.ai/";
-    const PAGE_URL = "https://brandbanao.ai/bus-branding"; // ✅ FIX: SEO-friendly lowercase canonical
+    const PAGE_URL = "https://brandbanao.ai/BusBranding";
     const BRAND_NAME = "BrandBanao.ai";
-    const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+    const OG_IMAGE = "https://brandbanao.ai/assets/busbranding-DTaNUJ2h.jpg";
 
     const FAQ_ITEMS = useMemo(
         () => [
@@ -163,7 +163,7 @@ const BussBranding = () => {
         <>
             <Helmet>
                 {/* ✅ FIX: Title typo + better intent */}
-                <title>Best Bus Branding in Nashik | Bus Advertising | BrandBanao.ai</title>
+                <title>Best Bus Branding in Nashik | BrandBanao.ai</title>
 
                 <meta
                     name="description"

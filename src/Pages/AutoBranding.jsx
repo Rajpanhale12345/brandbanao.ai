@@ -42,7 +42,7 @@ const AutoBranding = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [AutoBranding], []);
+  const images = useMemo(() => [Autobranding], []);
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
@@ -61,9 +61,9 @@ const AutoBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/auto-branding"; // ✅ FIX: keep lowercase canonical (best practice)
+  const PAGE_URL = "https://brandbanao.ai/AutoBranding";
   const BRAND_NAME = "BrandBanao.ai";
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const OG_IMAGE = "https://brandbanao.ai/assets/autobranding-Bpnv9LSm.jpg";
 
   const keywordsContent = useMemo(
     () =>

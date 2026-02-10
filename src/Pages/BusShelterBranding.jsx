@@ -28,9 +28,9 @@ const BusShelterBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/bus-shelter";
+  const PAGE_URL = "https://brandbanao.ai/Bus_Shelter";
   const BRAND_NAME = "BrandBanao.ai";
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const OG_IMAGE = "https://brandbanao.ai/assets/busshelter-Bqx2SSuA.jpg";
 
   const FAQ_ITEMS = useMemo(
     () => [
@@ -162,10 +162,9 @@ const BusShelterBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX: en-IN */}
+      <Helmet htmlAttributes={{ lang: "en-IN" }}>
         <meta charSet="utf-8" />
-
-        {/* ✅ FIX: Title is clearer + not spammy */}
+        
         <title>Bus Shelter Advertising in Nashik | BrandBanao.ai</title>
 
         <meta name="author" content={BRAND_NAME} />

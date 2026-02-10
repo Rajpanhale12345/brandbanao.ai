@@ -15,15 +15,13 @@ const HoardingBranding = () => {
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/Hoardings";
   const BRAND_NAME = "BrandBanao.ai";
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const OG_IMAGE = "https://brandbanao.ai/assets/hoarding-DQjSSeNb.jpg";
 
   const PAGE_TITLE =
     "Hoardings in Nashik | BrandBanao.ai";
   const PAGE_DESC =
     "Book hoardings and billboards in Nashik with BrandBanao.ai. Location planning, creative design, printing, installation, maintenance and campaign reporting.";
 
-  // ✅ Make BUSINESS stable so Hooks deps don't warn
-  // Fill with REAL values (or keep placeholders and schema won't output LocalBusiness)
   const BUSINESS = useMemo(
     () => ({
       name: BRAND_NAME,
@@ -241,7 +239,6 @@ const HoardingBranding = () => {
     };
   }, [FAQ_ITEMS, SITE_URL, PAGE_URL, BRAND_NAME, PAGE_DESC, OG_IMAGE, BUSINESS]);
 
-  // ✅ Lock scroll while gallery open
   useEffect(() => {
     if (!showGallery) return;
     const prevOverflow = document.body.style.overflow;

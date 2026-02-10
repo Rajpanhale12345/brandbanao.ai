@@ -16,12 +16,10 @@ const AirportBranding = () => {
         setShowGallery(true);
     }, []);
 
-    // ✅ FIX: Add a close function (reused in click + ESC)
     const closeGallery = useCallback(() => {
         setShowGallery(false);
     }, []);
 
-    // ✅ FIX: ESC to close gallery (better UX)
     useEffect(() => {
         if (!showGallery) return;
         const onKeyDown = (e) => {
@@ -194,7 +192,6 @@ const AirportBranding = () => {
     return (
         <>
             <Helmet>
-                {/* ✅ FIX: More specific title (intent + location) */}
                 <title>Airport Branding & Advertising in Maharashtra | BrandBanao.ai</title>
 
                 <meta name="author" content="BrandBanao.ai" />
@@ -219,7 +216,7 @@ const AirportBranding = () => {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta property="og:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
                 <meta property="og:image:alt" content="BrandBanao.ai - Airport Branding Services" />
 
                 <meta name="twitter:card" content="summary_large_image" />
@@ -228,7 +225,7 @@ const AirportBranding = () => {
                     name="twitter:description"
                     content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by BrandBanao.ai."
                 />
-                <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+                <meta name="twitter:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
 
                 {/* ✅ FIX: One JSON-LD block (connected graph) */}
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

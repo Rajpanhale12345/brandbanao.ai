@@ -1,21 +1,20 @@
-import React, { useMemo, useState, useCallback, useEffect } from "react"; // ✅ FIX
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import radioimg from "../Images/radio.jpg";
 import { Helmet } from "react-helmet";
-import "./busShelter.css"; // ✅ FIX: ensure styles are applied (you use hoarding-page classes)
+import "./busShelter.css"; 
 
 const RadioFMBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [radioimg], []); // ✅ FIX: memoize
+  const images = useMemo(() => [radioimg], []); 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
-  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
+  const closeGallery = useCallback(() => setShowGallery(false), []); 
 
-  // ✅ FIX: ESC closes gallery
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -26,14 +25,14 @@ const RadioFMBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/radio";
-  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
-  const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg"; // ✅ FIX: consistent OG/Twitter
+  const PAGE_URL = "https://brandbanao.ai/Radio";
+  const BRAND_NAME = "BrandBanao.ai"; 
+  const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg"; 
   const LOGO = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-  const PAGE_TITLE = "Radio & FM Advertising in Nashik | Scripts, RJ Mentions | BrandBanao.ai"; // ✅ FIX: cleaner title
+  const PAGE_TITLE = "Radio & FM Advertising in Nashik | Scripts, RJ Mentions | BrandBanao.ai"; 
   const PAGE_DESC =
-    "BrandBanao.ai creates conversational Radio & FM ads that boost recall and response. We write radio ad scripts, plan formats (10–30 sec), coordinate voice/sound, and align radio campaigns with digital.";
+    "BrandBanao.ai creates conversational Radio & FM ads that boost recall and response. We write radio ad scripts, plan formats (10-30 sec), coordinate voice/sound, and align radio campaigns with digital.";
 
   const FAQ_ITEMS = useMemo(
     () => [
@@ -41,7 +40,7 @@ const RadioFMBranding = () => {
         question:
           "Which is the best radio advertising agency in Nashik and Maharashtra for FM campaigns?",
         answer:
-          "BrandBanao.ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10–30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
+          "BrandBanao.ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10-30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
       },
       {
         question:
@@ -72,7 +71,6 @@ const RadioFMBranding = () => {
   );
 
 
-
   const keywordsContent = useMemo(
     () =>
       [
@@ -91,8 +89,6 @@ const RadioFMBranding = () => {
     []
   );
 
-
-  // ✅ FIX: Single JSON-LD @graph (AI-search friendly)
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";
     const pageId = `${PAGE_URL}#webpage`;
@@ -142,7 +138,7 @@ const RadioFMBranding = () => {
           ],
           url: PAGE_URL,
           description:
-            "Radio and FM advertising including scriptwriting, format planning (10–30 sec), RJ mentions (where applicable), voice/sound coordination, scheduling support, and radio + digital message alignment.",
+            "Radio and FM advertising including scriptwriting, format planning (10-30 sec), RJ mentions (where applicable), voice/sound coordination, scheduling support, and radio + digital message alignment.",
         },
         {
           "@type": "FAQPage",
@@ -178,7 +174,6 @@ const RadioFMBranding = () => {
         <link rel="icon" href={LOGO} />
         <link rel="apple-touch-icon" href={LOGO} />
 
-        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -188,18 +183,15 @@ const RadioFMBranding = () => {
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
 
-        {/* ✅ FIX: single JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      {/* Using the same structure / classes as Hoarding.jsx for styling */}
       <div className="hoarding-page">
         <h1 className="hoarding-title">Radio &amp; FM Branding</h1>
 

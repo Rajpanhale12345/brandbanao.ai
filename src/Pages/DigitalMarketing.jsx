@@ -1,23 +1,22 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import digitalImg from "../Images/digital.jpg"; // ✅ FIX: proper variable name
+import digitalImg from "../Images/digital.jpg"; 
 import "./tvNews.css";
 
-const DigitalMarketing = () => { // ✅ FIX: correct component name
+const DigitalMarketing = () => { 
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [digitalImg], []); // ✅ FIX: memoize
+  const images = useMemo(() => [digitalImg], []);
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
+  const closeGallery = useCallback(() => setShowGallery(false), []);
 
-  // ✅ FIX: ESC closes gallery
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -28,8 +27,8 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/DigitalMarketing"; // ✅ FIX: lowercase canonical recommended
-  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
+  const PAGE_URL = "https://brandbanao.ai/WebDevelopment";
+  const OG_IMAGE = "https://brandbanao.ai/assets/app-BPEwsj2h.png";
   const BRAND_NAME = "Brand Banao.AI";
 
   const PAGE_TITLE = "Digital Marketing in Nashik | BrandBanao.ai";
@@ -92,7 +91,6 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
   );
 
 
-  // ✅ FIX: Single JSON-LD @graph (better for AI search understanding)
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";
     const pageId = `${PAGE_URL}#webpage`;
@@ -168,7 +166,7 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+      <Helmet htmlAttributes={{ lang: "en-IN" }}>  
         <title>{PAGE_TITLE}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -180,10 +178,9 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
 
-        {/* ✅ FIX: optional + short */}
         <meta name="keywords" content={keywordsContent} />
 
-        <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX */}
+        <link rel="canonical" href={PAGE_URL} />  
         <link rel="icon" href={OG_IMAGE} />
         <link rel="apple-touch-icon" href={OG_IMAGE} />
 
@@ -194,15 +191,14 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai - Digital Marketing" /> {/* ✅ FIX */}
+        <meta property="og:image:alt" content="BrandBanao.ai - Digital Marketing" />  
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="BrandBanao.ai - Digital Marketing" /> {/* ✅ FIX */}
+        <meta name="twitter:image:alt" content="BrandBanao.ai - Digital Marketing" />  
 
-        {/* ✅ FIX: single JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
