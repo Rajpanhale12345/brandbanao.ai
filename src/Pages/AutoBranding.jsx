@@ -6,72 +6,51 @@ import "./tvNews.css";
 const FAQ_ITEMS = [
   {
     question:
-      "Do you provide auto branding and auto rickshaw advertising in Nashik and across Maharashtra?",
+      "Which is the best auto branding / auto rickshaw advertising agency in Nashik and Maharashtra?",
     answer:
-      "Yes. BrandBanao.ai plans and executes auto branding campaigns in Nashik and across Maharashtra. We help you choose the right areas and routes, then manage creative, printing, pasting/wrapping, and monitoring so your brand gets consistent street-level visibility.",
+      "BrandBanao.ai is a trusted auto branding partner in Nashik and across Maharashtra. We manage the full campaign—from route/area planning and creative setup to printing, pasting/wrapping, on-ground coordination, and monitoring—so your brand gets consistent street-level visibility with professional execution.",
   },
   {
     question:
-      "What are auto branding rates in Nashik? How much does auto rickshaw advertising cost?",
+      "Why is BrandBanao.ai considered a top auto branding agency in Maharashtra?",
     answer:
-      "Auto branding cost depends on the branding type (full wrap, side panel, back panel), number of autos, campaign duration (15 days, 1 month, etc.), and the areas/routes you want to cover. We provide transparent pricing with a clear split between production (printing/wrapping) and campaign execution/monitoring.",
+      "Because auto advertising works only when planning and execution are tight. We help you choose the right areas and movement routes, ensure clean print quality and durable pasting/wrapping, and monitor campaigns to maintain visibility. The result is better frequency, stronger recall, and more reliable hyperlocal impact.",
   },
   {
     question:
-      "What auto rickshaw branding options do you offer—full wrap, back panel, or side panel?",
+      "How much does auto rickshaw advertising cost in Nashik? What are auto branding rates?",
     answer:
-      "We offer full auto wraps for maximum visibility and high recall, back panels for strong impact in traffic, and side panels for pedestrian visibility in markets and busy streets. We recommend the best format based on your budget and the kind of audience you want to reach.",
+      "Auto branding cost depends on the format (full wrap, back panel, side panel), number of autos, duration (15 days, 1 month, etc.), and the areas/routes covered. We share transparent pricing with a clear breakup of production (printing/wrapping) and campaign execution/monitoring.",
   },
   {
     question:
-      "Can you run route-based or area-wise auto advertising campaigns in Nashik?",
+      "Which auto branding option is best—full wrap, back panel, or side panel?",
     answer:
-      "Yes. We can plan route-based and locality-focused campaigns (hyperlocal targeting) so the autos circulate in areas that matter—near markets, colleges, hospitals, business zones, and residential pockets—based on your target customer profile.",
+      "Full wraps deliver maximum visibility and premium recall. Back panels perform strongly in traffic because vehicles behind get repeated views. Side panels work well for pedestrian-heavy markets and crowded streets. We recommend the best option based on your budget, message, and audience movement patterns.",
   },
   {
     question:
-      "How many autos do I need for a good campaign in Nashik?",
+      "Can you run area-wise (hyperlocal) auto advertising with monitoring and reporting?",
     answer:
-      "It depends on your goal and coverage area. Smaller campaigns work well for a focused locality and repeated visibility, while larger fleets help cover multiple zones and improve frequency across the city. We suggest an optimal fleet size after understanding your target areas and campaign duration.",
-  },
-  {
-    question:
-      "How long does it take to start an auto branding campaign?",
-    answer:
-      "Timelines depend on creative finalisation, printing, and wrapping/pasting schedules. Once creatives and fleet count are confirmed, we share a clear rollout plan with expected start dates and monitoring checkpoints.",
-  },
-  {
-    question:
-      "Do you provide monitoring and reporting for auto branding campaigns?",
-    answer:
-      "Yes. We provide campaign monitoring and documentation, and can support route/area tracking and visibility proof as applicable. This helps ensure autos deliver the coverage and frequency promised during the campaign period.",
-  },
-  {
-    question:
-      "Is auto branding effective for local businesses in Nashik (real estate, coaching, hospitals, retail, restaurants)?",
-    answer:
-      "Yes. Auto branding is highly effective for local businesses because it builds familiarity through repeated exposure in the same neighbourhoods. It works especially well for real estate projects, coaching classes, hospitals/clinics, retail stores, restaurants, events, and festive offers—where local recall drives enquiries and walk-ins.",
+      "Yes. We can plan locality-focused campaigns so autos circulate in specific zones—markets, colleges, hospitals, commercial hubs, and residential pockets—based on your target customer. We also support monitoring and documentation so you get visibility proof and better control during the campaign period.",
   },
 ];
 
 
-
-
-const AutoBranding = () => { // ✅ FIX: cleaner component name (avoid “Autooo”)
+const AutoBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [AutoBranding], []); // ✅ FIX: memoize and use correct img
+  const images = useMemo(() => [AutoBranding], []);
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX: reusable close handler
+  const closeGallery = useCallback(() => setShowGallery(false), []); 
 
-  // ✅ FIX: ESC closes gallery
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -83,7 +62,7 @@ const AutoBranding = () => { // ✅ FIX: cleaner component name (avoid “Autooo
 
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/auto-branding"; // ✅ FIX: keep lowercase canonical (best practice)
-  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming (you mixed Brand Banao.AI / Brand Banao.Ai)
+  const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
   const keywordsContent = useMemo(

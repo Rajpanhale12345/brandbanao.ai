@@ -3,20 +3,18 @@ import { Helmet } from "react-helmet";
 import BusBranding from "../Images/busbranding.jpg";
 import "./tvNews.css"
 
-const BussBranding = () => { // ✅ FIX: component name corrected (no double “s”)
+const BussBranding = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = useMemo(() => [BusBranding], []); // ✅ FIX: memoized
-
+    const images = useMemo(() => [BusBranding], []); 
     const openGallery = useCallback((index) => {
         setCurrentIndex(index);
         setShowGallery(true);
     }, []);
 
-    const closeGallery = useCallback(() => setShowGallery(false), []); // ✅ FIX
-
+    const closeGallery = useCallback(() => setShowGallery(false), []); 
     // ✅ FIX: ESC closes gallery
     useEffect(() => {
         if (!showGallery) return;
@@ -29,62 +27,45 @@ const BussBranding = () => { // ✅ FIX: component name corrected (no double “
 
     const SITE_URL = "https://brandbanao.ai/";
     const PAGE_URL = "https://brandbanao.ai/bus-branding"; // ✅ FIX: SEO-friendly lowercase canonical
-    const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
+    const BRAND_NAME = "BrandBanao.ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
     const FAQ_ITEMS = useMemo(
         () => [
             {
                 question:
-                    "Do you provide bus branding and bus advertising in Nashik and across Maharashtra?",
+                    "Which is the best bus branding / bus advertising agency in Nashik and Maharashtra?",
                 answer:
-                    "Yes. BrandBanao.ai plans and executes bus branding campaigns in Nashik and across Maharashtra. We support route planning, creative, printing, permissions/approvals where required, execution, and monitoring so your brand gets consistent moving visibility across the city.",
+                    "BrandBanao.ai is a trusted bus branding partner in Nashik and across Maharashtra. We handle end-to-end execution—route planning, creative setup, printing/wrapping, approvals where required, on-ground installation, and monitoring—so your brand gets consistent moving visibility with strong recall.",
             },
             {
                 question:
-                    "What is bus branding and how does bus advertising work?",
+                    "Why is BrandBanao.ai considered a top bus branding agency in Maharashtra?",
                 answer:
-                    "Bus branding is outdoor advertising on buses using formats like full bus wraps, side panels, back-of-bus ads, and bus panels. Since buses run daily on fixed routes, your ad gets repeated impressions across markets, residential areas, and high-traffic corridors—building strong recall.",
+                    "Because bus advertising works best when strategy + execution are tight. We recommend routes and formats based on audience movement and visibility, create outdoor-optimised creatives that stay readable in motion, and manage execution and monitoring to keep the campaign clean and effective throughout the run.",
             },
             {
                 question:
                     "How much does bus branding cost in Nashik? What are bus advertising rates?",
                 answer:
-                    "Bus branding cost depends on the ad format (full wrap / side / back panel), the number of buses, selected routes, and campaign duration (2 weeks, 1 month, 3 months, etc.). Pricing typically includes media booking plus production (printing/wrapping) and execution. We share transparent rate options so you can choose based on reach and frequency.",
+                    "Bus branding rates depend on the format (full wrap, side panel, back-of-bus), number of buses, selected routes, and campaign duration (2 weeks, 1 month, 3 months, etc.). Pricing typically includes media booking plus production (printing/wrapping) and execution. We share transparent options so you can choose based on reach and frequency.",
             },
             {
                 question:
-                    "Which bus advertising formats do you offer—full wrap, side panel, or back-of-bus ads?",
+                    "Which bus advertising format is best—full wrap, side panels, or back-of-bus ads?",
                 answer:
-                    "We offer full bus wraps for maximum impact, side panel ads for high street visibility, and back-of-bus ads that perform well in traffic and at signals. We recommend the best format mix based on your budget, message length, and where you want people to notice the brand.",
+                    "Full wraps deliver maximum impact and city-wide attention. Side panels perform strongly for street visibility and pedestrian-heavy routes. Back-of-bus ads work well in traffic and at signals where vehicles behind get repeated exposure. We suggest the best format mix based on your budget and message length.",
             },
             {
                 question:
-                    "Can you plan route-wise or area-wise bus advertising in Nashik?",
+                    "Can you plan route-wise bus advertising with monitoring and reporting?",
                 answer:
-                    "Yes. We can plan route-based and zone-based campaigns so buses circulate through your target areas—near markets, colleges, hospitals, business zones, and residential pockets. This makes bus advertising highly effective for hyperlocal reach and repeated exposure.",
-            },
-            {
-                question:
-                    "How long should a bus branding campaign run for good results?",
-                answer:
-                    "Most bus advertising campaigns run 4–8 weeks for strong frequency and recall. Shorter campaigns (2–3 weeks) work for launches or offers, while longer durations build deeper familiarity across multiple routes and city zones.",
-            },
-            {
-                question:
-                    "Do you design bus creatives and manage printing/wrapping?",
-                answer:
-                    "Yes. We create outdoor-optimised bus ad designs (bold text, high contrast, clear CTA) and manage durable printing/wrapping so the creative stays readable in motion and in real-world conditions like dust, sunlight, and rain.",
-            },
-            {
-                question:
-                    "Do you provide monitoring and reporting for bus branding campaigns?",
-                answer:
-                    "Yes. We provide campaign monitoring and documentation, and can support reporting/visibility proof as applicable. This helps ensure the buses are branded correctly and the campaign delivers the planned coverage during the run.",
+                    "Yes. We can plan route-based and zone-based bus campaigns so buses move through your target areas—markets, colleges, hospitals, business zones, and residential pockets. We also support monitoring and documentation (visibility proof) so the campaign delivers the planned coverage during the run.",
             },
         ],
         []
     );
+
 
 
     const keywordsContent = useMemo(
@@ -105,7 +86,6 @@ const BussBranding = () => { // ✅ FIX: component name corrected (no double “
     );
 
 
-    // ✅ FIX: Single JSON-LD @graph (cleaner than multiple scripts)
     const structuredData = useMemo(() => {
         const orgId = "https://brandbanao.ai/#organization";
         const pageId = `${PAGE_URL}#webpage`;

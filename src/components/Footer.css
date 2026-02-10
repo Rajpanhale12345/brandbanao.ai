@@ -184,7 +184,6 @@
   gap: 8px;
   padding: 10px 12px;
   border-radius: 999px;
-  border: 1px solid var(--sf-line);
   text-decoration: none;
   color: var(--sf-fg);
   font-weight: 600;

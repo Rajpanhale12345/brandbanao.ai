@@ -39,55 +39,38 @@ const RadioFMBranding = () => {
     () => [
       {
         question:
-          "Do you provide FM radio advertising in Nashik and across Maharashtra?",
+          "Which is the best radio advertising agency in Nashik and Maharashtra for FM campaigns?",
         answer:
-          "Yes. BrandBanao.ai plans and supports FM radio advertising in Nashik and across Maharashtra through leading FM stations and regional networks. We help with message strategy, scriptwriting, format selection, scheduling support, and radio + digital alignment for higher recall.",
+          "BrandBanao.ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10–30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
       },
       {
         question:
-          "What are FM radio advertising rates in Nashik? How much does radio advertising cost?",
+          "Why is BrandBanao.ai considered a top FM radio advertising agency in Nashik?",
         answer:
-          "FM radio advertising cost depends on the station, time band (morning/evening drive time vs off-peak), ad duration (10/20/30 seconds), frequency (number of spots per day), and campaign length (1 week, 2 weeks, 1 month). We share transparent options so you can choose a plan based on reach + repetition and your budget.",
+          "Because radio performance depends on clarity, repetition, and the right time bands. We write conversational scripts that sound natural on-air, recommend spot duration and frequency, and plan time slots around your audience routine—helping brands improve recall and action without wasting spend.",
       },
       {
         question:
-          "Which radio ad formats do you offer—spot ads, RJ mentions, jingles, contests, or sponsorships?",
+          "How much does FM radio advertising cost in Nashik? What are radio advertising rates?",
         answer:
-          "We support popular radio advertising formats such as spot ads (10–30 seconds), RJ mentions (where applicable), brand integrations, sponsorship tags, and jingle-style audio branding. The best format mix depends on whether your goal is awareness, footfall, leads, or a new launch.",
+          "FM radio advertising cost depends on the station, time band (drive time vs off-peak), ad duration (10/20/30 seconds), frequency (spots per day), and campaign length (1 week, 2 weeks, 1 month). We share transparent plan options so you can choose based on reach + repetition and budget.",
       },
       {
         question:
-          "What is the best duration for a radio ad—10 sec, 20 sec, or 30 sec?",
+          "Which radio ad formats work best—spot ads, RJ mentions, jingles, contests, or sponsorships?",
         answer:
-          "10 seconds works well for quick retail pushes and simple offers. 20 seconds is a strong balance for message clarity and recall. 30 seconds is best for storytelling, multiple USPs, or a stronger call-to-action. We recommend the duration based on your category and what listeners can absorb fast.",
+          "Spot ads (10-30 seconds) are the most common for consistent frequency. RJ mentions and integrations (where available) add trust and personality. Jingles help build audio identity, while sponsorship tags and contest-led activations boost recall. We recommend the best mix based on your goal—awareness, footfall, leads, or a new launch.",
       },
       {
         question:
-          "What are the best time slots for radio advertising in Nashik (morning/evening drive time)?",
+          "What are the best radio time slots in Nashik, and how quickly can a campaign go live?",
         answer:
-          "Morning and evening drive-time slots usually deliver strong listener volume, while mid-day and evening slots can be cost-effective for frequency. We plan time bands based on your audience routine—students, working professionals, families, or shoppers—so the ads hit when people are most likely to respond.",
-      },
-      {
-        question:
-          "Do you create radio ad scripts and coordinate voice-over/music production?",
-        answer:
-          "Yes. We write voice-ready radio ad scripts in a natural, conversational style. We can also coordinate voice-over and sound elements (music beds/jingle-style audio) as needed, ensuring the final ad matches station requirements and sounds clean on-air.",
-      },
-      {
-        question:
-          "How quickly can an FM campaign go live in Nashik after approval?",
-        answer:
-          "Timelines depend on script finalization, voice production, station scheduling, and approvals. If your content is ready, campaigns can be planned quickly. We share a clear execution timeline once station/time bands and spot counts are locked.",
-      },
-      {
-        question:
-          "Is radio advertising effective for local businesses in Nashik (coaching, hospitals, real estate, restaurants, retail)?",
-        answer:
-          "Yes. FM radio advertising is strong for local businesses because it builds trust and repetition in a city audience. It’s commonly used for coaching institutes, hospitals/clinics, real estate projects, restaurants, retail stores, events, and festive offers—especially when paired with a simple offer and location-based CTA.",
+          "Morning and evening drive-time usually deliver strong listener volume, while mid-day and evening can be cost-effective for frequency. Go-live timelines depend on script finalisation, voice production, station scheduling, and approvals. Once time bands and spot counts are locked, we share a clear rollout plan and start dates.",
       },
     ],
     []
   );
+
 
 
   const keywordsContent = useMemo(

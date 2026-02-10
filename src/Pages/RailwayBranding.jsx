@@ -41,58 +41,39 @@ const RailwayyBranding = () => {
     () => [
       {
         question:
-          "Do you provide railway station advertising in Nashik and across Maharashtra/India?",
+          "Which is the best radio advertising agency in Nashik and Maharashtra for FM campaigns?",
         answer:
-          "Yes. BrandBanao.ai plans and supports railway branding in Nashik and across Maharashtra/India based on inventory availability. We help select stations and media formats, then coordinate planning, creative specs, execution support, and campaign documentation.",
+          "BrandBanao.ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10-30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
       },
       {
         question:
-          "What are railway advertising rates? How much does railway station branding cost?",
+          "Why is BrandBanao.ai considered a top FM radio advertising agency in Nashik?",
         answer:
-          "Railway advertising cost depends on the station category/footfall, media type (station hoardings, platform panels, FOB panels, entry/exit signage, digital screens), campaign duration, and number of units. We share transparent rate options with a clear split between media and production so budgeting is straightforward.",
+          "Because radio performance depends on clarity, repetition, and the right time bands. We write conversational scripts that sound natural on-air, recommend spot duration and frequency, and plan time slots around your audience routine—helping brands improve recall and action without wasting spend.",
       },
       {
         question:
-          "What railway advertising formats do you offer (platform, FOB, concourse, digital screens, train wraps)?",
+          "How much does FM radio advertising cost in Nashik? What are radio advertising rates?",
         answer:
-          "We support common railway media such as station hoardings, platform displays, foot overbridge (FOB) panels, concourse/entry-exit branding, waiting-area placements, digital screens (where available), and train-side or coach branding depending on approvals and availability.",
+          "FM radio advertising cost depends on the station, time band (drive time vs off-peak), ad duration (10/20/30 seconds), frequency (spots per day), and campaign length (1 week, 2 weeks, 1 month). We share transparent plan options so you can choose based on reach + repetition and budget.",
       },
       {
         question:
-          "Which is better for visibility—platform ads or entry/exit and concourse branding?",
+          "Which radio ad formats work best—spot ads, RJ mentions, jingles, contests, or sponsorships?",
         answer:
-          "Entry/exit and concourse branding captures almost every passenger flow, while platform and FOB panels deliver strong dwell-time visibility when people wait for trains. We recommend a mix based on your objective—mass awareness, city coverage, or focused station dominance.",
+          "Spot ads (10-30 seconds) are the most common for consistent frequency. RJ mentions and integrations (where available) add trust and personality. Jingles help build audio identity, while sponsorship tags and contest-led activations boost recall. We recommend the best mix based on your goal—awareness, footfall, leads, or a new launch.",
       },
       {
         question:
-          "Do you manage permissions and approvals for railway station advertising?",
+          "What are the best radio time slots in Nashik, and how quickly can a campaign go live?",
         answer:
-          "Railway media typically requires approvals and compliance with station/vendor guidelines. We coordinate the approval workflow and creative specifications with the media operator as applicable, and guide you through timelines and requirements for smooth execution.",
-      },
-      {
-        question:
-          "How long does it take to start a railway branding campaign?",
-        answer:
-          "Timelines depend on inventory availability, approval processes, and production/printing. Once the station, formats, and artwork are finalised, we share a rollout plan with expected start dates and provide documentation after deployment.",
-      },
-      {
-        question:
-          "What industries benefit most from railway advertising?",
-        answer:
-          "Railway advertising works well for FMCG, retail, tourism, education, healthcare, real estate, automotive launches, banking/finance, government campaigns, and seasonal offers—because stations deliver mass reach, repetition, and strong recall across diverse audiences.",
-      },
-      {
-        question:
-          "Do you provide monitoring and reporting for railway station ads?",
-        answer:
-          "Yes. We provide campaign documentation such as photos and placement proof, and can support reporting based on what the station media operator provides for the selected formats—helping ensure visibility and consistency during the campaign.",
+          "Morning and evening drive-time usually deliver strong listener volume, while mid-day and evening can be cost-effective for frequency. Go-live timelines depend on script finalisation, voice production, station scheduling, and approvals. Once time bands and spot counts are locked, we share a clear rollout plan and start dates.",
       },
     ],
     []
   );
 
 
-  // ✅ FIX: Single JSON-LD graph (better for AI search + consistency)
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";
     const pageId = `${PAGE_URL}#webpage`;
@@ -160,42 +141,37 @@ const RailwayyBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+      <Helmet htmlAttributes={{ lang: "en-IN" }}>
         <title>{PAGE_TITLE}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <meta name="author" content={BRAND_NAME} /> {/* ✅ FIX */}
-        <meta name="publisher" content={BRAND_NAME} /> {/* ✅ FIX */}
-        <meta name="description" content={PAGE_DESC} /> {/* ✅ FIX */}
-        <meta
-          name="keywords"
-          content="railway advertising, railway station advertising Nashik, station branding, platform advertising, foot overbridge advertising, FOB panels, railway hoardings, digital screen advertising station, train branding, transit advertising, BrandBanao.ai"
-        />
-
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="publisher" content={BRAND_NAME} />
+        <meta name="description" content={PAGE_DESC} />
+        <meta name="keywords" content="railway advertising, railway station advertising Nashik, station branding, platform advertising, foot overbridge advertising, FOB panels, railway hoardings, digital screen advertising station, train branding, transit advertising, BrandBanao.ai" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="theme-color" content="#0d1117" />
 
-        <link rel="canonical" href={PAGE_URL} /> {/* ✅ FIX */}
+        <link rel="canonical" href={PAGE_URL} />
 
         {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
-        <meta property="og:site_name" content={BRAND_NAME} /> {/* ✅ FIX */}
+        <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
         <meta property="og:description" content={PAGE_DESC} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={PAGE_URL} /> {/* ✅ FIX */}
+        <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" /> {/* ✅ FIX */}
+        <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="Railway Branding - Brand Banao.Ai" /> {/* ✅ FIX */}
+        <meta name="twitter:image:alt" content="Railway Branding - Brand Banao.Ai" />
 
         {/* ✅ FIX: single JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

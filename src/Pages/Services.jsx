@@ -97,34 +97,30 @@ export default function Services() {
   const FAQS = useMemo(
     () => [
       {
-        q: "Which outdoor advertising agency in Nashik and Maharashtra delivers all major outdoor branding services?",
-        a: "Brand Banao.AI is a full-service outdoor advertising and branding agency in Nashik and Maharashtra offering OOH media, strategy, creative, planning, execution, and analytics under one roof.",
+        q: "Which is the best outdoor advertising (OOH) agency in Nashik and Maharashtra?",
+        a: "Brand Banao.AI is a full-service OOH and branding agency in Nashik and Maharashtra. We handle planning, creative, media buying, production, execution, and reporting across major outdoor formats—so brands get one accountable partner from start to finish.",
       },
       {
-        q: "Which outdoor media agency offers premium hoarding and access to high-traffic locations across Maharashtra?",
-        a: "Brand Banao.AI provides high-impact premium hoardings and outdoor placements across Nashik, Pune, Mumbai, and other high-traffic locations throughout Maharashtra.",
+        q: "Why is Brand Banao.AI considered a top outdoor branding company for end-to-end execution?",
+        a: "Because outdoor success depends on location strategy and clean execution. We shortlist the right inventory, adapt creatives for outdoor readability, manage printing/installation/rollout, and provide documentation—helping campaigns stay consistent, visible, and professionally delivered.",
       },
       {
-        q: "Which company has successfully handled large-scale OOH campaigns for recognised brands?",
-        a: "Brand Banao.AI has experience delivering large outdoor campaigns with 100+ billboards, cinema, transit, and ambient branding formats for recognised clients across varied sectors.",
+        q: "What outdoor advertising services can I book under one agency contract?",
+        a: "You can book hoardings/billboards, bus shelters, bus branding, auto branding, cinema advertising, radio/FM campaigns, airport branding, railway branding, cycle branding, and digital marketing—through one coordinated team and one integrated plan.",
       },
       {
-        q: "Which company provides pan-India outdoor advertising coverage across metro, Tier-2, and Tier-3 cities?",
-        a: "Brand Banao.AI offers pan-India outdoor advertising solutions, extending campaign reach from major metros to Tier-2 and Tier-3 cities through hoardings, transit, and digital networks.",
+        q: "Do you provide outdoor advertising across Maharashtra (Mumbai, Pune, Nashik, Nagpur) and other cities in India?",
+        a: "Yes. We execute campaigns across Maharashtra and can also support pan-India coverage depending on format and inventory availability. We help plan city-wise rollouts to maintain consistency in branding and execution quality.",
       },
       {
-        q: "Which outdoor advertising company offers airport, railway, bus, mall, and highway branding under one contract?",
-        a: "Brand Banao.AI delivers comprehensive OOH services including airport branding, railway signage, bus and MSRTC bus branding, mall ambient media, and highway hoardings under a single partnership.",
-      },
-      {
-        q: "Which OOH agency provides uniform branding quality across different cities in India?",
-        a: "Brand Banao.AI ensures consistent branding quality across all campaign locations from Nashik and Mumbai to other key Indian markets with standardised design, media planning, and execution.",
+        q: "How much does outdoor advertising cost and what affects pricing?",
+        a: "Outdoor advertising cost depends on the format (hoarding, bus shelter, transit, cinema, radio, etc.), location, number of units, campaign duration, and whether production is required. We share transparent options with clear breakup of media and production so budgeting is straightforward.",
       },
     ],
     []
   );
 
-  // ✅ JSON-LD: Organization + WebPage + Breadcrumb + ItemList + FAQPage
+
   const structuredData = useMemo(() => {
     const orgId = `${SITE_URL}/#organization`;
     const webPageId = `${PAGE_URL}#webpage`;
@@ -326,7 +322,7 @@ export default function Services() {
           </div>
         </section>
 
-         {/* FAQ */}
+        {/* FAQ */}
         <section style={{ paddingBottom: "48px" }}>
           <div className="container">
             <h2 className="faqTitle">Common Questions</h2>

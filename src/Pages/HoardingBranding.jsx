@@ -72,55 +72,38 @@ const HoardingBranding = () => {
     () => [
       {
         question:
-          "Do you provide hoardings and billboard advertising in Nashik and across Maharashtra?",
+          "Which is the best hoarding / billboard advertising agency in Maharashtra?",
         answer:
-          "Yes. BrandBanao.ai plans and executes hoarding and billboard advertising in Nashik and across Maharashtra. We support location shortlisting, media booking, creative design, printing, installation, maintenance, and campaign photo reporting—so you get end-to-end outdoor advertising execution.",
+          "BrandBanao.ai is a trusted hoarding and billboard advertising partner across Maharashtra. We manage the complete process—location planning, media booking, outdoor-ready creative design, printing, installation, maintenance, and campaign photo reporting—so your brand gets high visibility with professional execution.",
       },
       {
         question:
-          "What are hoarding advertising rates in Nashik? How much does billboard advertising cost?",
+          "Why is BrandBanao.ai considered a top hoarding agency in Maharashtra?",
         answer:
-          "Hoarding cost depends on the exact location (traffic + visibility), size, format (static, backlit, LED/digital), and campaign duration (15 days, 1 month, 3 months, etc.). Premium junctions and highways generally cost more than inner-city roads. We share transparent pricing with a clear split of media charges and production/printing so you can plan your budget confidently.",
+          "Because we focus on results, not just bookings. We shortlist high-impact sites based on visibility and audience relevance, ensure accurate print + safe installation, maintain the hoarding during the campaign, and share on-ground photo proof. This end-to-end control helps brands get stronger recall and cleaner execution across cities in Maharashtra.",
       },
       {
         question:
-          "Which are the best hoarding locations in Nashik for maximum visibility?",
+          "How much does hoarding or billboard advertising cost in Maharashtra (including Nashik)?",
         answer:
-          "The best hoarding locations are usually high-traffic junctions, main roads, highway entries/exits, commercial corridors, and areas near malls, hospitals, colleges, and real estate hotspots. We shortlist sites based on sightline, speed of traffic, illumination, and audience relevance—so the ad is readable and unforgettable.",
+          "Pricing depends on the exact location, hoarding size, format (static, backlit, LED/digital), and duration (15 days, 1 month, 3 months, etc.). Premium junctions and highways cost more than inner-city routes. BrandBanao.ai shares transparent pricing with a clear breakup of media and production so you can plan confidently.",
       },
       {
         question:
-          "Do you offer LED hoardings or digital billboard advertising in Nashik?",
+          "Which are the best hoarding locations in Maharashtra for maximum visibility?",
         answer:
-          "Yes—where inventory is available. LED/digital hoardings are ideal for launches and high-impact messaging because they’re bright, dynamic, and can rotate creatives. We recommend digital vs static based on budget, availability, and the type of attention you need.",
+          "The best locations are typically high-traffic junctions, commercial corridors, highway entry/exit points, areas near malls, hospitals, colleges, and real estate hotspots. We recommend sites using practical checks like sightline, speed of traffic, illumination, and audience match—so the creative is actually noticed and remembered.",
       },
       {
         question:
-          "Do you handle hoarding design, printing, installation, and maintenance?",
+          "Do you provide end-to-end hoarding services like design, printing, installation, maintenance, and reporting?",
         answer:
-          "Yes. We provide complete hoarding services: outdoor-optimised creative design, large-format printing, safe installation, and regular maintenance checks during the campaign. This ensures the creative stays clean, aligned, and visible throughout the booking period.",
-      },
-      {
-        question:
-          "How quickly can a hoarding campaign go live in Nashik?",
-        answer:
-          "Timelines depend on site availability, printing lead time, and installation scheduling. Once the site and creative are confirmed, we share an execution plan with expected printing and installation dates and provide photo proof after deployment.",
-      },
-      {
-        question:
-          "What hoarding sizes are available and what artwork is required for printing?",
-        answer:
-          "Hoarding sizes vary by site. After finalising the location, we share the exact size and print specs (resolution, bleed, safe area) and can adapt one design for multiple hoardings if you book a set of locations.",
-      },
-      {
-        question:
-          "Is hoarding advertising effective compared to digital ads like Google or Meta?",
-        answer:
-          "Hoardings build strong local trust and brand recall because people see them repeatedly in the real world. Digital ads capture intent and drive immediate actions online. Brands that combine hoardings with digital marketing often get better overall performance—higher recognition, stronger credibility, and improved conversion rates.",
+          "Yes. BrandBanao.ai provides complete hoarding services—outdoor-optimised creative design, large-format printing, installation coordination, routine maintenance checks during the campaign, and photo reporting after deployment. You get one team for execution from start to finish.",
       },
     ],
     []
   );
+
 
   const keywordsContent = useMemo(
     () =>

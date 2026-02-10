@@ -27,8 +27,6 @@ import "./Footer.css";
             title="Contact"
             links={[
             ["Contact", "/contact"],
-             
-             
             ]}
           />
            <Column
@@ -45,9 +43,13 @@ import "./Footer.css";
             <a className="sf-pill" href="mailto:clientservicing@brandbanao.ai">
               clientservicing@brandbanao.ai
             </a>
-             <br />
+            
            <a className="sf-pill" href="tel:9156784242 ">
              91 5678 4242
+            </a>
+           
+           <a className="sf-pill" href="tel:9156784242 " style={{textAlign : "left"}}>
+             The Hub, B-603, Samartha Nagar, Mahatma Nagar, Parijat Nagar, Nashik, Maharashtra 422005
             </a>
          
           </div>

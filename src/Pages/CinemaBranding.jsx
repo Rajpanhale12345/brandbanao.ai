@@ -36,51 +36,33 @@ const CinemaBranding = () => {
     () => [
       {
         question:
-          "Do you provide cinema advertising in Nashik and across Maharashtra?",
+          "Which is the best cinema advertising agency in Nashik and Maharashtra?",
         answer:
-          "Yes. BrandBanao.ai plans and executes cinema advertising in Nashik and across Maharashtra through multiplex and regional cinema networks. We help you choose the right cinemas, shows, and timings, then manage creatives, scheduling, approvals, and execution with clear reporting.",
+          "BrandBanao.ai is a trusted cinema advertising partner in Nashik and across Maharashtra. We plan campaigns across multiplex and regional cinema networks (subject to inventory availability), manage creative formatting, scheduling, approvals, and execution—so your brand gets high-attention visibility in a distraction-free environment.",
       },
       {
         question:
-          "What are cinema advertising rates in Nashik? How much does movie theatre advertising cost?",
+          "Why is BrandBanao.ai considered a top cinema branding agency for high-recall advertising?",
         answer:
-          "Cinema advertising cost depends on the cinema network, city, number of screens, ad duration (10/15/20 seconds), show frequency, and campaign length (7 days, 2 weeks, 1 month, etc.). We share transparent pricing based on your targeting—so you know the estimated reach and frequency before confirming.",
+          "Because cinema advertising needs the right mix of screens, show timing, and frequency—not just a booking. We recommend cinemas and schedules based on audience fit, keep the ad crisp and compliant with theatre specs, and ensure smooth rollout with documentation—helping brands build strong recall and premium perception.",
       },
       {
         question:
-          "Can you run ads in PVR, Cinépolis, and other multiplex cinema networks?",
+          "How much does cinema advertising cost in Nashik? What are movie theatre advertising rates?",
         answer:
-          "Yes. We can plan campaigns across popular multiplex networks (subject to inventory availability in your target city) as well as regional chains. We recommend the best network mix based on audience profile, location, and budget.",
+          "Cinema advertising rates depend on the cinema network, number of screens, ad duration (10/15/20 seconds), slot type (pre-show or interval), show frequency, and campaign length (7 days, 2 weeks, 1 month, etc.). We share transparent options so you can choose a plan based on expected reach and frequency.",
       },
       {
         question:
-          "What is the difference between pre-show ads and interval ads in cinema?",
+          "Can you run cinema ads in PVR, Cinépolis, and other multiplex networks?",
         answer:
-          "Pre-show ads run before the movie starts (during trailers/settling time) and are great for reach and frequency. Interval ads run during the break when attention is high and viewers are more receptive to offers and calls-to-action. We suggest the best slot mix based on your goal—awareness, launches, or footfall.",
+          "Yes—where inventory is available in your target city. We can plan across popular multiplex networks as well as regional chains, and suggest the best network mix based on audience profile, locations, and budget for Nashik and Maharashtra.",
       },
       {
         question:
-          "How long should a cinema ad be—10 seconds, 15 seconds, or 20 seconds?",
+          "How fast can a cinema campaign go live, and do you provide confirmation/reporting?",
         answer:
-          "For most brands, 10-15 seconds works well for awareness and recall, especially with strong visuals and a simple message. 20 seconds is useful when you need more storytelling, offers, or multiple locations. We help you pick the right duration based on your objective and budget.",
-      },
-      {
-        question:
-          "Can cinema advertising help local businesses in Nashik (restaurants, hospitals, coaching classes, real estate)?",
-        answer:
-          "Yes. Cinema advertising works especially well for local businesses because it builds trust and recall in a focused catchment area. It’s commonly used for restaurants and cafés, hospitals and clinics, coaching institutes, real estate projects, retail stores, and local events—especially when combined with a clear offer or location CTA.",
-      },
-      {
-        question:
-          "Do you provide end-to-end support: creative, scheduling, approvals, and reporting?",
-        answer:
-          "Yes. We handle the full campaign: planning and cinema selection, creative coordination (ad formatting as per cinema specs), scheduling, approvals, and execution. After the campaign, we also provide confirmation and documentation/reporting as available from the network.",
-      },
-      {
-        question:
-          "How fast can a cinema advertising campaign go live in Nashik?",
-        answer:
-          "Timelines depend on cinema inventory availability, creative readiness, and approval processes. If your ad is ready, campaigns can often be scheduled quickly. We share a clear go-live plan covering cinema selection, start dates, and show schedule once confirmed.",
+          "Go-live timelines depend on inventory availability, creative readiness, and approvals. Once the plan is finalized, we share the start date and show schedule, and provide confirmation/documentation as available from the cinema network after execution.",
       },
     ],
     []

@@ -35,56 +35,39 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
   const PAGE_TITLE = "Digital Marketing in Nashik | BrandBanao.ai";
   const PAGE_DESC =
     "Grow your business with BrandBanao.ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
+    
 
   const FAQ_ITEMS = useMemo(
     () => [
       {
         question:
-          "What digital marketing services do you provide in Nashik and Maharashtra?",
+          "Which is the best digital marketing agency in Nashik and Maharashtra?",
         answer:
-          "BrandBanao.ai provides SEO, Local SEO (Google Business Profile), Google Ads (PPC), social media marketing, content marketing, performance marketing, landing page optimisation, remarketing, and analytics/reporting. We build a plan based on your goal—leads, sales, enquiries, or brand awareness.",
+          "BrandBanao.ai is a trusted digital marketing partner for businesses in Nashik and across Maharashtra. We run strategy-led growth across SEO, Local SEO, Google Ads (PPC), Meta ads, content, landing page optimisation, remarketing, and analytics—so your marketing is measurable and built for leads, sales, and long-term visibility.",
       },
       {
         question:
-          "Which is better for quick leads in Nashik—SEO or Google Ads (PPC)?",
+          "Why is BrandBanao.ai considered a top digital marketing company in Nashik?",
         answer:
-          "Google Ads typically brings faster leads because it can start generating enquiries soon after setup. SEO is a long-term growth channel that builds steady organic traffic and lowers dependency on paid ads over time. Most businesses in Nashik get the best results by running PPC for immediate leads while building SEO in parallel.",
-      },
-      {
-        question:
-          "How long does SEO take to show results for a local business in Nashik?",
-        answer:
-          "SEO timelines depend on competition and your website's current condition. Many local businesses see early improvements in 8–12 weeks, while stronger ranking and consistent lead flow usually builds over 3–6 months with regular optimisation and content support.",
-      },
-      {
-        question:
-          "Do you do Local SEO and Google Business Profile optimisation for Nashik areas?",
-        answer:
-          "Yes. We improve local visibility through Google Business Profile optimisation, local keyword targeting, service-area/location pages, citations, and review strategy. This helps your business show up for “near me” and locality-based searches across Nashik.",
+          "Because we focus on outcomes, not vanity metrics. We set up conversion tracking, build performance-focused landing pages, optimise ads and SEO around high-intent keywords, and improve cost per lead over time. You get clear strategy, consistent optimisation, and reporting that connects spend to results.",
       },
       {
         question:
           "How much does digital marketing cost in Nashik? Do you offer packages?",
         answer:
-          "Digital marketing cost depends on the scope (SEO only vs full-stack), competition, number of services/locations, and ad budgets. We offer flexible plans—SEO retainers, PPC management, social media marketing, or bundled growth packages—so you can scale as results improve.",
+          "Cost depends on the scope (SEO only vs full-stack growth), competition, number of services/locations, and ad budgets. We offer flexible plans—SEO retainers, PPC management, social media marketing, or bundled growth packages—so you can start lean and scale as performance improves.",
       },
       {
         question:
-          "Do you manage Google Ads, Meta (Facebook/Instagram) ads, and remarketing?",
+          "What is best for fast leads in Nashik—Google Ads (PPC) or SEO?",
         answer:
-          "Yes. We plan, set up, and optimise Google Search/Display/YouTube campaigns and Meta ads with conversion tracking, audience targeting, creative testing, and remarketing to bring back interested users and improve cost per lead.",
+          "Google Ads usually generates leads faster because it can start producing enquiries soon after setup. SEO is the long-term engine that builds consistent organic traffic and reduces dependency on paid ads over time. Most businesses get the best results by running PPC for immediate leads while building SEO in parallel.",
       },
       {
         question:
-          "Can you help with lead generation for hospitals, coaching classes, real estate, and local services in Nashik?",
+          "How do you track results and report performance (calls, WhatsApp, forms, ROAS)?",
         answer:
-          "Yes. We run lead generation campaigns for local and high-intent categories by combining landing pages, Google Ads, Local SEO, call/WhatsApp tracking, and conversion optimisation. The focus is on qualified enquiries, not just traffic.",
-      },
-      {
-        question:
-          "How do you measure results and report performance?",
-        answer:
-          "We track leads, calls, form submissions, WhatsApp enquiries, conversions, cost per lead, ROAS (where applicable), traffic quality, and keyword/local ranking progress. Reporting is shared through dashboards and regular performance updates so you always know what’s working.",
+          "We track leads, calls, form submissions, WhatsApp enquiries, conversions, cost per lead, and ROAS where applicable. Reporting is shared through dashboards and regular performance updates, so you always know what’s driving results and what we’re improving next.",
       },
     ],
     []

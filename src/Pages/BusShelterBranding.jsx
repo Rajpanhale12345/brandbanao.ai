@@ -36,56 +36,37 @@ const BusShelterBranding = () => {
     () => [
       {
         question:
-          "Do you provide bus shelter advertising in Nashik (CBS, College Road, Gangapur Road, Dwarka, Satpur) and across Maharashtra?",
+          "Which is the best bus shelter advertising agency in Nashik and Maharashtra?",
         answer:
-          "Yes. We plan and execute bus shelter advertising in Nashik and across Maharashtra. We can recommend shelters near key areas like CBS, College Road, Gangapur Road, Dwarka, Satpur, Indira Nagar, and main highway corridors—based on your target audience, traffic flow, and visibility. We manage the full process: location planning, creative, printing, installation, and photo reporting.",
+          "BrandBanao.ai is a trusted bus shelter advertising partner in Nashik and across Maharashtra. We manage end-to-end execution—location planning, creative, printing, installation, and photo proof—so your brand gets consistent 24x7 street-level visibility with professional control.",
       },
       {
         question:
-          "What are the bus shelter advertising rates in Nashik? How is the cost calculated?",
+          "Why is BrandBanao.ai considered a top bus shelter branding agency in Nashik?",
         answer:
-          "Bus shelter advertising cost in Nashik depends on the exact location (footfall + traffic), format (non-lit / backlit / digital where available), and campaign duration (15 days, 1 month, 3 months, etc.). Pricing usually includes media rental plus production (printing) and installation. We share a clear, item-wise quotation so you understand the total cost before booking.",
+          "Because bus shelter ads perform best when placement + readability + execution are handled properly. We shortlist shelters based on footfall, dwell time, sightline, and audience relevance, then deliver outdoor-optimised creatives, clean installation, and documentation—helping brands get stronger local recall and trust.",
       },
       {
         question:
-          "Which are the best locations for bus stop advertising in Nashik for maximum visibility?",
+          "What are bus shelter advertising rates in Nashik? How is the cost calculated?",
         answer:
-          "The best bus stop / bus shelter locations in Nashik are typically near busy junctions, markets, schools/colleges, hospitals, IT/industrial routes, and commuter-heavy roads. We shortlist shelters based on sightline, dwell time, vehicle speed, and audience type—so your ad is easy to read and hard to miss.",
+          "Bus shelter advertising cost depends on the exact location, format (non-lit, backlit, or digital where available), number of shelters, and campaign duration (15 days, 1 month, 3 months, etc.). Pricing usually includes media rental plus production (printing) and installation. We share a clear item-wise quote so budgeting stays transparent.",
       },
       {
         question:
-          "What is the difference between non-lit, backlit, and digital bus shelter ads?",
+          "Which are the best bus stop / bus shelter locations in Nashik for maximum visibility?",
         answer:
-          "Non-lit bus shelter ads are cost-effective and work well for long-duration campaigns. Backlit shelters improve night visibility and boost recall. Digital bus shelters (where available) allow multiple creatives and time-based messaging. We suggest the best option based on your goal—brand awareness, local trust, store walk-ins, or a new launch.",
+          "High-performing shelters are usually near busy junctions, markets, schools/colleges, hospitals, commercial streets, and commuter-heavy corridors. We recommend locations using practical checks like sightline, waiting time, vehicle speed, and local audience movement—so your ad is easy to read and hard to miss.",
       },
       {
         question:
-          "How long does it take to start a bus shelter advertising campaign in Nashik?",
+          "What is the difference between non-lit, backlit, and digital bus shelter ads—and which one is best?",
         answer:
-          "Most campaigns can go live quickly once locations are finalized and creatives are approved. The timeline mainly depends on availability of shelters, printing lead time, and installation scheduling. We coordinate end-to-end execution and share expected dates for printing, pasting, and go-live along with photo proof after installation.",
-      },
-      {
-        question:
-          "Do you handle creative design, printing, and installation for bus shelter branding?",
-        answer:
-          "Yes. We provide complete bus shelter branding services: creative design optimized for outdoor viewing (large text, high contrast), outdoor-grade printing, professional installation, and photo documentation. You get one accountable team from planning to final execution.",
-      },
-      {
-        question:
-          "What size is a bus shelter ad? What artwork files do you need for printing?",
-        answer:
-          "Bus shelter ad sizes can vary by vendor and site type (side panel, back panel, or full wrap). After we finalize locations, we share the exact media sizes and a simple artwork checklist (bleed, resolution, safe area). We can also adapt one design into multiple sizes if you book multiple shelters.",
-      },
-      {
-        question:
-          "Is bus shelter advertising good for local businesses like hospitals, coaching classes, restaurants, and real estate in Nashik?",
-        answer:
-          "Yes—bus shelter advertising is one of the best outdoor advertising options for local businesses in Nashik because it targets people in a specific area repeatedly. It works especially well for hospitals/clinics, coaching institutes, restaurants, retail stores, real estate projects, gyms, and local events because it drives strong local recall and walk-ins.",
+          "Non-lit shelters are cost-effective and great for longer durations. Backlit shelters improve night visibility and boost recall. Digital shelters (where available) support multiple creatives and time-based messaging. We recommend the best option based on your goal—local awareness, store walk-ins, or launch impact—and handle creative, printing, installation, and photo reporting.",
       },
     ],
     []
   );
-
 
 
   const keywordsContent = useMemo(
@@ -329,6 +310,7 @@ const BusShelterBranding = () => {
                 <li>Political campaigns</li>
               </ul>
             </li>
+            <br />
             <li>
               <strong>Day and Night Visibility</strong>
               <p>
@@ -472,8 +454,8 @@ const BusShelterBranding = () => {
             through our powerful hyperlocal network.
           </p>
 
-          <h2>Why Choose Brand Banao.AI for Bus Shelter Advertising?</h2>
-          <ol>
+          {/* <h2>Why Choose Brand Banao.AI for Bus Shelter Advertising?</h2> */}
+          {/* <ol>
 
             <li>
               <strong>Maharashtra&apos;s Largest OOH Network</strong>
@@ -524,14 +506,14 @@ const BusShelterBranding = () => {
               </ul>
             </li>
 
-          </ol>
-          <p>When you compare the top 3 advertising agencies specialising in bus shelters
+          </ol> */}
+          {/* <p>When you compare the top 3 advertising agencies specialising in bus shelters
             within Maharashtra, it's fair to say that Brand Banao.AI is an excellent option
             because it offers an integrated solution through proprietary inventory, planning
             proficiency, creativity, and operational rigour. We have extensive on-the-ground
             activity with a performance-first outlook and are one of the leading top outdoor
             advertising agencies in Maharashtra to support brands looking for measurable
-            impressions, trustworthy data, and superior placement strategies.</p>
+            impressions, trustworthy data, and superior placement strategies.</p> */}
         </div>
 
         <div className="hoarding-content faq-section">
@@ -545,7 +527,7 @@ const BusShelterBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} // ✅ FIX
+                    aria-expanded={isActive}
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>
