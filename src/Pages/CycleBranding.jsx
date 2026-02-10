@@ -32,52 +32,72 @@ const CycleBranding = () => { // ✅ FIX: cleaner component name (no extra "e")
     const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-    // ✅ FIX: ONE FAQ list used for both UI + JSON-LD
     const FAQ_ITEMS = useMemo(
         () => [
             {
-                question: "What is cycle branding?",
+                question:
+                    "Do you provide cycle branding and bicycle advertising in Nashik and across Maharashtra?",
                 answer:
-                    "Cycle branding is a mobile outdoor advertising format where branded bicycles carry your message through neighborhoods, markets, campuses, and community spaces to build repeated local visibility and recall.",
+                    "Yes. BrandBanao.ai plans and executes cycle branding campaigns in Nashik and across Maharashtra. We handle route planning, creative/printing, deployment, on-ground operations, and monitoring so your brand gets repeated visibility in targeted local areas.",
             },
             {
-                question: "Where does cycle advertising work best?",
+                question:
+                    "What is cycle branding and how does branded cycle advertising work?",
                 answer:
-                    "Cycle advertising performs best in residential neighborhoods, markets, campuses, housing societies, and local hotspots where people repeatedly see the message during daily routines.",
+                    "Cycle branding is eco-friendly hyperlocal advertising where branded bicycles carry your message through neighbourhoods, markets, campuses, and community areas. Because cycles move at a human pace and revisit the same pockets, people notice the ad repeatedly—building familiarity and recall.",
             },
             {
-                question: "What campaign types can cycle branding support?",
+                question:
+                    "How much does cycle branding cost in Nashik? What are bicycle advertising rates?",
                 answer:
-                    "Cycle branding is ideal for local launches, retail promotions, public awareness and CSR initiatives, real estate site launches, healthcare and education awareness, and event promotions.",
+                    "Cycle branding cost depends on the branding format (cycle panels/boards or wrap), number of cycles, campaign duration (7 days, 15 days, 1 month, etc.), and the areas/routes you want to cover. We share transparent pricing with a clear split between production and deployment/monitoring.",
             },
             {
-                question: "Do you handle route planning and deployment?",
+                question:
+                    "Where does cycle advertising work best in Nashik—societies, markets, colleges, or events?",
                 answer:
-                    "Yes. We plan routes based on your target areas, schedule campaign timing and duration, produce branding materials, and manage on-ground deployment.",
+                    "Cycle advertising works best in residential societies, local markets, campuses/colleges, parks, and event zones—places where people walk, shop, and spend time. It’s also strong for locality-based promotions where repeated exposure drives enquiries and walk-ins.",
             },
             {
-                question: "Do you provide monitoring and reporting?",
+                question:
+                    "Can you run route-wise or area-wise cycle branding campaigns?",
                 answer:
-                    "Yes. Campaigns include monitoring and reporting to help ensure cycles follow planned routes and deliver consistent visibility and frequency in your target locations.",
+                    "Yes. We can plan route-based and zone-based campaigns so cycles circulate in the exact areas you want—near housing societies, retail clusters, hospitals, coaching hubs, or real estate sites. This makes cycle branding ideal for hyperlocal targeting.",
             },
             {
-                question: "Why choose BrandBanao.ai for cycle branding?",
+                question:
+                    "Which businesses benefit most from cycle branding in Nashik?",
                 answer:
-                    "We combine strategy, creative execution, and on-ground operations to deliver scalable hyperlocal cycle branding campaigns with measurable coverage and strong brand recall.",
+                    "Cycle branding is highly effective for local retail, supermarkets, coaching classes, clinics/hospitals, real estate launches, restaurants/food brands, events, and CSR/public awareness campaigns—especially when you want community-level visibility at an efficient cost.",
+            },
+            {
+                question:
+                    "How quickly can a cycle branding campaign start?",
+                answer:
+                    "Timelines depend on creative finalisation and production. Once artwork and cycle count are confirmed, we share a rollout plan with deployment dates and route schedules, then start the campaign as per the agreed timeline.",
+            },
+            {
+                question:
+                    "Do you provide monitoring and reporting for branded cycle campaigns?",
+                answer:
+                    "Yes. We provide campaign monitoring and documentation, and can support route/area tracking and visibility proof as applicable. This helps ensure cycles follow planned coverage and deliver consistent frequency during the campaign period.",
             },
         ],
         []
     );
 
-    // ✅ FIX: keep keywords short
+
     const keywordsContent = useMemo(
         () =>
             [
-                "cycle branding",
-                "branded cycle advertising",
-                "bicycle advertising",
-                "hyperlocal advertising",
+                "cycle branding Nashik",
+                "bicycle advertising Nashik",
+                "cycle branding cost",
+                "bicycle advertising rates",
                 "eco friendly advertising",
+                "hyperlocal advertising Nashik",
+                "society promotion advertising",
+                "campus promotion advertising",
                 "mobile outdoor advertising",
                 "BrandBanao.ai",
             ].join(", "),

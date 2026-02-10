@@ -32,57 +32,79 @@ const CinemaBranding = () => {
   const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-  // ✅ FIX: ONE FAQ source used for UI + JSON-LD (no duplicates)
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question: "What is cinema branding and how does cinema advertising work?",
+        question:
+          "Do you provide cinema advertising in Nashik and across Maharashtra?",
         answer:
-          "Cinema branding is advertising inside the movie theatre ecosystem using on-screen ads (pre-show/interval) and off-screen placements like lobby and foyer displays, standees, and posters. Viewers are seated and attentive, so cinema delivers high recall and emotional impact.",
+          "Yes. BrandBanao.ai plans and executes cinema advertising in Nashik and across Maharashtra through multiplex and regional cinema networks. We help you choose the right cinemas, shows, and timings, then manage creatives, scheduling, approvals, and execution with clear reporting.",
       },
       {
-        question: "Why does cinema work better than many other offline formats?",
+        question:
+          "What are cinema advertising rates in Nashik? How much does movie theatre advertising cost?",
         answer:
-          "Cinema is immersive: controlled lighting, large-format visuals and powerful sound in a distraction-free environment. Ads repeat across shows and days, improving frequency and retention.",
+          "Cinema advertising cost depends on the cinema network, city, number of screens, ad duration (10/15/20 seconds), show frequency, and campaign length (7 days, 2 weeks, 1 month, etc.). We share transparent pricing based on your targeting—so you know the estimated reach and frequency before confirming.",
       },
       {
-        question: "Do you provide end-to-end cinema advertising execution?",
+        question:
+          "Can you run ads in PVR, Cinépolis, and other multiplex cinema networks?",
         answer:
-          "Yes. We handle planning, creative coordination, theatre network selection, scheduling, approvals, and execution. We can also combine on-screen with off-screen placements to maximize visibility.",
+          "Yes. We can plan campaigns across popular multiplex networks (subject to inventory availability in your target city) as well as regional chains. We recommend the best network mix based on audience profile, location, and budget.",
       },
       {
-        question: "Can you run campaigns across multiplexes and regional cinema networks?",
+        question:
+          "What is the difference between pre-show ads and interval ads in cinema?",
         answer:
-          "Yes. We can plan campaigns across multiplex and regional networks with city-tier targeting to reach both metro and non-metro audiences.",
+          "Pre-show ads run before the movie starts (during trailers/settling time) and are great for reach and frequency. Interval ads run during the break when attention is high and viewers are more receptive to offers and calls-to-action. We suggest the best slot mix based on your goal—awareness, launches, or footfall.",
       },
       {
-        question: "What on-screen and off-screen cinema advertising options do you offer?",
+        question:
+          "How long should a cinema ad be—10 seconds, 15 seconds, or 20 seconds?",
         answer:
-          "We offer on-screen ad slots plus off-screen placements such as lobby/foyer branding, standees and other in-cinema touchpoints. The right mix depends on the audience and objectives.",
+          "For most brands, 10-15 seconds works well for awareness and recall, especially with strong visuals and a simple message. 20 seconds is useful when you need more storytelling, offers, or multiple locations. We help you pick the right duration based on your objective and budget.",
       },
       {
-        question: "How do you plan the best cinema advertising mix for ROI?",
+        question:
+          "Can cinema advertising help local businesses in Nashik (restaurants, hospitals, coaching classes, real estate)?",
         answer:
-          "We plan by audience behavior, city tier, film category, show timings, and reach-frequency targets. The goal is strong recall with an efficient budget and measurable outcomes.",
+          "Yes. Cinema advertising works especially well for local businesses because it builds trust and recall in a focused catchment area. It’s commonly used for restaurants and cafés, hospitals and clinics, coaching institutes, real estate projects, retail stores, and local events—especially when combined with a clear offer or location CTA.",
+      },
+      {
+        question:
+          "Do you provide end-to-end support: creative, scheduling, approvals, and reporting?",
+        answer:
+          "Yes. We handle the full campaign: planning and cinema selection, creative coordination (ad formatting as per cinema specs), scheduling, approvals, and execution. After the campaign, we also provide confirmation and documentation/reporting as available from the network.",
+      },
+      {
+        question:
+          "How fast can a cinema advertising campaign go live in Nashik?",
+        answer:
+          "Timelines depend on cinema inventory availability, creative readiness, and approval processes. If your ad is ready, campaigns can often be scheduled quickly. We share a clear go-live plan covering cinema selection, start dates, and show schedule once confirmed.",
       },
     ],
     []
   );
 
-  // ✅ FIX: keep keywords short (meta keywords are ignored by Google)
+
   const keywordsContent = useMemo(
     () =>
       [
-        "cinema branding",
-        "cinema advertising",
-        "movie theatre advertising",
-        "on-screen advertising",
-        "lobby advertising",
-        "foyer branding",
+        "cinema advertising Nashik",
+        "cinema branding Nashik",
+        "movie theatre advertising Nashik",
+        "theatre advertising",
+        "multiplex advertising",
+        "PVR cinema advertising",
+        "Cinépolis advertising",
+        "pre show ads",
+        "interval ads",
+        "cinema advertising rates",
         "BrandBanao.ai",
       ].join(", "),
     []
   );
+
 
   // ✅ FIX: Single JSON-LD @graph (WebSite + Org + WebPage + Service + FAQ + Breadcrumbs)
   const structuredData = useMemo(() => {

@@ -13,12 +13,12 @@ const HoardingBranding = () => {
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/hoardings";
+  const PAGE_URL = "https://brandbanao.ai/Hoardings";
   const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
   const PAGE_TITLE =
-    "Hoardings in Nashik | Billboard & Outdoor Advertising | BrandBanao.ai";
+    "Hoardings in Nashik | BrandBanao.ai";
   const PAGE_DESC =
     "Book hoardings and billboards in Nashik with BrandBanao.ai. Location planning, creative design, printing, installation, maintenance and campaign reporting.";
 
@@ -71,33 +71,75 @@ const HoardingBranding = () => {
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question: "Do you provide hoarding and billboard advertising in Nashik, Maharashtra, and across India?",
+        question:
+          "Do you provide hoardings and billboard advertising in Nashik and across Maharashtra?",
         answer:
-          "Yes. Brand Banao.AI manages hoarding and billboard advertising campaigns in Nashik, across Maharashtra, and in major cities throughout India. We handle location planning, creative design, printing, installation, and maintenance to give your brand consistent outdoor visibility wherever your audience is.",
+          "Yes. BrandBanao.ai plans and executes hoarding and billboard advertising in Nashik and across Maharashtra. We support location shortlisting, media booking, creative design, printing, installation, maintenance, and campaign photo reporting—so you get end-to-end outdoor advertising execution.",
       },
       {
-        question: "How much does hoarding advertising cost in Nashik and Maharashtra?",
+        question:
+          "What are hoarding advertising rates in Nashik? How much does billboard advertising cost?",
         answer:
-          "Hoarding costs depend on location traffic, visibility, hoarding size, and campaign duration. Premium junctions and highways cost more than inner roads. We provide transparent pricing that includes media space, printing, installation, and maintenance so you clearly understand your total investment.",
+          "Hoarding cost depends on the exact location (traffic + visibility), size, format (static, backlit, LED/digital), and campaign duration (15 days, 1 month, 3 months, etc.). Premium junctions and highways generally cost more than inner-city roads. We share transparent pricing with a clear split of media charges and production/printing so you can plan your budget confidently.",
       },
       {
-        question: "Which are the best locations for hoardings in Nashik?",
+        question:
+          "Which are the best hoarding locations in Nashik for maximum visibility?",
         answer:
-          "The best hoarding locations in Nashik are high-traffic intersections, commercial roads, highways, and areas near malls, hospitals, education hubs, and real estate corridors. We select sites based on traffic flow, sightline visibility, and audience relevance to maximize brand recall.",
+          "The best hoarding locations are usually high-traffic junctions, main roads, highway entries/exits, commercial corridors, and areas near malls, hospitals, colleges, and real estate hotspots. We shortlist sites based on sightline, speed of traffic, illumination, and audience relevance—so the ad is readable and unforgettable.",
       },
       {
-        question: "Do you handle hoarding design, printing, and installation?",
+        question:
+          "Do you offer LED hoardings or digital billboard advertising in Nashik?",
         answer:
-          "Yes. We offer complete end-to-end hoarding services from creative design and large-format printing to safe installation and ongoing maintenance checks. You work with one team from concept to campaign execution.",
+          "Yes—where inventory is available. LED/digital hoardings are ideal for launches and high-impact messaging because they’re bright, dynamic, and can rotate creatives. We recommend digital vs static based on budget, availability, and the type of attention you need.",
       },
       {
-        question: "How effective is hoarding advertising compared to digital ads?",
+        question:
+          "Do you handle hoarding design, printing, installation, and maintenance?",
         answer:
-          "Hoardings build strong local trust and brand recall because people see your message repeatedly in the real world. Digital ads capture intent online. Brands that combine hoardings with digital marketing usually see better recognition, credibility, and overall campaign performance.",
+          "Yes. We provide complete hoarding services: outdoor-optimised creative design, large-format printing, safe installation, and regular maintenance checks during the campaign. This ensures the creative stays clean, aligned, and visible throughout the booking period.",
+      },
+      {
+        question:
+          "How quickly can a hoarding campaign go live in Nashik?",
+        answer:
+          "Timelines depend on site availability, printing lead time, and installation scheduling. Once the site and creative are confirmed, we share an execution plan with expected printing and installation dates and provide photo proof after deployment.",
+      },
+      {
+        question:
+          "What hoarding sizes are available and what artwork is required for printing?",
+        answer:
+          "Hoarding sizes vary by site. After finalising the location, we share the exact size and print specs (resolution, bleed, safe area) and can adapt one design for multiple hoardings if you book a set of locations.",
+      },
+      {
+        question:
+          "Is hoarding advertising effective compared to digital ads like Google or Meta?",
+        answer:
+          "Hoardings build strong local trust and brand recall because people see them repeatedly in the real world. Digital ads capture intent and drive immediate actions online. Brands that combine hoardings with digital marketing often get better overall performance—higher recognition, stronger credibility, and improved conversion rates.",
       },
     ],
     []
   );
+
+  const keywordsContent = useMemo(
+    () =>
+      [
+        "hoardings in Nashik",
+        "billboard advertising Nashik",
+        "hoarding advertising rates Nashik",
+        "billboard cost Nashik",
+        "outdoor advertising Nashik",
+        "OOH advertising Maharashtra",
+        "LED hoarding advertising",
+        "digital billboard Nashik",
+        "hoarding printing and installation",
+        "BrandBanao.ai",
+      ].join(", "),
+    []
+  );
+
+
 
   const structuredData = useMemo(() => {
     const orgId = `${SITE_URL}#organization`;
@@ -239,6 +281,7 @@ const HoardingBranding = () => {
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
         <link rel="canonical" href={PAGE_URL} />
+        <meta name="keywords" content={keywordsContent} />
 
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />

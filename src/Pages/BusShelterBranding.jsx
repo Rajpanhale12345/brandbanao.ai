@@ -35,48 +35,75 @@ const BusShelterBranding = () => {
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question: "Do you provide bus shelter advertising in Nashik, Maharashtra, and across India?",
+        question:
+          "Do you provide bus shelter advertising in Nashik (CBS, College Road, Gangapur Road, Dwarka, Satpur) and across Maharashtra?",
         answer:
-          "Yes. BrandBanao.ai plans and executes bus shelter advertising in Nashik, across Maharashtra, and in major cities across India through a strong OOH network. We help you choose the right routes and locations, then manage design, printing, installation, and campaign reporting so your brand gets consistent street-level visibility.",
+          "Yes. We plan and execute bus shelter advertising in Nashik and across Maharashtra. We can recommend shelters near key areas like CBS, College Road, Gangapur Road, Dwarka, Satpur, Indira Nagar, and main highway corridors—based on your target audience, traffic flow, and visibility. We manage the full process: location planning, creative, printing, installation, and photo reporting.",
       },
       {
-        question: "How much does bus shelter advertising cost in Nashik and Maharashtra?",
+        question:
+          "What are the bus shelter advertising rates in Nashik? How is the cost calculated?",
         answer:
-          "Bus shelter advertising cost depends on the city, the exact location (footfall and traffic), format (non-lit, backlit, or digital), and campaign duration. We share transparent pricing with a clear split of media charges, production/printing, and installation so you can decide confidently without hidden surprises.",
+          "Bus shelter advertising cost in Nashik depends on the exact location (footfall + traffic), format (non-lit / backlit / digital where available), and campaign duration (15 days, 1 month, 3 months, etc.). Pricing usually includes media rental plus production (printing) and installation. We share a clear, item-wise quotation so you understand the total cost before booking.",
       },
       {
-        question: "Which are the best bus shelter advertising locations in Nashik?",
+        question:
+          "Which are the best locations for bus stop advertising in Nashik for maximum visibility?",
         answer:
-          "The best bus shelter locations in Nashik are typically near high-traffic junctions, markets, schools/colleges, hospitals, business districts, and commuter-heavy corridors. We shortlist shelters based on visibility, dwell time, and the kind of audience you want so you're not just seen, you're remembered.",
+          "The best bus stop / bus shelter locations in Nashik are typically near busy junctions, markets, schools/colleges, hospitals, IT/industrial routes, and commuter-heavy roads. We shortlist shelters based on sightline, dwell time, vehicle speed, and audience type—so your ad is easy to read and hard to miss.",
       },
       {
-        question: "What formats do you offer non-lit, backlit, or digital bus shelters?",
+        question:
+          "What is the difference between non-lit, backlit, and digital bus shelter ads?",
         answer:
-          "We offer non-lit shelters for cost-effective reach, backlit shelters for strong night visibility, and digital shelters (where available) for high-impact creatives and changing messages. We recommend the format mix based on your goal brand awareness, local trust, store walk-ins, or a launch campaign.",
+          "Non-lit bus shelter ads are cost-effective and work well for long-duration campaigns. Backlit shelters improve night visibility and boost recall. Digital bus shelters (where available) allow multiple creatives and time-based messaging. We suggest the best option based on your goal—brand awareness, local trust, store walk-ins, or a new launch.",
       },
       {
-        question: "Do you handle everything end-to-end creative, printing, installation, and reporting?",
+        question:
+          "How long does it take to start a bus shelter advertising campaign in Nashik?",
         answer:
-          "Yes. We provide complete execution: creative design that's readable in real-world conditions, outdoor-grade printing, professional installation, and proof-of-performance reporting (including photo documentation). You get one accountable team from planning to rollout.",
+          "Most campaigns can go live quickly once locations are finalized and creatives are approved. The timeline mainly depends on availability of shelters, printing lead time, and installation scheduling. We coordinate end-to-end execution and share expected dates for printing, pasting, and go-live along with photo proof after installation.",
+      },
+      {
+        question:
+          "Do you handle creative design, printing, and installation for bus shelter branding?",
+        answer:
+          "Yes. We provide complete bus shelter branding services: creative design optimized for outdoor viewing (large text, high contrast), outdoor-grade printing, professional installation, and photo documentation. You get one accountable team from planning to final execution.",
+      },
+      {
+        question:
+          "What size is a bus shelter ad? What artwork files do you need for printing?",
+        answer:
+          "Bus shelter ad sizes can vary by vendor and site type (side panel, back panel, or full wrap). After we finalize locations, we share the exact media sizes and a simple artwork checklist (bleed, resolution, safe area). We can also adapt one design into multiple sizes if you book multiple shelters.",
+      },
+      {
+        question:
+          "Is bus shelter advertising good for local businesses like hospitals, coaching classes, restaurants, and real estate in Nashik?",
+        answer:
+          "Yes—bus shelter advertising is one of the best outdoor advertising options for local businesses in Nashik because it targets people in a specific area repeatedly. It works especially well for hospitals/clinics, coaching institutes, restaurants, retail stores, real estate projects, gyms, and local events because it drives strong local recall and walk-ins.",
       },
     ],
     []
   );
 
 
+
   const keywordsContent = useMemo(
     () =>
       [
         "bus shelter advertising Nashik",
+        "bus stop advertising Nashik",
+        "bus stand advertising Nashik",
         "bus shelter branding Nashik",
-        "bus stop advertising",
-        "OOH advertising Maharashtra",
         "outdoor advertising Nashik",
-        "transit advertising",
+        "OOH advertising Maharashtra",
+        "transit advertising Nashik",
+        "bus shelter advertising rates Nashik",
         "BrandBanao.ai",
       ].join(", "),
     []
   );
+
 
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";

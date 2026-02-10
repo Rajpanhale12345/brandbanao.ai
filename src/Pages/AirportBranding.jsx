@@ -47,54 +47,83 @@ const AirportBranding = () => {
         []
     );
 
-    // ✅ FIX: Keep meta keywords short (Google ignores it; very long can look spammy)
     const keywordsContent = useMemo(() => {
-        const short = [
+        return [
             "airport branding",
             "airport advertising",
-            "airport OOH advertising",
-            "airport LED advertising",
-            "airport lounge branding",
+            "airport advertising cost",
+            "airport branding rates",
+            "airport LED screen advertising",
             "baggage belt branding",
+            "baggage claim advertising",
+            "airport lounge branding",
             "terminal branding",
-            "BrandBanao.ai",
+            "airport OOH advertising",
             "Maharashtra",
-            "Nashik",
-            "Pune",
-            "Mumbai",
-        ];
-        return short.join(", ");
+            "Mumbai airport advertising",
+            "Pune airport advertising",
+            "Nagpur airport advertising",
+            "BrandBanao.ai",
+        ].join(", ");
     }, []);
 
-    // ✅ FIX: Prefer lowercase canonical for consistency (change if your real route is uppercase!)
-    const canonicalUrl = "https://brandbanao.ai/airport-branding";
 
-    // ✅ FIX: Create a REAL FAQ data array for UI rendering (your code was broken)
+    const canonicalUrl = "https://brandbanao.ai/AirportBranding";
+
     const faqs = useMemo(
         () => [
             {
-                question: "What is airport branding and how does it work?",
+                question:
+                    "Do you provide airport advertising and branding in Maharashtra (Mumbai, Pune, Nagpur) and nearby cities like Nashik?",
                 answer:
-                    "Airport branding is advertising inside airport environments such as terminals, check-in zones, security lanes, boarding gates, lounges, baggage claim, and digital screens. Since travelers spend 90–120 minutes in the airport, your brand gets repeated visibility that builds strong recall and trust.",
+                    "Yes. BrandBanao.ai plans and executes airport advertising across Maharashtra and other locations based on inventory availability. We help you select the right airport, terminal zones, and formats, then manage approvals, production, installation, and campaign documentation.",
             },
             {
-                question: "Which airport touchpoints are best for high visibility?",
+                question:
+                    "How much does airport advertising cost? What are airport branding rates in India?",
                 answer:
-                    "High-visibility touchpoints include Arrival & Departure Terminals, check-in counters, security lanes, boarding gates, baggage claim & conveyor belts, premium lounges, and digital LED screens. The best mix depends on your audience and campaign objective.",
+                    "Airport branding cost depends on the airport, terminal zone (arrivals/departures), media type (LED screens, hoardings, pillar wraps, baggage belt panels, lounge branding), campaign duration, and the number of units. We share transparent rate options with a clear split between media charges and production/printing so budgeting is straightforward.",
             },
             {
-                question: "Do you handle permissions, creatives, printing and installation?",
+                question:
+                    "Which airport branding locations work best—terminal, check-in, security, gates, or baggage claim?",
                 answer:
-                    "Yes. BrandBanao.ai provides end-to-end airport branding execution: media planning, creative design, approvals/permissions, printing/production, logistics, and on-ground installation.",
+                    "High-performing placements are usually arrivals/departures corridors, check-in and security queue zones (high dwell time), boarding gate areas, and baggage claim/conveyor belts (people wait and repeatedly view). We recommend the best mix based on audience type, visibility, and your objective (premium awareness, launches, or lead generation).",
             },
             {
-                question: "Why choose BrandBanao.ai for airport branding?",
+                question:
+                    "Do you offer airport LED screen advertising and other digital airport media?",
                 answer:
-                    "With 15+ years of OOH experience, BrandBanao.ai offers airport media planning, premium creative support, end-to-end execution, and campaign reporting with documentation and post-campaign analysis.",
+                    "Yes. We support airport digital advertising such as LED screens and other digital displays where available. Digital formats are ideal for product launches, multiple creatives, day-part messaging, and stronger visual impact.",
+            },
+            {
+                question:
+                    "Can you do baggage belt branding and baggage claim advertising at airports?",
+                answer:
+                    "Yes. Baggage belt branding and baggage claim advertising are powerful because travelers spend uninterrupted time waiting for luggage, which increases repeated impressions and recall. We can plan placements around the belt area and nearby sightlines depending on the airport’s inventory rules.",
+            },
+            {
+                question:
+                    "Do you handle airport permissions and approvals for branding placements?",
+                answer:
+                    "Yes. Airport media typically requires approvals and compliance with airport/vendor guidelines. We coordinate the approval workflow, creative specs, and on-ground execution so the campaign runs smoothly and as per policy.",
+            },
+            {
+                question:
+                    "How long does it take to launch an airport branding campaign?",
+                answer:
+                    "Timelines depend on inventory availability, approvals, production lead time, and installation scheduling. Once placements and creatives are finalized, we share an execution plan with expected go-live dates and provide photo documentation after installation.",
+            },
+            {
+                question:
+                    "Do you provide reporting or proof-of-display for airport advertising?",
+                answer:
+                    "Yes. We provide campaign documentation such as installation photos and visibility proof, and we can support post-campaign reporting based on what the airport media operator provides for the selected formats.",
             },
         ],
         []
     );
+
 
     // ✅ FIX: Use @graph to connect WebPage + Service + FAQPage (cleaner for SEO + AI search)
     const structuredData = useMemo(() => {

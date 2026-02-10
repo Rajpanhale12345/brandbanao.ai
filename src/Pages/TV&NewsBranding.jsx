@@ -126,36 +126,55 @@ const TVNewsBranding = () => {
 
     const faqItems = [
         {
-            question: "What is TV news channel branding?",
+            question:
+                "What is TV news channel branding and on-air graphics?",
             answer:
-                "TV news channel branding is the complete visual identity and on-air design system of a news network—logo, colors, typography, motion style, lower-thirds, tickers, transitions, show packaging, and brand guidelines for consistency.",
+                "TV news channel branding is the complete on-air visual identity for a news network—logo system, colors, typography, motion style, lower-thirds, tickers, transitions, breaking news graphics, show packaging, and brand guidelines. It keeps the channel consistent, credible, and instantly recognizable on screen.",
         },
         {
-            question: "What all is included in on-air branding for news channels?",
+            question:
+                "What all is included in a news channel on-air graphics package (lower thirds, ticker, breaking news)?",
             answer:
-                "We can build a full on-air package: channel identity system, lower-thirds, tickers, bugs, stings, wipes, promos, breaking-news graphics, show openers, and an easy-to-follow style guide for daily use.",
+                "A complete on-air package typically includes lower-thirds, tickers, bugs/logo placement, stings, wipes, transitions, breaking-news templates, title sequences, promo templates, show openers, and a style guide. We build templates that your production team can use daily without slowing down live output.",
         },
         {
-            question: "Do you create motion graphics packages for 24x7 news?",
+            question:
+                "Do you create 24x7 news-ready motion graphics templates for fast live production?",
             answer:
-                "Yes. We design modular motion graphics and templates that are quick to operate during live broadcasts while keeping the overall look premium and consistent.",
+                "Yes. We design modular motion graphics systems that work for 24x7 news workflows—quick to operate during live bulletins, scalable for special shows, and consistent across regular updates and breaking news.",
         },
         {
-            question: "Can you brand regional language news channels (Marathi and others)?",
+            question:
+                "Can you do Marathi and other regional language news channel branding in Maharashtra?",
             answer:
-                "Yes. We create culturally relevant branding for regional channels including Marathi—aligned with audience preferences while meeting broadcast standards.",
+                "Yes. We create culturally relevant branding for Marathi and other regional news channels while following broadcast-safe readability and layout standards—so the channel feels local, premium, and easy to follow.",
         },
         {
-            question: "Do you handle rebranding for an existing news channel?",
+            question:
+                "Do you handle news channel rebranding for existing channels (refresh or full rebrand)?",
             answer:
-                "Yes. We offer refresh and full rebrand options, including audit, redesign, rollout planning, and guidelines to ensure the new identity launches smoothly.",
+                "Yes. We support both refresh and full rebranding: brand audit, updated identity direction, redesigned on-air package, rollout planning, and brand guidelines—so the transition looks smooth without disrupting your daily broadcast workflow.",
         },
         {
-            question: "Why choose Brand Banao.Ai for TV news channel branding?",
+            question:
+                "How long does it take to deliver a TV news branding package?",
             answer:
-                "We combine strategy + design + execution support to make your channel look credible, consistent, and distinct across daily bulletins, special shows, and breaking news.",
+                "Timelines depend on the scope—basic identity + essential templates can move fast, while full channel packaging (multiple shows + breaking system + promos) takes longer. After understanding your deliverables, we share a structured timeline with clear milestones for concept, design, motion, and final handover.",
+        },
+        {
+            question:
+                "How much does TV news channel branding cost in India?",
+            answer:
+                "Pricing depends on the deliverables (logo/identity, number of lower-third styles, ticker variants, breaking-news system, show packages, promo templates) and whether you need full motion templates or design-only. We provide a clear scope-based quote so you can choose a package that fits your channel stage and budget.",
+        },
+        {
+            question:
+                "Why choose Brand Banao.Ai as a TV news channel branding agency in Nashik/Maharashtra?",
+            answer:
+                "We combine brand strategy, broadcast design, and execution support to build a channel that looks credible and consistent every day. Our systems are made for real newsrooms—fast, repeatable templates with a premium visual identity that stands out across TV and digital.",
         },
     ];
+
 
     return (
         <>

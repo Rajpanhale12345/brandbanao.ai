@@ -28,65 +28,86 @@ const DigitalMarketing = () => { // ✅ FIX: correct component name
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/digital-marketing"; // ✅ FIX: lowercase canonical recommended
+  const PAGE_URL = "https://brandbanao.ai/DigitalMarketing"; // ✅ FIX: lowercase canonical recommended
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
-  const BRAND_NAME = "BrandBanao.ai"; // ✅ FIX: consistent naming
+  const BRAND_NAME = "Brand Banao.AI";
 
-  const PAGE_TITLE = "Digital Marketing in Nashik | SEO, PPC & Social | BrandBanao.ai"; // ✅ FIX: less spammy
+  const PAGE_TITLE = "Digital Marketing in Nashik | BrandBanao.ai";
   const PAGE_DESC =
     "Grow your business with BrandBanao.ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
 
-  // ✅ FIX: ONE FAQ list (used for both UI + JSON-LD)
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question: "What digital marketing services does BrandBanao.ai offer?",
+        question:
+          "What digital marketing services do you provide in Nashik and Maharashtra?",
         answer:
-          "We provide SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, conversion rate optimisation, and reporting—tailored to your goals and budget.",
+          "BrandBanao.ai provides SEO, Local SEO (Google Business Profile), Google Ads (PPC), social media marketing, content marketing, performance marketing, landing page optimisation, remarketing, and analytics/reporting. We build a plan based on your goal—leads, sales, enquiries, or brand awareness.",
       },
       {
-        question: "How long does SEO take to show results?",
+        question:
+          "Which is better for quick leads in Nashik—SEO or Google Ads (PPC)?",
         answer:
-          "SEO timelines vary by industry and competition, but many websites see early improvements within 8–12 weeks. Stronger results often build over 3–6 months with consistent optimisation.",
+          "Google Ads typically brings faster leads because it can start generating enquiries soon after setup. SEO is a long-term growth channel that builds steady organic traffic and lowers dependency on paid ads over time. Most businesses in Nashik get the best results by running PPC for immediate leads while building SEO in parallel.",
       },
       {
-        question: "Do you manage Google Ads and paid social campaigns?",
+        question:
+          "How long does SEO take to show results for a local business in Nashik?",
         answer:
-          "Yes. We plan, set up and optimise search, display and social campaigns with conversion tracking, audience targeting, creative testing, and ongoing performance optimisation.",
+          "SEO timelines depend on competition and your website's current condition. Many local businesses see early improvements in 8–12 weeks, while stronger ranking and consistent lead flow usually builds over 3–6 months with regular optimisation and content support.",
       },
       {
-        question: "Can you help with local SEO for Nashik and nearby areas?",
+        question:
+          "Do you do Local SEO and Google Business Profile optimisation for Nashik areas?",
         answer:
-          "Yes. We improve local visibility through Google Business Profile optimisation, local keyword targeting, location pages, citations, and review strategy.",
+          "Yes. We improve local visibility through Google Business Profile optimisation, local keyword targeting, service-area/location pages, citations, and review strategy. This helps your business show up for “near me” and locality-based searches across Nashik.",
       },
       {
-        question: "How do you measure performance?",
+        question:
+          "How much does digital marketing cost in Nashik? Do you offer packages?",
         answer:
-          "We track qualified leads, conversions, ROAS/CAC, revenue impact, traffic quality, and engagement—shared through dashboards and regular reporting.",
+          "Digital marketing cost depends on the scope (SEO only vs full-stack), competition, number of services/locations, and ad budgets. We offer flexible plans—SEO retainers, PPC management, social media marketing, or bundled growth packages—so you can scale as results improve.",
       },
       {
-        question: "Why choose BrandBanao.ai as your digital marketing partner?",
+        question:
+          "Do you manage Google Ads, Meta (Facebook/Instagram) ads, and remarketing?",
         answer:
-          "We combine strategy, creativity and analytics to build scalable growth systems, focusing on measurable outcomes, continuous optimisation, and transparent reporting.",
+          "Yes. We plan, set up, and optimise Google Search/Display/YouTube campaigns and Meta ads with conversion tracking, audience targeting, creative testing, and remarketing to bring back interested users and improve cost per lead.",
+      },
+      {
+        question:
+          "Can you help with lead generation for hospitals, coaching classes, real estate, and local services in Nashik?",
+        answer:
+          "Yes. We run lead generation campaigns for local and high-intent categories by combining landing pages, Google Ads, Local SEO, call/WhatsApp tracking, and conversion optimisation. The focus is on qualified enquiries, not just traffic.",
+      },
+      {
+        question:
+          "How do you measure results and report performance?",
+        answer:
+          "We track leads, calls, form submissions, WhatsApp enquiries, conversions, cost per lead, ROAS (where applicable), traffic quality, and keyword/local ranking progress. Reporting is shared through dashboards and regular performance updates so you always know what’s working.",
       },
     ],
     []
   );
 
-  // ✅ FIX: Short keywords (optional; Google ignores meta keywords)
+
   const keywordsContent = useMemo(
     () =>
       [
+        "digital marketing agency Nashik",
         "digital marketing Nashik",
         "SEO services Nashik",
-        "Google Ads PPC",
-        "social media marketing",
+        "local SEO Nashik",
+        "Google Ads agency Nashik",
+        "PPC services Nashik",
+        "social media marketing Nashik",
+        "lead generation Nashik",
         "performance marketing",
-        "local SEO",
         "BrandBanao.ai",
       ].join(", "),
     []
   );
+
 
   // ✅ FIX: Single JSON-LD @graph (better for AI search understanding)
   const structuredData = useMemo(() => {

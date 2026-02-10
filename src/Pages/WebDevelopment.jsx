@@ -138,34 +138,58 @@ const WebDevelopmentt = () => {
 
     const faqItems = [
         {
-            question: "What types of websites and apps does Brand Banao.Ai develop?",
+            question:
+                "Do you provide website development and app development in Nashik and across Maharashtra/India?",
             answer:
-                "We build custom business websites, web applications, mobile-first apps and ecommerce platforms aligned with goals like lead generation, online sales, brand presence and operational efficiency.",
+                "Yes. Brand Banao.Ai builds websites and mobile apps for businesses in Nashik, Maharashtra, and across India. We handle planning, UI/UX, development, testing, launch, and ongoing support—so you get an end-to-end digital product team.",
         },
         {
-            question: "Which technologies do you use for web and app development?",
+            question:
+                "What types of websites do you develop (business, portfolio, landing pages, ecommerce)?",
             answer:
-                "We use modern tech stacks with a strong focus on React for web applications, alongside backend and cloud technologies selected according to your project’s scale and requirements.",
+                "We develop business websites, lead-generation landing pages, portfolio sites, ecommerce websites, and custom web applications. Whether your goal is enquiries, sales, bookings, or credibility, we build the right structure and user journey to match.",
         },
         {
-            question: "Do you build responsive and mobile-first websites?",
+            question:
+                "Do you build React websites and custom web applications?",
             answer:
-                "Yes. All our websites are responsive and mobile-first, ensuring they look clear and consistent on phones, tablets and desktops.",
+                "Yes. We build modern React-based websites and web apps that are fast, scalable, and future-ready. We use the best-fit stack based on features, performance needs, integrations, and your long-term roadmap.",
         },
         {
-            question: "Can you develop ecommerce websites and online stores?",
+            question:
+                "Can you develop ecommerce websites with payment gateway integration?",
             answer:
-                "Yes. We create ecommerce-ready websites with product catalogues, carts, checkout flows and payment integration—designed to simplify journeys and improve conversions.",
+                "Yes. We build ecommerce stores with product categories, cart, checkout, payment gateway integration, order flows, and conversion-focused UI. The aim is smooth browsing, faster decisions, and higher sales.",
         },
         {
-            question: "How long does it take to develop a website or app?",
+            question:
+                "Do you build mobile-first and fully responsive websites?",
             answer:
-                "It depends on the complexity of design, features and integrations. After understanding your requirements, we share a clear timeline with phases for design, development, testing and launch.",
+                "Yes. Every website we deliver is mobile-first and responsive—optimized for phones, tablets, and desktops—so users don’t need to zoom or struggle with layouts on any device.",
         },
         {
-            question: "Do you provide ongoing support and maintenance?",
+            question:
+                "Do you create SEO-friendly websites (technical SEO-ready structure)?",
             answer:
-                "We offer ongoing maintenance, updates and performance optimisation so your site or app remains stable, secure and ready to scale.",
+                "Yes. We build websites with SEO-friendly structure: clean code, fast loading, proper headings, crawlable pages, basic technical SEO best practices, and layouts that support content and conversions. If needed, we can also support SEO as an ongoing service.",
+        },
+        {
+            question:
+                "How much does website development cost in Nashik? Do you offer packages?",
+            answer:
+                "Website/app development cost depends on pages, UI complexity, features, integrations (forms, WhatsApp, payments, CRM), content needs, and timelines. We share a clear scope-based quote (or package options) so you can choose what fits your stage and budget.",
+        },
+        {
+            question:
+                "How long does it take to build a website or app?",
+            answer:
+                "Timelines depend on scope. Basic websites can be completed faster, while ecommerce and custom web/apps take longer due to features and testing. After understanding your requirements, we share a milestone-based plan for design, development, testing, and launch.",
+        },
+        {
+            question:
+                "Do you provide website maintenance, updates, and support after launch?",
+            answer:
+                "Yes. We provide maintenance, performance optimization, security updates, bug fixes, and feature enhancements—so your website/app stays stable, secure, and ready to scale as your business grows.",
         },
     ];
 

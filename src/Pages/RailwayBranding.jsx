@@ -37,42 +37,60 @@ const RailwayyBranding = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [showGallery, closeGallery]);
 
-  // ✅ FIX: ONE FAQ source (used for UI + JSON-LD)
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question: "What is railway branding?",
+        question:
+          "Do you provide railway station advertising in Nashik and across Maharashtra/India?",
         answer:
-          "Railway branding is transit advertising that uses railway stations and trains to promote brands through formats like station hoardings, platform displays, foot overbridge panels, train wraps, and digital screens for repeated high-volume visibility.",
+          "Yes. BrandBanao.ai plans and supports railway branding in Nashik and across Maharashtra/India based on inventory availability. We help select stations and media formats, then coordinate planning, creative specs, execution support, and campaign documentation.",
       },
       {
-        question: "Where can railway advertisements be placed?",
+        question:
+          "What are railway advertising rates? How much does railway station branding cost?",
         answer:
-          "Railway ads can be placed at entry/exit zones, station premises, concourse areas, platforms, foot overbridges, waiting areas, trains, and digital screens depending on availability and campaign objectives.",
+          "Railway advertising cost depends on the station category/footfall, media type (station hoardings, platform panels, FOB panels, entry/exit signage, digital screens), campaign duration, and number of units. We share transparent rate options with a clear split between media and production so budgeting is straightforward.",
       },
       {
-        question: "Why does railway advertising work well for brands?",
+        question:
+          "What railway advertising formats do you offer (platform, FOB, concourse, digital screens, train wraps)?",
         answer:
-          "Railway advertising works due to mass reach, high frequency, longer dwell time at stations, and audience diversity—helping brands build recall and trust through repeated exposure.",
+          "We support common railway media such as station hoardings, platform displays, foot overbridge (FOB) panels, concourse/entry-exit branding, waiting-area placements, digital screens (where available), and train-side or coach branding depending on approvals and availability.",
       },
       {
-        question: "Do you manage permissions and end-to-end execution?",
+        question:
+          "Which is better for visibility—platform ads or entry/exit and concourse branding?",
         answer:
-          "Yes. Brand Banao.Ai supports planning, artwork guidance, production, permissions/coordination where applicable, placement execution, monitoring, and reporting for railway branding campaigns.",
+          "Entry/exit and concourse branding captures almost every passenger flow, while platform and FOB panels deliver strong dwell-time visibility when people wait for trains. We recommend a mix based on your objective—mass awareness, city coverage, or focused station dominance.",
       },
       {
-        question: "What types of campaigns are suitable for railway branding?",
+        question:
+          "Do you manage permissions and approvals for railway station advertising?",
         answer:
-          "Railway branding is suitable for FMCG promotions, retail launches, tourism campaigns, education and healthcare awareness, real estate launches, automotive promotions, and seasonal or event-based campaigns.",
+          "Railway media typically requires approvals and compliance with station/vendor guidelines. We coordinate the approval workflow and creative specifications with the media operator as applicable, and guide you through timelines and requirements for smooth execution.",
       },
       {
-        question: "Why choose Brand Banao.Ai for railway advertising?",
+        question:
+          "How long does it take to start a railway branding campaign?",
         answer:
-          "Brand Banao.Ai combines strategic planning, creative execution, and on-ground operations to deliver scalable railway branding with consistent visibility, monitoring, and measurable coverage.",
+          "Timelines depend on inventory availability, approval processes, and production/printing. Once the station, formats, and artwork are finalised, we share a rollout plan with expected start dates and provide documentation after deployment.",
+      },
+      {
+        question:
+          "What industries benefit most from railway advertising?",
+        answer:
+          "Railway advertising works well for FMCG, retail, tourism, education, healthcare, real estate, automotive launches, banking/finance, government campaigns, and seasonal offers—because stations deliver mass reach, repetition, and strong recall across diverse audiences.",
+      },
+      {
+        question:
+          "Do you provide monitoring and reporting for railway station ads?",
+        answer:
+          "Yes. We provide campaign documentation such as photos and placement proof, and can support reporting based on what the station media operator provides for the selected formats—helping ensure visibility and consistency during the campaign.",
       },
     ],
     []
   );
+
 
   // ✅ FIX: Single JSON-LD graph (better for AI search + consistency)
   const structuredData = useMemo(() => {
@@ -152,8 +170,8 @@ const RailwayyBranding = () => {
         <meta name="description" content={PAGE_DESC} /> {/* ✅ FIX */}
         <meta
           name="keywords"
-          content="railway branding, railway station advertising, station branding, platform branding, foot overbridge advertising, train wrap advertising, transit advertising, Brand Banao Ai"
-        /> {/* ✅ FIX: shorter keywords */}
+          content="railway advertising, railway station advertising Nashik, station branding, platform advertising, foot overbridge advertising, FOB panels, railway hoardings, digital screen advertising station, train branding, transit advertising, BrandBanao.ai"
+        />
 
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
