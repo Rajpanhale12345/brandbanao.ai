@@ -195,12 +195,7 @@ const AirportBranding = () => {
                 <title>Airport Branding & Advertising in Maharashtra | BrandBanao.ai</title>
 
                 <meta name="author" content="BrandBanao.ai" />
-                <meta
-                    name="description"
-                    content="Airport Branding Services by BrandBanao.ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution."
-                />
-
-                {/* ✅ FIX: Optional; keep short (Google ignores it) */}
+                <meta name="description" content="Airport Branding Services by BrandBanao.ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
                 <meta name="keywords" content={keywordsContent} />
 
                 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -210,10 +205,7 @@ const AirportBranding = () => {
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.ai" />
                 <meta property="og:title" content="Airport Branding & Advertising in Maharashtra | BrandBanao.ai" />
-                <meta
-                    property="og:description"
-                    content="Premium airport branding across terminals, lounges, baggage belts and digital screens with end-to-end execution."
-                />
+                <meta property="og:description" content="Premium airport branding across terminals, lounges, baggage belts and digital screens with end-to-end execution." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
@@ -221,13 +213,9 @@ const AirportBranding = () => {
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Airport Branding & Advertising | BrandBanao.ai" />
-                <meta
-                    name="twitter:description"
-                    content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by BrandBanao.ai."
-                />
+                <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by BrandBanao.ai." />
                 <meta name="twitter:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
 
-                {/* ✅ FIX: One JSON-LD block (connected graph) */}
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
