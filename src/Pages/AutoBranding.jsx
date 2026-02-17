@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Autobranding from "../Images/autobranding.jpg";
 import "./tvNews.css";
 
@@ -61,7 +61,7 @@ const AutoBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/AutoBranding";
+  const PAGE_URL = "https://brandbanao.ai/auto-branding";
   const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/autobranding-Bpnv9LSm.jpg";
 
@@ -80,8 +80,6 @@ const AutoBranding = () => {
     []
   );
 
-
-  // ✅ FIX: One JSON-LD graph is cleaner than 5 separate blocks
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";
     const pageId = `${PAGE_URL}#webpage`;
@@ -168,43 +166,27 @@ const AutoBranding = () => {
       <Helmet>
         <title>Auto Branding in Nashik | Auto Rickshaw Advertising | BrandBanao.ai</title>
 
-        <meta
-          name="description"
-          content="Auto branding and auto rickshaw advertising by BrandBanao.ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
-        />
-
+        <meta name="description" content="Auto branding and auto rickshaw advertising by BrandBanao.ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-
-        {/* ✅ FIX: Optional (short) keywords */}
         <meta name="keywords" content={keywordsContent} />
-
-        {/* ✅ FIX: Keep OG/Twitter clean */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content="Auto Branding in Nashik | BrandBanao.ai" />
-        <meta
-          property="og:description"
-          content="High-visibility auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
-        />
+        <meta property="og:description" content="High-visibility auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Auto Branding Services" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Auto Branding in Nashik | BrandBanao.ai" />
-        <meta
-          name="twitter:description"
-          content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting."
-        />
+        <meta name="twitter:description" content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        {/* ✅ FIX: Single JSON-LD output */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 

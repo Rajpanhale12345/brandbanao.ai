@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import newsImg from "../Images/news.png";
 import "./tvNews.css";
 
@@ -18,7 +18,7 @@ const TVNewsBranding = () => {
     const PAGE_TITLE = "Best TV News Branding in Nashik | Brand Banao.Ai";
     const PAGE_DESC =
         "TV News Channel Branding by Brand Banao.Ai. End-to-end on-air branding, motion graphics, channel identity, lower-thirds, tickers, show packaging, and visual systems for regional and national news networks.";
-    const PAGE_URL = "https://brandbanao.ai/TVNewsChanelBranding";
+    const PAGE_URL = "https://brandbanao.ai/tv-news-chanel-branding";
     const OG_IMAGE = "https://brandbanao.ai/assets/news-3vk9foU8.png";
 
     const webPageSchema = {
@@ -159,11 +159,9 @@ const TVNewsBranding = () => {
 
     return (
         <>
-            <Helmet htmlAttributes={{ lang: "en-IN" }}>
+            <Helmet>
                 <title>{PAGE_TITLE}</title>
-                <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
                 <meta name="author" content="Brand Banao.AI" />
                 <meta name="publisher" content="Brand Banao.Ai" />
                 <meta name="creator" content="Brand Banao.Ai" />
@@ -175,9 +173,7 @@ const TVNewsBranding = () => {
                 <meta name="color-scheme" content="light dark" />
                 <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
                 <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-
                 <link rel="canonical" href={PAGE_URL} />
-
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content="TV News Channel Branding Services" />
@@ -189,7 +185,6 @@ const TVNewsBranding = () => {
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="TV News Channel Branding - Brand Banao.Ai" />
-
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="TV News Channel Branding Services" />
                 <meta name="twitter:description" content={PAGE_DESC} />

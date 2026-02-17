@@ -24,9 +24,9 @@ import "./Footer.css";
             ]}
           />
           <Column
-            title="Contact"
+            title="Other"
             links={[
-            ["Contact", "/contact"],
+            ["Sitemap", "/sitemap"],
             ]}
           />
            <Column

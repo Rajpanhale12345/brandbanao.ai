@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import airport from "../Images/airport.jpg";
 import "./busShelter.css";
 
@@ -66,7 +66,7 @@ const AirportBranding = () => {
     }, []);
 
 
-    const canonicalUrl = "https://brandbanao.ai/AirportBranding";
+    const canonicalUrl = "https://brandbanao.ai/airport-branding";
 
     const faqs = useMemo(
         () => [

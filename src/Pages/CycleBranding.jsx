@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import cycleImg from "../Images/cycle.jpg";
 import "./tvNews.css";
 
@@ -27,7 +27,7 @@ const CycleBranding = () => {
     }, [showGallery, closeGallery]);
 
     const SITE_URL = "https://brandbanao.ai/";
-    const PAGE_URL = "https://brandbanao.ai/CycleBranding"; 
+    const PAGE_URL = "https://brandbanao.ai/cycle-branding"; 
     const BRAND_NAME = "BrandBanao.ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
@@ -165,9 +165,8 @@ const CycleBranding = () => {
 
     return (
         <>
-            <Helmet htmlAttributes={{ lang: "en-IN" }}>  
+            <Helmet>  
                 <title>Cycle Branding in Nashik | Branded Cycle Advertising | BrandBanao.ai</title>  
-                <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content={BRAND_NAME} />
                 <meta name="publisher" content={BRAND_NAME} />
@@ -176,12 +175,9 @@ const CycleBranding = () => {
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="theme-color" content="#0d1117" />
-
                 <link rel="icon" href={OG_IMAGE} />
                 <link rel="apple-touch-icon" href={OG_IMAGE} />
-
                 <link rel="canonical" href={PAGE_URL} />  
-
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
                 <meta property="og:title" content="Cycle Branding Services | BrandBanao.ai" />
@@ -190,7 +186,6 @@ const CycleBranding = () => {
                 <meta property="og:url" content={PAGE_URL} />  
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:alt" content="BrandBanao.ai - Cycle Branding" />  
-
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Cycle Branding | BrandBanao.ai" />
                 <meta name="twitter:description" content={metaDescription} />

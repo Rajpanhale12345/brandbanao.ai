@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react"; 
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import railwayImg from "../Images/railwaybranding.jpg"; 
 import "./tvNews.css";
 
@@ -9,7 +9,7 @@ const RailwayyBranding = () => {
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/RailwayBranding"; 
+  const PAGE_URL = "https://brandbanao.ai/railway-branding"; 
   const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/railwaybranding-B3y0GcSB.jpg";
 
@@ -139,9 +139,8 @@ const RailwayyBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>
+      <Helmet>
         <title>{PAGE_TITLE}</title>
-        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
@@ -151,9 +150,7 @@ const RailwayyBranding = () => {
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="theme-color" content="#0d1117" />
-
         <link rel="canonical" href={PAGE_URL} />
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -162,7 +159,6 @@ const RailwayyBranding = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="Railway Branding - Brand Banao.Ai" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />

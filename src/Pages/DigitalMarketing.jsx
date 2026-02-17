@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import digitalImg from "../Images/digital.jpg"; 
 import "./tvNews.css";
 
@@ -27,7 +27,7 @@ const DigitalMarketing = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/WebDevelopment";
+  const PAGE_URL = "https://brandbanao.ai/digital-marketing";
   const OG_IMAGE = "https://brandbanao.ai/assets/app-BPEwsj2h.png";
   const BRAND_NAME = "Brand Banao.AI";
 
@@ -166,24 +166,18 @@ const DigitalMarketing = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>  
+      <Helmet>  
         <title>{PAGE_TITLE}</title>
-        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
-
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-
         <meta name="keywords" content={keywordsContent} />
-
         <link rel="canonical" href={PAGE_URL} />  
         <link rel="icon" href={OG_IMAGE} />
         <link rel="apple-touch-icon" href={OG_IMAGE} />
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -192,7 +186,6 @@ const DigitalMarketing = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Digital Marketing" />  
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />

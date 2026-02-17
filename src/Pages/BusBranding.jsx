@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import BusBranding from "../Images/busbranding.jpg";
 import "./tvNews.css"
 
@@ -26,7 +26,7 @@ const BussBranding = () => {
     }, [showGallery, closeGallery]);
 
     const SITE_URL = "https://brandbanao.ai/";
-    const PAGE_URL = "https://brandbanao.ai/BusBranding";
+    const PAGE_URL = "https://brandbanao.ai/bus-branding";
     const BRAND_NAME = "BrandBanao.ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/busbranding-DTaNUJ2h.jpg";
 
@@ -162,49 +162,31 @@ const BussBranding = () => {
     return (
         <>
             <Helmet>
-                {/* ✅ FIX: Title typo + better intent */}
                 <title>Best Bus Branding in Nashik | BrandBanao.ai</title>
-
-                <meta
-                    name="description"
-                    content="Bus branding and bus advertising services by BrandBanao.ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall."
-                />
-
+                <meta name="description" content="Bus branding and bus advertising services by BrandBanao.ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall." />
                 <meta name="author" content={BRAND_NAME} />
                 <meta name="publisher" content={BRAND_NAME} />
                 <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="canonical" href={PAGE_URL} />
                 <meta name="theme-color" content="#000000" />
-
-                {/* ✅ FIX: optional + short */}
                 <meta name="keywords" content={keywordsContent} />
-
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
                 <meta property="og:title" content="Bus Branding & Bus Advertising | BrandBanao.ai" />
-                <meta
-                    property="og:description"
-                    content="High-impact bus branding: full wraps, side ads, back-of-bus ads, route planning and creative execution for strong reach and recall."
-                />
+                <meta property="og:description" content="High-impact bus branding: full wraps, side ads, back-of-bus ads, route planning and creative execution for strong reach and recall." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:alt" content="BrandBanao.ai - Bus Branding Services" />
-
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Bus Branding & Bus Advertising | BrandBanao.ai" />
-                <meta
-                    name="twitter:description"
-                    content="Bus branding: wraps, side ads, back-of-bus ads, route planning, and creative execution."
-                />
+                <meta name="twitter:description" content="Bus branding: wraps, side ads, back-of-bus ads, route planning, and creative execution." />
                 <meta name="twitter:image" content={OG_IMAGE} />
 
-                {/* ✅ FIX: single JSON-LD */}
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
 
-            {/* Using the same structure / classes as Hoarding.jsx for styling */}
             <div className="hoarding-page">
                 <h1 className="hoarding-title">Bus Branding</h1>
 

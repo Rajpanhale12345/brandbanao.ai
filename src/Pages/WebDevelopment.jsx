@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import appImg from "../Images/app.png";
 import webDevImg from "../Images/Web Dev.png";
 import seoDevImg from "../Images/SEO Dev.png";
@@ -20,7 +20,7 @@ const WebDevelopmentt = () => {
     const PAGE_TITLE = "Website & App Development | Brand Banao.Ai";
     const PAGE_DESC =
         "Custom website and mobile app development by Brand Banao.AI — responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
-    const PAGE_URL = "https://brandbanao.ai/WebDevelopmentt";
+    const PAGE_URL = "https://brandbanao.ai/web-developmentt";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
     const webPageSchema = {
@@ -170,17 +170,12 @@ const WebDevelopmentt = () => {
 
     return (
         <>
-            <Helmet htmlAttributes={{ lang: "en-IN" }}>
+            <Helmet>
                 <title>{PAGE_TITLE}</title>
-                <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
-                <meta
-                    name="keywords"
-                    content="website development, web development company, web app development, mobile app development, app development company, ecommerce website development, responsive web design, React website development, custom web application development, web development services, app development services, performance-focused websites, UI UX design, business website development, online store development, web development agency"
-                />
+                <meta name="keywords" content="website development, web development company, web app development, mobile app development, app development company, ecommerce website development, responsive web design, React website development, custom web application development, web development services, app development services, performance-focused websites, UI UX design, business website development, online store development, web development agency" />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
@@ -188,9 +183,7 @@ const WebDevelopmentt = () => {
                 <meta name="color-scheme" content="light dark" />
                 <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
                 <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-
                 <link rel="canonical" href={PAGE_URL} />
-
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.Ai" />
                 <meta property="og:title" content={PAGE_TITLE} />
@@ -202,7 +195,6 @@ const WebDevelopmentt = () => {
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
                 <meta property="og:image:alt" content="Website & App Development - Brand Banao.Ai" />
-
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={PAGE_TITLE} />
                 <meta name="twitter:description" content={PAGE_DESC} />

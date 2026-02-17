@@ -1,14 +1,12 @@
 import React, { useMemo, useState, useCallback } from "react";
 import "../components/Careers.css";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const SITE_URL = "https://brandbanao.ai";
 const CANONICAL_URL = `${SITE_URL}/careers`;
 const OG_IMAGE = `${SITE_URL}/assets/logopng-CGGCs8OD.png`;
 
-// ✅ FIX: Use PATHS for internal links (not full URLs)
-// ✅ FIX: Make IDs UNIQUE (no duplicates)
 const JOBS = [
   {
     id: "media-planner",
@@ -17,7 +15,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "01 - 05 years", 
     tags: ["media"],
-    link: "careers/MediaPlanner#header", 
+    link: "careers/media-planner#header", 
     desc: "Own media planning, buying coordination, budgeting support, and channel mix for client campaigns.",
   },
   {
@@ -27,7 +25,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "01 - 05 years",
     tags: ["sales"],
-    link: "careers/SalesMarketingExecutiveFemale#header",
+    link: "careers/sales-marketing-executive-female#header",
     desc: "Drive new business, manage leads, and maintain client relationships.",
   },
   {
@@ -37,7 +35,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "02+ years",
     tags: ["marketing", "digital"],
-    link: "careers/DigitalMarketingExecutive#header", 
+    link: "careers/careers/digital-marketing-executive#header", 
     desc: "Execute digital campaigns, content plans, and performance tracking for growth.",
   },
   {
@@ -47,7 +45,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "05+ years",
     tags: ["marketing", "digital"],
-    link: "careers/DigitalMarketingManager#header", 
+    link: "careers/digital-marketing-manager#header", 
     desc: "Lead strategy across paid, owned, and earned channels; manage team and reporting.",
   },
   {
@@ -57,7 +55,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "02+ years",
     tags: ["operations"],
-    link: "careers/OperationsHead#header", 
+    link: "careers/operations-head#header", 
     desc: "Own operational excellence, vendor coordination, timelines, and campaign execution quality.",
   },
   {
@@ -67,7 +65,7 @@ const JOBS = [
     location: "Nashik (India)",
     exp: "02+ years",
     tags: ["sales", "marketing"],
-    link: "careers/SalesMarketingManager#header", 
+    link: "careers/sales-marketing-manager#header", 
     desc: "Lead sales pipeline + marketing alignment to scale revenue and partnerships.",
   },
 ];
@@ -204,33 +202,31 @@ export default function Careers() {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}> {/* ✅ FIX */}
+      <Helmet> 
         <title>Careers | BrandBanao.ai</title>
         <meta name="description" content={metaDescription} />
         <meta name="author" content="BrandBanao.ai" />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <meta name="theme-color" content="#d94f5c" />
-        <link rel="canonical" href={CANONICAL_URL} />
-
+        <link rel="canonical" href={CANONICAL_URL} /> 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="BrandBanao.ai" />
         <meta property="og:url" content={CANONICAL_URL} />
         <meta property="og:title" content="Careers | BrandBanao.ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai" /> {/* ✅ FIX */}
-
+        <meta property="og:image:alt" content="BrandBanao.ai" /> 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Careers | BrandBanao.ai" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        <script type="application/ld+json">{JSON.stringify(schema)}</script> {/* ✅ FIX: no newline string */}
+        <script type="application/ld+json">{JSON.stringify(schema)}</script> 
       </Helmet>
 
       <div className="careers-page">
         <header className="site-header" role="banner">
-          {/* Keep header minimal per original */}
+ 
         </header>
 
         <main id="main" className="container" role="main">

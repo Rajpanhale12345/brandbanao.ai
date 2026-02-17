@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import "./busShelter.css";
 
 import hoarding1 from "../Images/hoarding.jpg";
@@ -13,7 +13,7 @@ const HoardingBranding = () => {
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/Hoardings";
+  const PAGE_URL = "https://brandbanao.ai/hoardings";
   const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/hoarding-DQjSSeNb.jpg";
 
@@ -250,19 +250,15 @@ const HoardingBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>
-        <meta charSet="utf-8" />
+      <Helmet>
         <title>{PAGE_TITLE}</title>
-
         <meta name="author" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
         <meta name="robots" content="index,follow,max-image-preview:large" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-
         <link rel="canonical" href={PAGE_URL} />
         <meta name="keywords" content={keywordsContent} />
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -273,7 +269,6 @@ const HoardingBranding = () => {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />

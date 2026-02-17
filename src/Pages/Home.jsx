@@ -3,7 +3,7 @@ import "./Home.css";
 import BoxCard from "../components/BoxCard";
 import Carousel from "../components/Carousel";
 import Work from "../components/Work";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const canvasRef = useRef(null);
@@ -217,7 +217,6 @@ export default function Home() {
           <h2 className="title-2">AGENCY IN <br /><div className="highlight">MAHARASHTRA</div> </h2>
         </div>
 
-        {/* NEW: floating scroll-down arrow */}
         <button
           className={`scroll-down ${showArrow ? "" : "hidden"}`}
           onClick={scrollDown}
@@ -230,7 +229,6 @@ export default function Home() {
         </button>
       </div>
 
-      {/* NEW: anchor target just below the hero */}
       <div ref={belowHeroRef} />
 
       <BoxCard />

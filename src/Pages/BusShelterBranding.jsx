@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import busshelter from "../Images/busshelter.jpg";
 import "./busShelter.css"
 
@@ -28,7 +28,7 @@ const BusShelterBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/Bus_Shelter";
+  const PAGE_URL = "https://brandbanao.ai/bus-shelter";
   const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/busshelter-Bqx2SSuA.jpg";
 
@@ -162,52 +162,33 @@ const BusShelterBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>
-        <meta charSet="utf-8" />
-        
+      <Helmet>
         <title>Bus Shelter Advertising in Nashik | BrandBanao.ai</title>
-
         <meta name="author" content={BRAND_NAME} />
-        <meta
-          name="description"
-          content="Boost your brand visibility with Bus Shelter Advertising by BrandBanao.ai. 24x7 street-level ads with wide reach, local targeting, and complete campaign execution."
-        />
-
-        {/* ✅ FIX: Short keywords (optional) */}
+        <meta name="description" content="Boost your brand visibility with Bus Shelter Advertising by BrandBanao.ai. 24x7 street-level ads with wide reach, local targeting, and complete campaign execution." />
         <meta name="keywords" content={keywordsContent} />
-
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <meta name="theme-color" content="#000000" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
         <link rel="canonical" href={PAGE_URL} />
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content="Bus Shelter Advertising & Branding | BrandBanao.ai" />
-        <meta
-          property="og:description"
-          content="Bus shelter ads with 24x7 visibility, hyperlocal targeting, and complete execution: creative, printing, installation and reporting."
-        />
+        <meta property="og:description" content="Bus shelter ads with 24x7 visibility, hyperlocal targeting, and complete execution: creative, printing, installation and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Bus Shelter Advertising" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bus Shelter Advertising | BrandBanao.ai" />
-        <meta
-          name="twitter:description"
-          content="Bus shelter advertising with hyperlocal targeting, 24x7 visibility and end-to-end execution."
-        />
+        <meta name="twitter:description" content="Bus shelter advertising with hyperlocal targeting, 24x7 visibility and end-to-end execution." />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        {/* ✅ FIX: One JSON-LD script */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
-      {/* Using the same structure / classes as Hoarding.jsx for styling */}
       <div className="hoarding-page">
         <h1 className="hoarding-title">Bus Shelter Advertising &amp; Branding</h1>
 

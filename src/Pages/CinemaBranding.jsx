@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import { Helmet } from "react-helmet";
-import cinemaImg from "../Images/cinemabranding.webp"; 
+import { Helmet } from "react-helmet-async";
+import cinemaImg from "../Images/cinemabranding.webp";
 import "./tvNews.css";
 
 const CinemaBranding = () => {
@@ -8,16 +8,16 @@ const CinemaBranding = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [cinemaImg], []); 
+  const images = useMemo(() => [cinemaImg], []);
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []);  
+  const closeGallery = useCallback(() => setShowGallery(false), []);
 
- 
+
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -28,7 +28,7 @@ const CinemaBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/Cinema";
+  const PAGE_URL = "https://brandbanao.ai/cinema";
   const BRAND_NAME = "BrandBanao.ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/cinemabranding-BROdYWzQ.webp";
 
@@ -167,34 +167,25 @@ const CinemaBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>  
-        <meta charSet="utf-8" />
+      <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    
         <title>Cinema Branding in Nashik | BrandBanao.ai</title>
-
         <meta name="author" content={BRAND_NAME} />
         <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-
-     
         <meta name="keywords" content={keywordsContent} />
-
         <link rel="icon" href={OG_IMAGE} />
         <link rel="apple-touch-icon" href={OG_IMAGE} />
-        <link rel="canonical" href={PAGE_URL} /> 
-
+        <link rel="canonical" href={PAGE_URL} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content="Cinema Branding & Advertising | BrandBanao.ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={PAGE_URL} />  
+        <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Cinema Branding" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cinema Branding | BrandBanao.ai" />
         <meta name="twitter:description" content={metaDescription} />
@@ -359,7 +350,7 @@ const CinemaBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive}  
+                    aria-expanded={isActive}
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

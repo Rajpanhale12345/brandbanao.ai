@@ -1,7 +1,7 @@
 // Services.jsx
 import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import "../components/Services.css";
 
 import busshelter from "../Images/busshelter.jpg";
@@ -32,37 +32,37 @@ export default function Services() {
       {
         title: "Hoardings/Billboards",
         image: hoarding,
-        path: "/Hoardings",
+        path: "/hoardings",
       },
       {
         title: "Bus Shelter",
         image: busshelter,
-        path: "/Bus_Shelter",
+        path: "/bus-shelter",
       },
       {
         title: "Cinema Branding",
         image: cinema,
-        path: "/Cinema",
+        path: "/cinema",
       },
       {
         title: "Radio FM Branding",
         image: radio,
-        path: "/Radio",
+        path: "/radio",
       },
       {
         title: "Airport Branding",
         image: airportImg,
-        path: "/AirportBranding",
+        path: "/airport-branding",
       },
       {
         title: "Digital Marketing",
         image: digital,
-        path: "/DigitalMarketing",
+        path: "/digital-marketing",
       },
       {
         title: "Railway Branding",
         image: railway,
-        path: "/RailwayBranding",
+        path: "/railway-branding",
       },
       {
         title: "Bus Branding",
@@ -72,23 +72,23 @@ export default function Services() {
       {
         title: "TV News Channel Branding",
         image: news,
-        path: "/TVNewsChanelBranding",
+        path: "/tv-news-chanel-branding",
         imgStyle: { objectFit: "contain", background: "#fff" },
       },
       {
         title: "Auto Branding",
         image: auto,
-        path: "/AutoBranding",
+        path: "/auto-branding",
       },
       {
         title: "Website/App Development",
         image: app,
-        path: "/WebDevelopment",
+        path: "/web-development",
       },
       {
         title: "Cycle Branding",
         image: cycle,
-        path: "/CycleBranding",
+        path: "/cycle-branding",
       },
     ],
     []
@@ -189,26 +189,18 @@ export default function Services() {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>
+      <Helmet>
         <title>Best Outdoor Services in Nashik | Brand Banao.Ai</title>
-        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={metaDescription} />
-        <meta
-          name="keywords"
-          content="outdoor advertising Nashik, hoardings, bus shelter advertising, cinema branding, radio advertising, airport branding, digital marketing, railway branding, bus branding, auto branding, TV news channel branding, web development, app development, cycle branding"
-        />
-
+        <meta name="keywords" content="outdoor advertising Nashik, hoardings, bus shelter advertising, cinema branding, radio advertising, airport branding, digital marketing, railway branding, bus branding, auto branding, TV news channel branding, web development, app development, cycle branding" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="canonical" href={PAGE_URL} />
-
-        {/* Open Graph */}
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content="Services | Brand Banao.Ai" />
@@ -217,15 +209,12 @@ export default function Services() {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="Brand Banao.Ai - Services" />
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services | Brand Banao.Ai" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Brand Banao.Ai - Services" />
 
-        {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
@@ -246,45 +235,45 @@ export default function Services() {
               <ServiceCard
                 title="Hoardings/Billboards"
                 image={hoarding}
-                path="/Hoardings"
+                path="/hoardings"
                 style={{ height: "200px" }}
               />
 
               <ServiceCard
                 title="Bus Shelter"
                 image={busshelter}
-                path="/Bus_Shelter"
+                path="/bus-shelter"
               />
 
               <ServiceCard
                 title="Cinema Branding"
                 image={cinema}
-                path="/Cinema"
+                path="/cinema"
 
               />
 
               <ServiceCard
                 title="Radio FM Branding"
                 image={radio}
-                path="/Radio"
+                path="/radio"
               />
 
               <ServiceCard
                 title="Airport Branding"
                 image={airportImg}
-                path="/AirportBranding"
+                path="/airport-branding"
               />
 
               <ServiceCard
                 title="Digital Marketing"
                 image={digital}
-                path="/DigitalMarketing"
+                path="/digital-marketing"
               />
 
               <ServiceCard
                 title="Railway Branding"
                 image={railway}
-                path="/RailwayBranding"
+                path="/railway-branding"
               />
 
               <ServiceCard
@@ -296,7 +285,7 @@ export default function Services() {
               <ServiceCard
                 title="TV News Channel Branding"
                 image={news}
-                path="/TVNewsChanelBranding"
+                path="/tv-news-chanel-branding"
                 // example of custom img style on a single card:
                 imgStyle={{ objectFit: "contain", background: "#fff" }}
               />
@@ -304,19 +293,19 @@ export default function Services() {
               <ServiceCard
                 title="Auto Branding"
                 image={auto}
-                path="/AutoBranding"
+                path="/auto-branding"
               />
 
               <ServiceCard
                 title="Website/App Development"
                 image={app}
-                path="/WebDevelopment"
+                path="/web-development"
               />
 
               <ServiceCard
                 title="Cycle Branding"
                 image={cycle}
-                path="/CycleBranding"
+                path="/cycle-branding"
               />
             </div>
           </div>

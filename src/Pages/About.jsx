@@ -4,18 +4,15 @@ import founder from "../Images/amitpatil.png"
 import cofounder from '../Images/prajaktapatil.jpeg'
 import CountUp from 'react-countup';
 import Innovation from '../components/Innovation';
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
 
-   // ✅ FIX: Use JSON.stringify instead of template string (safer, no formatting issues)
-  // ✅ FIX: Use @graph to describe AboutPage + Organization (better entity clarity)
-  // ✅ FIX: Use a logo URL that actually exists on your site (update if different)
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "AboutPage", // ✅ FIX: More accurate than generic WebPage
+        "@type": "AboutPage", 
         "@id": "https://brandbanao.ai/about#aboutpage",
         "url": "https://brandbanao.ai/about",
         "name": "About BrandBanao.ai | 360° Branding & Advertising Agency in Nashik",
@@ -87,22 +84,10 @@ const About = () => {
       <Helmet>
         <title>About BrandBanao.ai | 360° Branding & Advertising Agency in Nashik</title>
         <meta name="description" content="BrandBanao.ai is a leading 360-degree branding & advertising agency in Nashik, Maharashtra. Founded by Amit Hemant Patil, we specialize in strategic branding, digital marketing, OOH advertising, and growth-driven campaigns." />
-        <meta name="author" content="BrandBanao.ai" />
-        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href="https://brandbanao.ai/about" />
         <meta property="og:title" content="About BrandBanao.ai | 360° Branding Agency in Nashik" />
-        <meta property="og:description" content="Meet the visionaries behind BrandBanao.ai — a Nashik-based 360° branding and advertising agency delivering measurable business growth." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/about" />
-        <meta property="og:site_name" content="BrandBanao.ai" />
-        <meta property="og:image" content="https://brandbanao.ai/assets/brandbanao-og.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About BrandBanao.ai | Branding Agency in Nashik" />
-        <meta name="twitter:description" content="Discover BrandBanao.ai — a results-driven branding and advertising agency helping businesses scale with strategy and creativity." />
-        <meta name="twitter:image" content="https://brandbanao.ai/assets/brandbanao-og.jpg" />
-        <meta name="application-name" content="BrandBanao.ai" />
-        <meta name="theme-color" content="#d94f5c" />
 
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

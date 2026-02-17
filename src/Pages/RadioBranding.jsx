@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import radioimg from "../Images/radio.jpg";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import "./busShelter.css"; 
 
 const RadioFMBranding = () => {
@@ -25,7 +25,7 @@ const RadioFMBranding = () => {
   }, [showGallery, closeGallery]);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/Radio";
+  const PAGE_URL = "https://brandbanao.ai/radio";
   const BRAND_NAME = "BrandBanao.ai"; 
   const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg"; 
   const LOGO = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
@@ -155,25 +155,20 @@ const RadioFMBranding = () => {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: "en-IN" }}>
+      <Helmet>
         <title>{PAGE_TITLE}</title>
-        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
         <meta name="keywords" content={keywordsContent} />
-
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
-
         <link rel="canonical" href={PAGE_URL} />
         <link rel="icon" href={LOGO} />
         <link rel="apple-touch-icon" href={LOGO} />
-
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -182,7 +177,6 @@ const RadioFMBranding = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />

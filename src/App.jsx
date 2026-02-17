@@ -12,7 +12,6 @@ import RadioBranding from "./Pages/RadioBranding";
 import Hoardings from "./Pages/HoardingBranding";
 import BusShelterBranding from "./Pages/BusShelterBranding";
 import AirportBranding from "./Pages/AirportBranding";
-import Helmet from 'react-helmet';
 import DigitalMarketingExecutiveRole from "./JD/DigitalExecutive";
 import DigitalMarketingManager from "./JD/DigitalManager";
 import MediaPlanner from "./JD/MediaPlanner";
@@ -26,7 +25,10 @@ import AutoBranding from "./Pages/AutoBranding";
 import CycleeBranding from "./Pages/CycleBranding";
 import RailwayyBranding from "./Pages/RailwayBranding";
 import DigitallMarketing from "./Pages/DigitalMarketing";
-import WebDevelopmentt from "./Pages/WebDevelopment";
+import WebDevelopment from "./Pages/WebDevelopment";
+import NotFound from "./Pages/NotFound";
+import Sitemap from "./Pages/Sitemap";
+
 
 export default function App() {
   return (
@@ -40,24 +42,26 @@ export default function App() {
         <Route path="/contact" element={< Contact />} />
         <Route path="/services" element={< Services />} />
         <Route path="/careers" element={< Careers />} />
-        <Route path="/Cinema" element={< CinemaBranding />} />
-        <Route path="/Radio" element={< RadioBranding />} />
-        <Route path="/Hoardings" element={< Hoardings />} />
-        <Route path="/Bus_Shelter" element={< BusShelterBranding />} />
-        <Route path="/AirportBranding" element={< AirportBranding />} />
-        <Route path="/Careers/DigitalMarketingExecutive" element={< DigitalMarketingExecutiveRole />} />
-        <Route path="/Careers/DigitalMarketingManager" element={< DigitalMarketingManager />} />
-        <Route path="/Careers/MediaPlanner" element={< MediaPlanner />} />
-        <Route path="/Careers/SalesMarketingExecutiveFemale" element={< SalesMarketingExecutiveFemale/>} />
-        <Route path="/Careers/SalesMarketingManager" element={< SalesMarketingManager />} />
-        <Route path="/Careers/OperationsHead" element={< OperationsHead />} />
-        <Route path="/TVNewsChanelBranding" element={< TVNewsChanelBranding />} />
-        <Route path="/BusBranding" element={< BusBranding />} />
-        <Route path="/AutoBranding" element={< AutoBranding />} />
-        <Route path="/CycleBranding" element={< CycleeBranding />} />
-        <Route path="/RailwayBranding" element={< RailwayyBranding />} />
-        <Route path="/DigitalMarketing" element={< DigitallMarketing />} />
-        <Route path="/WebDevelopment" element={< WebDevelopmentt />} />
+        <Route path="/cinema" element={< CinemaBranding />} />
+        <Route path="/radio" element={< RadioBranding />} />
+        <Route path="/hoardings" element={< Hoardings />} />
+        <Route path="/bus-shelter" element={< BusShelterBranding />} />
+        <Route path="/airport-branding" element={< AirportBranding />} />
+        <Route path="/careers/digital-marketing-executive" element={< DigitalMarketingExecutiveRole />} />
+        <Route path="/careers/digital-marketing-manager" element={< DigitalMarketingManager />} />
+        <Route path="/careers/media-planner" element={< MediaPlanner />} />
+        <Route path="/careers/sales-marketing-executive-female" element={< SalesMarketingExecutiveFemale/>} />
+        <Route path="/careers/sales-marketing-manager" element={< SalesMarketingManager />} />
+        <Route path="/careers/operations-head" element={< OperationsHead />} />
+        <Route path="/tv-news-chanel-branding" element={< TVNewsChanelBranding />} />
+        <Route path="/bus-branding" element={< BusBranding />} />
+        <Route path="/auto-branding" element={< AutoBranding />} />
+        <Route path="/cycle-branding" element={< CycleeBranding />} />
+        <Route path="/railway-branding" element={< RailwayyBranding />} />
+        <Route path="/digital-marketing" element={< DigitallMarketing />} />
+        <Route path="/web-development" element={< WebDevelopment />} />
+        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

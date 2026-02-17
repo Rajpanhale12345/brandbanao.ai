@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 /**
  * SheetDB setup
