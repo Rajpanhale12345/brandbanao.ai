@@ -173,7 +173,7 @@ export default function Services() {
           "@type": "WebPage",
           "@id": webPageId,
           url: PAGE_URL,
-          name: "Services | Brand Banao.Ai",
+          name: "Services - Brand Banao.Ai",
           description: metaDescription,
           isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}/#website` },
           about: { "@id": orgId },
@@ -190,7 +190,7 @@ export default function Services() {
   return (
     <>
       <Helmet>
-        <title>Best Outdoor Services in Nashik | Brand Banao.Ai</title>
+        <title>Best Outdoor Services in Nashik - Brand Banao.Ai</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
@@ -203,14 +203,14 @@ export default function Services() {
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Services | Brand Banao.Ai" />
+        <meta property="og:title" content="Services - Brand Banao.Ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="Brand Banao.Ai - Services" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Services | Brand Banao.Ai" />
+        <meta name="twitter:title" content="Services - Brand Banao.Ai" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Brand Banao.Ai - Services" />

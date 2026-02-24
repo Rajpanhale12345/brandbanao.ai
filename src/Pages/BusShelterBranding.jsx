@@ -113,7 +113,7 @@ const BusShelterBranding = () => {
           "@type": "WebPage",
           "@id": pageId,
           "url": PAGE_URL,
-          "name": "Bus Shelter Advertising in Nashik | Bus Shelter Branding",
+          "name": "Bus Shelter Advertising in Nashik - Bus Shelter Branding",
           "headline": "Bus Shelter Advertising & Branding in Maharashtra",
           "description":
             "Boost visibility with bus shelter advertising: 24x7 street-level reach, hyperlocal targeting, backlit and digital options, creative support, printing, installation, and reporting.",
@@ -163,7 +163,7 @@ const BusShelterBranding = () => {
   return (
     <>
       <Helmet>
-        <title>Bus Shelter Advertising in Nashik | BrandBanao.ai</title>
+        <title>Bus Shelter Advertising in Nashik - BrandBanao.ai</title>
         <meta name="author" content={BRAND_NAME} />
         <meta name="description" content="Boost your brand visibility with Bus Shelter Advertising by BrandBanao.ai. 24x7 street-level ads with wide reach, local targeting, and complete campaign execution." />
         <meta name="keywords" content={keywordsContent} />
@@ -175,14 +175,14 @@ const BusShelterBranding = () => {
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Bus Shelter Advertising & Branding | BrandBanao.ai" />
+        <meta property="og:title" content="Bus Shelter Advertising & Branding - BrandBanao.ai" />
         <meta property="og:description" content="Bus shelter ads with 24x7 visibility, hyperlocal targeting, and complete execution: creative, printing, installation and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Bus Shelter Advertising" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bus Shelter Advertising | BrandBanao.ai" />
+        <meta name="twitter:title" content="Bus Shelter Advertising - BrandBanao.ai" />
         <meta name="twitter:description" content="Bus shelter advertising with hyperlocal targeting, 24x7 visibility and end-to-end execution." />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -234,7 +234,7 @@ const BusShelterBranding = () => {
             visiting pedestrians, and local audiences likely to be in busy locations.
           </p>
           <p>
-            As an expert in OOH media with 15+ years of experience coupled with our
+            As an expert in OOH media with 16+ years of experience coupled with our
             own strong owned-media network, we assure you that your brand will
             be noticed where it is most important.
           </p>
@@ -447,7 +447,7 @@ const BusShelterBranding = () => {
             </li>
 
             <li>
-              <strong>Concerning 15+ Years of experience in OOH advertising</strong>
+              <strong>Concerning 16+ Years of experience in OOH advertising</strong>
               <p>
                 PANA Enterprises provides 15 years of experience in outdoor
                 advertising to each and every campaign

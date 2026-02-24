@@ -112,7 +112,7 @@ const CycleBranding = () => {
                 {
                     "@type": "WebPage",
                     "@id": pageId,
-                    name: "Cycle Branding in Nashik | Branded Cycle Advertising",
+                    name: "Cycle Branding in Nashik - Branded Cycle Advertising",
                     headline: "Cycle Branding Services",
                     description:
                         "Cycle branding and branded cycle advertising by BrandBanao.ai. Eco-friendly, hyperlocal mobile ads with route planning, deployment, monitoring, and reporting.",
@@ -166,7 +166,7 @@ const CycleBranding = () => {
     return (
         <>
             <Helmet>  
-                <title>Cycle Branding in Nashik | Branded Cycle Advertising | BrandBanao.ai</title>  
+                <title>Best Cycle Branding in Nashik - Brand Banao.AI</title>  
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content={BRAND_NAME} />
                 <meta name="publisher" content={BRAND_NAME} />
@@ -180,14 +180,14 @@ const CycleBranding = () => {
                 <link rel="canonical" href={PAGE_URL} />  
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
-                <meta property="og:title" content="Cycle Branding Services | BrandBanao.ai" />
+                <meta property="og:title" content="Cycle Branding Services - BrandBanao.ai" />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={PAGE_URL} />  
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:alt" content="BrandBanao.ai - Cycle Branding" />  
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Cycle Branding | BrandBanao.ai" />
+                <meta name="twitter:title" content="Cycle Branding - BrandBanao.ai" />
                 <meta name="twitter:description" content={metaDescription} />
                 <meta name="twitter:image" content={OG_IMAGE} />
                 <meta name="twitter:image:alt" content="BrandBanao.ai - Cycle Branding" />  

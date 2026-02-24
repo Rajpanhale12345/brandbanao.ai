@@ -15,7 +15,7 @@ const TVNewsBranding = () => {
         setShowGallery(true);
     };
 
-    const PAGE_TITLE = "Best TV News Branding in Nashik | Brand Banao.Ai";
+    const PAGE_TITLE = "Best TV News Branding in Nashik - Brand Banao.Ai";
     const PAGE_DESC =
         "TV News Channel Branding by Brand Banao.Ai. End-to-end on-air branding, motion graphics, channel identity, lower-thirds, tickers, show packaging, and visual systems for regional and national news networks.";
     const PAGE_URL = "https://brandbanao.ai/tv-news-chanel-branding";

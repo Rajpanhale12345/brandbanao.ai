@@ -118,7 +118,7 @@ const AirportBranding = () => {
                     "@type": "WebPage",
                     "@id": pageId,
                     "url": canonicalUrl,
-                    "name": "Airport Branding Services in Maharashtra | BrandBanao.ai",
+                    "name": "Airport Branding Services in Maharashtra - BrandBanao.ai",
                     "description":
                         "Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens with end-to-end planning, creatives, permissions, and execution.",
                     "inLanguage": "en-IN",
@@ -192,7 +192,7 @@ const AirportBranding = () => {
     return (
         <>
             <Helmet>
-                <title>Airport Branding & Advertising in Maharashtra | BrandBanao.ai</title>
+                <title>Airport Branding & Advertising in Maharashtra - BrandBanao.ai</title>
 
                 <meta name="author" content="BrandBanao.ai" />
                 <meta name="description" content="Airport Branding Services by BrandBanao.ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
@@ -204,7 +204,7 @@ const AirportBranding = () => {
 
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content="BrandBanao.ai" />
-                <meta property="og:title" content="Airport Branding & Advertising in Maharashtra | BrandBanao.ai" />
+                <meta property="og:title" content="Airport Branding & Advertising in Maharashtra - BrandBanao.ai" />
                 <meta property="og:description" content="Premium airport branding across terminals, lounges, baggage belts and digital screens with end-to-end execution." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={canonicalUrl} />
@@ -212,7 +212,7 @@ const AirportBranding = () => {
                 <meta property="og:image:alt" content="BrandBanao.ai - Airport Branding Services" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Airport Branding & Advertising | BrandBanao.ai" />
+                <meta name="twitter:title" content="Airport Branding & Advertising - BrandBanao.ai" />
                 <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by BrandBanao.ai." />
                 <meta name="twitter:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
 

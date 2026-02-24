@@ -18,7 +18,7 @@ const HoardingBranding = () => {
   const OG_IMAGE = "https://brandbanao.ai/assets/hoarding-DQjSSeNb.jpg";
 
   const PAGE_TITLE =
-    "Hoardings in Nashik | BrandBanao.ai";
+    "Hoardings in Nashik - BrandBanao.ai";
   const PAGE_DESC =
     "Book hoardings and billboards in Nashik with BrandBanao.ai. Location planning, creative design, printing, installation, maintenance and campaign reporting.";
 

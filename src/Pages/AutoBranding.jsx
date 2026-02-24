@@ -112,7 +112,7 @@ const AutoBranding = () => {
           "@type": "WebPage",
           "@id": pageId,
           "url": PAGE_URL,
-          "name": "Auto Branding in Nashik | Auto Rickshaw Advertising",
+          "name": "Auto Branding in Nashik - Auto Rickshaw Advertising",
           "description":
             "Auto branding and auto rickshaw advertising for hyperlocal reach in Nashik and Maharashtra. Mobile outdoor ads with wraps, panels, route-based campaigns, monitoring and reporting.",
           "inLanguage": "en-IN",
@@ -164,7 +164,7 @@ const AutoBranding = () => {
   return (
     <>
       <Helmet>
-        <title>Auto Branding in Nashik | Auto Rickshaw Advertising | BrandBanao.ai</title>
+        <title>Auto Branding in Nashik - Auto Rickshaw Advertising - BrandBanao.ai</title>
 
         <meta name="description" content="Auto branding and auto rickshaw advertising by BrandBanao.ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="author" content={BRAND_NAME} />
@@ -176,14 +176,14 @@ const AutoBranding = () => {
         <meta name="keywords" content={keywordsContent} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Auto Branding in Nashik | BrandBanao.ai" />
+        <meta property="og:title" content="Auto Branding in Nashik - BrandBanao.ai" />
         <meta property="og:description" content="High-visibility auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Auto Branding Services" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Auto Branding in Nashik | BrandBanao.ai" />
+        <meta name="twitter:title" content="Auto Branding in Nashik - BrandBanao.ai" />
         <meta name="twitter:description" content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="twitter:image" content={OG_IMAGE} />
 

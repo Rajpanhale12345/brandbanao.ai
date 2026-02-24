@@ -107,7 +107,7 @@ export default function Contact() {
 
       <Helmet htmlAttributes={{ lang: "en" }}>
         <meta charSet="utf-8" />
-        <title>Contact | Brand Banao.ai</title>
+        <title>Contact - Brand Banao.ai</title>
         <meta name="description" content="Contact Brand Banao.ai for branding, marketing, and AI-driven growth. Reach our team in Nashik and Mumbai for campaigns, design, and outdoor advertising." />
         <meta name="author" content="Brand Banao.AI" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -120,7 +120,7 @@ export default function Contact() {
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Brand Banao.ai" />
-        <meta property="og:title" content="Contact | Brand Banao.ai" />
+        <meta property="og:title" content="Contact - Brand Banao.ai" />
         <meta property="og:description" content="Get in touch with Brand Banao.ai. Tell us your requirement and we'll respond quickly." />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
@@ -128,7 +128,7 @@ export default function Contact() {
         <meta property="og:image:alt" content="Brand Banao.ai - Contact" />
         <meta property="og:locale" content="en_IN" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact | Brand Banao.ai" />
+        <meta name="twitter:title" content="Contact - Brand Banao.ai" />
         <meta name="twitter:description" content="Contact Brand Banao.ai for branding, marketing, and AI-driven growth." />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Brand Banao.ai - Contact" />

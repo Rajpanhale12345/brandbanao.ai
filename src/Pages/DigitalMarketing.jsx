@@ -31,7 +31,7 @@ const DigitalMarketing = () => {
   const OG_IMAGE = "https://brandbanao.ai/assets/app-BPEwsj2h.png";
   const BRAND_NAME = "Brand Banao.AI";
 
-  const PAGE_TITLE = "Digital Marketing in Nashik | BrandBanao.ai";
+  const PAGE_TITLE = "Digital Marketing in Nashik - BrandBanao.ai";
   const PAGE_DESC =
     "Grow your business with BrandBanao.ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
     

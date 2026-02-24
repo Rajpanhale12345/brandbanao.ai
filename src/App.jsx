@@ -28,6 +28,8 @@ import DigitallMarketing from "./Pages/DigitalMarketing";
 import WebDevelopment from "./Pages/WebDevelopment";
 import NotFound from "./Pages/NotFound";
 import Sitemap from "./Pages/Sitemap";
+import HoardingBrandingCity from "./Pages/HoardingBrandingCity";
+import HoardingBranding from "./Pages/HoardingBranding";
 
 
 export default function App() {
@@ -35,7 +37,7 @@ export default function App() {
 
     <Router>
       <Navbar />
-        <ScrollToTop smooth offset={80} />
+      <ScrollToTop smooth offset={80} />
       <Routes>
         <Route path="/" element={< Home />} />
         <Route path="/about" element={< About />} />
@@ -50,7 +52,7 @@ export default function App() {
         <Route path="/careers/digital-marketing-executive" element={< DigitalMarketingExecutiveRole />} />
         <Route path="/careers/digital-marketing-manager" element={< DigitalMarketingManager />} />
         <Route path="/careers/media-planner" element={< MediaPlanner />} />
-        <Route path="/careers/sales-marketing-executive-female" element={< SalesMarketingExecutiveFemale/>} />
+        <Route path="/careers/sales-marketing-executive-female" element={< SalesMarketingExecutiveFemale />} />
         <Route path="/careers/sales-marketing-manager" element={< SalesMarketingManager />} />
         <Route path="/careers/operations-head" element={< OperationsHead />} />
         <Route path="/tv-news-chanel-branding" element={< TVNewsChanelBranding />} />
@@ -62,6 +64,9 @@ export default function App() {
         <Route path="/web-development" element={< WebDevelopment />} />
         <Route path="/sitemap" element={<Sitemap />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/hoardings" element={<HoardingBranding />} />
+        <Route path="/hoardings/:citySlug" element={<HoardingBrandingCity />} />
+
       </Routes>
       <Footer />
     </Router>

@@ -17,7 +17,7 @@ const WebDevelopmentt = () => {
         setShowGallery(true);
     };
 
-    const PAGE_TITLE = "Website & App Development | Brand Banao.Ai";
+    const PAGE_TITLE = "Website & App Development - Brand Banao.Ai";
     const PAGE_DESC =
         "Custom website and mobile app development by Brand Banao.AI — responsive, React-based, ecommerce-ready platforms that turn visitors into loyal customers.";
     const PAGE_URL = "https://brandbanao.ai/web-developmentt";

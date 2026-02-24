@@ -15,7 +15,7 @@ const About = () => {
         "@type": "AboutPage", 
         "@id": "https://brandbanao.ai/about#aboutpage",
         "url": "https://brandbanao.ai/about",
-        "name": "About BrandBanao.ai | 360° Branding & Advertising Agency in Nashik",
+        "name": "About BrandBanao.ai - 360° Branding & Advertising Agency in Nashik",
         "description":
           "BrandBanao.ai is a 360-degree branding & advertising agency in Nashik, Maharashtra. Founded by Amit Hemant Patil, we deliver strategic branding, OOH advertising, and digital marketing for growth-driven campaigns.",
         "inLanguage": "en-IN",
@@ -82,10 +82,10 @@ const About = () => {
     <>
 
       <Helmet>
-        <title>About BrandBanao.ai | 360° Branding & Advertising Agency in Nashik</title>
+        <title>About BrandBanao.ai - 360° Branding & Advertising Agency in Nashik</title>
         <meta name="description" content="BrandBanao.ai is a leading 360-degree branding & advertising agency in Nashik, Maharashtra. Founded by Amit Hemant Patil, we specialize in strategic branding, digital marketing, OOH advertising, and growth-driven campaigns." />
         <link rel="canonical" href="https://brandbanao.ai/about" />
-        <meta property="og:title" content="About BrandBanao.ai | 360° Branding Agency in Nashik" />
+        <meta property="og:title" content="About BrandBanao.ai - 360° Branding Agency in Nashik" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/about" />
 

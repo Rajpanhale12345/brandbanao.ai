@@ -45,7 +45,7 @@ export default function Sitemap() {
     },
   ];
 
-  const PAGE_TITLE = "Sitemap | Brand Banao.Ai";
+  const PAGE_TITLE = "Sitemap - Brand Banao.Ai";
   const PAGE_DESC =
     "Browse all pages on Brand Banao.Ai including services, branding solutions, digital marketing, web development, and careers.";
 

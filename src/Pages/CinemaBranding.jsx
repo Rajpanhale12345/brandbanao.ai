@@ -115,7 +115,7 @@ const CinemaBranding = () => {
           "@type": "WebPage",
           "@id": pageId,
           url: PAGE_URL,
-          name: "Cinema Branding in Nashik | Cinema Advertising Services",
+          name: "Cinema Branding in Nashik - Cinema Advertising Services",
           headline: "Cinema Branding & Advertising Services",
           description:
             "Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising, planned and executed end-to-end by BrandBanao.ai.",
@@ -169,7 +169,7 @@ const CinemaBranding = () => {
     <>
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cinema Branding in Nashik | BrandBanao.ai</title>
+        <title>Cinema Branding in Nashik - BrandBanao.ai</title>
         <meta name="author" content={BRAND_NAME} />
         <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
@@ -180,14 +180,14 @@ const CinemaBranding = () => {
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Cinema Branding & Advertising | BrandBanao.ai" />
+        <meta property="og:title" content="Cinema Branding & Advertising - BrandBanao.ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai - Cinema Branding" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cinema Branding | BrandBanao.ai" />
+        <meta name="twitter:title" content="Cinema Branding - BrandBanao.ai" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="BrandBanao.ai - Cinema Branding" />

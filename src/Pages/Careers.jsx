@@ -130,7 +130,7 @@ export default function Careers() {
       "@type": "WebPage",
       "@id": pageId,
       url: CANONICAL_URL,
-      name: "Careers | BrandBanao.ai",
+      name: "Careers - BrandBanao.ai",
       description:
         "Explore open roles at BrandBanao.ai in Nashik, India. Join our team in media planning, sales, digital marketing, and operations.",
       isPartOf: { "@id": websiteId },
@@ -203,7 +203,7 @@ export default function Careers() {
   return (
     <>
       <Helmet> 
-        <title>Careers | BrandBanao.ai</title>
+        <title>Careers - BrandBanao.ai</title>
         <meta name="description" content={metaDescription} />
         <meta name="author" content="BrandBanao.ai" />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
@@ -212,12 +212,12 @@ export default function Careers() {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="BrandBanao.ai" />
         <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:title" content="Careers | BrandBanao.ai" />
+        <meta property="og:title" content="Careers - BrandBanao.ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:alt" content="BrandBanao.ai" /> 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Careers | BrandBanao.ai" />
+        <meta name="twitter:title" content="Careers - BrandBanao.ai" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
 

@@ -13,7 +13,7 @@ const RailwayyBranding = () => {
   const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/railwaybranding-B3y0GcSB.jpg";
 
-  const PAGE_TITLE = "Best Railway Branding Agency in Nashik | Brand Banao.Ai";
+  const PAGE_TITLE = "Best Railway Branding Agency in Nashik - Brand Banao.Ai";
   const PAGE_DESC =
     "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
 

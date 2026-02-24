@@ -113,7 +113,7 @@ const BussBranding = () => {
                     "@type": "WebPage",
                     "@id": pageId,
                     "url": PAGE_URL,
-                    "name": "Bus Branding in Nashik | Bus Advertising Services",
+                    "name": "Bus Branding in Nashik - Bus Advertising Services",
                     "description":
                         "Bus branding and bus advertising services: full bus wraps, side panels, back-of-bus ads, route planning, creative design and execution for strong city-wide reach and recall.",
                     "inLanguage": "en-IN",
@@ -162,7 +162,7 @@ const BussBranding = () => {
     return (
         <>
             <Helmet>
-                <title>Best Bus Branding in Nashik | BrandBanao.ai</title>
+                <title>Best Bus Branding in Nashik - BrandBanao.ai</title>
                 <meta name="description" content="Bus branding and bus advertising services by BrandBanao.ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall." />
                 <meta name="author" content={BRAND_NAME} />
                 <meta name="publisher" content={BRAND_NAME} />
@@ -173,14 +173,14 @@ const BussBranding = () => {
                 <meta name="keywords" content={keywordsContent} />
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
-                <meta property="og:title" content="Bus Branding & Bus Advertising | BrandBanao.ai" />
+                <meta property="og:title" content="Bus Branding & Bus Advertising - BrandBanao.ai" />
                 <meta property="og:description" content="High-impact bus branding: full wraps, side ads, back-of-bus ads, route planning and creative execution for strong reach and recall." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
                 <meta property="og:image:alt" content="BrandBanao.ai - Bus Branding Services" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Bus Branding & Bus Advertising | BrandBanao.ai" />
+                <meta name="twitter:title" content="Bus Branding & Bus Advertising - BrandBanao.ai" />
                 <meta name="twitter:description" content="Bus branding: wraps, side ads, back-of-bus ads, route planning, and creative execution." />
                 <meta name="twitter:image" content={OG_IMAGE} />
 

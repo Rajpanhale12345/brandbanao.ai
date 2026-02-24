@@ -26,7 +26,8 @@
 }
 
 .faq-item.active {
-  border-color: #d94f5c; /* Brand-ish highlight */
+  border-color: #d94f5c;
+  /* Brand-ish highlight */
   box-shadow: 0 8px 20px rgba(217, 79, 92, 0.12);
   background: #fff7f8;
 }
@@ -83,7 +84,8 @@
 }
 
 .faq-answer.open {
-  max-height: 300px; /* you can increase if you have very long answers */
+  max-height: 300px;
+  /* you can increase if you have very long answers */
   transition: max-height 0.3s ease-in;
 }
 
@@ -109,4 +111,12 @@
   .faq-answer-inner {
     padding: 0 1rem 0.85rem 1rem;
   }
+}
+
+
+.hoarding-content p,
+.hoarding-content li,
+.hoarding-title,
+.hoarding-content h2 {
+  color: #000 !important;
 }
