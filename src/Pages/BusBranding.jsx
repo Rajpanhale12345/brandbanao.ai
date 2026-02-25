@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import BusBranding from "../Images/busbranding.jpg";
+import BusBranding from "../Images/busbranding.webp";
 import "./tvNews.css"
 
 const BussBranding = () => {

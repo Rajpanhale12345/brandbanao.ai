@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import Autobranding from "../Images/autobranding.jpg";
+import Autobranding from "../Images/autobranding.webp";
 import "./tvNews.css";
 
 const FAQ_ITEMS = [

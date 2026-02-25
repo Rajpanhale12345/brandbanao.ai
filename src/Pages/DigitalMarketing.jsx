@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import digitalImg from "../Images/digital.jpg"; 
+import digitalImg from "../Images/digital.webp"; 
 import "./tvNews.css";
 
 const DigitalMarketing = () => { 

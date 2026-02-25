@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState, useMemo } from "react";
 import "./Carousel.css";
-import award1 from '../Images/award1.png';
-import award2 from '../Images/award2.png';
-import award3 from '../Images/award3.png';
-import award4 from '../Images/award4.png';
-import award5 from '../Images/award5.png';
-import award6 from '../Images/award6.png';
+import award1 from '../Images/award1.webp';
+import award2 from '../Images/award2.webp';
+import award3 from '../Images/award3.webp';
+import award4 from '../Images/award4.webp';
+import award5 from '../Images/award5.webp';
+import award6 from '../Images/award6.webp';
 
 export default function Carousel({
   images = defaultImages,    // string[] or [{src, alt}]

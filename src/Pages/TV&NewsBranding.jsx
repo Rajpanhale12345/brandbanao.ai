@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import newsImg from "../Images/news.png";
+import newsImg from "../Images/news.webp";
 import "./tvNews.css";
 
 const TVNewsBranding = () => {

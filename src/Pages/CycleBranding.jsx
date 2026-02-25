@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import cycleImg from "../Images/cycle.jpg";
+import cycleImg from "../Images/cycle.webp";
 import "./tvNews.css";
 
 const CycleBranding = () => { 

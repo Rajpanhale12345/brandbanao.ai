@@ -3,7 +3,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import './Innovation.css'; // For optional styling
-import image from  '../Images/innovation.jpg'
+import image from  '../Images/innovation.webp'
 
 const Innovation = () => {
   return (

@@ -4,10 +4,10 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import "./busShelter.css";
 import "../components/hoardingCity.css"
 
-import hoarding1 from "../Images/hoarding.jpg";
-import hoarding2 from "../Images/award2.png";
-import hoarding3 from "../Images/award5.png";
-import hoarding4 from "../Images/busbranding.jpg";
+import hoarding1 from "../Images/hoarding.webp";
+import hoarding2 from "../Images/award2.webp";
+import hoarding3 from "../Images/award5.webp";
+import hoarding4 from "../Images/busbranding.webp";
 
 import { HOARDINGS_CITIES } from "../data/hoardingsCities";
 

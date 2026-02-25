@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
-import airport from "../Images/airport.jpg";
+import airport from "../Images/airport.webp";
 import "./busShelter.css";
 
 

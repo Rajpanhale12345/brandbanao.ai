@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import busshelter from "../Images/busshelter.jpg";
+import busshelter from "../Images/busshelter.webp";
 import "./busShelter.css"
 
 const BusShelterBranding = () => {

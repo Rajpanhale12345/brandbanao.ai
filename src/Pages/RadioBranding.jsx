@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
-import radioimg from "../Images/radio.jpg";
+import radioimg from "../Images/radio.webp";
 import { Helmet } from "react-helmet-async";
 import "./busShelter.css"; 
 

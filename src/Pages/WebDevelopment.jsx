@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import appImg from "../Images/app.png";
-import webDevImg from "../Images/Web Dev.png";
-import seoDevImg from "../Images/SEO Dev.png";
+import appImg from "../Images/app.webp";
+import webDevImg from "../Images/Web Dev.webp";
+import seoDevImg from "../Images/SEO Dev.webp";
 import "./tvNews.css";
 
 const WebDevelopmentt = () => {

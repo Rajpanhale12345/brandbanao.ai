@@ -1,7 +1,7 @@
 import React from 'react'
 import "../components/About.css"
-import founder from "../Images/amitpatil.png"
-import cofounder from '../Images/prajaktapatil.jpeg'
+import founder from "../Images/amitpatil.webp"
+import cofounder from '../Images/prajaktapatil.webp'
 import CountUp from 'react-countup';
 import Innovation from '../components/Innovation';
 import { Helmet } from "react-helmet-async";
