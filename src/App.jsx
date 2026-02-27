@@ -39,34 +39,39 @@ export default function App() {
       <Navbar />
       <ScrollToTop smooth offset={80} />
       <Routes>
-        <Route path="/" element={< Home />} />
-        <Route path="/about" element={< About />} />
-        <Route path="/contact" element={< Contact />} />
-        <Route path="/services" element={< Services />} />
-        <Route path="/careers" element={< Careers />} />
-        <Route path="/cinema" element={< CinemaBranding />} />
-        <Route path="/radio" element={< RadioBranding />} />
-        <Route path="/hoardings" element={< Hoardings />} />
-        <Route path="/bus-shelter" element={< BusShelterBranding />} />
-        <Route path="/airport-branding" element={< AirportBranding />} />
-        <Route path="/careers/digital-marketing-executive" element={< DigitalMarketingExecutiveRole />} />
-        <Route path="/careers/digital-marketing-manager" element={< DigitalMarketingManager />} />
-        <Route path="/careers/media-planner" element={< MediaPlanner />} />
-        <Route path="/careers/sales-marketing-executive-female" element={< SalesMarketingExecutiveFemale />} />
-        <Route path="/careers/sales-marketing-manager" element={< SalesMarketingManager />} />
-        <Route path="/careers/operations-head" element={< OperationsHead />} />
-        <Route path="/tv-news-chanel-branding" element={< TVNewsChanelBranding />} />
-        <Route path="/bus-branding" element={< BusBranding />} />
-        <Route path="/auto-branding" element={< AutoBranding />} />
-        <Route path="/cycle-branding" element={< CycleeBranding />} />
-        <Route path="/railway-branding" element={< RailwayyBranding />} />
-        <Route path="/digital-marketing" element={< DigitallMarketing />} />
-        <Route path="/web-development" element={< WebDevelopment />} />
-        <Route path="/sitemap" element={<Sitemap />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/cinema" element={<CinemaBranding />} />
+        <Route path="/radio" element={<RadioBranding />} />
+
+        {/* Hoardings list + city pages */}
         <Route path="/hoardings" element={<HoardingBranding />} />
         <Route path="/hoardings/:citySlug" element={<HoardingBrandingCity />} />
 
+        <Route path="/bus-shelter" element={<BusShelterBranding />} />
+        <Route path="/airport-branding" element={<AirportBranding />} />
+
+        <Route path="/careers/digital-marketing-executive" element={<DigitalMarketingExecutiveRole />} />
+        <Route path="/careers/digital-marketing-manager" element={<DigitalMarketingManager />} />
+        <Route path="/careers/media-planner" element={<MediaPlanner />} />
+        <Route path="/careers/sales-marketing-executive-female" element={<SalesMarketingExecutiveFemale />} />
+        <Route path="/careers/sales-marketing-manager" element={<SalesMarketingManager />} />
+        <Route path="/careers/operations-head" element={<OperationsHead />} />
+
+        <Route path="/tv-news-chanel-branding" element={<TVNewsChanelBranding />} />
+        <Route path="/bus-branding" element={<BusBranding />} />
+        <Route path="/auto-branding" element={<AutoBranding />} />
+        <Route path="/cycle-branding" element={<CycleeBranding />} />
+        <Route path="/railway-branding" element={<RailwayyBranding />} />
+        <Route path="/digital-marketing" element={<DigitallMarketing />} />
+        <Route path="/web-development" element={<WebDevelopment />} />
+        <Route path="/sitemap" element={<Sitemap />} />
+
+        {/* Always last */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

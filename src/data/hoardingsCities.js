@@ -5,7 +5,7 @@ export const HOARDINGS_CITIES = {
     areas: ["College Road", "Gangapur Road", "Indira Nagar", "Dwarka", "Mumbai Naka"],
 
     intro: [
-      "Nashik is one of Maharashtra’s fastest growing commercial cities.",
+      "Nashik is one of Maharashtra's fastest growing commercial cities.",
       "Strategic hoardings across key junctions deliver powerful brand visibility."
     ],
 
