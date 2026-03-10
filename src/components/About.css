@@ -12,101 +12,43 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom:9px solid#d94f5c ;
+  border-bottom: 9px solid #d94f5c;
   padding: 20px;
-}
-@media (max-width: 768px) {
-  .vector-container {
-    gap: 10%; 
-  }
-  .vector {
-    margin-bottom: 20px; 
-    
-  }
-  #count{
-    margin-left: 27px;
-  }
-}
-.images{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    margin-top: 40px;
-}
-
-.images img{
-    width: 435px;
-    height: 400px;
-  border-radius: 20px;
 }
 
 .images {
   display: flex;
-  gap: 4%;
   justify-content: center;
+  align-items: center;
+  gap: 4%;
+  margin-top: 40px;
+  width: 100%;
 }
 
 .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  gap: 30px;
+  border-radius: 20px;
   display: flex;
+  justify-content: center;
 }
+
+/* IMAGE SIZE (DESKTOP) */
 
 .image-container img {
   width: 435px;
   height: 435px;
   object-fit: cover;
+  border-radius: 20px;
   display: block;
   transition: transform 0.4s ease;
 }
 
+/* HOVER EFFECT (UNCHANGED) */
+
 .image-container:hover img {
   transform: scale(1.05);
   filter: brightness(0.5);
-}   
-
-.overlay-text { 
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  font-size: 1.0rem;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.4s ease;
-}
-
-.image-container:hover .overlay-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.title{
-    text-align: center;
-    font-size: 40px;
-}
-
-.count {
-  font-family: "Roboto", sans-serif;
-  color: #d94f5c;
-  font-size: 60px;
-}   
-
-.label {
-  color: rgba(169, 153, 7, 1);
-  margin-top: 5px;
-  font-size: 60px;
-}
-
-@media (max-width:600px){
-  .images {
-display: inline-block;
 }
 
 .overlay-text { 
@@ -117,37 +59,133 @@ display: inline-block;
   width: 100%;
   text-align: center;
   padding: 10px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   opacity: 0;
   transform: translateY(100%);
   transition: all 0.4s ease;
 }
 
-.founder{
-  height: 200px;
-  width: 300px;
+.image-container:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.images img{
-   height: 320px;
-  width: 350px;
-  margin:auto;
-}
-}
-
-@media (max-width : 600px){
-  .vector {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-bottom:none ;
-  padding: 20px;
-}
-}
-
-.desc{
+.title {
   text-align: center;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
+  font-size: 40px;
+}
+
+.count {
+  font-family: "Roboto", sans-serif;
+  color: #d94f5c;
+  font-size: 60px;
+}
+
+.label {
+  color: rgba(169, 153, 7, 1);
+  margin-top: 5px;
+  font-size: 60px;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .vector-container {
+    gap: 30px;
+  }
+
+  .vector {
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 360px;
+    height: 360px;
+  }
+
+  #count{
+    margin-left: 0;
+  }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .vector-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vector {
+    border-bottom: none;
+    border-left: 6px solid #d94f5c;
+    padding: 20px;
+    width: 90%;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay-text {
+    font-size: 0.85rem;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .count {
+    font-size: 40px;
+  }
+
+  .label {
+    font-size: 28px;
+  }
+
+}
+
+/* ========================= */
+/* VERY SMALL MOBILE */
+/* ========================= */
+
+@media (max-width: 380px){
+
+  .image-container {
+    max-width: 300px;
+  }
+
+  .title{
+    font-size: 24px;
+  }
+
+  .count{
+    font-size: 34px;
+  }
+
+  .label{
+    font-size: 24px;
+  }
+
 }

@@ -24,12 +24,13 @@
 }
 
 .innovation-image {
-  flex: 1;
+  flex: 1.4;
   display: flex;
   justify-content: center;
 }
 
 .innovation-image img {
+  width: 420px;      /* increase size */
   max-width: 100%;
   height: auto;
   border-radius: 12px;

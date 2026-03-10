@@ -161,13 +161,13 @@ export const HOARDINGS_CITIES = {
     areas: ["Hinjewadi", "Shivaji Nagar", "Kothrud", "Swargate", "Hadapsar"],
 
     intro: [
-      "Pune is one of India’s fastest growing business cities.",
+      "Pune is one of India's fastest growing business cities.",
       "Hoardings in high-traffic zones deliver massive daily impressions."
     ],
 
     localNote: "We provide hoarding advertising services across entire Pune including Hinjewadi, Shivaji Nagar, Kothrud and major highways.",
 
-    paragraph: "Hoarding advertising in Pune offers unmatched visibility because of the city’s IT growth and dense commuter traffic. Billboard advertising in Pune performs best in Hinjewadi IT Park, Shivaji Nagar, Swargate and Hadapsar where professionals travel daily. These high-traffic corridors provide strong repeated impressions and brand recall. Outdoor advertising in Pune helps brands reach working professionals, students and families across commercial and residential zones. Metro routes, highways and junctions are ideal placements for maximum exposure. The cost of hoarding advertising in Pune depends on location visibility, traffic volume, size and duration. Premium IT hubs and highway locations have higher rates due to heavy impressions. Industries such as real estate, retail, healthcare and education benefit significantly from billboard campaigns in Pune. With proper installation and maintenance, hoardings provide 24/7 brand presence and long-term recall value. For brands targeting urban audiences, outdoor hoardings in Pune remain a high-impact marketing solution.",
+    paragraph: "Hoarding advertising in Pune offers unmatched visibility because of the city's IT growth and dense commuter traffic. Billboard advertising in Pune performs best in Hinjewadi IT Park, Shivaji Nagar, Swargate and Hadapsar where professionals travel daily. These high-traffic corridors provide strong repeated impressions and brand recall. Outdoor advertising in Pune helps brands reach working professionals, students and families across commercial and residential zones. Metro routes, highways and junctions are ideal placements for maximum exposure. The cost of hoarding advertising in Pune depends on location visibility, traffic volume, size and duration. Premium IT hubs and highway locations have higher rates due to heavy impressions. Industries such as real estate, retail, healthcare and education benefit significantly from billboard campaigns in Pune. With proper installation and maintenance, hoardings provide 24/7 brand presence and long-term recall value. For brands targeting urban audiences, outdoor hoardings in Pune remain a high-impact marketing solution.",
 
     conclusion: "For brands targeting Pune audiences, hoardings provide unmatched visibility and recall.",
 
@@ -239,7 +239,7 @@ export const HOARDINGS_CITIES = {
     areas: ["Andheri", "Bandra", "Lower Parel", "Goregaon", "Dadar"],
 
     intro: [
-      "Mumbai is India’s highest visibility advertising market.",
+      "Mumbai is India's highest visibility advertising market.",
       "Hoardings here reach millions of viewers daily."
     ],
 
