@@ -70,7 +70,7 @@ export default function App() {
         <Route path="/web-development" element={<WebDevelopment />} />
         <Route path="/sitemap" element={<Sitemap />} />
 
-        {/* Always last */}
+        {/* Always last */} 
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
