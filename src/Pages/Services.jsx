@@ -67,7 +67,7 @@ export default function Services() {
       {
         title: "Bus Branding",
         image: bus,
-        path: "/BusBranding",
+        path: "/bus-branding",
       },
       {
         title: "TV News Channel Branding",
