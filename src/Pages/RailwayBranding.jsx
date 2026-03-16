@@ -311,7 +311,7 @@ const RailwayyBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} // ✅ FIX
+                    aria-expanded={isActive} 
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

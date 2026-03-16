@@ -29,16 +29,14 @@ export default function DigitalMarketingManager() {
 <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
       
       </header>
-
-      {/* About */}
+ 
       <section id="about" className="dmm-panel">
         <h2 className="dmm-h2">About BrandBanao.ai</h2>
         <p className="dmm-paragraph">
           BrandBanao.ai is a 360° marketing and advertising agency, is seeking a strategic yet hands-on Digital Marketing Manager to drive performance, creativity, and growth across channels. You’ll lead a talented team, manage campaigns end-to-end, and ensure our clients’ brands achieve measurable impact.
         </p>
       </section>
-
-      {/* Key Responsibilities (verbatim with bullet dots) */}
+ 
       <section id="responsibilities" className="dmm-panel">
         <h2 className="dmm-h2">Key Responsibilities</h2>
         <ul className="dmm-ul">
@@ -52,8 +50,7 @@ export default function DigitalMarketingManager() {
           <li>•&nbsp;Lead Generation &amp; Client Relations: Manage funnels, nurture leads, and maintain strong client communication.</li>
         </ul>
       </section>
-
-      {/* Requirements (verbatim) */}
+ 
       <section className="dmm-panel">
         <h2 className="dmm-h2">Requirements</h2>
         <ul className="dmm-ul">
@@ -62,8 +59,7 @@ export default function DigitalMarketingManager() {
           <li>•&nbsp;Excellent communication, leadership, and stakeholder management.</li>
         </ul>
       </section>
-
-      {/* Application Questions (verbatim) */}
+ 
       <section className="dmm-panel">
         <h2 className="dmm-h2">Application Questions</h2>
         <ul className="dmm-ul">
@@ -73,14 +69,7 @@ export default function DigitalMarketingManager() {
         </ul>
       </section><br /><br />
        <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
-
-      {/* Optional CTA area (you can link this to a form/route later) */}
-      
  
-
-      
-
-      {/* Inline styles to guarantee layout without touching global CSS */}
       <style>{`
         :root{
           --primary:#d94f5c;

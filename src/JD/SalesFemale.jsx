@@ -30,16 +30,14 @@ export default function SalesMarketingExecutiveFemale() {
 <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
       
       </header>
-
-      {/* About the Role (verbatim) */}
+ 
       <section id="about" className="smef-panel">
         <h2 className="smef-h2">About the Role</h2>
         <p className="smef-paragraph">
           We’re looking for a motivated Sales &amp; Marketing Executive to support business growth and client engagement at BrandBanao.ai. The role involves lead generation, client coordination, proposal preparation, and assisting in campaign execution across OOH, Digital, Print, Cinema, FM, and Activation platforms.
         </p>
       </section>
-
-      {/* Key Responsibilities (verbatim bullets) */}
+ 
       <section id="responsibilities" className="smef-panel">
         <h2 className="smef-h2">Key Responsibilities</h2>
         <ul className="smef-ul">
@@ -55,8 +53,7 @@ export default function SalesMarketingExecutiveFemale() {
           <li>•&nbsp;Conduct basic market research and identify new business opportunities.</li>
         </ul>
       </section>
-
-      {/* Measurement Metrics (verbatim) */}
+ 
       <section id="kpis" className="smef-panel">
         <h2 className="smef-h2">Measurement Metrics (KPIs)</h2>
         <ul className="smef-ul">
@@ -67,8 +64,7 @@ export default function SalesMarketingExecutiveFemale() {
           <li>•&nbsp;Contribution to new client acquisitions and repeat business.</li>
         </ul>
       </section>
-
-      {/* You Are (verbatim) */}
+ 
       <section id="you-are" className="smef-panel">
         <h2 className="smef-h2">You Are</h2>
         <ul className="smef-ul">
@@ -79,12 +75,7 @@ export default function SalesMarketingExecutiveFemale() {
         </ul>
       </section><br /><br /> 
       <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
-
-      {/* CTA — swap href to your per-role application route/form */}
-    
-    
-
-      {/* Inline styles to ensure consistent layout without touching global CSS */}
+ 
       <style>{`
         :root{
           --primary:#d94f5c;

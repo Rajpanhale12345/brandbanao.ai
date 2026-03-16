@@ -44,8 +44,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // mark fields as touched to surface errors
+ 
     setTouched({
       fullName: true,
       phone: true,
@@ -55,8 +54,7 @@ export default function Contact() {
     if (hasErrors) return;
 
     setIsSubmitting(true);
-    try {
-      // SheetDB expects { data: [ { ...row } ] }
+    try { 
       const payload = {
         data: [
           {
@@ -156,8 +154,7 @@ export default function Contact() {
 
       <div className="contact-page">
         <form className="contact" onSubmit={handleSubmit} noValidate>
-          <div className="grid">
-            {/* Office Location */}
+          <div className="grid"> 
             <div className="field">
               <label htmlFor="officeLocation">
                 Location<span aria-hidden="true">*</span>
@@ -174,9 +171,8 @@ export default function Contact() {
                 <option value="PUNE">PUNE</option>
                 <option value="REMOTE">Other</option>
               </select>
-            </div>
+            </div> 
 
-            {/* Full Name */}
             <div className="field">
               <label htmlFor="fullName">
                 Full Name <span aria-hidden="true">*</span>
@@ -193,8 +189,7 @@ export default function Contact() {
                 <p className="error">{errors.fullName}</p>
               )}
             </div>
-
-            {/* Phone */}
+ 
             <div className="field">
               <label htmlFor="phone">
                 Phone <span aria-hidden="true">*</span>
@@ -213,8 +208,7 @@ export default function Contact() {
                 <p className="error">{errors.phone}</p>
               )}
             </div>
-
-            {/* Email */}
+ 
             <div className="field span-2">
               <label htmlFor="email">
                 Email <span aria-hidden="true">*</span>
@@ -234,14 +228,7 @@ export default function Contact() {
                 <p className="error">{errors.email}</p>
               )}
             </div>
-
-            {/* Company */}
-
-
-            {/* Designation */}
-
-
-            {/* Message */}
+  
             <div className="field span-2">
               <label htmlFor="message">How can we help?</label>
               <textarea

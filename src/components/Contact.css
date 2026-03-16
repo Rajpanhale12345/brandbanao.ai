@@ -1,5 +1,5 @@
 :root {
-  --brand:rgba(185, 15, 15, 0.7); /* orange accent */
+  --brand:rgba(185, 15, 15, 0.7);  
   --ink: #1a1a1a;
   --muted: #888;
   --border: #aa2c2c;
@@ -164,8 +164,7 @@ h1{ margin:16px 0 10px; font-size:clamp(32px, 4vw, 46px); line-height:1.15; lett
 .btn-primary:hover{ filter:brightness(.98); transform:translateY(-1px); }
 .btn-outline{ background:#fff; color:#000; border-color:var(--brand-accent); }
 .btn-primary:focus-visible, .btn-outline:focus-visible{ outline:none; box-shadow:var(--focus-ring); }
-
-/* Perks */
+ 
 .perks{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:34px 0 10px; }
 .perk{
   background:linear-gradient(180deg, rgba(255,230,0,.3), rgba(255,230,0,0)) #fff;
@@ -173,8 +172,7 @@ h1{ margin:16px 0 10px; font-size:clamp(32px, 4vw, 46px); line-height:1.15; lett
 }
 .perk h3{ margin:6px 0 6px; font-size:16px; }
 .perk p{ margin:0; color:var(--ink-3); font-size:14px; }
-
-/* Section header */
+ 
 .section-head{
   display:flex; align-items:center; justify-content:space-between; gap:16px; margin:34px 0 12px;
 }

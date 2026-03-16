@@ -9,10 +9,10 @@
 .track {
   display: flex;
   gap: var(--gap);
-  overflow-x: auto;               /* we drive scrollLeft via JS */
-  scroll-behavior: auto;          /* JS controls timing; avoid smoothing here */
-  -ms-overflow-style: none;       /* hide scrollbar (Edge/IE) */
-  scrollbar-width: none;          /* Firefox */
+  overflow-x: auto;                
+  scroll-behavior: auto;         
+  -ms-overflow-style: none;       
+  scrollbar-width: none; 
 }
 .track::-webkit-scrollbar { display: none; }
 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {motion} from 'framer-motion';
-import './Innovation.css'; // For optional styling
+import './Innovation.css';  
 import image from  '../Images/innovation.webp'
 
 const Innovation = () => {

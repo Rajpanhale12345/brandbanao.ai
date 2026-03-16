@@ -15,7 +15,7 @@ const BussBranding = () => {
     }, []);
 
     const closeGallery = useCallback(() => setShowGallery(false), []); 
-    // ✅ FIX: ESC closes gallery
+ 
     useEffect(() => {
         if (!showGallery) return;
         const onKeyDown = (e) => {
@@ -318,7 +318,7 @@ const BussBranding = () => {
                                         type="button"
                                         className="faq-question"
                                         onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                        aria-expanded={isActive} // ✅ FIX
+                                        aria-expanded={isActive}  
                                     >
                                         <span className="faq-question-text">{faq.question}</span>
                                         <span className="faq-icon">{isActive ? "−" : "+"}</span>

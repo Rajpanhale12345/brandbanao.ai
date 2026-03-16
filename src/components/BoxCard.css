@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 .boxcard-scene {
-  min-height: 100vh;               /* optional: centers on page like original */
+  min-height: 100vh;             
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +8,8 @@
   color: #000000;
 
   perspective: 1000px;
-}
+} 
 
-/* allow nested 3D transforms to render properly */
 .boxcard-scene,
 .box-card {
   transform-style: preserve-3d;
@@ -21,8 +20,7 @@
 *::after {
   box-sizing: border-box;
 }
-
-/* core box */
+ 
 .box-card {
   position: relative;
   transition: transform 1s ease;
@@ -39,12 +37,12 @@
 }
 
 .box-card {
-  /* keep existing styles like transform-style: preserve-3d; etc. */
-  animation: rotateBox 12s linear infinite; /* adjust speed if needed */
+ 
+  animation: rotateBox 12s linear infinite;  
 }
 
 
-/* each face */
+ 
 .face {
   position: absolute;
   inset: 0;
@@ -60,8 +58,7 @@
   transition: all 0.3s ease;
   overflow: hidden;
 }
-
-/* sheen effects */
+ 
 .face::before {
   content: "";
   position: absolute;
@@ -85,8 +82,7 @@
 
 .face:hover::before { top: 100%; left: 100%; }
 .face:hover::after { opacity: 1; }
-
-/* face positions (use half of size for translations) */
+ 
 .front  { transform: translateZ( calc(var(--half, 100px)) );            border-color: #646cff; }
 .back   { transform: translateZ( calc(var(--n-half, -100px)) ) rotateY(180deg); border-color: #00bcd4; }
 .right  { transform: translateX( calc(var(--half, 100px)) ) rotateY(90deg);     border-color: #4caf50; }
@@ -120,7 +116,7 @@
 }
 @media (max-width: 600px) {
 .boxcard-scene {
-  min-height: 80vh;               /* optional: centers on page like original */
+  min-height: 80vh;    
   display: inline-block;
   justify-items: center;
   justify-content: center;

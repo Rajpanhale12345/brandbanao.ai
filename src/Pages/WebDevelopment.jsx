@@ -265,7 +265,7 @@ const WebDevelopmentt = () => {
 
                     <div style={{ textAlign: "center", margin: "30px 0" }}>
                         <img
-                            src={webDevImg}        // change to airport if using same image
+                            src={webDevImg}   
                             alt="Web Development at Brand Banao"
                             style={{ width: "100%", maxWidth: "700px", borderRadius: "10px" }}
                         />
@@ -298,7 +298,7 @@ const WebDevelopmentt = () => {
 
                     <div style={{ textAlign: "center", margin: "30px 0" }}>
                         <img
-                            src={seoDevImg}        // change to airport if using same image
+                            src={seoDevImg}       
                             alt="Web Development at Brand Banao"
                             style={{ width: "100%", maxWidth: "700px", borderRadius: "10px" }}
                         />

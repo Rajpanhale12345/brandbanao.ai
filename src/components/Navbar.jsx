@@ -9,8 +9,7 @@ export default function Navbar() {
   const panelRef = useRef(null);
   const firstLinkRef = useRef(null);
   const location = useLocation();
-
-  // single source of truth for links
+ 
   const links = useMemo(() => ([
     { to: "/", label: "Home", end: true },
     { to: "/about", label: "About" },
@@ -18,22 +17,18 @@ export default function Navbar() {
     { to: "/careers", label: "Careers" },  
     { to: "/contact", label: "Contact" },
   ]), []);
-
-  // const openMenu = useCallback(() => setOpen(true), []);
+ 
   const closeMenu = useCallback(() => setOpen(false), []);
   const toggleMenu = useCallback(() => setOpen(v => !v), []);
-
-  // lock body scroll when menu is open (mobile)
+ 
   useEffect(() => {
     const prev = document.body.style.overflow;
     document.body.style.overflow = open ? "hidden" : prev || "";
     return () => { document.body.style.overflow = prev || ""; };
   }, [open]);
-
-  // close on route change
+ 
   useEffect(() => { closeMenu(); }, [location.pathname, closeMenu]);
-
-  // esc to close + focus management
+ 
   useEffect(() => {
     if (!open) return;
 
@@ -45,8 +40,7 @@ export default function Navbar() {
       }
     };
     document.addEventListener("keydown", onKeyDown);
-
-    // move focus to first link
+ 
     const t = setTimeout(() => firstLinkRef.current?.focus(), 0);
 
     return () => {
@@ -54,8 +48,7 @@ export default function Navbar() {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [open, closeMenu]);
-
-  // click outside to close
+ 
   useEffect(() => {
     if (!open) return;
     const onDown = (e) => {
@@ -108,15 +101,13 @@ export default function Navbar() {
           <span />
         </button>
       </div>
-
-      {/* overlay */}
+ 
       <div
         className={`overlay ${open ? "show" : ""}`}
         aria-hidden={!open}
         onClick={closeMenu}
       />
-
-      {/* mobile slide-out */}
+ 
       <aside
         id="mobile-nav"
         className={`panel ${open ? "open" : ""}`}

@@ -70,8 +70,7 @@ const JOBS = [
   },
 ];
 
-const FILTERS = [
-  // ✅ FIX: If you want chips visible, add filters here
+const FILTERS = [ 
   { key: "all", label: "All" },
   { key: "sales", label: "Sales" },
   { key: "marketing", label: "Marketing" },
@@ -87,18 +86,16 @@ export default function Careers() {
     if (active === "all") return JOBS;
     return JOBS.filter((j) => j.tags?.includes(active));
   }, [active]);
-
-  // ✅ FIX: Proper internal/external detection (works with relative paths too)
+ 
   const isExternal = useCallback((url = "") => {
     try {
-      const u = new URL(url, SITE_URL); // supports relative paths
+      const u = new URL(url, SITE_URL);  
       return u.origin !== new URL(SITE_URL).origin;
     } catch {
       return false;
     }
   }, []);
-
-  // ✅ FIX: Helper to normalize job URL for schema (absolute URL)
+ 
   const toAbsolute = useCallback((url = "") => {
     try {
       return new URL(url, SITE_URL).toString();
@@ -106,8 +103,7 @@ export default function Careers() {
       return url;
     }
   }, []);
-
-  // ✅ FIX: Single @graph schema, unique JobPosting identifiers
+ 
   const schema = useMemo(() => {
     const orgId = `${SITE_URL}/#organization`;
     const websiteId = `${SITE_URL}/#website`;
@@ -118,7 +114,7 @@ export default function Careers() {
       "@id": orgId,
       name: "BrandBanao.ai",
       url: SITE_URL,
-      logo: OG_IMAGE, // ✅ FIX: include logo
+      logo: OG_IMAGE,  
       sameAs: [
         "https://www.instagram.com/brandbanao.ai",
         "https://www.linkedin.com/company/brandbanao-ai",
@@ -135,10 +131,9 @@ export default function Careers() {
         "Explore open roles at BrandBanao.ai in Nashik, India. Join our team in media planning, sales, digital marketing, and operations.",
       isPartOf: { "@id": websiteId },
       about: { "@id": orgId },
-      inLanguage: "en-IN", // ✅ FIX
+      inLanguage: "en-IN",  
     };
-
-    // ✅ FIX: Better JobPosting fields + absolute URL
+ 
     const jobPostings = JOBS.map((job) => ({
       "@type": "JobPosting",
       title: job.title,
@@ -149,7 +144,7 @@ export default function Careers() {
         address: {
           "@type": "PostalAddress",
           addressLocality: "Nashik",
-          addressRegion: "MH", // ✅ FIX
+          addressRegion: "MH",  
           addressCountry: "IN",
         },
       },
@@ -157,14 +152,14 @@ export default function Careers() {
         "@type": "Country",
         name: "India",
       },
-      url: toAbsolute(job.link), // ✅ FIX: always absolute for schema
+      url: toAbsolute(job.link),  
       description: job.desc || `Apply for the ${job.title} position at BrandBanao.ai in Nashik, India.`,
       identifier: {
         "@type": "PropertyValue",
         name: "BrandBanao.ai",
-        value: job.id, // ✅ FIX: unique id
+        value: job.id,  
       },
-      // ✅ FIX (optional but recommended): add datePosted/validThrough when you know them
+       
       // "datePosted": "2026-01-01",
       // "validThrough": "2026-12-31T23:59",
     }));
@@ -182,7 +177,7 @@ export default function Careers() {
         },
         org,
         webPage,
-        // ✅ FIX: Put JobPosting objects directly in graph (clearer than ItemList wrapping)
+       
         ...jobPostings,
         {
           "@type": "ItemList",
@@ -190,7 +185,7 @@ export default function Careers() {
           itemListElement: jobPostings.map((jp, idx) => ({
             "@type": "ListItem",
             position: idx + 1,
-            item: { "@id": jp.url }, // ✅ FIX: reference by URL
+            item: { "@id": jp.url }, 
           })),
         },
       ],
@@ -322,7 +317,6 @@ export default function Careers() {
         </main>
 
         <footer role="contentinfo">
-          {/* Diversity note intentionally commented as in original */}
         </footer>
       </div>
     </>

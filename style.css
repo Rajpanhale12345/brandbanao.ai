@@ -27,8 +27,7 @@ html, body, #app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* let mouse reach the canvas */
+  justify-content: center; 
   pointer-events: none;
 }
 

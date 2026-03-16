@@ -8,29 +8,27 @@ import award5 from '../Images/award5.webp';
 import award6 from '../Images/award6.webp';
 
 export default function Carousel({
-  images = defaultImages,    // string[] or [{src, alt}]
+  images = defaultImages,    
   height = 160,
   itemWidth = 300,
   gap = 12,
   autoPlay = true,
-  speed = 60,                // px per second (uniform speed)
-  direction = "ltr",         // "ltr" or "rtl"
+  speed = 60,                 
+  direction = "ltr",         
   pauseOnHover = true
 }) {
   const trackRef = useRef(null);
   const frameRef = useRef(null);
   const lastTsRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
-
-  // duplicate slides to enable seamless loop
+ 
   const loopImages = useMemo(() => {
     const normalize = (img, i) =>
       typeof img === "string" ? { src: img, alt: `Slide ${i + 1}` } : img;
     const base = images.map(normalize);
-    return [...base, ...base]; // exactly two copies
+    return [...base, ...base]; 
   }, [images]);
-
-  // keep arrow keys & buttons working (manual nudge)
+ 
   const scrollByStep = (dir) => {
     const el = trackRef.current;
     if (!el) return;
@@ -40,18 +38,14 @@ export default function Carousel({
       behavior: "smooth"
     });
   };
-
-  // core animation loop
+ 
   useEffect(() => {
     const el = trackRef.current;
     if (!el || !autoPlay) return;
-
-    // Respect reduced motion
+ 
     const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
     const effectiveSpeed = prefersReduced ? 0 : speed;
-
-    // Ensure we start somewhere safe
-    // (place at 0 so the first wrap math is correct)
+ 
     el.scrollLeft = 0;
     lastTsRef.current = performance.now();
 
@@ -63,10 +57,8 @@ export default function Carousel({
       const delta = (direction === "rtl" ? -1 : 1) * pxPerMs * dt;
 
       if (!isPaused && effectiveSpeed > 0) {
-        el.scrollLeft += delta;
-        // width of one set of slides (since we rendered 2x)
-        const setWidth = el.scrollWidth / 2;
-        // seamless wrap
+        el.scrollLeft += delta; 
+        const setWidth = el.scrollWidth / 2; 
         if (el.scrollLeft >= setWidth) el.scrollLeft -= setWidth;
         if (el.scrollLeft < 0) el.scrollLeft += setWidth;
       }
@@ -75,8 +67,7 @@ export default function Carousel({
     };
 
     frameRef.current = requestAnimationFrame(animate);
-    const onResize = () => {
-      // Keep scrollLeft within [0, setWidth)
+    const onResize = () => { 
       const setWidth = el.scrollWidth / 2;
       if (setWidth > 0) {
         el.scrollLeft = ((el.scrollLeft % setWidth) + setWidth) % setWidth;
@@ -117,8 +108,7 @@ export default function Carousel({
           </div>
         ))}
       </div>
-
-      {/* Optional manual nav (works alongside steady motion) */}
+ 
       <button className="nav prev" aria-label="Previous" onClick={() => scrollByStep("prev")}>
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

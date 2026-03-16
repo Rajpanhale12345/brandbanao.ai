@@ -29,16 +29,14 @@ export default function MediaPlannerExecutive() {
         <Link to="/contact">
         <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
       </header>
-
-      {/* Role Definition (verbatim) */}
+ 
       <section id="role-definition" className="mpe-panel">
         <h2 className="mpe-h2">Role Definition</h2>
         <p className="mpe-paragraph">
           The Media planner is a person who is responsible for creating strategic media plan, media buying at right rate from right vendor, coordination with management for creating proposals and completing the loop for printing, mounting and monitoring, invoice checking.
         </p>
       </section>
-
-      {/* Key Responsibilities (verbatim) */}
+ 
       <section id="key-resp" className="mpe-panel">
         <h2 className="mpe-h2">Key Responsibilities</h2>
         <ol className="mpe-ol">
@@ -52,8 +50,7 @@ export default function MediaPlannerExecutive() {
           <li> Clients vendor coordination</li>
         </ol>
       </section>
-
-      {/* Key Tasks & Activities (verbatim bullets including "• -") */}
+ 
       <section id="tasks" className="mpe-panel">
         <h2 className="mpe-h2">Key Tasks & Activities</h2>
         <ul className="mpe-ul">
@@ -85,8 +82,7 @@ export default function MediaPlannerExecutive() {
           <li>• - Every Month Submitting Vrindawan Sites Data Before 5th</li>
         </ul>
       </section>
-
-      {/* Measurement Metrics (verbatim) */}
+ 
       <section id="metrics" className="mpe-panel">
         <h2 className="mpe-h2">Measurement Metrics</h2>
         <ul className="mpe-metrics">
@@ -98,8 +94,7 @@ export default function MediaPlannerExecutive() {
           <li>No. of cities/ hoardings/ other medias/ new media owners added in the Master media list every month with details</li>
         </ul>
       </section>
-
-      {/* Salary (verbatim) */}
+ 
       <section id="salary" className="mpe-panel mpe-panel--accent">
        
         <div className="mpe-comp">
@@ -109,12 +104,7 @@ export default function MediaPlannerExecutive() {
       </section>
 <br /><br />
  <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
-      {/* Optional CTA: hook to your unique route/form for this role */}
-     
-
-     
-
-      {/* Inline styles to ensure consistent layout without touching global CSS */}
+ 
       <style>{`
         :root{
           --primary:#d94f5c;

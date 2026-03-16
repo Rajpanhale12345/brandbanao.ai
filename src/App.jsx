@@ -1,4 +1,3 @@
-// App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
@@ -46,8 +45,7 @@ export default function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/cinema" element={<CinemaBranding />} />
         <Route path="/radio" element={<RadioBranding />} />
-
-        {/* Hoardings list + city pages */}
+ 
         <Route path="/hoardings" element={<HoardingBranding />} />
         <Route path="/hoardings/:citySlug" element={<HoardingBrandingCity />} />
 
@@ -69,8 +67,7 @@ export default function App() {
         <Route path="/digital-marketing" element={<DigitallMarketing />} />
         <Route path="/web-development" element={<WebDevelopment />} />
         <Route path="/sitemap" element={<Sitemap />} />
-
-        {/* Always last */} 
+ 
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

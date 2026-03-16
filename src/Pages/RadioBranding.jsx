@@ -30,7 +30,7 @@ const RadioFMBranding = () => {
   const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg"; 
   const LOGO = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-  const PAGE_TITLE = "Best Radio & FM Advertising in Nashik - Brand Banao.AI"; 
+  const PAGE_TITLE = "Best Radio & FM Advertising in Nashik - Brand Banao.Ai"; 
   const PAGE_DESC =
     "BrandBanao.ai creates conversational Radio & FM ads that boost recall and response. We write radio ad scripts, plan formats (10-30 sec), coordinate voice/sound, and align radio campaigns with digital.";
 
@@ -330,7 +330,7 @@ const RadioFMBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} // ✅ FIX
+                    aria-expanded={isActive}  
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

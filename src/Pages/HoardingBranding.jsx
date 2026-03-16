@@ -56,7 +56,6 @@ const HoardingBranding = () => {
 
   const closeGallery = useCallback(() => setShowGallery(false), []);
 
-  // ✅ ESC closes gallery
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {

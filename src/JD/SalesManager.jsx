@@ -30,16 +30,14 @@ export default function SalesMarketingManager() {
                <Link to="/contact">
        <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
       </header>
-
-      {/* About the Role (verbatim) */}
+ 
       <section id="about" className="smm-panel">
         <h2 className="smm-h2">About the Role</h2>
         <p className="smm-paragraph">
           We’re looking for an experienced Sales &amp; Marketing Manager to lead business growth and client relationships for BrandBanao.ai. The role demands strategic thinking, strong leadership, and hands-on execution to drive revenue across OOH, Digital, Print, Cinema, FM, and Activation verticals. You’ll oversee a team, build key partnerships, and ensure sales targets are consistently met through structured planning and effective coordination.
         </p>
       </section>
-
-      {/* Key Responsibilities (verbatim) */}
+ 
       <section id="responsibilities" className="smm-panel">
         <h2 className="smm-h2">Key Responsibilities</h2>
 
@@ -75,8 +73,7 @@ export default function SalesMarketingManager() {
           <li>•&nbsp;Maintain strong relations with vendors, media houses, and key industry stakeholders.</li>
         </ul>
       </section>
-
-      {/* Measurement Metrics (verbatim) */}
+ 
       <section id="kpis" className="smm-panel">
         <h2 className="smm-h2">Measurement Metrics (KPIs)</h2>
         <ul className="smm-ul">
@@ -87,8 +84,7 @@ export default function SalesMarketingManager() {
           <li>•&nbsp;Overall business expansion and client satisfaction.</li>
         </ul>
       </section>
-
-      {/* You Are (verbatim) */}
+ 
       <section id="you-are" className="smm-panel">
         <h2 className="smm-h2">You Are</h2>
         <ul className="smm-ul">
@@ -101,12 +97,7 @@ export default function SalesMarketingManager() {
       </section>
 <br /><br />
  <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
-      {/* CTA — replace href with your per-role application route/form */}
-    
-
-     
-
-      {/* Inline styles to ensure consistent layout without touching global CSS */}
+ 
       <style>{`
         :root{
           --primary:#d94f5c;

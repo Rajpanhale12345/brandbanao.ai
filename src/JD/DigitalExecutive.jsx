@@ -33,8 +33,7 @@ export default function DigitalMarketingExecutive() {
        
         </div>
       </header>
-
-      {/* KEY RESPONSIBILITIES */}
+ 
       <section id="responsibilities" className="dme-panel" aria-labelledby="dme-h2-resp">
         <h2 id="dme-h2-resp" className="dme-h2">Key Responsibilities</h2>
         <ol className="dme-list">
@@ -47,8 +46,7 @@ export default function DigitalMarketingExecutive() {
           <li> Client Meeting Handling, Co-ordination &amp; Communication</li>
         </ol>
       </section>
-
-      {/* KEY TASKS & ACTIVITIES */}
+ 
       <section className="dme-panel" aria-labelledby="dme-h2-tasks">
         <h2 id="dme-h2-tasks" className="dme-h2">Key Tasks &amp; Activities</h2>
 
@@ -95,8 +93,7 @@ export default function DigitalMarketingExecutive() {
           </ul>
         </article>
       </section>
-
-      {/* MEASUREMENT METRICS */}
+ 
       <section className="dme-panel" aria-labelledby="dme-h2-metrics">
         <h2 id="dme-h2-metrics" className="dme-h2">Measurement Metrics</h2>
         <ul className="dme-grid">
@@ -113,9 +110,8 @@ export default function DigitalMarketingExecutive() {
             <li key={idx} className="dme-metric">{item}</li>
           ))}
         </ul>
-      </section>
+      </section> 
 
-      {/* COMPENSATION */}
       <section className="dme-panel dme-panel--accent" aria-labelledby="dme-h2-comp">
         <h2 id="dme-h2-comp" className="dme-h2">Salary – 3.5 to 4 LPA</h2>
         <div className="dme-comp">
@@ -125,8 +121,7 @@ export default function DigitalMarketingExecutive() {
       </section>
 <br /><br />    
      <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
-
-      {/* Styles kept inside to guarantee layout without touching your global CSS */}
+ 
       <style>{`
         :root{
           --primary:#d94f5c;

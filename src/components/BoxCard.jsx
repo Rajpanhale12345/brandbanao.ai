@@ -2,8 +2,7 @@
 import "./BoxCard.css";
 
 
-export default function BoxCard({ size = 200, labels = {} }) {
-  // labels lets you override the face text if you want
+export default function BoxCard({ size = 200, labels = {} }) { 
   const {
     front = "Trust",
     back = "Revenue",

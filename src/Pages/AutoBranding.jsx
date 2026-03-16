@@ -164,7 +164,7 @@ const AutoBranding = () => {
   return (
     <>
       <Helmet>
-        <title>Auto Branding in Nashik - Auto Rickshaw Advertising - BrandBanao.ai</title>
+        <title>Best Auto Branding in Nashik - BrandBanao.ai</title>
 
         <meta name="description" content="Auto branding and auto rickshaw advertising by BrandBanao.ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="author" content={BRAND_NAME} />
@@ -307,8 +307,7 @@ const AutoBranding = () => {
           <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai move with your audience-literally-driving awareness,
             trust, and growth across the city.</b></i></h3>
         </div>
-
-        {/* BOTTOM FAQ SECTION – ACCORDION STYLE */}
+ 
         <div className="hoarding-content faq-section">
           <h2>Auto Branding FAQs</h2>
           <div className="faq-list">

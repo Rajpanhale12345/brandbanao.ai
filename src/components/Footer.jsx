@@ -1,4 +1,3 @@
-// Footer.jsx
 import React from "react";
 import "./Footer.css";
 
@@ -9,11 +8,7 @@ import "./Footer.css";
     <footer className="site-footer" role="contentinfo" aria-label="Site footer">
       <div className="sf-accent" aria-hidden="true" />
 
-      <div className="sf-inner">
-        {/* Brand / tagline / social */}
-
-
-        {/* Link columns */}
+      <div className="sf-inner"> 
         <div className="sf-grid">
          
           <Column
@@ -45,7 +40,7 @@ import "./Footer.css";
             </a>
             
            <a className="sf-pill" href="tel:9156784242 ">
-             91 5678 4242
+             91567 84242
             </a>
            
            <a className="sf-pill" href="tel:9156784242" style={{textAlign : "left"}}>
@@ -55,8 +50,7 @@ import "./Footer.css";
           </div>
          
         </div>
-
-        {/* Bottom row */}
+ 
         <div className="sf-bottom">
           <p  style={{color : "white"}}>© {year} brandbanao.ai. All rights reserved.</p>
           <ul className="sf-legal" role="list">

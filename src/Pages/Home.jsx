@@ -40,8 +40,7 @@ export default function Home() {
 
   useEffect(() => {
     const cleanupFns = [];
-
-    // Hide arrow after user starts scrolling down a bit
+ 
     const onScroll = () => setShowArrow(window.scrollY < 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     cleanupFns.push(() => window.removeEventListener("scroll", onScroll));
@@ -57,15 +56,13 @@ export default function Home() {
 
         const bg = Grid2Background(canvas);
         bgRef.current = bg;
-
-        // Ensure target element can receive pointer events
+ 
         const target = bg?.renderer?.domElement || canvas;
         if (target && target.style) {
           target.style.pointerEvents = "auto";
           target.style.touchAction = "none";
         }
-
-        // Full-bleed + crisp DPR
+ 
         const resize = () => {
           const w = window.innerWidth;
           const h = window.innerHeight;
@@ -86,8 +83,7 @@ export default function Home() {
         resize();
         window.addEventListener("resize", resize, { passive: true });
         cleanupFns.push(() => window.removeEventListener("resize", resize));
-
-        // Forward real (trusted) events only
+ 
         const forward = (e) => {
           if (!e.isTrusted) return;
           if (!target) return;
@@ -111,8 +107,7 @@ export default function Home() {
         cleanupFns.push(() =>
           eventTypes.forEach((t) => window.removeEventListener(t, forward))
         );
-
-        // Click to randomize palette/lights
+ 
         const rand = () => Math.floor(Math.random() * 0xffffff);
         const handleClick = () => {
           if (!bg?.grid) return;
@@ -148,8 +143,7 @@ export default function Home() {
       bgRef.current = null;
     };
   }, []);
-
-  // NEW: smooth scroll helper
+ 
   const scrollDown = () => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (belowHeroRef.current) {

@@ -1,5 +1,3 @@
-/* layout shell */
-
 .navbar {
   position: relative;
   z-index: 1000;
@@ -19,7 +17,7 @@
 .brand { display: inline-flex; align-items: center; gap: 8px; }
 .logo { height: 200px; width: 200px; display: block; margin-top: -60px;}
 
-/* desktop menu */
+ 
 .menu {
   list-style: none;
   margin: 0;
@@ -29,7 +27,7 @@
   color: yellow;
 }
 .menu--desktop {
-  display: none; /* hidden by default, shown on >= md */
+  display: none; 
   gap: 24px;
 }
 .menu--desktop li { display: inline-block; }
@@ -43,8 +41,7 @@
   text-decoration: underline;
   color:  #d94f5c;
 }
-
-/* hamburger button */
+ 
 .hamburger {
   width: 44px; height: 44px;
   display: grid; place-items: center;
@@ -62,8 +59,7 @@
 .hamburger.is-open span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
 .hamburger.is-open span:nth-child(2) { opacity: 0; }
 .hamburger.is-open span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
-
-/* overlay for mobile menu */
+ 
 .overlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.38);
@@ -73,8 +69,7 @@
 .overlay.show {
   opacity: 1; pointer-events: auto;
 }
-
-/* mobile panel (slide from right) */
+ 
 .panel {
   position: fixed; top: 0; right: 0; bottom: 0;
   width: min(82vw, 340px);
@@ -89,15 +84,13 @@
 
 .menu--mobile li { margin: 6px 0; }
 .menu--mobile a { display: block; padding: 10px 6px; }
-
-/* responsive */
+ 
 @media (min-width: 960px) {
   .menu--desktop { display: flex; }
   .hamburger { display: none; }
   .overlay, .panel { display: none; }
-}
+} 
 
-/* respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hamburger span, .overlay, .panel { transition: none; }
 }

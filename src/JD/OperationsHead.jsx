@@ -27,16 +27,14 @@ export default function OperationsHead() {
                 <Link to="/contact">
         <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
       </header>
-
-      {/* About the Role (verbatim) */}
+ 
       <section id="about" className="smef-panel">
         <h2 className="smef-h2">About the Role</h2>
         <p className="smef-paragraph">
           We’re seeking an experienced Operations Head to lead and optimize the overall functioning of BrandBanao.ai. You’ll oversee smooth execution across Digital, Outdoor (OOH), Creative, and Client Servicing divisions—driving efficiency, accountability, and performance excellence. The ideal candidate combines strategic thinking with hands-on execution and strong leadership skills.
         </p>
       </section>
-
-      {/* Key Responsibilities (verbatim bullets) */}
+ 
       <section id="responsibilities" className="smef-panel">
         <h2 className="smef-h2">Key Responsibilities</h2>
         <ul className="smef-ul">
@@ -49,8 +47,7 @@ export default function OperationsHead() {
           <li>•&nbsp;Supervise printing, mounting, and OOH execution, ensuring timely completion and documentation.</li>
         </ul>
       </section>
-
-      {/* Qualifications (verbatim) */}
+ 
       <section id="qualifications" className="smef-panel">
         <h2 className="smef-h2">Qualifications</h2>
         <ul className="smef-ul">
@@ -61,8 +58,7 @@ export default function OperationsHead() {
           <li>•&nbsp;MBA / Postgraduate in Business, Marketing, or Operations preferred.</li>
         </ul>
       </section>
-
-      {/* You Are (verbatim) */}
+ 
       <section id="you-are" className="smef-panel">
         <h2 className="smef-h2">You Are</h2>
         <ul className="smef-ul">
@@ -73,8 +69,7 @@ export default function OperationsHead() {
         </ul>
       </section><br /><br />
        <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
-
-      {/* Inline styles to ensure consistent layout without touching global CSS */}
+ 
       <style>{`
         :root{
           --primary:#d94f5c;

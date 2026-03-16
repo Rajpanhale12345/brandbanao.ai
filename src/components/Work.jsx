@@ -25,12 +25,12 @@ const Work = () => {
 
             <div className='work-container'>
                 <br /><br />
-                <h1 style={{  textAlign: "center", color : "#d94f5c",   }}>Our Clients</h1>
-<br />
+                <h1 style={{ textAlign: "center", color: "#d94f5c", }}>Our Clients</h1>
+                <br />
                 <div className='image1-container' style={{ justifyContent: "center", alignItems: "center", justifyItems: "center" }}>
                     <img src={client1} alt="Client 1" />
                     <img src={client3} alt="Client 3" />
-                     <img src={client19} alt="Client 19" />
+                    <img src={client19} alt="Client 19" />
                     <img src={client5} alt="Client 5" />
                     <img src={client6} alt="Client 6" />
                     <img src={client7} alt="Client 7" />
@@ -43,8 +43,6 @@ const Work = () => {
                     <img src={client14} alt="Client 14" />
                     <img src={client15} alt="Client 15" />
                     <img src={client16} alt="Client 16" />
-                    
-                   
                 </div>
                 <br /><br /><br />
             </div>

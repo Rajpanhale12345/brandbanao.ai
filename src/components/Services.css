@@ -42,8 +42,7 @@ gap: 40px;
       @media (min-width: 1024px){
         .grid{ grid-template-columns: repeat(3, 1fr); }
       }
-
-      /* ✅ Link wrapper should look like normal block, no underline */
+ 
       .cardLink{
         text-decoration: none;
         color: inherit;
@@ -103,8 +102,7 @@ gap: 40px;
         font-weight: 600; padding: 6px 8px; border-radius: 8px;
       }
       .card:hover .linkBtn{ background: rgba(217,79,92,0.08); }
-
-      /* FAQ */
+ 
       .faqTitle{
         margin: 6px 0 6px;
         font-size: 28px;

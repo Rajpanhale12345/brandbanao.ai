@@ -181,8 +181,7 @@ const AirportBranding = () => {
             ],
         };
     }, [canonicalUrl, targetCities, faqs]);
-
-    // ✅ FIX: GA page path should match canonical/route convention
+ 
     useEffect(() => {
         if (typeof window !== "undefined" && typeof window.gtag === "function") {
             window.gtag("event", "page_view", { page_path: "/airport-branding" });
@@ -192,7 +191,7 @@ const AirportBranding = () => {
     return (
         <>
             <Helmet>
-                <title>Airport Branding & Advertising in Maharashtra - BrandBanao.ai</title>
+                <title>Best Airport Branding & Advertising in Maharashtra</title>
 
                 <meta name="author" content="BrandBanao.ai" />
                 <meta name="description" content="Airport Branding Services by BrandBanao.ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
@@ -399,7 +398,7 @@ const AirportBranding = () => {
                                         type="button"
                                         className="faq-question"
                                         onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                        aria-expanded={isActive} // ✅ FIX: accessibility
+                                        aria-expanded={isActive}  
                                     >
                                         <span className="faq-question-text">{faq.question}</span>
                                         <span className="faq-icon">{isActive ? "−" : "+"}</span>
