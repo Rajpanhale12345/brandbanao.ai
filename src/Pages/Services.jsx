@@ -279,7 +279,7 @@ export default function Services() {
               <ServiceCard
                 title="Bus Branding"
                 image={bus}
-                path="/BusBranding"
+                path="/bus-branding"
               />
 
               <ServiceCard
