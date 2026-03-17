@@ -11,27 +11,30 @@ const routes = [
   "/services",
   "/careers",
 
-  "/Cinema",
-  "/Radio",
-  "/Hoardings",
-  "/Bus_Shelter",
-  "/AirportBranding",
-  "/TVNewsChanelBranding",
+  "/cinema",
+  "/radio",
+  "/hoardings",
+  "/bus-shelter",
+  "/airport-branding",
+  "/tv-news-chanel-branding",
 
-  "/BusBranding",
-  "/AutoBranding",
-  "/CycleBranding",
-  "/RailwayBranding",
-  "/DigitalMarketing",
-  "/WebDevelopment",
+  "/bus-branding",
+  "/auto-branding",
+  "/cycle-branding",
+  "/railway-branding",
+  "/digital-marketing",
+  "/web-development",
 
   // Career pages
-  "/Careers/DigitalMarketingExecutive",
-  "/Careers/DigitalMarketingManager",
-  "/Careers/MediaPlanner",
-  "/Careers/SalesMarketingExecutiveFemale",
-  "/Careers/SalesMarketingManager",
-  "/Careers/OperationsHead",
+  "/careers/digital-marketing-executive",
+  "/careers/digital-marketing-manager",
+  "/careers/media-planner",
+  "/careers/sales-marketing-executive-female",
+  "/careers/sales-marketing-manager",
+  "/careers/operations-head",
+
+  // Optional but recommended
+  "/sitemap",
 ];
 
 async function generateSitemap() {
