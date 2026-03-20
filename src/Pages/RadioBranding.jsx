@@ -1,19 +1,19 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import radioimg from "../Images/radio.webp";
 import { Helmet } from "react-helmet-async";
-import "./busShelter.css"; 
+import "./busShelter.css";
 
 const RadioFMBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-  const images = useMemo(() => [radioimg], []); 
+  const images = useMemo(() => [radioimg], []);
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
-  const closeGallery = useCallback(() => setShowGallery(false), []); 
+  const closeGallery = useCallback(() => setShowGallery(false), []);
 
   useEffect(() => {
     if (!showGallery) return;
@@ -26,11 +26,11 @@ const RadioFMBranding = () => {
 
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/radio";
-  const BRAND_NAME = "BrandBanao.ai"; 
-  const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg"; 
+  const BRAND_NAME = "BrandBanao.ai";
+  const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg";
   const LOGO = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-  const PAGE_TITLE = "Best Radio & FM Advertising in Nashik - Brand Banao.Ai"; 
+  const PAGE_TITLE = "Best Radio & FM Advertising in Nashik - Brand Banao.Ai";
   const PAGE_DESC =
     "BrandBanao.ai creates conversational Radio & FM ads that boost recall and response. We write radio ad scripts, plan formats (10-30 sec), coordinate voice/sound, and align radio campaigns with digital.";
 
@@ -70,25 +70,6 @@ const RadioFMBranding = () => {
     []
   );
 
-
-  const keywordsContent = useMemo(
-    () =>
-      [
-        "FM radio advertising Nashik",
-        "radio advertising Nashik",
-        "radio ad cost",
-        "FM advertising rates",
-        "radio spot booking",
-        "RJ mention advertising",
-        "radio jingle",
-        "10 second radio ad",
-        "20 second radio ad",
-        "30 second radio ad",
-        "BrandBanao.ai",
-      ].join(", "),
-    []
-  );
-
   const structuredData = useMemo(() => {
     const orgId = "https://brandbanao.ai/#organization";
     const pageId = `${PAGE_URL}#webpage`;
@@ -113,6 +94,30 @@ const RadioFMBranding = () => {
           logo: LOGO,
         },
         {
+          "@type": "BreadcrumbList",
+          "@id": `${PAGE_URL}#breadcrumb`,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: SITE_URL,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Services",
+              item: `${SITE_URL}/radio`,
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Radio & FM Branding",
+              item: PAGE_URL,
+            },
+          ],
+        },
+        {
           "@type": "WebPage",
           "@id": pageId,
           url: PAGE_URL,
@@ -123,6 +128,7 @@ const RadioFMBranding = () => {
           isPartOf: { "@id": "https://brandbanao.ai/#website" },
           about: { "@id": orgId },
           mainEntity: { "@id": serviceId },
+          breadcrumb: { "@id": `${PAGE_URL}#breadcrumb` },
           primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
         },
         {
@@ -161,14 +167,12 @@ const RadioFMBranding = () => {
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
-        <meta name="keywords" content={keywordsContent} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="canonical" href={PAGE_URL} />
-        <link rel="icon" href={LOGO} />
-        <link rel="apple-touch-icon" href={LOGO} />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
         <meta property="og:title" content={PAGE_TITLE} />
@@ -197,7 +201,7 @@ const RadioFMBranding = () => {
             onClick={() => openGallery(0)}
             loading="eager"
             decoding="async"
-            fetchpriority="high"
+            fetchPriority="high"
             width="1200"
             height="675"
           />
@@ -330,7 +334,7 @@ const RadioFMBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive}  
+                    aria-expanded={isActive}
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

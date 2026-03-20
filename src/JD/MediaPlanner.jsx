@@ -1,42 +1,91 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
-/**
- * Media Planner Executive — Role Page (Verbatim Content)
- * - Keeps ALL provided copy exactly as-is.
- * - Clean, responsive layout using #d94f5c (primary) and a yellow accent.
- * - Self-contained styles, print-friendly.
- */
+export default function MediaPlanner() {
+  const PAGE_URL = "https://brandbanao.ai/careers/media-planner";
+  const PAGE_TITLE = "Media Planner Job | BrandBanao.ai Nashik";
+  const PAGE_DESC =
+    "Apply for the Media Planner role at BrandBanao.ai in Nashik. Work on media planning, vendor coordination, proposals, execution tracking, and advertising operations across hoardings, cinema, radio, and more.";
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
-export default function MediaPlannerExecutive() {
-
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: "Media Planner",
+    description:
+      "Media Planner role at BrandBanao.ai handling media planning, vendor coordination, proposals, execution tracking, and advertising operations.",
+    employmentType: "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "BrandBanao.ai",
+      sameAs: "https://brandbanao.ai",
+      logo: OG_IMAGE,
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Nashik",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+    },
+    url: PAGE_URL,
+  };
 
   return (
-    <main className="mpe">
+    <main className="mp">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{PAGE_TITLE}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={PAGE_DESC} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:alt" content="Media Planner Job - BrandBanao.ai" />
+        <meta property="og:site_name" content="BrandBanao.ai" />
+        <meta property="og:locale" content="en_IN" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <meta name="twitter:image:alt" content="Media Planner Job - BrandBanao.ai" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+
+
       <header className="mpe-hero" role="banner" aria-label="Media Planner Executive" id="header" style={{
-  background: "linear-gradient(90deg, #e6eb8eff, #f9ceceff)"
-}}>
+        background: "linear-gradient(90deg, #e6eb8eff, #f9ceceff)"
+      }}>
         <span className="mpe-badge">Role</span>
         <h1 className="mpe-title">Media Planner Executive</h1>
-<br />
+        <br />
         <ul className="dmm-meta" aria-label="Role details">
           <li><b>Location:</b> Nashik (In person)</li>
           <li><b>Experience:</b> 2-3 years (Agency / Marketing Leadership)</li>
           <li><b>Type:</b> Full-time</li>
-       
+
         </ul>
         <br />
         <Link to="/contact">
-        <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
+          <button type="button" style={{ backgroundColor: "#d94f5c" }}>Apply</button></Link>
       </header>
- 
+
       <section id="role-definition" className="mpe-panel">
         <h2 className="mpe-h2">Role Definition</h2>
         <p className="mpe-paragraph">
           The Media planner is a person who is responsible for creating strategic media plan, media buying at right rate from right vendor, coordination with management for creating proposals and completing the loop for printing, mounting and monitoring, invoice checking.
         </p>
       </section>
- 
+
       <section id="key-resp" className="mpe-panel">
         <h2 className="mpe-h2">Key Responsibilities</h2>
         <ol className="mpe-ol">
@@ -50,7 +99,7 @@ export default function MediaPlannerExecutive() {
           <li> Clients vendor coordination</li>
         </ol>
       </section>
- 
+
       <section id="tasks" className="mpe-panel">
         <h2 className="mpe-h2">Key Tasks & Activities</h2>
         <ul className="mpe-ul">
@@ -82,7 +131,7 @@ export default function MediaPlannerExecutive() {
           <li>• - Every Month Submitting Vrindawan Sites Data Before 5th</li>
         </ul>
       </section>
- 
+
       <section id="metrics" className="mpe-panel">
         <h2 className="mpe-h2">Measurement Metrics</h2>
         <ul className="mpe-metrics">
@@ -94,17 +143,17 @@ export default function MediaPlannerExecutive() {
           <li>No. of cities/ hoardings/ other medias/ new media owners added in the Master media list every month with details</li>
         </ul>
       </section>
- 
+
       <section id="salary" className="mpe-panel mpe-panel--accent">
-       
+
         <div className="mpe-comp">
           <span className="mpe-comp-label">Salary Range</span>
           <span className="mpe-comp-value">₹ 1.8 LPA – ₹ 3.0 LPA</span>
         </div>
       </section>
-<br /><br />
- <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
- 
+      <br /><br />
+      <Link to="/contact"><button type="button" style={{ backgroundColor: " #d94f5c" }}>Apply</button></Link>
+
       <style>{`
         :root{
           --primary:#d94f5c;

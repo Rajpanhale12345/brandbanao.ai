@@ -44,7 +44,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- 
+
     setTouched({
       fullName: true,
       phone: true,
@@ -54,12 +54,11 @@ export default function Contact() {
     if (hasErrors) return;
 
     setIsSubmitting(true);
-    try { 
+    try {
       const payload = {
         data: [
           {
             officeLocation: form.officeLocation,
-            topic: form.topic,
             fullName: form.fullName,
             phone: form.phone,
             email: form.email,
@@ -70,6 +69,8 @@ export default function Contact() {
           },
         ],
       };
+
+
 
       const res = await fetch(SHEETDB_URL, {
         method: "POST",
@@ -99,7 +100,7 @@ export default function Contact() {
 
   const PAGE_URL = "https://brandbanao.ai/contact";
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
-  
+
   return (
     <>
 
@@ -111,7 +112,7 @@ export default function Contact() {
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#d94f5c" />
         <meta name="application-name" content="Brand Banao.ai" />
         <meta name="format-detection" content="telephone=no" />
@@ -154,7 +155,7 @@ export default function Contact() {
 
       <div className="contact-page">
         <form className="contact" onSubmit={handleSubmit} noValidate>
-          <div className="grid"> 
+          <div className="grid">
             <div className="field">
               <label htmlFor="officeLocation">
                 Location<span aria-hidden="true">*</span>
@@ -167,11 +168,11 @@ export default function Contact() {
               >
                 <option value="NASHIK">NASHIK</option>
                 <option value="MUMBAI">MUMBAI</option>
-                <option value="BENGALURU">CHHATRAPATI SAMBHAJI NAGAR</option>
+                <option value="CHHATRAPATI_SAMBHAJI_NAGAR">CHHATRAPATI SAMBHAJI NAGAR</option>
                 <option value="PUNE">PUNE</option>
                 <option value="REMOTE">Other</option>
               </select>
-            </div> 
+            </div>
 
             <div className="field">
               <label htmlFor="fullName">
@@ -189,7 +190,7 @@ export default function Contact() {
                 <p className="error">{errors.fullName}</p>
               )}
             </div>
- 
+
             <div className="field">
               <label htmlFor="phone">
                 Phone <span aria-hidden="true">*</span>
@@ -208,7 +209,7 @@ export default function Contact() {
                 <p className="error">{errors.phone}</p>
               )}
             </div>
- 
+
             <div className="field span-2">
               <label htmlFor="email">
                 Email <span aria-hidden="true">*</span>
@@ -228,7 +229,7 @@ export default function Contact() {
                 <p className="error">{errors.email}</p>
               )}
             </div>
-  
+
             <div className="field span-2">
               <label htmlFor="message">How can we help?</label>
               <textarea

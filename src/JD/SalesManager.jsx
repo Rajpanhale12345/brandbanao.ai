@@ -1,24 +1,72 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-/**
- * Sales & Marketing Manager — Role Page (Verbatim Content)
- * - All provided copy is kept exactly as-is.
- * - Clean, responsive layout using #d94f5c (primary) and a yellow accent.
- * - Self-contained styles, accessible, and print-friendly.
- */
+import { Helmet } from "react-helmet-async";
 
 export default function SalesMarketingManager() {
+  const PAGE_URL = "https://brandbanao.ai/careers/sales-marketing-manager";
+  const PAGE_TITLE = "Sales & Marketing Manager Job | BrandBanao.ai Nashik";
+  const PAGE_DESC =
+    "Apply for the Sales & Marketing Manager role at BrandBanao.ai in Nashik. Lead growth, client relationships, and integrated advertising campaigns across OOH, digital, print, cinema, FM, and activation.";
+  const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: "Sales & Marketing Manager",
+    description:
+      "Sales & Marketing Manager role at BrandBanao.ai handling OOH, digital, print, cinema, FM, and activation campaigns.",
+    employmentType: "FULL_TIME",
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "BrandBanao.ai",
+      sameAs: "https://brandbanao.ai",
+      logo: OG_IMAGE,
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Nashik",
+        addressRegion: "Maharashtra",
+        addressCountry: "IN",
+      },
+    },
+    url: PAGE_URL,
+  };
 
   return (
     <main className="smm">
-      <header className="smm-hero" role="banner" aria-label="Sales & Marketing Manager"   id="header"   style={{
-  background: "linear-gradient(90deg, #e6eb8eff, #f9ceceff)"
-}}>
+      <Helmet>
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESC} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href={PAGE_URL} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:site_name" content="BrandBanao.ai" />
+        <meta property="og:locale" content="en_IN" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+
+      
+      <header className="smm-hero" role="banner" aria-label="Sales & Marketing Manager" id="header" style={{
+        background: "linear-gradient(90deg, #e6eb8eff, #f9ceceff)"
+      }}>
         <span className="smm-badge">Role</span>
         <h1 className="smm-title">Sales &amp; Marketing Manager</h1>
-<br />
+        <br />
         <ul className="smm-meta" aria-label="Role details">
           <li><b>Location:</b> Nashik (In-person)</li>
           <li><b>Type:</b> Full-time</li>
@@ -26,18 +74,18 @@ export default function SalesMarketingManager() {
           <li><b>Pay:</b> Upto 7.5  LPA (Based on experience &amp; performance)</li>
         </ul>
 
-       <br />
-               <Link to="/contact">
-       <button type="button" style={{backgroundColor : "#d94f5c"}}>Apply</button></Link>
+        <br />
+        <Link to="/contact">
+          <button type="button" style={{ backgroundColor: "#d94f5c" }}>Apply</button></Link>
       </header>
- 
+
       <section id="about" className="smm-panel">
         <h2 className="smm-h2">About the Role</h2>
         <p className="smm-paragraph">
           We’re looking for an experienced Sales &amp; Marketing Manager to lead business growth and client relationships for BrandBanao.ai. The role demands strategic thinking, strong leadership, and hands-on execution to drive revenue across OOH, Digital, Print, Cinema, FM, and Activation verticals. You’ll oversee a team, build key partnerships, and ensure sales targets are consistently met through structured planning and effective coordination.
         </p>
       </section>
- 
+
       <section id="responsibilities" className="smm-panel">
         <h2 className="smm-h2">Key Responsibilities</h2>
 
@@ -73,7 +121,7 @@ export default function SalesMarketingManager() {
           <li>•&nbsp;Maintain strong relations with vendors, media houses, and key industry stakeholders.</li>
         </ul>
       </section>
- 
+
       <section id="kpis" className="smm-panel">
         <h2 className="smm-h2">Measurement Metrics (KPIs)</h2>
         <ul className="smm-ul">
@@ -84,7 +132,7 @@ export default function SalesMarketingManager() {
           <li>•&nbsp;Overall business expansion and client satisfaction.</li>
         </ul>
       </section>
- 
+
       <section id="you-are" className="smm-panel">
         <h2 className="smm-h2">You Are</h2>
         <ul className="smm-ul">
@@ -95,9 +143,9 @@ export default function SalesMarketingManager() {
           <li>•&nbsp;Passionate about integrated marketing and brand growth.</li>
         </ul>
       </section>
-<br /><br />
- <Link to="/contact"><button type="button" style={{backgroundColor : " #d94f5c"}}>Apply</button></Link>
- 
+      <br /><br />
+      <Link to="/contact"><button type="button" style={{ backgroundColor: " #d94f5c" }}>Apply</button></Link>
+
       <style>{`
         :root{
           --primary:#d94f5c;

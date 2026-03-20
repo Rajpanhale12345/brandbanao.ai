@@ -3,6 +3,12 @@ import { Helmet } from "react-helmet-async";
 import cinemaImg from "../Images/cinemabranding.webp";
 import "./tvNews.css";
 
+const SITE_URL = "https://brandbanao.ai";
+const PAGE_PATH = "/cinema";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const BRAND_NAME = "BrandBanao.ai";
+const OG_IMAGE = "https://brandbanao.ai/assets/cinemabranding-BROdYWzQ.webp";
+
 const CinemaBranding = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +23,6 @@ const CinemaBranding = () => {
 
   const closeGallery = useCallback(() => setShowGallery(false), []);
 
-
   useEffect(() => {
     if (!showGallery) return;
     const onKeyDown = (e) => {
@@ -27,197 +32,189 @@ const CinemaBranding = () => {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [showGallery, closeGallery]);
 
-  const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/cinema";
-  const BRAND_NAME = "BrandBanao.ai";
-  const OG_IMAGE = "https://brandbanao.ai/assets/cinemabranding-BROdYWzQ.webp";
-
   const FAQ_ITEMS = useMemo(
     () => [
       {
-        question:
-          "Which is the best cinema advertising agency in Nashik and Maharashtra?",
+        question: "Which is the best cinema advertising agency in Nashik and Maharashtra?",
         answer:
-          "BrandBanao.ai is a trusted cinema advertising partner in Nashik and across Maharashtra. We plan campaigns across multiplex and regional cinema networks (subject to inventory availability), manage creative formatting, scheduling, approvals, and execution—so your brand gets high-attention visibility in a distraction-free environment.",
+          "BrandBanao.ai is a trusted cinema advertising partner in Nashik and across Maharashtra. We plan campaigns across multiplex and regional cinema networks, manage creative formatting, scheduling, approvals, and execution for high-attention brand visibility.",
       },
       {
-        question:
-          "Why is BrandBanao.ai considered a top cinema branding agency for high-recall advertising?",
+        question: "Why is BrandBanao.ai considered a top cinema branding agency for high-recall advertising?",
         answer:
-          "Because cinema advertising needs the right mix of screens, show timing, and frequency—not just a booking. We recommend cinemas and schedules based on audience fit, keep the ad crisp and compliant with theatre specs, and ensure smooth rollout with documentation—helping brands build strong recall and premium perception.",
+          "We recommend cinema screens, show timings, and campaign frequency based on audience fit, while managing creative compliance, scheduling, and execution to improve brand recall and campaign efficiency.",
       },
       {
-        question:
-          "How much does cinema advertising cost in Nashik? What are movie theatre advertising rates?",
+        question: "How much does cinema advertising cost in Nashik?",
         answer:
-          "Cinema advertising rates depend on the cinema network, number of screens, ad duration (10/15/20 seconds), slot type (pre-show or interval), show frequency, and campaign length (7 days, 2 weeks, 1 month, etc.). We share transparent options so you can choose a plan based on expected reach and frequency.",
+          "Cinema advertising rates depend on the network, number of screens, ad duration, slot type, frequency, and campaign length. We provide transparent options based on reach, frequency, and budget.",
       },
       {
-        question:
-          "Can you run cinema ads in PVR, Cinépolis, and other multiplex networks?",
+        question: "Can you run cinema ads in PVR, Cinépolis, and other multiplex networks?",
         answer:
-          "Yes—where inventory is available in your target city. We can plan across popular multiplex networks as well as regional chains, and suggest the best network mix based on audience profile, locations, and budget for Nashik and Maharashtra.",
+          "Yes, subject to inventory availability. We help plan across multiplex and regional cinema networks based on target audience, geography, and budget.",
       },
       {
-        question:
-          "How fast can a cinema campaign go live, and do you provide confirmation/reporting?",
+        question: "How fast can a cinema campaign go live, and do you provide reporting?",
         answer:
-          "Go-live timelines depend on inventory availability, creative readiness, and approvals. Once the plan is finalized, we share the start date and show schedule, and provide confirmation/documentation as available from the cinema network after execution.",
+          "Timelines depend on inventory, approvals, and creative readiness. Once finalized, we share schedules and available execution confirmations from the cinema network.",
       },
     ],
     []
   );
 
-
-  const keywordsContent = useMemo(
-    () =>
-      [
-        "cinema advertising Nashik",
-        "cinema branding Nashik",
-        "movie theatre advertising Nashik",
-        "theatre advertising",
-        "multiplex advertising",
-        "PVR cinema advertising",
-        "Cinépolis advertising",
-        "pre show ads",
-        "interval ads",
-        "cinema advertising rates",
-        "BrandBanao.ai",
-      ].join(", "),
-    []
-  );
-
+  const metaTitle = "Cinema Branding in Nashik | Cinema Advertising Services | BrandBanao.ai";
+  const metaDescription =
+    "Cinema branding and advertising services in Nashik by BrandBanao.ai. Plan on-screen and off-screen cinema campaigns across multiplex and regional theatre networks with end-to-end execution.";
 
   const structuredData = useMemo(() => {
-    const orgId = "https://brandbanao.ai/#organization";
-    const pageId = `${PAGE_URL}#webpage`;
+    const orgId = `${SITE_URL}/#organization`;
+    const websiteId = `${SITE_URL}/#website`;
+    const webpageId = `${PAGE_URL}#webpage`;
     const serviceId = `${PAGE_URL}#service`;
+    const breadcrumbId = `${PAGE_URL}#breadcrumbs`;
+    const faqId = `${PAGE_URL}#faq`;
 
     return {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "WebSite",
-          "@id": "https://brandbanao.ai/#website",
-          url: SITE_URL,
-          name: BRAND_NAME,
-          publisher: { "@id": orgId },
-          inLanguage: "en-IN",
-        },
-        {
           "@type": "Organization",
           "@id": orgId,
           name: BRAND_NAME,
           url: SITE_URL,
-          logo: OG_IMAGE,
+          logo: {
+            "@type": "ImageObject",
+            url: OG_IMAGE
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": websiteId,
+          url: SITE_URL,
+          name: BRAND_NAME,
+          publisher: { "@id": orgId },
+          inLanguage: "en-IN"
         },
         {
           "@type": "WebPage",
-          "@id": pageId,
+          "@id": webpageId,
           url: PAGE_URL,
-          name: "Cinema Branding in Nashik - Cinema Advertising Services",
-          headline: "Cinema Branding & Advertising Services",
-          description:
-            "Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising, planned and executed end-to-end by BrandBanao.ai.",
+          name: metaTitle,
+          headline: "Cinema Branding & Advertising Services in Nashik",
+          description: metaDescription,
           inLanguage: "en-IN",
-          isPartOf: { "@id": "https://brandbanao.ai/#website" },
+          isPartOf: { "@id": websiteId },
           about: { "@id": orgId },
-          mainEntity: { "@id": serviceId },
-          primaryImageOfPage: { "@type": "ImageObject", url: OG_IMAGE },
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: OG_IMAGE
+          },
+          breadcrumb: { "@id": breadcrumbId },
+          mainEntity: { "@id": serviceId }
         },
         {
           "@type": "Service",
           "@id": serviceId,
-          name: "Cinema Branding & Cinema Advertising",
-          serviceType: ["Cinema Advertising", "Offline Advertising", "Branding"],
+          name: "Cinema Branding & Advertising",
+          url: PAGE_URL,
+          description:
+            "Cinema advertising services including on-screen and off-screen branding, campaign planning, scheduling, approvals, and execution across multiplex and regional cinema networks.",
           provider: { "@id": orgId },
           areaServed: [
             { "@type": "Country", name: "India" },
             { "@type": "State", name: "Maharashtra" },
-            { "@type": "City", name: "Nashik" },
+            { "@type": "City", name: "Nashik" }
           ],
-          url: PAGE_URL,
-          description:
-            "Cinema advertising with on-screen and off-screen placements across multiplex and regional networks, including planning, scheduling, approvals, and execution.",
+          serviceType: "Cinema Advertising"
         },
         {
           "@type": "BreadcrumbList",
-          "@id": `${PAGE_URL}#breadcrumbs`,
+          "@id": breadcrumbId,
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-            { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}services/` },
-            { "@type": "ListItem", position: 3, name: "Cinema Branding", item: PAGE_URL },
-          ],
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: `${SITE_URL}/`
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Cinema Branding",
+              item: PAGE_URL
+            }
+          ]
         },
         {
           "@type": "FAQPage",
-          "@id": `${PAGE_URL}#faq`,
-          mainEntity: FAQ_ITEMS.map((f) => ({
+          "@id": faqId,
+          mainEntity: FAQ_ITEMS.map((item) => ({
             "@type": "Question",
-            name: f.question,
-            acceptedAnswer: { "@type": "Answer", text: f.answer },
-          })),
-        },
-      ],
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer
+            }
+          }))
+        }
+      ]
     };
-  }, [BRAND_NAME, FAQ_ITEMS, PAGE_URL]);
-
-  const metaDescription =
-    "Cinema Branding Services by BrandBanao.ai. Turn movie halls into immersive storytelling platforms with on-screen and off-screen cinema advertising across multiplexes and regional networks, with end-to-end planning and execution.";
+  }, [FAQ_ITEMS, metaDescription, metaTitle]);
 
   return (
     <>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Cinema Branding in Nashik - BrandBanao.ai</title>
-        <meta name="author" content={BRAND_NAME} />
+      <Helmet prioritizeSeoTags>
+        <html lang="en-IN" />
+        <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta name="keywords" content={keywordsContent} />
-        <link rel="icon" href={OG_IMAGE} />
-        <link rel="apple-touch-icon" href={OG_IMAGE} />
+        <meta name="author" content={BRAND_NAME} />
+        <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
+
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Cinema Branding & Advertising - BrandBanao.ai" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai - Cinema Branding" />
+        <meta property="og:image:alt" content="Cinema branding and advertising by BrandBanao.ai" />
+
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cinema Branding - BrandBanao.ai" />
+        <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="BrandBanao.ai - Cinema Branding" />
+        <meta name="twitter:image:alt" content="Cinema branding and advertising by BrandBanao.ai" />
 
-        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
 
       <div className="hoarding-page">
-        <h1 className="hoarding-title">Cinema Branding</h1>
+        <h1 className="hoarding-title">Cinema Branding in Nashik</h1>
 
         <div className="hoarding-image-wrap">
           <img
             src={cinemaImg}
-            alt="Cinema Branding"
+            alt="Cinema branding advertising campaign display"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
             decoding="async"
-            fetchpriority="high"
+            fetchPriority="high"
             width="1200"
             height="675"
           />
         </div>
 
         {showGallery && (
-          <div className="gallery-overlay" onClick={() => setShowGallery(false)}>
+          <div className="gallery-overlay" onClick={closeGallery}>
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
               <img
                 src={images[currentIndex]}
-                alt="Cinema Branding"
+                alt="Cinema branding campaign visual"
                 className="gallery-img"
                 loading="lazy"
                 decoding="async"
