@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function MediaPlanner() {
   const PAGE_URL = "https://brandbanao.ai/careers/media-planner";
-  const PAGE_TITLE = "Media Planner Job | BrandBanao.ai Nashik";
+  const PAGE_TITLE = "Media Planner Job | BrandBanao.Ai Nashik";
   const PAGE_DESC =
     "Apply for the Media Planner role at BrandBanao.ai in Nashik. Work on media planning, vendor coordination, proposals, execution tracking, and advertising operations across hoardings, cinema, radio, and more.";
   const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
