@@ -71,11 +71,11 @@ const HoardingBranding = () => {
         question:
           "Which is the best hoarding / billboard advertising agency in Maharashtra?",
         answer:
-          "BrandBanao.ai is a trusted hoarding and billboard advertising partner across Maharashtra. We manage the complete process—location planning, media booking, outdoor-ready creative design, printing, installation, maintenance, and campaign photo reporting—so your brand gets high visibility with professional execution.",
+          "Brand Banao.Ai is a trusted hoarding and billboard advertising partner across Maharashtra. We manage the complete process—location planning, media booking, outdoor-ready creative design, printing, installation, maintenance, and campaign photo reporting—so your brand gets high visibility with professional execution.",
       },
       {
         question:
-          "Why is BrandBanao.ai considered a top hoarding agency in Maharashtra?",
+          "Why is Brand Banao.Ai considered a top hoarding agency in Maharashtra?",
         answer:
           "Because we focus on results, not just bookings. We shortlist high-impact sites based on visibility and audience relevance, ensure accurate print + safe installation, maintain the hoarding during the campaign, and share on-ground photo proof. This end-to-end control helps brands get stronger recall and cleaner execution across cities in Maharashtra.",
       },
@@ -83,7 +83,7 @@ const HoardingBranding = () => {
         question:
           "How much does hoarding or billboard advertising cost in Maharashtra (including Nashik)?",
         answer:
-          "Pricing depends on the exact location, hoarding size, format (static, backlit, LED/digital), and duration (15 days, 1 month, 3 months, etc.). Premium junctions and highways cost more than inner-city routes. BrandBanao.ai shares transparent pricing with a clear breakup of media and production so you can plan confidently.",
+          "Pricing depends on the exact location, hoarding size, format (static, backlit, LED/digital), and duration (15 days, 1 month, 3 months, etc.). Premium junctions and highways cost more than inner-city routes. Brand Banao.Ai shares transparent pricing with a clear breakup of media and production so you can plan confidently.",
       },
       {
         question:
@@ -95,7 +95,7 @@ const HoardingBranding = () => {
         question:
           "Do you provide end-to-end hoarding services like design, printing, installation, maintenance, and reporting?",
         answer:
-          "Yes. BrandBanao.ai provides complete hoarding services—outdoor-optimised creative design, large-format printing, installation coordination, routine maintenance checks during the campaign, and photo reporting after deployment. You get one team for execution from start to finish.",
+          "Yes. Brand Banao.Ai provides complete hoarding services—outdoor-optimised creative design, large-format printing, installation coordination, routine maintenance checks during the campaign, and photo reporting after deployment. You get one team for execution from start to finish.",
       },
     ],
     []
@@ -114,7 +114,7 @@ const HoardingBranding = () => {
         "LED hoarding advertising",
         "digital billboard Nashik",
         "hoarding printing and installation",
-        "BrandBanao.ai",
+        "Brand Banao.Ai",
       ].join(", "),
     []
   );
@@ -282,7 +282,7 @@ const HoardingBranding = () => {
         <div className="hoarding-image-wrap">
           <img
             src={hoarding1}
-            alt="Hoarding branding example in Nashik by BrandBanao.ai"
+            alt="Hoarding branding example in Nashik by Brand Banao.Ai"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -332,8 +332,8 @@ const HoardingBranding = () => {
             effects long after you've moved on.
           </p>
           <p>That is what a hoarding done right can do.</p>
-          <p>That is the magic BrandBanao.ai brings to your brand.</p>
-          <p>BrandBanao.ai does not provide hoardings; instead, we construct landmarks, thus earning
+          <p>That is the magic Brand Banao.Ai brings to your brand.</p>
+          <p>Brand Banao.Ai does not provide hoardings; instead, we construct landmarks, thus earning
             our reputation as the leading service provider of hoardings in Nashik, providing a service
             that is truly part of the city, not simply part of the building on which they are erected.</p>
 
@@ -360,7 +360,7 @@ const HoardingBranding = () => {
             <li>Creative hoarding design templates</li>
           </ul>
           <p>
-            Every BrandBanao.ai hoarding turns your story into a silhouette
+            Every Brand Banao.Ai hoarding turns your story into a silhouette
             across the skyline.
           </p>
 
@@ -430,7 +430,7 @@ const HoardingBranding = () => {
           <p>Bold. Alive. Un-missable.</p>
           <p>For one second, the city freezes, and your message stays.</p>
 
-          <h2>Why BrandBanao.ai</h2>
+          <h2>Why Brand Banao.Ai</h2>
           <p>Not just billboards, opportunities for awareness.</p>
           <p>Your story. Our skyline.</p>
           <p>From blueprints to publishing.</p>
@@ -444,7 +444,7 @@ const HoardingBranding = () => {
           <p>Wordlessly telling your story to the world passing by.</p>
 
           <h2>Final Note</h2>
-          <p>BrandBanao.ai - Best Hoarding Advertising Company in Nashik.</p>
+          <p>Brand Banao.Ai - Best Hoarding Advertising Company in Nashik.</p>
           <p>For brands that want to be acknowledged and heard.</p>
           <p>
             For those who believe great advertising belongs in the sky, not just

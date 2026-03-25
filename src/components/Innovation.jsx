@@ -17,7 +17,7 @@ const Innovation = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <img src={image} alt="" />
+          <img src={image} alt=""  style={{height: "300px", width: "300px", objectFit: "inherit", marginRight: "10px"}}/>
         </motion.div>
         <motion.div
           className="innovation-text"
