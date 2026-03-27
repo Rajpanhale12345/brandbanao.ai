@@ -211,7 +211,8 @@ const WebDevelopmentt = () => {
                 <div className="hoarding-image-wrap">
                     <img
                         src={appImg}
-                        alt="Railway Branding"
+                        alt="App Image"
+                        title="App Image"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
                         loading="eager"
@@ -227,7 +228,8 @@ const WebDevelopmentt = () => {
                         <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
                             <img
                                 src={images[currentIndex]}
-                                alt="Railway Branding Gallery"
+                                alt="Web Development"
+                                title="Web Development"
                                 className="gallery-img"
                                 loading="lazy"
                                 decoding="async"
@@ -265,8 +267,9 @@ const WebDevelopmentt = () => {
 
                     <div style={{ textAlign: "center", margin: "30px 0" }}>
                         <img
-                            src={webDevImg}   
+                            src={webDevImg}
                             alt="Web Development at Brand Banao"
+                            title="Web Development"
                             style={{ width: "100%", maxWidth: "700px", borderRadius: "10px" }}
                         />
                     </div>
@@ -298,8 +301,9 @@ const WebDevelopmentt = () => {
 
                     <div style={{ textAlign: "center", margin: "30px 0" }}>
                         <img
-                            src={seoDevImg}       
+                            src={seoDevImg}
                             alt="Web Development at Brand Banao"
+                            title="Web Development"
                             style={{ width: "100%", maxWidth: "700px", borderRadius: "10px" }}
                         />
                     </div>

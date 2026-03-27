@@ -8,27 +8,27 @@ import award5 from '../Images/award5.webp';
 import award6 from '../Images/award6.webp';
 
 export default function Carousel({
-  images = defaultImages,    
+  images = defaultImages,
   height = 160,
   itemWidth = 300,
   gap = 12,
   autoPlay = true,
-  speed = 60,                 
-  direction = "ltr",         
+  speed = 60,
+  direction = "ltr",
   pauseOnHover = true
 }) {
   const trackRef = useRef(null);
   const frameRef = useRef(null);
   const lastTsRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
- 
+
   const loopImages = useMemo(() => {
     const normalize = (img, i) =>
       typeof img === "string" ? { src: img, alt: `Slide ${i + 1}` } : img;
     const base = images.map(normalize);
-    return [...base, ...base]; 
+    return [...base, ...base];
   }, [images]);
- 
+
   const scrollByStep = (dir) => {
     const el = trackRef.current;
     if (!el) return;
@@ -38,14 +38,14 @@ export default function Carousel({
       behavior: "smooth"
     });
   };
- 
+
   useEffect(() => {
     const el = trackRef.current;
     if (!el || !autoPlay) return;
- 
+
     const prefersReduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
     const effectiveSpeed = prefersReduced ? 0 : speed;
- 
+
     el.scrollLeft = 0;
     lastTsRef.current = performance.now();
 
@@ -57,8 +57,8 @@ export default function Carousel({
       const delta = (direction === "rtl" ? -1 : 1) * pxPerMs * dt;
 
       if (!isPaused && effectiveSpeed > 0) {
-        el.scrollLeft += delta; 
-        const setWidth = el.scrollWidth / 2; 
+        el.scrollLeft += delta;
+        const setWidth = el.scrollWidth / 2;
         if (el.scrollLeft >= setWidth) el.scrollLeft -= setWidth;
         if (el.scrollLeft < 0) el.scrollLeft += setWidth;
       }
@@ -67,7 +67,7 @@ export default function Carousel({
     };
 
     frameRef.current = requestAnimationFrame(animate);
-    const onResize = () => { 
+    const onResize = () => {
       const setWidth = el.scrollWidth / 2;
       if (setWidth > 0) {
         el.scrollLeft = ((el.scrollLeft % setWidth) + setWidth) % setWidth;
@@ -94,7 +94,7 @@ export default function Carousel({
       tabIndex={0}
       onKeyDown={(e) => {
         if (e.key === "ArrowRight") { e.preventDefault(); scrollByStep("next"); }
-        if (e.key === "ArrowLeft")  { e.preventDefault(); scrollByStep("prev"); }
+        if (e.key === "ArrowLeft") { e.preventDefault(); scrollByStep("prev"); }
       }}
       onMouseEnter={() => pauseOnHover && setIsPaused(true)}
       onMouseLeave={() => pauseOnHover && setIsPaused(false)}
@@ -108,19 +108,26 @@ export default function Carousel({
           </div>
         ))}
       </div>
- 
+
       <button className="nav prev" aria-label="Previous" onClick={() => scrollByStep("prev")}>
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
       <button className="nav next" aria-label="Next" onClick={() => scrollByStep("next")}>
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
     </div>
   );
 }
 
-const defaultImages = [award1, award2, award3, award4, award5, award6];
+const defaultImages = [
+  { src: award1, alt: "Smart City Award" },
+  { src: award2, alt: "Certificate of Appreciation" },
+  { src: award3, alt: "सावित्रीबाई फुले पुणे विद्यापीठ" },
+  { src: award4, alt: "MY FM - IMPACT MAKERS" },
+  { src: award5, alt: "ZEE MEDIA/ZEE 24 तास - CERTIFIACTE OF APPRECIATION" },
+  { src: award6, alt: "महा BUSINESS AWARDS 2021" }
+];

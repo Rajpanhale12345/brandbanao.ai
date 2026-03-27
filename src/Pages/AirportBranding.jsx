@@ -206,6 +206,7 @@ const AirportBranding = () => {
                     <img
                         src={airport}
                         alt="Airport Branding"
+                        title="Airport Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
                         loading="eager"
@@ -225,6 +226,7 @@ const AirportBranding = () => {
                             <img
                                 src={images[currentIndex]}
                                 alt="Airport Branding"
+                                title="Airport Branding"
                                 className="gallery-img"
                                 loading="lazy"
                                 decoding="async"

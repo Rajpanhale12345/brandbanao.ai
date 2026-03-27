@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet-async";
 import cycleImg from "../Images/cycle.webp";
 import "./tvNews.css";
 
-const CycleBranding = () => { 
+const CycleBranding = () => {
     const [showGallery, setShowGallery] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = useMemo(() => [cycleImg], []); 
+    const images = useMemo(() => [cycleImg], []);
 
     const openGallery = useCallback((index) => {
         setCurrentIndex(index);
@@ -27,7 +27,7 @@ const CycleBranding = () => {
     }, [showGallery, closeGallery]);
 
     const SITE_URL = "https://brandbanao.ai/";
-    const PAGE_URL = "https://brandbanao.ai/cycle-branding"; 
+    const PAGE_URL = "https://brandbanao.ai/cycle-branding";
     const BRAND_NAME = "Brand Banao.Ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
@@ -165,8 +165,8 @@ const CycleBranding = () => {
 
     return (
         <>
-            <Helmet>  
-                <title>Best Cycle Branding in Nashik - Brand Banao.AI</title>  
+            <Helmet>
+                <title>Best Cycle Branding in Nashik - Brand Banao.AI</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content={BRAND_NAME} />
                 <meta name="publisher" content={BRAND_NAME} />
@@ -177,20 +177,20 @@ const CycleBranding = () => {
                 <meta name="theme-color" content="#0d1117" />
                 <link rel="icon" href={OG_IMAGE} />
                 <link rel="apple-touch-icon" href={OG_IMAGE} />
-                <link rel="canonical" href={PAGE_URL} />  
+                <link rel="canonical" href={PAGE_URL} />
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
                 <meta property="og:title" content="Cycle Branding Services - Brand Banao.Ai" />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={PAGE_URL} />  
+                <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
-                <meta property="og:image:alt" content="Brand Banao.Ai - Cycle Branding" />  
+                <meta property="og:image:alt" content="Brand Banao.Ai - Cycle Branding" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Cycle Branding - Brand Banao.Ai" />
                 <meta name="twitter:description" content={metaDescription} />
                 <meta name="twitter:image" content={OG_IMAGE} />
-                <meta name="twitter:image:alt" content="Brand Banao.Ai - Cycle Branding" />  
+                <meta name="twitter:image:alt" content="Brand Banao.Ai - Cycle Branding" />
 
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
@@ -201,7 +201,8 @@ const CycleBranding = () => {
                 <div className="hoarding-image-wrap">
                     <img
                         src={cycleImg}
-                        alt="Auto Branding"
+                        alt="Cycle Branding"
+                        title="Cycle Branding"
                         className="hoarding-image"
                         onClick={() => openGallery(0)}
                         loading="eager"
@@ -217,7 +218,8 @@ const CycleBranding = () => {
                         <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
                             <img
                                 src={images[currentIndex]}
-                                alt="Auto Branding Gallery"
+                                alt="Cycle Branding Gallery"
+                                title="Cycle Branding"
                                 className="gallery-img"
                                 loading="lazy"
                                 decoding="async"
@@ -349,7 +351,7 @@ const CycleBranding = () => {
                                         type="button"
                                         className="faq-question"
                                         onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                        aria-expanded={isActive} 
+                                        aria-expanded={isActive}
                                     >
                                         <span className="faq-question-text">{faq.question}</span>
                                         <span className="faq-icon">{isActive ? "−" : "+"}</span>

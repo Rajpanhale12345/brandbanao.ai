@@ -1,6 +1,6 @@
-import React, { useMemo, useState, useCallback, useEffect } from "react"; 
+import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import railwayImg from "../Images/railwaybranding.webp"; 
+import railwayImg from "../Images/railwaybranding.webp";
 import "./tvNews.css";
 
 const RailwayyBranding = () => {
@@ -9,7 +9,7 @@ const RailwayyBranding = () => {
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const SITE_URL = "https://brandbanao.ai/";
-  const PAGE_URL = "https://brandbanao.ai/railway-branding"; 
+  const PAGE_URL = "https://brandbanao.ai/railway-branding";
   const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/railwaybranding-B3y0GcSB.jpg";
 
@@ -17,14 +17,14 @@ const RailwayyBranding = () => {
   const PAGE_DESC =
     "Railway branding and railway station advertising by Brand Banao.Ai. Train and station ads, platform branding, FOB panels, digital screens, permissions, execution, monitoring, and reporting across India.";
 
-  const images = useMemo(() => [railwayImg], []); 
+  const images = useMemo(() => [railwayImg], []);
 
   const openGallery = useCallback((index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); 
+  const closeGallery = useCallback(() => setShowGallery(false), []);
 
   useEffect(() => {
     if (!showGallery) return;
@@ -175,6 +175,7 @@ const RailwayyBranding = () => {
           <img
             src={railwayImg}
             alt="Railway Branding"
+            title="Railway Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -191,6 +192,7 @@ const RailwayyBranding = () => {
               <img
                 src={images[currentIndex]}
                 alt="Railway Branding Gallery"
+                title="Railway Branding"
                 className="gallery-img"
                 loading="lazy"
                 decoding="async"
@@ -311,7 +313,7 @@ const RailwayyBranding = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} 
+                    aria-expanded={isActive}
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

@@ -282,7 +282,8 @@ const HoardingBranding = () => {
         <div className="hoarding-image-wrap">
           <img
             src={hoarding1}
-            alt="Hoarding branding example in Nashik by Brand Banao.Ai"
+            alt="Hoarding Branding"
+            title="Hoarding Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -314,6 +315,7 @@ const HoardingBranding = () => {
               <img
                 src={images[currentIndex]}
                 alt={`Hoarding advertising gallery image ${currentIndex + 1} of ${images.length}`}
+                title="Hoarding Branding"
                 className="gallery-img"
                 loading="lazy"
                 decoding="async"

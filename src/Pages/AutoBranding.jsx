@@ -49,7 +49,7 @@ const AutoBranding = () => {
     setShowGallery(true);
   }, []);
 
-  const closeGallery = useCallback(() => setShowGallery(false), []); 
+  const closeGallery = useCallback(() => setShowGallery(false), []);
 
   useEffect(() => {
     if (!showGallery) return;
@@ -197,6 +197,7 @@ const AutoBranding = () => {
           <img
             src={Autobranding}
             alt="Auto Branding"
+            title="Auto Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -212,6 +213,7 @@ const AutoBranding = () => {
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
               <img
                 src={images[currentIndex]}
+                title="Auto Branding"
                 alt="Auto Branding Gallery"
                 className="gallery-img"
                 loading="lazy"
@@ -307,7 +309,7 @@ const AutoBranding = () => {
           <h3 style={{ textAlign: "center" }}><i><b>Brand Banao.Ai move with your audience-literally-driving awareness,
             trust, and growth across the city.</b></i></h3>
         </div>
- 
+
         <div className="hoarding-content faq-section">
           <h2>Auto Branding FAQs</h2>
           <div className="faq-list">

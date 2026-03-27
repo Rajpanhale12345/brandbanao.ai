@@ -196,7 +196,8 @@ const RadioFMBranding = () => {
         <div className="hoarding-image-wrap">
           <img
             src={radioimg}
-            alt="Radio & FM Branding example by Brand Banao.AI"
+            alt="Radio & FM Branding"
+            title="Radio Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -215,7 +216,8 @@ const RadioFMBranding = () => {
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
               <img
                 src={images[currentIndex]}
-                alt="Radio & FM Branding gallery - Brand Banao.AI"
+                alt="Radio & FM Branding"
+                title="Radio & FM Branding"
                 className="gallery-img"
                 loading="lazy"
                 decoding="async"

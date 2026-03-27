@@ -1,9 +1,9 @@
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import digitalImg from "../Images/digital.webp"; 
+import digitalImg from "../Images/digital.webp";
 import "./tvNews.css";
 
-const DigitalMarketing = () => { 
+const DigitalMarketing = () => {
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
@@ -34,7 +34,7 @@ const DigitalMarketing = () => {
   const PAGE_TITLE = "Digital Marketing in Nashik - Brand Banao.Ai";
   const PAGE_DESC =
     "Grow your business with Brand Banao.Ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
-    
+
 
   const FAQ_ITEMS = useMemo(
     () => [
@@ -166,7 +166,7 @@ const DigitalMarketing = () => {
 
   return (
     <>
-      <Helmet>  
+      <Helmet>
         <title>{PAGE_TITLE}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content={BRAND_NAME} />
@@ -175,7 +175,7 @@ const DigitalMarketing = () => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="keywords" content={keywordsContent} />
-        <link rel="canonical" href={PAGE_URL} />  
+        <link rel="canonical" href={PAGE_URL} />
         <link rel="icon" href={OG_IMAGE} />
         <link rel="apple-touch-icon" href={OG_IMAGE} />
         <meta property="og:locale" content="en_IN" />
@@ -185,12 +185,12 @@ const DigitalMarketing = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Brand Banao.Ai - Digital Marketing" />  
+        <meta property="og:image:alt" content="Brand Banao.Ai - Digital Marketing" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="Brand Banao.Ai - Digital Marketing" />  
+        <meta name="twitter:image:alt" content="Brand Banao.Ai - Digital Marketing" />
 
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -202,6 +202,7 @@ const DigitalMarketing = () => {
           <img
             src={digitalImg}
             alt="Digital Marketing"
+            title="Digital Marketing"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -218,6 +219,7 @@ const DigitalMarketing = () => {
               <img
                 src={images[currentIndex]}
                 alt="Digital Marketing Gallery"
+                title="Digital Marketing"
                 className="gallery-img"
                 loading="lazy"
                 decoding="async"
@@ -354,7 +356,7 @@ const DigitalMarketing = () => {
                     type="button"
                     className="faq-question"
                     onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                    aria-expanded={isActive} 
+                    aria-expanded={isActive}
                   >
                     <span className="faq-question-text">{faq.question}</span>
                     <span className="faq-icon">{isActive ? "−" : "+"}</span>

@@ -8,14 +8,14 @@ const BussBranding = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
-    const images = useMemo(() => [BusBranding], []); 
+    const images = useMemo(() => [BusBranding], []);
     const openGallery = useCallback((index) => {
         setCurrentIndex(index);
         setShowGallery(true);
     }, []);
 
-    const closeGallery = useCallback(() => setShowGallery(false), []); 
- 
+    const closeGallery = useCallback(() => setShowGallery(false), []);
+
     useEffect(() => {
         if (!showGallery) return;
         const onKeyDown = (e) => {
@@ -193,8 +193,9 @@ const BussBranding = () => {
                 <div className="hoarding-image-wrap">
                     <img
                         src={BusBranding}
-                        alt="TV News Channel Branding"
+                        alt="Bus Branding"
                         className="hoarding-image"
+                        title="Bus Branding"
                         onClick={() => openGallery(0)}
                         loading="eager"
                         decoding="async"
@@ -212,7 +213,8 @@ const BussBranding = () => {
                         <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
                             <img
                                 src={images[currentIndex]}
-                                alt="Airport Branding"
+                                alt="Bus Branding"
+                                title="Bus Branding"
                                 className="gallery-img"
                                 loading="lazy"
                                 decoding="async"
@@ -318,7 +320,7 @@ const BussBranding = () => {
                                         type="button"
                                         className="faq-question"
                                         onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                        aria-expanded={isActive}  
+                                        aria-expanded={isActive}
                                     >
                                         <span className="faq-question-text">{faq.question}</span>
                                         <span className="faq-icon">{isActive ? "−" : "+"}</span>

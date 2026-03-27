@@ -1,23 +1,23 @@
 // InnovationSection.jsx
 
 import React from 'react';
-import {motion} from 'framer-motion';
-import './Innovation.css';  
-import image from  '../Images/innovation.webp'
+import { motion } from 'framer-motion';
+import './Innovation.css';
+import image from '../Images/innovation.webp'
 
 const Innovation = () => {
   return (
     <div className="innovation-wrapper">
-      <h2 className="innovation-title" style={{color : " #d94f5c"}}>Innovation</h2>
+      <h2 className="innovation-title" style={{ color: " #d94f5c" }}>Innovation</h2>
       <div className="innovation-container">
-         <motion.div
+        <motion.div
           className="innovation-image"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <img src={image} alt=""  style={{height: "300px", width: "300px", objectFit: "inherit", marginRight: "10px"}}/>
+          <img src={image} alt="Innovation" title="Innovation" style={{ height: "300px", width: "300px", objectFit: "inherit", marginRight: "10px" }} />
         </motion.div>
         <motion.div
           className="innovation-text"
@@ -27,11 +27,11 @@ const Innovation = () => {
           viewport={{ once: true }}
         >
           <p>
-            <span style={{textAlign : "center"}}><span className='brand-name' style={{fontSize : "50px", color : ""}}>B</span>randBanao.Ai</span> is a Mumbai based branding and outdoor advertising company operating under the umbrella of AHP Resolute Pvt. Ltd. It is powered by PANA Enterprises, an Out-of-Home (OOH) media agency with its owned media (Hoardings/Billboards) with over 16+ years of robust experience.
+            <span style={{ textAlign: "center" }}><span className='brand-name' style={{ fontSize: "50px", color: "" }}>B</span>randBanao.Ai</span> is a Mumbai based branding and outdoor advertising company operating under the umbrella of AHP Resolute Pvt. Ltd. It is powered by PANA Enterprises, an Out-of-Home (OOH) media agency with its owned media (Hoardings/Billboards) with over 16+ years of robust experience.
           </p>
         </motion.div>
 
-       
+
       </div>
     </div>
   );

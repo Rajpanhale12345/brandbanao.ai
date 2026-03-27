@@ -195,7 +195,8 @@ const BusShelterBranding = () => {
         <div className="hoarding-image-wrap">
           <img
             src={busshelter}
-            alt="Bus Shelter branding example by Brand Banao.AI"
+            alt="Bus Shelter Branding"
+            title="Bus Shelter Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
             loading="eager"
@@ -214,7 +215,8 @@ const BusShelterBranding = () => {
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
               <img
                 src={images[currentIndex]}
-                alt="Bus shelter advertising gallery - Brand Banao.AI"
+                alt="Bus shelter advertising gallery"
+                title="Bus Shelter Branding"
                 className="gallery-img"
                 loading="lazy"
                 decoding="async"

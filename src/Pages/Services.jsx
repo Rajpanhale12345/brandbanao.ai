@@ -2,7 +2,6 @@ import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "../components/Services.css";
-
 import busshelter from "../Images/busshelter.webp";
 import hoarding from "../Images/hoarding.webp";
 import cinema from "../Images/cinemabranding.webp";
@@ -24,7 +23,7 @@ const OG_IMAGE = `https://brandbanao.ai/assets/logopng-CGGCs8OD.png`;
 export default function Services() {
   const metaDescription =
     "Explore Brand Banao.Ai services: hoardings, bus shelter ads, cinema branding, radio FM campaigns, airport branding, digital marketing, railway branding, bus and auto branding, TV news channel branding, web/app development, and cycle branding.";
- 
+
   const SERVICES = useMemo(
     () => [
       {
@@ -217,16 +216,16 @@ export default function Services() {
       </Helmet>
 
       <div style={{ minHeight: "100vh", background: "#fafafa" }}>
- 
+
         <section style={{ position: "relative" }}>
           <div className="container">
             <h1 className="title" style={{ color: "#d94f5c" }}>Our Services</h1>
           </div>
         </section>
- 
+
         <section>
           <div className="container">
-            <div className="grid"> 
+            <div className="grid">
 
               <ServiceCard
                 title="Hoardings/Billboards"
@@ -281,7 +280,7 @@ export default function Services() {
               <ServiceCard
                 title="TV News Channel Branding"
                 image={news}
-                path="/tv-news-chanel-branding" 
+                path="/tv-news-chanel-branding"
                 imgStyle={{ objectFit: "contain", background: "#fff" }}
               />
 
@@ -305,7 +304,7 @@ export default function Services() {
             </div>
           </div>
         </section>
- 
+
         <section style={{ paddingBottom: "48px" }}>
           <div className="container">
             <h2 className="faqTitle">Common Questions</h2>
@@ -329,6 +328,7 @@ function ServiceCard({ title, image, path, imgStyle }) {
             <img
               src={image}
               alt={title}
+              title="Outdoor Branding Image"
               className="image"
               loading="lazy"
               style={imgStyle}

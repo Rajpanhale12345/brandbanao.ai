@@ -185,6 +185,7 @@ const HoardingBrandingCity = () => {
           <img
             src={hoarding1}
             alt={`Hoarding advertising in ${city}`}
+            title="Hoarding Branding"
             className="hoarding-image"
             onClick={() => openGallery(0)}
           />
@@ -194,7 +195,7 @@ const HoardingBrandingCity = () => {
           <div className="gallery-overlay" onClick={closeGallery}>
             <div className="gallery-box" onClick={(e) => e.stopPropagation()}>
               <button onClick={closeGallery}>x</button>
-              <img src={images[currentIndex]} alt="gallery" />
+              <img src={images[currentIndex]} alt="gallery" title="Hoarding Branding"/>
             </div>
           </div>
         )}
