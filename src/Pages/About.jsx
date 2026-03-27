@@ -201,7 +201,7 @@ const About = () => {
 
                 <img
                   src={founder}
-                  title="अमित झाट्टू"
+                  title="Amit Patil"
                   alt="Amit Hemant Patil, Founder and CEO of BrandBanao.ai"
                   className='founder'
                   loading="lazy"
@@ -235,7 +235,7 @@ const About = () => {
                 <img
                   src={cofounder}
                   alt="Prajakta Amit Patil, Co-Founder and CFO of BrandBanao.ai"
-                  title="पुच्चा वासाडेल "
+                  title="Prajakta Patil"
                   className='founder'
                   loading="lazy"
                 />
