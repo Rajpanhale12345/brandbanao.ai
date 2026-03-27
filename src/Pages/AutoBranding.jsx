@@ -8,11 +8,11 @@ const FAQ_ITEMS = [
     question:
       "Which is the best auto branding / auto rickshaw advertising agency in Nashik and Maharashtra?",
     answer:
-      "BrandBanao.ai is a trusted auto branding partner in Nashik and across Maharashtra. We manage the full campaign—from route/area planning and creative setup to printing, pasting/wrapping, on-ground coordination, and monitoring—so your brand gets consistent street-level visibility with professional execution.",
+      "Brand Banao.Ai is a trusted auto branding partner in Nashik and across Maharashtra. We manage the full campaign—from route/area planning and creative setup to printing, pasting/wrapping, on-ground coordination, and monitoring—so your brand gets consistent street-level visibility with professional execution.",
   },
   {
     question:
-      "Why is BrandBanao.ai considered a top auto branding agency in Maharashtra?",
+      "Why is Brand Banao.Ai considered a top auto branding agency in Maharashtra?",
     answer:
       "Because auto advertising works only when planning and execution are tight. We help you choose the right areas and movement routes, ensure clean print quality and durable pasting/wrapping, and monitor campaigns to maintain visibility. The result is better frequency, stronger recall, and more reliable hyperlocal impact.",
   },
@@ -62,7 +62,7 @@ const AutoBranding = () => {
 
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/auto-branding";
-  const BRAND_NAME = "BrandBanao.ai";
+  const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/autobranding-Bpnv9LSm.jpg";
 
   const keywordsContent = useMemo(
@@ -75,7 +75,7 @@ const AutoBranding = () => {
         "auto back panel advertising",
         "mobile advertising Nashik",
         "OOH advertising Nashik",
-        "BrandBanao.ai",
+        "Brand Banao.Ai",
       ].join(", "),
     []
   );
@@ -164,9 +164,9 @@ const AutoBranding = () => {
   return (
     <>
       <Helmet>
-        <title>Best Auto Branding in Nashik - BrandBanao.ai</title>
+        <title>Best Auto Branding in Nashik - Brand Banao.Ai</title>
 
-        <meta name="description" content="Auto branding and auto rickshaw advertising by BrandBanao.ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
+        <meta name="description" content="Auto branding and auto rickshaw advertising by Brand Banao.Ai in Nashik & Maharashtra. High-visibility mobile ads with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -176,14 +176,14 @@ const AutoBranding = () => {
         <meta name="keywords" content={keywordsContent} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Auto Branding in Nashik - BrandBanao.ai" />
+        <meta property="og:title" content="Auto Branding in Nashik - Brand Banao.Ai" />
         <meta property="og:description" content="High-visibility auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai - Auto Branding Services" />
+        <meta property="og:image:alt" content="Brand Banao.Ai - Auto Branding Services" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Auto Branding in Nashik - BrandBanao.ai" />
+        <meta name="twitter:title" content="Auto Branding in Nashik - Brand Banao.Ai" />
         <meta name="twitter:description" content="Auto branding & auto rickshaw advertising with wraps, panels, route-based hyperlocal campaigns, monitoring and reporting." />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -221,7 +221,7 @@ const AutoBranding = () => {
           </div>
         )}
 
-        <div className="hoarding-content">
+        <div className="services-content">
           <h2>Auto Branding & Advertising - Brand Banao.Ai</h2>
           <p>
             Auto branding is one of the most powerful ways to turn everyday city hustle into non-stop

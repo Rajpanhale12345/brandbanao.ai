@@ -176,7 +176,7 @@ const WebDevelopmentt = () => {
                 <meta name="author" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
                 <meta name="keywords" content="website development, web development company, web app development, mobile app development, app development company, ecommerce website development, responsive web design, React website development, custom web application development, web development services, app development services, performance-focused websites, UI UX design, business website development, online store development, web development agency" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta name="googlebot" content="index, follow, max-image-preview:large, max-video-preview:-1" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="theme-color" content="#0d1117" />
@@ -185,7 +185,7 @@ const WebDevelopmentt = () => {
                 <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
                 <link rel="canonical" href={PAGE_URL} />
                 <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.Ai" />
+                <meta property="og:site_name" content="Brand Banao.Ai" />
                 <meta property="og:title" content={PAGE_TITLE} />
                 <meta property="og:description" content={PAGE_DESC} />
                 <meta property="og:type" content="website" />
@@ -236,7 +236,7 @@ const WebDevelopmentt = () => {
                     </div>
                 )}
 
-                <div className="hoarding-content">
+                <div className="services-content">
                     <h2>Website and App Development - Brand Banao.Ai</h2>
                     <p>
                         Your digital platform isn't just an online presence; it's who you are as a business, your sales
@@ -359,7 +359,7 @@ const WebDevelopmentt = () => {
                     </div>
                 </div>
 
-                <div className="hoarding-content">{/* Reserved */}</div>
+                <div className="services-content">{/* Reserved */}</div>
             </div>
         </>
     );

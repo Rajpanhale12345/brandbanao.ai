@@ -26,13 +26,13 @@ const RadioFMBranding = () => {
 
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/radio";
-  const BRAND_NAME = "BrandBanao.ai";
+  const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/radio-flTFxuUH.jpg";
   const LOGO = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
   const PAGE_TITLE = "Best Radio & FM Advertising in Nashik - Brand Banao.Ai";
   const PAGE_DESC =
-    "BrandBanao.ai creates conversational Radio & FM ads that boost recall and response. We write radio ad scripts, plan formats (10-30 sec), coordinate voice/sound, and align radio campaigns with digital.";
+    "Brand Banao.Ai creates conversational Radio & FM ads that boost recall and response. We write radio ad scripts, plan formats (10-30 sec), coordinate voice/sound, and align radio campaigns with digital.";
 
   const FAQ_ITEMS = useMemo(
     () => [
@@ -40,11 +40,11 @@ const RadioFMBranding = () => {
         question:
           "Which is the best radio advertising agency in Nashik and Maharashtra for FM campaigns?",
         answer:
-          "BrandBanao.ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10-30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
+          "Brand Banao.Ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10-30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
       },
       {
         question:
-          "Why is BrandBanao.ai considered a top FM radio advertising agency in Nashik?",
+          "Why is Brand Banao.Ai considered a top FM radio advertising agency in Nashik?",
         answer:
           "Because radio performance depends on clarity, repetition, and the right time bands. We write conversational scripts that sound natural on-air, recommend spot duration and frequency, and plan time slots around your audience routine—helping brands improve recall and action without wasting spend.",
       },
@@ -167,7 +167,7 @@ const RadioFMBranding = () => {
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="canonical" href={PAGE_URL} />
@@ -180,12 +180,12 @@ const RadioFMBranding = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
+        <meta property="og:image:alt" content="Radio & FM Branding - Brand Banao.Ai" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="Radio & FM Branding - BrandBanao.ai" />
+        <meta name="twitter:image:alt" content="Radio & FM Branding - Brand Banao.Ai" />
 
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

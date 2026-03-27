@@ -18,7 +18,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "headline": "Best 360° Marketing & Branding Agency",
-    "description": "BrandBanao.Ai is full 360° service of marketing agency delivering impactful branding across digital, outdoor, print, TV, & radio. With over 16+ years of experience.",
+    "description": "Brand Banao.Ai is full 360° service of marketing agency delivering impactful branding across digital, outdoor, print, TV, & radio. With over 16+ years of experience.",
     "image": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
     "url": "https://brandbanao.ai/",
     "datePublished": "2024-03-05",
@@ -26,7 +26,7 @@ export default function Home() {
     "dateModified": "2025-05-05",
     "publisher": {
       "@type": "Organization",
-      "name": "BrandBanao.ai",
+      "name": "Brand Banao.Ai",
       "url": "https://brandbanao.ai/",
       "logo": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
     },
@@ -192,8 +192,8 @@ export default function Home() {
         <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="BrandBanao.Ai 360° Marketing & Branding Agency" />
-        <meta name="twitter:description" content="BrandBanao.Ai offers 360° expert digital, outdoor, and print marketing services across Maharashtra." />
+        <meta name="twitter:title" content="Brand Banao.Ai 360° Marketing & Branding Agency" />
+        <meta name="twitter:description" content="Brand Banao.Ai offers 360° expert digital, outdoor, and print marketing services across Maharashtra." />
         <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
 
         <script type="application/ld+json">

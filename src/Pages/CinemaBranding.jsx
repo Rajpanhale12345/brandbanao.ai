@@ -6,7 +6,7 @@ import "./tvNews.css";
 const SITE_URL = "https://brandbanao.ai";
 const PAGE_PATH = "/cinema";
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
-const BRAND_NAME = "BrandBanao.ai";
+const BRAND_NAME = "Brand Banao.Ai";
 const OG_IMAGE = "https://brandbanao.ai/assets/cinemabranding-BROdYWzQ.webp";
 
 const CinemaBranding = () => {
@@ -37,10 +37,10 @@ const CinemaBranding = () => {
       {
         question: "Which is the best cinema advertising agency in Nashik and Maharashtra?",
         answer:
-          "BrandBanao.ai is a trusted cinema advertising partner in Nashik and across Maharashtra. We plan campaigns across multiplex and regional cinema networks, manage creative formatting, scheduling, approvals, and execution for high-attention brand visibility.",
+          "Brand Banao.Ai is a trusted cinema advertising partner in Nashik and across Maharashtra. We plan campaigns across multiplex and regional cinema networks, manage creative formatting, scheduling, approvals, and execution for high-attention brand visibility.",
       },
       {
-        question: "Why is BrandBanao.ai considered a top cinema branding agency for high-recall advertising?",
+        question: "Why is Brand Banao.Ai considered a top cinema branding agency for high-recall advertising?",
         answer:
           "We recommend cinema screens, show timings, and campaign frequency based on audience fit, while managing creative compliance, scheduling, and execution to improve brand recall and campaign efficiency.",
       },
@@ -63,9 +63,9 @@ const CinemaBranding = () => {
     []
   );
 
-  const metaTitle = "Cinema Branding in Nashik | Cinema Advertising Services | BrandBanao.ai";
+  const metaTitle = "Cinema Branding in Nashik | Cinema Advertising Services | Brand Banao.Ai";
   const metaDescription =
-    "Cinema branding and advertising services in Nashik by BrandBanao.ai. Plan on-screen and off-screen cinema campaigns across multiplex and regional theatre networks with end-to-end execution.";
+    "Cinema branding and advertising services in Nashik by Brand Banao.Ai. Plan on-screen and off-screen cinema campaigns across multiplex and regional theatre networks with end-to-end execution.";
 
   const structuredData = useMemo(() => {
     const orgId = `${SITE_URL}/#organization`;
@@ -169,7 +169,7 @@ const CinemaBranding = () => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="author" content={BRAND_NAME} />
-        <meta name="robots" content="index,follow,max-image-preview:large,max-video-preview:-1" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
 
         <meta property="og:locale" content="en_IN" />
@@ -179,13 +179,13 @@ const CinemaBranding = () => {
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Cinema branding and advertising by BrandBanao.ai" />
+        <meta property="og:image:alt" content="Cinema branding and advertising by Brand Banao.Ai" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="Cinema branding and advertising by BrandBanao.ai" />
+        <meta name="twitter:image:alt" content="Cinema branding and advertising by Brand Banao.Ai" />
 
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -223,7 +223,7 @@ const CinemaBranding = () => {
           </div>
         )}
 
-        <div className="hoarding-content">
+        <div className="services-content">
           <h2>Branding & Advertising Cinema</h2>
           <p>
             Cinema is the most immersive environment for brand communication;
@@ -364,7 +364,7 @@ const CinemaBranding = () => {
           </div>
         </div>
 
-        <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
+        <div className="services-content">{/* Reserved for CTAs/forms */}</div>
       </div>
     </>
   );

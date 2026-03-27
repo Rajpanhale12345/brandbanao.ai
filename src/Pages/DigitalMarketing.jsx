@@ -31,9 +31,9 @@ const DigitalMarketing = () => {
   const OG_IMAGE = "https://brandbanao.ai/assets/app-BPEwsj2h.png";
   const BRAND_NAME = "Brand Banao.AI";
 
-  const PAGE_TITLE = "Digital Marketing in Nashik - BrandBanao.ai";
+  const PAGE_TITLE = "Digital Marketing in Nashik - Brand Banao.Ai";
   const PAGE_DESC =
-    "Grow your business with BrandBanao.ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
+    "Grow your business with Brand Banao.Ai digital marketing services: SEO, Google Ads (PPC), social media marketing, content strategy, performance marketing, analytics, and conversion rate optimisation.";
     
 
   const FAQ_ITEMS = useMemo(
@@ -42,11 +42,11 @@ const DigitalMarketing = () => {
         question:
           "Which is the best digital marketing agency in Nashik and Maharashtra?",
         answer:
-          "BrandBanao.ai is a trusted digital marketing partner for businesses in Nashik and across Maharashtra. We run strategy-led growth across SEO, Local SEO, Google Ads (PPC), Meta ads, content, landing page optimisation, remarketing, and analytics—so your marketing is measurable and built for leads, sales, and long-term visibility.",
+          "Brand Banao.Ai is a trusted digital marketing partner for businesses in Nashik and across Maharashtra. We run strategy-led growth across SEO, Local SEO, Google Ads (PPC), Meta ads, content, landing page optimisation, remarketing, and analytics—so your marketing is measurable and built for leads, sales, and long-term visibility.",
       },
       {
         question:
-          "Why is BrandBanao.ai considered a top digital marketing company in Nashik?",
+          "Why is Brand Banao.Ai considered a top digital marketing company in Nashik?",
         answer:
           "Because we focus on outcomes, not vanity metrics. We set up conversion tracking, build performance-focused landing pages, optimise ads and SEO around high-intent keywords, and improve cost per lead over time. You get clear strategy, consistent optimisation, and reporting that connects spend to results.",
       },
@@ -85,7 +85,7 @@ const DigitalMarketing = () => {
         "social media marketing Nashik",
         "lead generation Nashik",
         "performance marketing",
-        "BrandBanao.ai",
+        "Brand Banao.Ai",
       ].join(", "),
     []
   );
@@ -119,7 +119,7 @@ const DigitalMarketing = () => {
           "@id": pageId,
           url: PAGE_URL,
           name: "Digital Marketing Services in Nashik",
-          headline: "Digital Marketing Services by BrandBanao.ai",
+          headline: "Digital Marketing Services by Brand Banao.Ai",
           description: PAGE_DESC,
           inLanguage: "en-IN",
           isPartOf: { "@id": "https://brandbanao.ai/#website" },
@@ -185,12 +185,12 @@ const DigitalMarketing = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai - Digital Marketing" />  
+        <meta property="og:image:alt" content="Brand Banao.Ai - Digital Marketing" />  
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="BrandBanao.ai - Digital Marketing" />  
+        <meta name="twitter:image:alt" content="Brand Banao.Ai - Digital Marketing" />  
 
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
@@ -226,7 +226,7 @@ const DigitalMarketing = () => {
           </div>
         )}
 
-        <div className="hoarding-content">
+        <div className="services-content">
           <h2>Digital Marketing - Brand Banao.Ai</h2>
           <p>
             In the era of fast-paced life, brands grow through precision rather than just having an existence.
@@ -371,7 +371,7 @@ const DigitalMarketing = () => {
           </div>
         </div>
 
-        <div className="hoarding-content">{/* Reserved */}</div>
+        <div className="services-content">{/* Reserved */}</div>
       </div>
     </>
   );

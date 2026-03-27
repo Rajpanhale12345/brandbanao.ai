@@ -45,26 +45,6 @@ const AirportBranding = () => {
         []
     );
 
-    const keywordsContent = useMemo(() => {
-        return [
-            "airport branding",
-            "airport advertising",
-            "airport advertising cost",
-            "airport branding rates",
-            "airport LED screen advertising",
-            "baggage belt branding",
-            "baggage claim advertising",
-            "airport lounge branding",
-            "terminal branding",
-            "airport OOH advertising",
-            "Maharashtra",
-            "Mumbai airport advertising",
-            "Pune airport advertising",
-            "Nagpur airport advertising",
-            "BrandBanao.ai",
-        ].join(", ");
-    }, []);
-
 
     const canonicalUrl = "https://brandbanao.ai/airport-branding";
 
@@ -74,11 +54,11 @@ const AirportBranding = () => {
                 question:
                     "Which is the best airport branding / airport advertising agency in Maharashtra (Mumbai, Pune, Nagpur)?",
                 answer:
-                    "BrandBanao.ai is a trusted airport branding partner for Maharashtra and other locations (subject to inventory availability). We handle the complete workflow—airport media planning, placement selection, approvals/permissions, creative adaptation, production, installation coordination, and proof-of-display—so your campaign looks premium and runs smoothly end-to-end.",
+                    "Brand Banao.Ai is a trusted airport branding partner for Maharashtra and other locations (subject to inventory availability). We handle the complete workflow—airport media planning, placement selection, approvals/permissions, creative adaptation, production, installation coordination, and proof-of-display—so your campaign looks premium and runs smoothly end-to-end.",
             },
             {
                 question:
-                    "Why is BrandBanao.ai considered a top airport advertising agency for premium traveler targeting?",
+                    "Why is Brand Banao.Ai considered a top airport advertising agency for premium traveler targeting?",
                 answer:
                     "Because airport branding needs precision: the right zones, the right formats, and flawless execution. We recommend placements based on dwell time and visibility (check-in, security queues, gates, baggage claim, lounges), align creatives to airport guidelines, coordinate execution with media operators, and document the campaign—helping brands build strong recall and credibility.",
             },
@@ -86,7 +66,7 @@ const AirportBranding = () => {
                 question:
                     "How much does airport advertising cost in Maharashtra? What are airport branding rates?",
                 answer:
-                    "Airport branding rates depend on the airport, terminal/zone (arrivals, departures, check-in, security, gates, baggage claim, lounges), format (static or digital/LED), number of units, and campaign duration. BrandBanao.ai shares clear options with transparent breakup of media charges and production/printing so budgeting stays straightforward.",
+                    "Airport branding rates depend on the airport, terminal/zone (arrivals, departures, check-in, security, gates, baggage claim, lounges), format (static or digital/LED), number of units, and campaign duration. Brand Banao.Ai shares clear options with transparent breakup of media charges and production/printing so budgeting stays straightforward.",
             },
             {
                 question:
@@ -118,7 +98,7 @@ const AirportBranding = () => {
                     "@type": "WebPage",
                     "@id": pageId,
                     "url": canonicalUrl,
-                    "name": "Airport Branding Services in Maharashtra - BrandBanao.ai",
+                    "name": "Airport Branding Services in Maharashtra - Brand Banao.Ai",
                     "description":
                         "Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens with end-to-end planning, creatives, permissions, and execution.",
                     "inLanguage": "en-IN",
@@ -138,7 +118,7 @@ const AirportBranding = () => {
                     "provider": {
                         "@type": "Organization",
                         "@id": orgId,
-                        "name": "BrandBanao.ai",
+                        "name": "Brand Banao.Ai",
                         "url": "https://brandbanao.ai/",
                         "logo": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
                     },
@@ -181,7 +161,7 @@ const AirportBranding = () => {
             ],
         };
     }, [canonicalUrl, targetCities, faqs]);
- 
+
     useEffect(() => {
         if (typeof window !== "undefined" && typeof window.gtag === "function") {
             window.gtag("event", "page_view", { page_path: "/airport-branding" });
@@ -193,26 +173,26 @@ const AirportBranding = () => {
             <Helmet>
                 <title>Best Airport Branding & Advertising in Maharashtra</title>
 
-                <meta name="author" content="BrandBanao.ai" />
-                <meta name="description" content="Airport Branding Services by BrandBanao.ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
-                <meta name="keywords" content={keywordsContent} />
+                <meta name="author" content="Brand Banao.Ai" />
+                <meta name="description" content="Airport Branding Services by Brand Banao.Ai. Reach premium travelers with high-impact airport advertising across terminals, lounges, baggage belts, and digital screens. End-to-end planning, creatives, permissions, and execution." />
+
 
                 <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="canonical" href={canonicalUrl} />
 
                 <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.ai" />
-                <meta property="og:title" content="Airport Branding & Advertising in Maharashtra - BrandBanao.ai" />
+                <meta property="og:site_name" content="Brand Banao.Ai" />
+                <meta property="og:title" content="Airport Branding & Advertising in Maharashtra - Brand Banao.Ai" />
                 <meta property="og:description" content="Premium airport branding across terminals, lounges, baggage belts and digital screens with end-to-end execution." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
-                <meta property="og:image:alt" content="BrandBanao.ai - Airport Branding Services" />
+                <meta property="og:image:alt" content="Brand Banao.Ai - Airport Branding Services" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Airport Branding & Advertising - BrandBanao.ai" />
-                <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by BrandBanao.ai." />
+                <meta name="twitter:title" content="Airport Branding & Advertising - Brand Banao.Ai" />
+                <meta name="twitter:description" content="Reach premium travelers with airport branding across terminals, lounges, baggage belts and digital screens. End-to-end execution by Brand Banao.Ai." />
                 <meta name="twitter:image" content="https://brandbanao.ai/assets/airport-B-atg0Ll.jpg" />
 
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
@@ -398,7 +378,7 @@ const AirportBranding = () => {
                                         type="button"
                                         className="faq-question"
                                         onClick={() => setActiveFaqIndex(isActive ? null : index)}
-                                        aria-expanded={isActive}  
+                                        aria-expanded={isActive}
                                     >
                                         <span className="faq-question-text">{faq.question}</span>
                                         <span className="faq-icon">{isActive ? "−" : "+"}</span>

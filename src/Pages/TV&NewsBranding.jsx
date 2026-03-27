@@ -167,7 +167,7 @@ const TVNewsBranding = () => {
                 <meta name="creator" content="Brand Banao.Ai" />
                 <meta name="description" content={PAGE_DESC} />
                 <meta name="keywords" content="tv news channel branding, news channel branding, on-air branding, broadcast design, tv channel identity, news channel rebranding, motion graphics for news, lower thirds design, ticker design, breaking news graphics, tv news graphics package, tv channel logo design, brand banao ai" />
-                <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta name="theme-color" content="#0d1117" />
                 <meta name="color-scheme" content="light dark" />
@@ -175,7 +175,7 @@ const TVNewsBranding = () => {
                 <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
                 <link rel="canonical" href={PAGE_URL} />
                 <meta property="og:locale" content="en_IN" />
-                <meta property="og:site_name" content="BrandBanao.Ai" />
+                <meta property="og:site_name" content="Brand Banao.Ai" />
                 <meta property="og:title" content="TV News Channel Branding Services" />
                 <meta property="og:description" content={PAGE_DESC} />
                 <meta property="og:type" content="website" />
@@ -230,7 +230,7 @@ const TVNewsBranding = () => {
                     </div>
                 )}
 
-                <div className="hoarding-content">
+                <div className="services-content">
                     <h2>The Branding of TV News Networks - Brand Banao.Ai</h2>
                     <p>
                         A fast-paced broadcast environment requires a news channel to establish reliable,
@@ -399,7 +399,7 @@ const TVNewsBranding = () => {
                     </div>
                 </div>
 
-                <div className="hoarding-content">{/* Reserved */}</div>
+                <div className="services-content">{/* Reserved */}</div>
             </div>
         </>
     );

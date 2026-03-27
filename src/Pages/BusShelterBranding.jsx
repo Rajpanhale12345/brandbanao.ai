@@ -29,7 +29,7 @@ const BusShelterBranding = () => {
 
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/bus-shelter";
-  const BRAND_NAME = "BrandBanao.ai";
+  const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/busshelter-Bqx2SSuA.jpg";
 
   const FAQ_ITEMS = useMemo(
@@ -38,11 +38,11 @@ const BusShelterBranding = () => {
         question:
           "Which is the best bus shelter advertising agency in Nashik and Maharashtra?",
         answer:
-          "BrandBanao.ai is a trusted bus shelter advertising partner in Nashik and across Maharashtra. We manage end-to-end execution—location planning, creative, printing, installation, and photo proof—so your brand gets consistent 24x7 street-level visibility with professional control.",
+          "Brand Banao.Ai is a trusted bus shelter advertising partner in Nashik and across Maharashtra. We manage end-to-end execution—location planning, creative, printing, installation, and photo proof—so your brand gets consistent 24x7 street-level visibility with professional control.",
       },
       {
         question:
-          "Why is BrandBanao.ai considered a top bus shelter branding agency in Nashik?",
+          "Why is Brand Banao.Ai considered a top bus shelter branding agency in Nashik?",
         answer:
           "Because bus shelter ads perform best when placement + readability + execution are handled properly. We shortlist shelters based on footfall, dwell time, sightline, and audience relevance, then deliver outdoor-optimised creatives, clean installation, and documentation—helping brands get stronger local recall and trust.",
       },
@@ -80,7 +80,7 @@ const BusShelterBranding = () => {
         "OOH advertising Maharashtra",
         "transit advertising Nashik",
         "bus shelter advertising rates Nashik",
-        "BrandBanao.ai",
+        "Brand Banao.Ai",
       ].join(", "),
     []
   );
@@ -163,9 +163,9 @@ const BusShelterBranding = () => {
   return (
     <>
       <Helmet>
-        <title>Best Bus Shelter Advertising in Nashik - BrandBanao.ai</title>
+        <title>Best Bus Shelter Advertising in Nashik - Brand Banao.Ai</title>
         <meta name="author" content={BRAND_NAME} />
-        <meta name="description" content="Boost your brand visibility with Bus Shelter Advertising by BrandBanao.ai. 24x7 street-level ads with wide reach, local targeting, and complete campaign execution." />
+        <meta name="description" content="Boost your brand visibility with Bus Shelter Advertising by Brand Banao.Ai. 24x7 street-level ads with wide reach, local targeting, and complete campaign execution." />
         <meta name="keywords" content={keywordsContent} />
         <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -175,14 +175,14 @@ const BusShelterBranding = () => {
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content={BRAND_NAME} />
-        <meta property="og:title" content="Bus Shelter Advertising & Branding - BrandBanao.ai" />
+        <meta property="og:title" content="Bus Shelter Advertising & Branding - Brand Banao.Ai" />
         <meta property="og:description" content="Bus shelter ads with 24x7 visibility, hyperlocal targeting, and complete execution: creative, printing, installation and reporting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai - Bus Shelter Advertising" />
+        <meta property="og:image:alt" content="Brand Banao.Ai - Bus Shelter Advertising" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bus Shelter Advertising - BrandBanao.ai" />
+        <meta name="twitter:title" content="Bus Shelter Advertising - Brand Banao.Ai" />
         <meta name="twitter:description" content="Bus shelter advertising with hyperlocal targeting, 24x7 visibility and end-to-end execution." />
         <meta name="twitter:image" content={OG_IMAGE} />
 

@@ -194,7 +194,7 @@ export default function Services() {
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content="outdoor advertising Nashik, hoardings, bus shelter advertising, cinema branding, radio advertising, airport branding, digital marketing, railway branding, bus branding, auto branding, TV news channel branding, web development, app development, cycle branding" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="theme-color" content="#0d1117" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />

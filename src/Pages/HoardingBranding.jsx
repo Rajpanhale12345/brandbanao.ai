@@ -14,19 +14,19 @@ const HoardingBranding = () => {
 
   const SITE_URL = "https://brandbanao.ai/";
   const PAGE_URL = "https://brandbanao.ai/hoardings";
-  const BRAND_NAME = "BrandBanao.ai";
+  const BRAND_NAME = "Brand Banao.Ai";
   const OG_IMAGE = "https://brandbanao.ai/assets/hoarding-DQjSSeNb.jpg";
 
   const PAGE_TITLE =
-    "Hoardings in Nashik - BrandBanao.ai";
+    "Hoardings in Nashik - Brand Banao.Ai";
   const PAGE_DESC =
-    "Book hoardings and billboards in Nashik with BrandBanao.ai. Location planning, creative design, printing, installation, maintenance and campaign reporting.";
+    "Book hoardings and billboards in Nashik with Brand Banao.Ai. Location planning, creative design, printing, installation, maintenance and campaign reporting.";
 
   const BUSINESS = useMemo(
     () => ({
       name: BRAND_NAME,
       telephone: "+919156785678",
-      email: "hello@brandbanao.ai",
+      email: "clientservicing@brandbanao.ai",
       address: {
         streetAddress: "",
         addressLocality: "Nashik",
@@ -253,7 +253,7 @@ const HoardingBranding = () => {
         <title>{PAGE_TITLE}</title>
         <meta name="author" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
-        <meta name="robots" content="index,follow,max-image-preview:large" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <link rel="canonical" href={PAGE_URL} />
@@ -322,7 +322,7 @@ const HoardingBranding = () => {
           </div>
         )}
 
-        <div className="hoarding-content">
+        <div className="services-content">
           <h2>About Our Hoarding Services</h2>
           <p>
             Each day, the city of Nashik comes alive with untold tales. You may forget some stories
@@ -490,7 +490,7 @@ const HoardingBranding = () => {
           </div>
         </div>
 
-        <div className="hoarding-content">{/* Reserved */}</div>
+        <div className="services-content">{/* Reserved */}</div>
       </div>
     </>
   );

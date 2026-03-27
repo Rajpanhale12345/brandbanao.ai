@@ -2,6 +2,7 @@ import React, { useMemo, useState, useCallback, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, Navigate } from "react-router-dom";
 import "./busShelter.css";
+import NotFound from "../Pages/NotFound";
 import "../components/hoardingCity.css";
 
 import hoarding1 from "../Images/hoarding.webp";
@@ -31,7 +32,8 @@ const HoardingBrandingCity = () => {
   }, [citySlug]);
 
   // If city not found, go back to listing page
-  if (!cityData) return <Navigate to="/hoardings" replace />;
+
+  if (!cityData) return <NotFound />;
 
   /* ---------- SAFE FIELDS ---------- */
   const city = cityData.city ?? "Maharashtra";
@@ -51,7 +53,7 @@ const HoardingBrandingCity = () => {
   /* ---------- CONSTANTS ---------- */
   const SITE_URL = "https://brandbanao.ai";
   const PAGE_URL = `${SITE_URL}/hoardings/${citySlug}`;
-  const BRAND_NAME = "BrandBanao.ai";
+  const BRAND_NAME = "Brand Banao.Ai";
 
   const PAGE_TITLE = `Best Hoarding Advertising in ${city} - ${BRAND_NAME}`;
   const PAGE_DESC = `Looking for best hoardings in ${city}? ${BRAND_NAME} provides billboard advertising, outdoor hoardings, LED hoardings and prime location booking across ${city}.`;
@@ -165,6 +167,7 @@ const HoardingBrandingCity = () => {
       <Helmet key={citySlug}>
         <title>{PAGE_TITLE}</title>
         <meta name="description" content={PAGE_DESC} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="keywords" content={keywordsContent} />
         <meta property="og:title" content={PAGE_TITLE} />

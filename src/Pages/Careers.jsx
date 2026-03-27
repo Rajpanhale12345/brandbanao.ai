@@ -112,7 +112,7 @@ export default function Careers() {
     const org = {
       "@type": "Organization",
       "@id": orgId,
-      name: "BrandBanao.ai",
+      name: "Brand Banao.Ai",
       url: SITE_URL,
       logo: OG_IMAGE,  
       sameAs: [
@@ -126,9 +126,9 @@ export default function Careers() {
       "@type": "WebPage",
       "@id": pageId,
       url: CANONICAL_URL,
-      name: "Careers - BrandBanao.ai",
+      name: "Careers - Brand Banao.Ai",
       description:
-        "Explore open roles at BrandBanao.ai in Nashik, India. Join our team in media planning, sales, digital marketing, and operations.",
+        "Explore open roles at Brand Banao.Ai in Nashik, India. Join our team in media planning, sales, digital marketing, and operations.",
       isPartOf: { "@id": websiteId },
       about: { "@id": orgId },
       inLanguage: "en-IN",  
@@ -153,10 +153,10 @@ export default function Careers() {
         name: "India",
       },
       url: toAbsolute(job.link),  
-      description: job.desc || `Apply for the ${job.title} position at BrandBanao.ai in Nashik, India.`,
+      description: job.desc || `Apply for the ${job.title} position at Brand Banao.Ai in Nashik, India.`,
       identifier: {
         "@type": "PropertyValue",
-        name: "BrandBanao.ai",
+        name: "Brand Banao.Ai",
         value: job.id,  
       },
        
@@ -171,7 +171,7 @@ export default function Careers() {
           "@type": "WebSite",
           "@id": websiteId,
           url: SITE_URL,
-          name: "BrandBanao.ai",
+          name: "Brand Banao.Ai",
           publisher: { "@id": orgId },
           inLanguage: "en-IN",
         },
@@ -181,7 +181,7 @@ export default function Careers() {
         ...jobPostings,
         {
           "@type": "ItemList",
-          name: "Open roles at BrandBanao.ai",
+          name: "Open roles at Brand Banao.Ai",
           itemListElement: jobPostings.map((jp, idx) => ({
             "@type": "ListItem",
             position: idx + 1,
@@ -198,21 +198,21 @@ export default function Careers() {
   return (
     <>
       <Helmet> 
-        <title>Careers - BrandBanao.ai</title>
+        <title>Careers - Brand Banao.Ai</title>
         <meta name="description" content={metaDescription} />
-        <meta name="author" content="BrandBanao.ai" />
+        <meta name="author" content="Brand Banao.Ai" />
         <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
         <meta name="theme-color" content="#d94f5c" />
         <link rel="canonical" href={CANONICAL_URL} /> 
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="BrandBanao.ai" />
+        <meta property="og:site_name" content="Brand Banao.Ai" />
         <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:title" content="Careers - BrandBanao.ai" />
+        <meta property="og:title" content="Careers - Brand Banao.Ai" />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="BrandBanao.ai" /> 
+        <meta property="og:image:alt" content="Brand Banao.Ai" /> 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Careers - BrandBanao.ai" />
+        <meta name="twitter:title" content="Careers - Brand Banao.Ai" />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={OG_IMAGE} />
 

@@ -27,7 +27,7 @@ const BussBranding = () => {
 
     const SITE_URL = "https://brandbanao.ai/";
     const PAGE_URL = "https://brandbanao.ai/bus-branding";
-    const BRAND_NAME = "BrandBanao.ai";
+    const BRAND_NAME = "Brand Banao.Ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/busbranding-DTaNUJ2h.jpg";
 
     const FAQ_ITEMS = useMemo(
@@ -36,11 +36,11 @@ const BussBranding = () => {
                 question:
                     "Which is the best bus branding / bus advertising agency in Nashik and Maharashtra?",
                 answer:
-                    "BrandBanao.ai is a trusted bus branding partner in Nashik and across Maharashtra. We handle end-to-end execution—route planning, creative setup, printing/wrapping, approvals where required, on-ground installation, and monitoring—so your brand gets consistent moving visibility with strong recall.",
+                    "Brand Banao.Ai is a trusted bus branding partner in Nashik and across Maharashtra. We handle end-to-end execution—route planning, creative setup, printing/wrapping, approvals where required, on-ground installation, and monitoring—so your brand gets consistent moving visibility with strong recall.",
             },
             {
                 question:
-                    "Why is BrandBanao.ai considered a top bus branding agency in Maharashtra?",
+                    "Why is Brand Banao.Ai considered a top bus branding agency in Maharashtra?",
                 answer:
                     "Because bus advertising works best when strategy + execution are tight. We recommend routes and formats based on audience movement and visibility, create outdoor-optimised creatives that stay readable in motion, and manage execution and monitoring to keep the campaign clean and effective throughout the run.",
             },
@@ -80,7 +80,7 @@ const BussBranding = () => {
                 "side panel bus advertising",
                 "route wise bus advertising",
                 "transit advertising Nashik",
-                "BrandBanao.ai",
+                "Brand Banao.Ai",
             ].join(", "),
         []
     );
@@ -162,8 +162,8 @@ const BussBranding = () => {
     return (
         <>
             <Helmet>
-                <title>Best Bus Branding in Nashik - BrandBanao.ai</title>
-                <meta name="description" content="Bus branding and bus advertising services by BrandBanao.ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall." />
+                <title>Best Bus Branding in Nashik - Brand Banao.Ai</title>
+                <meta name="description" content="Bus branding and bus advertising services by Brand Banao.Ai: full bus wraps, side panels, back-of-bus ads, route planning, creative design, and campaign execution for city-wide reach and high recall." />
                 <meta name="author" content={BRAND_NAME} />
                 <meta name="publisher" content={BRAND_NAME} />
                 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -173,14 +173,14 @@ const BussBranding = () => {
                 <meta name="keywords" content={keywordsContent} />
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
-                <meta property="og:title" content="Bus Branding & Bus Advertising - BrandBanao.ai" />
+                <meta property="og:title" content="Bus Branding & Bus Advertising - Brand Banao.Ai" />
                 <meta property="og:description" content="High-impact bus branding: full wraps, side ads, back-of-bus ads, route planning and creative execution for strong reach and recall." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={PAGE_URL} />
                 <meta property="og:image" content={OG_IMAGE} />
-                <meta property="og:image:alt" content="BrandBanao.ai - Bus Branding Services" />
+                <meta property="og:image:alt" content="Brand Banao.Ai - Bus Branding Services" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Bus Branding & Bus Advertising - BrandBanao.ai" />
+                <meta name="twitter:title" content="Bus Branding & Bus Advertising - Brand Banao.Ai" />
                 <meta name="twitter:description" content="Bus branding: wraps, side ads, back-of-bus ads, route planning, and creative execution." />
                 <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -221,7 +221,7 @@ const BussBranding = () => {
                     </div>
                 )}
 
-                <div className="hoarding-content">
+                <div className="services-content">
                     <h2>Bus Branding - Brand Banao.Ai</h2>
                     <p>
                         The most powerful form of branding this decade has been bus branding. It converts moving
@@ -335,7 +335,7 @@ const BussBranding = () => {
                     </div>
                 </div>
 
-                <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
+                <div className="services-content">{/* Reserved for CTAs/forms */}</div>
             </div>
         </>
     );

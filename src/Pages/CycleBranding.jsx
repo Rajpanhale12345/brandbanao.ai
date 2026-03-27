@@ -28,7 +28,7 @@ const CycleBranding = () => {
 
     const SITE_URL = "https://brandbanao.ai/";
     const PAGE_URL = "https://brandbanao.ai/cycle-branding"; 
-    const BRAND_NAME = "BrandBanao.ai";
+    const BRAND_NAME = "Brand Banao.Ai";
     const OG_IMAGE = "https://brandbanao.ai/assets/logopng-CGGCs8OD.png";
 
     const FAQ_ITEMS = useMemo(
@@ -37,11 +37,11 @@ const CycleBranding = () => {
                 question:
                     "Which is the best cycle branding / branded bicycle advertising agency in Nashik and Maharashtra?",
                 answer:
-                    "BrandBanao.ai is a trusted cycle branding partner in Nashik and across Maharashtra. We manage the full campaign—area/route planning, creative and production, deployment, on-ground operations, monitoring, and documentation—so your brand gets repeated visibility in high-intent local pockets.",
+                    "Brand Banao.Ai is a trusted cycle branding partner in Nashik and across Maharashtra. We manage the full campaign—area/route planning, creative and production, deployment, on-ground operations, monitoring, and documentation—so your brand gets repeated visibility in high-intent local pockets.",
             },
             {
                 question:
-                    "Why is BrandBanao.ai considered a top cycle advertising agency for hyperlocal visibility?",
+                    "Why is Brand Banao.Ai considered a top cycle advertising agency for hyperlocal visibility?",
                 answer:
                     "Because cycle branding works when the movement plan is smart and the message stays visible. We deploy cycles in high-footfall zones at human pace, repeat coverage in key areas, and keep creatives clean and readable—helping brands build familiarity, trust, and strong neighborhood-level recall.",
             },
@@ -81,7 +81,7 @@ const CycleBranding = () => {
                 "society promotion advertising",
                 "campus promotion advertising",
                 "mobile outdoor advertising",
-                "BrandBanao.ai",
+                "Brand Banao.Ai",
             ].join(", "),
         []
     );
@@ -115,7 +115,7 @@ const CycleBranding = () => {
                     name: "Cycle Branding in Nashik - Branded Cycle Advertising",
                     headline: "Cycle Branding Services",
                     description:
-                        "Cycle branding and branded cycle advertising by BrandBanao.ai. Eco-friendly, hyperlocal mobile ads with route planning, deployment, monitoring, and reporting.",
+                        "Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, deployment, monitoring, and reporting.",
                     image: OG_IMAGE,
                     url: PAGE_URL,
                     inLanguage: "en-IN",
@@ -161,7 +161,7 @@ const CycleBranding = () => {
     }, [FAQ_ITEMS, PAGE_URL]);
 
     const metaDescription =
-        "Cycle branding and branded cycle advertising by BrandBanao.ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting.";
+        "Cycle branding and branded cycle advertising by Brand Banao.Ai. Eco-friendly, hyperlocal mobile ads with route planning, repeated exposure in neighborhoods, deployment, monitoring, and reporting.";
 
     return (
         <>
@@ -180,17 +180,17 @@ const CycleBranding = () => {
                 <link rel="canonical" href={PAGE_URL} />  
                 <meta property="og:locale" content="en_IN" />
                 <meta property="og:site_name" content={BRAND_NAME} />
-                <meta property="og:title" content="Cycle Branding Services - BrandBanao.ai" />
+                <meta property="og:title" content="Cycle Branding Services - Brand Banao.Ai" />
                 <meta property="og:description" content={metaDescription} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={PAGE_URL} />  
                 <meta property="og:image" content={OG_IMAGE} />
-                <meta property="og:image:alt" content="BrandBanao.ai - Cycle Branding" />  
+                <meta property="og:image:alt" content="Brand Banao.Ai - Cycle Branding" />  
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Cycle Branding - BrandBanao.ai" />
+                <meta name="twitter:title" content="Cycle Branding - Brand Banao.Ai" />
                 <meta name="twitter:description" content={metaDescription} />
                 <meta name="twitter:image" content={OG_IMAGE} />
-                <meta name="twitter:image:alt" content="BrandBanao.ai - Cycle Branding" />  
+                <meta name="twitter:image:alt" content="Brand Banao.Ai - Cycle Branding" />  
 
                 <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
             </Helmet>
@@ -226,7 +226,7 @@ const CycleBranding = () => {
                     </div>
                 )}
 
-                <div className="hoarding-content">
+                <div className="services-content">
                     <h2>Cycle Branding - Brand Banao.Ai</h2>
                     <p>
                         Cycle Branding stands out as arguably the easiest way to get your brand seen a lot right where
@@ -366,7 +366,7 @@ const CycleBranding = () => {
                     </div>
                 </div>
 
-                <div className="hoarding-content">{/* Reserved for CTAs/forms */}</div>
+                <div className="services-content">{/* Reserved for CTAs/forms */}</div>
             </div>
         </>
     );

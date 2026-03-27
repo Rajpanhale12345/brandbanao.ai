@@ -41,11 +41,11 @@ const RailwayyBranding = () => {
         question:
           "Which is the best radio advertising agency in Nashik and Maharashtra for FM campaigns?",
         answer:
-          "BrandBanao.ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10-30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
+          "Brand Banao.Ai is a trusted radio & FM advertising partner in Nashik and across Maharashtra. We help with message strategy, radio ad scriptwriting, format planning (10-30 sec), voice/sound coordination, scheduling support, and radio + digital alignment—so your campaign is memorable and built for response.",
       },
       {
         question:
-          "Why is BrandBanao.ai considered a top FM radio advertising agency in Nashik?",
+          "Why is Brand Banao.Ai considered a top FM radio advertising agency in Nashik?",
         answer:
           "Because radio performance depends on clarity, repetition, and the right time bands. We write conversational scripts that sound natural on-air, recommend spot duration and frequency, and plan time slots around your audience routine—helping brands improve recall and action without wasting spend.",
       },
@@ -145,8 +145,8 @@ const RailwayyBranding = () => {
         <meta name="author" content={BRAND_NAME} />
         <meta name="publisher" content={BRAND_NAME} />
         <meta name="description" content={PAGE_DESC} />
-        <meta name="keywords" content="railway advertising, railway station advertising Nashik, station branding, platform advertising, foot overbridge advertising, FOB panels, railway hoardings, digital screen advertising station, train branding, transit advertising, BrandBanao.ai" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+        <meta name="keywords" content="railway advertising, railway station advertising Nashik, station branding, platform advertising, foot overbridge advertising, FOB panels, railway hoardings, digital screen advertising station, train branding, transit advertising, Brand Banao.Ai" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta name="theme-color" content="#0d1117" />
@@ -199,7 +199,7 @@ const RailwayyBranding = () => {
           </div>
         )}
 
-        <div className="hoarding-content">
+        <div className="services-content">
           <h2>Railway Branding - Brand Banao.Ai</h2>
           <p>
             Indian Railways still remain one of the biggest mass-connectors across the world. With daily
@@ -328,7 +328,7 @@ const RailwayyBranding = () => {
           </div>
         </div>
 
-        <div className="hoarding-content">{/* Reserved */}</div>
+        <div className="services-content">{/* Reserved */}</div>
       </div>
     </>
   );
