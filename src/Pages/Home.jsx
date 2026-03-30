@@ -8,39 +8,78 @@ import { Helmet } from "react-helmet-async";
 export default function Home() {
   const canvasRef = useRef(null);
   const bgRef = useRef(null);
-
   const belowHeroRef = useRef(null);
+
   const [showArrow, setShowArrow] = useState(true);
+  const [openFaq, setOpenFaq] = useState(0);
 
-
+  const faqData = [
+    {
+      question: "What services does Brand Banao.Ai offer?",
+      answer:
+        "We provide 360° branding and advertising services including digital marketing, outdoor advertising, print media, TV, radio, branding strategy, and creative campaigns.",
+    },
+    {
+      question: "Do you work with businesses across Maharashtra?",
+      answer:
+        "Yes, we work with businesses across Maharashtra and help brands grow through strategic marketing, advertising, and branding solutions.",
+    },
+    {
+      question: "Can you help with both online and offline marketing?",
+      answer:
+        "Absolutely. We handle both online and offline marketing, including social media, performance marketing, websites, outdoor ads, print campaigns, and media planning.",
+    },
+    {
+      question: "Why should I choose Brand Banao.Ai?",
+      answer:
+        "With 16+ years of experience, we focus on result-driven branding and advertising strategies tailored to each business, combining creativity with market understanding.",
+    },
+    {
+      question: "How can I get started with your agency?",
+      answer:
+        "You can contact us through our website or inquiry form, and our team will connect with you to understand your brand goals and suggest the right marketing plan.",
+    },
+  ];
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Best 360° Marketing & Branding Agency",
-    "description": "Brand Banao.Ai is full 360° service of marketing agency delivering impactful branding across digital, outdoor, print, TV, & radio. With over 16+ years of experience.",
-    "image": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
-    "url": "https://brandbanao.ai/",
-    "datePublished": "2024-03-05",
-    "dateCreated": "2024-03-05",
-    "dateModified": "2025-05-05",
-    "publisher": {
+    headline: "Best 360° Marketing & Branding Agency",
+    description:
+      "Brand Banao.Ai is full 360° service of marketing agency delivering impactful branding across digital, outdoor, print, TV, & radio. With over 16+ years of experience.",
+    image: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
+    url: "https://brandbanao.ai/",
+    datePublished: "2024-03-05",
+    dateCreated: "2024-03-05",
+    dateModified: "2025-05-05",
+    publisher: {
       "@type": "Organization",
-      "name": "Brand Banao.Ai",
-      "url": "https://brandbanao.ai/",
-      "logo": "https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
+      name: "Brand Banao.Ai",
+      url: "https://brandbanao.ai/",
+      logo: "https://brandbanao.ai/assets/logopng-CGGCs8OD.png",
     },
-    "author": {
+    author: {
       "@type": "Person",
-      "name": "Amit Hemant Patil"
-    }
+      name: "Amit Hemant Patil",
+    },
   };
 
-
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 
   useEffect(() => {
     const cleanupFns = [];
- 
+
     const onScroll = () => setShowArrow(window.scrollY < 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     cleanupFns.push(() => window.removeEventListener("scroll", onScroll));
@@ -56,13 +95,13 @@ export default function Home() {
 
         const bg = Grid2Background(canvas);
         bgRef.current = bg;
- 
+
         const target = bg?.renderer?.domElement || canvas;
         if (target && target.style) {
           target.style.pointerEvents = "auto";
           target.style.touchAction = "none";
         }
- 
+
         const resize = () => {
           const w = window.innerWidth;
           const h = window.innerHeight;
@@ -80,13 +119,13 @@ export default function Home() {
             bg.camera.updateProjectionMatrix?.();
           }
         };
+
         resize();
         window.addEventListener("resize", resize, { passive: true });
         cleanupFns.push(() => window.removeEventListener("resize", resize));
- 
+
         const forward = (e) => {
-          if (!e.isTrusted) return;
-          if (!target) return;
+          if (!e.isTrusted || !target) return;
           const evt = new e.constructor(e.type, e);
           target.dispatchEvent(evt);
         };
@@ -104,11 +143,13 @@ export default function Home() {
         eventTypes.forEach((t) =>
           window.addEventListener(t, forward, { passive: true })
         );
+
         cleanupFns.push(() =>
           eventTypes.forEach((t) => window.removeEventListener(t, forward))
         );
- 
+
         const rand = () => Math.floor(Math.random() * 0xffffff);
+
         const handleClick = () => {
           if (!bg?.grid) return;
           bg.grid.setColors([rand(), rand(), rand()]);
@@ -117,6 +158,7 @@ export default function Home() {
           bg.grid.light2?.color?.set(rand());
           if (bg.grid.light2) bg.grid.light2.intensity = 250 + Math.random() * 250;
         };
+
         document.body.addEventListener("click", handleClick);
         cleanupFns.push(() =>
           document.body.removeEventListener("click", handleClick)
@@ -131,41 +173,52 @@ export default function Home() {
         try {
           fn();
         } catch {
-          //ignore
+          // ignore
         }
       });
+
       const bg = bgRef.current;
       try {
         bg?.renderer?.dispose?.();
       } catch {
-        //ignore
+        // ignore
       }
       bgRef.current = null;
     };
   }, []);
- 
+
   const scrollDown = () => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     if (belowHeroRef.current) {
       belowHeroRef.current.scrollIntoView({
         behavior: prefersReduced ? "auto" : "smooth",
         block: "start",
       });
     } else {
-      window.scrollTo({ top: window.innerHeight, behavior: prefersReduced ? "auto" : "smooth" });
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: prefersReduced ? "auto" : "smooth",
+      });
     }
+  };
+
+  const toggleFaq = (index) => {
+    setOpenFaq((prev) => (prev === index ? -1 : index));
   };
 
   return (
     <>
-
       <Helmet>
-
         <meta charSet="utf-8" />
         <title>Best Branding & Advertising Agency in Maharashtra</title>
         <meta name="author" content="Brand Banao.Ai" />
-        <meta name="description" content="Brand Banao.Ai is a 360° marketing and branding agency in Maharashtra delivering outdoor advertising and digital marketing with 16+ years of experience." />
-        <meta name="keywords" content="360 degree advertising agency Nashik, branding agency Maharashtra, digital marketing Nashik, outdoor advertising agency" />
+        <meta
+          name="description"
+          content="Brand Banao.Ai is a 360° marketing and branding agency in Maharashtra delivering outdoor advertising and digital marketing with 16+ years of experience."
+        />
         <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://brandbanao.ai/" />
@@ -178,37 +231,64 @@ export default function Home() {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta property="og:locale" content="en_IN" />
         <meta property="og:site_name" content="Brand Banao.Ai" />
-        <meta property="og:title" content="Brand Banao.Ai 360° Marketing & Branding Agency" />
-        <meta property="og:description" content="A leading 360° digital & outdoor marketing agency in Maharashtra. We deliver strategic advertising & branding with over 16+ years of experience." />
+        <meta
+          property="og:title"
+          content="Brand Banao.Ai 360° Marketing & Branding Agency"
+        />
+        <meta
+          property="og:description"
+          content="A leading 360° digital & outdoor marketing agency in Maharashtra. We deliver strategic advertising & branding with over 16+ years of experience."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://brandbanao.ai/" />
-        <meta property="og:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta
+          property="og:image"
+          content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
+        />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Nashik" />
-        <meta name="geo.position" content="19.990263481422677, 73.79178939433704" />
-        <meta name="ICBM" content="19.990263481422677, 73.79178939433704" />
+        <meta
+          name="geo.position"
+          content="19.990263481422677, 73.79178939433704"
+        />
+        <meta
+          name="ICBM"
+          content="19.990263481422677, 73.79178939433704"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Brand Banao.Ai 360° Marketing & Branding Agency" />
-        <meta name="twitter:description" content="Brand Banao.Ai offers 360° expert digital, outdoor, and print marketing services across Maharashtra." />
-        <meta name="twitter:image" content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png" />
+        <meta
+          name="twitter:title"
+          content="Brand Banao.Ai 360° Marketing & Branding Agency"
+        />
+        <meta
+          name="twitter:description"
+          content="Brand Banao.Ai offers 360° expert digital, outdoor, and print marketing services across Maharashtra."
+        />
+        <meta
+          name="twitter:image"
+          content="https://brandbanao.ai/assets/logopng-CGGCs8OD.png"
+        />
 
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
-
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
-
 
       <div id="app" style={{ backgroundColor: "black" }} className="home-main">
         <canvas id="webgl-canvas" ref={canvasRef} />
 
         <div className="hero">
           <h1 className="title-1">THE BEST 360° BRANDING AND ADVERTISING</h1>
-          <h2 className="title-2">AGENCY IN <br /><div className="highlight">MAHARASHTRA</div> </h2>
+          <h2 className="title-2">
+            AGENCY IN <br /> <span className="highlight">MAHARASHTRA</span>
+          </h2>
         </div>
 
         <button
@@ -218,7 +298,14 @@ export default function Home() {
           title="Scroll down"
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M6 9l6 6 6-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
       </div>
@@ -226,21 +313,53 @@ export default function Home() {
       <div ref={belowHeroRef} />
 
       <BoxCard />
-      <br />
-      <h3 className="awards-text" style={{ textAlign: "center", color: "#d94f5c", fontSize: "40px" }}>
-        Recognised and Awarded by
-      </h3>
+
+      <h3 className="awards-text">Recognised and Awarded by</h3>
 
       <div className="award-container">
-        <br />
-        <br />
-        <br />
         <Carousel />
       </div>
 
-      <br />
-      <br />
       <Work />
+
+      <section className="faq-section">
+        <div className="faq-wrapper">
+          <p className="faq-tag">FAQs</p>
+          <h2 className="faq-heading">Frequently Asked Questions</h2>
+          <p className="faq-subtext">
+            Find answers to common questions about our branding and advertising services.
+          </p>
+
+          <div className="faq-list">
+            {faqData.map((faq, index) => (
+              <div
+                className={`faq-item ${openFaq === index ? "active" : ""}`}
+                key={index}
+              >
+                <button
+                  className="faq-question"
+                  onClick={() => toggleFaq(index)}
+                  aria-expanded={openFaq === index}
+                  aria-controls={`faq-answer-${index}`}
+                  id={`faq-question-${index}`}
+                >
+                  <span>{faq.question}</span>
+                  <span className="faq-icon">{openFaq === index ? "−" : "+"}</span>
+                </button>
+
+                <div
+                  id={`faq-answer-${index}`}
+                  className="faq-answer"
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                >
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
